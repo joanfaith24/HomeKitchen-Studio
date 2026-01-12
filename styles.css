@@ -228,6 +228,8 @@ body
     letter-spacing: -1px;
     cursor: pointer;
     background-color: #cca04f;
+    text-decoration: none;
+    color: #333;
 }
 
 .banner1ShopNow:hover
@@ -596,3 +598,139 @@ ul li
     transition: 0.2s;
     background-color: #333;
 }
+
+
+
+
+
+/*SPECIAL DEALS*/
+.sdBanner
+{
+    background-image: url(images/Specialdeal-Banner2-cropped.png);
+    background-size: cover;
+    height: 40vh;
+    margin: 20px;
+    border-radius: 7px;
+}
+
+
+.specialdeals
+{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    margin: 20px;
+}
+.dealsImg
+{
+    position: relative;
+    padding: 15px;
+}
+
+.dealsImg:hover
+{
+    color: #8b6b2e;
+}
+
+.dealsImg img
+{
+    width: 100%;
+    height: auto;
+    border-radius: 7px;
+}
+
+.dealsLabel
+{
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+.prices
+{
+    display: flex;
+    justify-content: center;
+}
+
+.then
+{
+    color: #333;
+    text-decoration:line-through;
+    margin: 4px 5px;
+    font-size: 1.1rem;
+}
+
+.now
+{
+    color: red;
+    font-weight: 700;
+    margin: 4px 5px;
+    font-size: 1.1rem;
+}
+
+
+.cartSpecial
+{
+    margin: 20px 70px;
+    padding: 10px 20px 10px 20px;
+    font-size: 15px;
+    border-radius: 10px;
+    background-color: #ebba31c9;
+}
+
+.dealsImg img:hover
+{
+    transform: scale(104%);
+    transition: 0.1s;
+    cursor: pointer;
+    color: #df960e;
+}
+
+.cartSpecial:hover
+{
+    transform: scale(104%);
+    transition: 0.1s;
+    cursor: pointer;
+    color: papayawhip;
+    background-color: #e21010e1;
+    border: 1px solid papayawhip;
+}
+
+.salegroup
+{
+    position: absolute;
+    top: 15px;
+    right: 15.5px;
+    background-color: rgba(240, 4, 4, 0.719);
+    padding: 5px;
+    border-radius: 7px;
+}
+
+.salegroup:hover
+{
+    color: papayawhip;
+    font-weight: bold;
+    transition: 0.1s;
+}
+
+.sale, .discount
+{
+    color: papayawhip;
+}
+
+/*UTENSILS*/
+.path
+{
+    display: flex;
+}
+
+.path a, .path span
+{
+    margin: 10px;
+    text-decoration: none;
+    color: #333;
+}
+
+.path a:hover
+{
+    transform: scale(102%);
+}
+
