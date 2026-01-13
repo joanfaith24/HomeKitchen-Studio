@@ -1,17 +1,4 @@
 
-
-/*
-
-        <form class="searchBar">
-            <select name="search" id="search" aria-label="search category">
-                <option value="1">All</option>
-                <option value="2">Cookware</option>
-                <option value="3">Kitchen Tools</option>
-                <option value="4">Storage</option>
-            </select>
-*/
-
-
 *
 {
     margin: 0;
@@ -26,6 +13,9 @@ body
     min-height: 100vh;
     font-family: 'Nunito', sans-serif;
 }
+
+/*HEADER*/
+    /*-logo*/
 
 #mainHeader
 {
@@ -48,6 +38,7 @@ body
     transform: scale(0.95);
 }
 
+    /*-content*/
 #headerContent
 {
     max-width: 1200px;
@@ -90,9 +81,10 @@ body
     cursor: pointer;
     font-size: 20px;
     background: #f7f5f575;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.4);
+    box-shadow: 0 2px 6px rgba(0,0,0,0.4);
 }
 
+    /*-cart, -sign in, -contact us*/
 .signIn ul
 {
     display: flex;
@@ -129,6 +121,8 @@ body
     transform: scale(102%);
 }
 
+/*CATERGORIES*/
+    /*category list*/
 .categories
 {
     display: flex;
@@ -166,6 +160,162 @@ body
     transition: 0.2s;
 }
 
+/*UTENSILS*/
+.path
+{
+    display: flex;
+}
+
+.path a, .path span
+{
+    margin: 10px;
+    text-decoration: none;
+    color: #333;
+}
+
+.path a:hover
+{
+    transform: scale(102%);
+    color:#8b6b2e;
+}
+
+/*GLASSWARES*/
+.mugs, .wineGlass
+{
+    position: relative;
+}
+
+.mugs img
+{
+    width: 100%;
+    height: auto;
+    margin-bottom: 5rem;
+}
+
+.wineGlass img
+{
+    width: 100%;
+    height: 390px;
+    margin-bottom: 5rem;
+}
+
+.mugsLabel, .wineglassLabel
+{
+    text-align: center;
+    font-size: 4rem;
+    margin-top: 7rem;
+    margin-bottom: 2rem;
+    color: #333;
+}
+
+.mugGroup, .wineglassGroup
+{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    padding: 20px;
+    gap: 10px;
+}
+
+.mugGroup img, .wineglassGroup img
+{
+    width: 100%;
+    display: block;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+
+
+.mugGroup img:hover, .wineglassGroup img:hover
+{
+    transform: scale(103%);
+    transition: 0.2s;
+    border: 1px solid #333;
+    padding: 1px;
+    box-shadow: 0 3px 6px #333;
+    cursor: pointer;
+}
+
+.mugGroup figure:hover, .wineglassGroup figure:hover
+{
+    color: #8b6b2e;
+}
+
+.imgLabel
+{
+    font-size: 1.3rem;
+    text-align: center;
+}
+
+.price
+{
+    margin-bottom: 30px;
+}
+
+.mugsBannerLabel, .wineglassBannerLabel
+{
+    position: absolute;
+    top: 80px;
+    background-color: #f1ecece1;
+    font-size: 2.5rem;
+    margin-left: 30px;
+    padding: 30px;
+    border-radius: 5px;
+}
+
+.mugsP1, .wineglassP1
+{
+    background-color: rgba(221, 179, 62, 0.616);
+    width: 70%;
+    border-radius: 3px;
+    padding: 20px 10px 20px 10px;
+    font-weight: 800;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.mugsP2, .wineglassP2
+{
+    font-size: 2rem;
+    width: 100%;
+}
+
+.viewmore
+{
+    position:relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 100px;
+}
+
+.viewmoreButton
+{
+    position: absolute;
+    bottom: -50px;
+    font-size: 1.3rem;
+    left: 570px;
+    border: 0.1px solid rgb(100, 99, 99);
+    padding: 6px 10px 6px 10px;
+    font-family: "Nunito", sans-serif;
+    border-radius: 8px;
+    letter-spacing: -1px;
+    cursor: pointer;
+    background-color: rgb(216, 177, 115);
+}
+
+.viewmoreButton:hover
+{
+    cursor: pointer;
+    transform: scale(110%);
+    color: papayawhip;
+    border: 1px solid papayawhip;
+    transition: 0.15s;
+    background-color: #333;
+}
+
+
+/*HERO*/
 .hero-content
 {
     text-align: center;
@@ -192,12 +342,12 @@ body
     margin-top: 12px;
 }
 
+/*MAIN BANNER-shop now*/
 .banner1 img
 {
-   width: 100%;
+    width: 100%;
     height: 50vh;
     opacity: 0.85;
-    padding: 20px;
 }
 
 .banner1message
@@ -232,11 +382,12 @@ body
     color: #333;
 }
 
+
 .banner1ShopNow:hover
 {
     transform: scale(103%);
-    color:#df960e;
-    border: 1px solid #df960e;
+    color: papayawhip;
+    border: 1px solid papayawhip;
     transition: 0.2s;
     background-color: #333;
 }
@@ -246,9 +397,124 @@ body
     color: red;
 }
 
+/*SHOP NOW - SPECIAL DEALS*/
+.sdBanner
+{
+    background-image: url(images/Specialdeal-Banner2-cropped.png);
+    background-size: cover;
+    height: 40vh;
+    margin: 20px;
+    border-radius: 7px;
+}
 
-/*Collection*/
 
+.specialdeals
+{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    margin: 20px;
+}
+.dealsImg
+{
+    position: relative;
+    padding: 15px;
+}
+
+.dealsImg:hover
+{
+    color: #8b6b2e;
+}
+
+.dealsImg img
+{
+    width: 100%;
+    height: auto;
+    border-radius: 7px;
+}
+
+.dealsLabel
+{
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+.prices
+{
+    display: flex;
+    justify-content: center;
+}
+
+.then
+{
+    color: #333;
+    text-decoration:line-through;
+    margin: 4px 5px;
+    font-size: 1.1rem;
+}
+
+.now
+{
+    color: red;
+    font-weight: 700;
+    margin: 4px 5px;
+    font-size: 1.1rem;
+}
+
+
+.addtocart
+{
+    margin: 20px 70px;
+    padding: 10px 20px 10px 20px;
+    font-size: 15px;
+    border-radius: 9px;
+    background-color: #ebba31c9;
+}
+
+.dealsImg img:hover
+{
+    transform: scale(104%);
+    transition: 0.1s;
+    cursor: pointer;
+    color: #df960e;
+    border: 1px solid #333;
+    padding: 1px;
+    box-shadow: 0 3px 6px #333;
+}
+
+.addtocart:hover
+{
+    transform: scale(104%);
+    transition: 0.1s;
+    cursor: pointer;
+    color: papayawhip;
+    background-color: #e21010e1;
+    border: 1px solid papayawhip;
+}
+
+.salegroup
+{
+    position: absolute;
+    top: 15px;
+    right: 15.5px;
+    background-color: rgba(240, 4, 4, 0.719);
+    padding: 5px;
+    border-radius: 7px;
+}
+
+.salegroup:hover
+{
+    color: papayawhip;
+    font-weight: bold;
+    transition: 0.1s;
+}
+
+.sale, .discount
+{
+    color: papayawhip;
+}
+
+
+/*FEATURED*/
 .h2
 {
     text-align: center;
@@ -257,33 +523,12 @@ body
     margin-bottom: 2rem;
 }
 
-.collection, .organizer
-{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    padding: 20px;
-    gap: 25px;
-}
-
 .featured
 {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
-    padding: 10px;
+    padding: 20px;
     gap: 10px;
-}
-
-.organizer
-{
-    margin-bottom: 5rem;
-}
-
-.collection img, .organizer img
-{
-    width: 100%;
-    height: auto;
-    display: block;
-    border-radius: 8px;
 }
 
 .featured img
@@ -305,6 +550,55 @@ body
     text-align: center;
 }
 
+.price
+{
+    text-align: center;
+    font-weight: 700;
+}
+
+.addtocartf
+{
+    display: flex;
+    margin: 10px auto;
+    padding: 10px 20px 10px 20px;
+    font-size: 15px;
+    border-radius: 9px;
+    background-color: #ebba31c9;
+}
+
+.addtocartf:hover
+{
+    transform: scale(104%);
+    transition: 0.1s;
+    cursor: pointer;
+    color: papayawhip;
+    background-color: #e21010e1;
+    border: 1px solid papayawhip;
+}
+
+/*COLLECTIONS & ORGANIZERS*/
+
+.collection, .organizer
+{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 20px;
+    gap: 25px;
+}
+
+.organizer
+{
+    margin-bottom: 5rem;
+}
+
+.collection img, .organizer img
+{
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+}
+
 .collection figure:hover, .organizer figure:hover, .featured figure:hover
 {
     border-radius: 8px;
@@ -312,6 +606,9 @@ body
     transition: 0.2s;
     cursor: pointer;
     color:  #8b6b2e;
+    border: 1px solid #333;
+    padding: 1px;
+    box-shadow: 0 3px 6px #333;
 }
 
 
@@ -325,8 +622,72 @@ body
     height: 40px;
 }
 
+.clearanceSection
+{
+    position:relative;
+    bottom: -6px;
+}
 
-/*About*/
+.clearanceBanner
+{
+    position:relative;
+}
+
+.clearanceSection img
+{
+    width: 100%;
+    height: auto;
+}
+
+.clearanceMessage1
+{
+    position: absolute;
+    font-size: 5rem;
+    background-color: #ee7c7885;
+    text-align: center;
+    margin-top: -430px;
+    padding: 20px;
+    letter-spacing: -3px;
+    color: #202020;
+}
+
+.clearanceMessage2
+{
+    position: absolute;
+    font-size: 2rem;
+    background-color: #eeeee8e5;
+    text-align: center;
+    margin-top: -270px;
+    margin-left: 20px;
+    letter-spacing: -1px;
+    padding: 12px;
+}
+
+.clearanceButton
+{
+    position: absolute;
+    bottom: 70px;
+    font-size: 1.3rem;
+    left: 570px;
+    border: 0.1px solid rgb(180, 179, 179);
+    padding: 7px 10px 7px 10px;
+    font-family: "Nunito", sans-serif;
+    border-radius: 8px;
+    letter-spacing: -1px;
+    cursor: pointer;
+    background-color: #cca04f;
+}
+
+.clearanceButton:hover
+{
+    transform: scale(103%);
+    color: papayawhip;
+    border: 1px solid papayawhip;
+    transition: 0.2s;
+    background-color: #333;
+}
+
+/*ALL ABOUT FOOTER*/
 
 .section4Bottom
 {
@@ -418,8 +779,8 @@ ul li
 
 .sub a
 {
-   color: #533c0f;
-   text-decoration: none; 
+    color: #533c0f;
+    text-decoration: none; 
 }
 
 .sub a:hover, .Explore:hover
@@ -460,8 +821,8 @@ ul li
 
 .Explore
 {
-     color: #8b6b2e;
-     text-decoration: none;
+    color: #8b6b2e;
+    text-decoration: none;
 }
 
 .section5
@@ -517,7 +878,7 @@ ul li
 
 .p2
 {
-     text-align: justify;
+    text-align: justify;
     font-size: 12px;
     color: #6b6b6bea;
     letter-spacing: -0.5px;
@@ -533,204 +894,3 @@ ul li
     transition: 0.1s;
     border: 1px solid grey;
 }
-
-.clearanceSection
-{
-    position:relative;
-    bottom: -6px;
-}
-
-.clearanceBanner
-{
-    position:relative;
-}
-
-.clearanceSection img
-{
-    width: 100%;
-    height: auto;
-}
-
-.clearanceMessage1
-{
-    position: absolute;
-    font-size: 5rem;
-    background-color: #ee7c7885;
-    text-align: center;
-    margin-top: -430px;
-    padding: 20px;
-    letter-spacing: -3px;
-    color: #202020;
-}
-
-.clearanceMessage2
-{
-    position: absolute;
-    font-size: 2rem;
-    background-color: #eeeee8e5;
-    text-align: center;
-    margin-top: -270px;
-    margin-left: 20px;
-    letter-spacing: -1px;
-    padding: 12px;
-}
-
-.clearanceButton
-{
-    position: absolute;
-    bottom: 70px;
-    font-size: 1.3rem;
-    left: 570px;
-    border: 0.1px solid rgb(180, 179, 179);
-    padding: 7px 10px 7px 10px;
-    font-family: "Nunito", sans-serif;
-    border-radius: 8px;
-    letter-spacing: -1px;
-    cursor: pointer;
-    background-color: #cca04f;
-}
-
-.clearanceButton:hover
-{
-    transform: scale(103%);
-    color:#df960e;
-    border: 1px solid #df960e;
-    transition: 0.2s;
-    background-color: #333;
-}
-
-
-
-
-
-/*SPECIAL DEALS*/
-.sdBanner
-{
-    background-image: url(images/Specialdeal-Banner2-cropped.png);
-    background-size: cover;
-    height: 40vh;
-    margin: 20px;
-    border-radius: 7px;
-}
-
-
-.specialdeals
-{
-    display: grid;
-    grid-template-columns: repeat(4,1fr);
-    margin: 20px;
-}
-.dealsImg
-{
-    position: relative;
-    padding: 15px;
-}
-
-.dealsImg:hover
-{
-    color: #8b6b2e;
-}
-
-.dealsImg img
-{
-    width: 100%;
-    height: auto;
-    border-radius: 7px;
-}
-
-.dealsLabel
-{
-    text-align: center;
-    font-size: 1.2rem;
-}
-
-.prices
-{
-    display: flex;
-    justify-content: center;
-}
-
-.then
-{
-    color: #333;
-    text-decoration:line-through;
-    margin: 4px 5px;
-    font-size: 1.1rem;
-}
-
-.now
-{
-    color: red;
-    font-weight: 700;
-    margin: 4px 5px;
-    font-size: 1.1rem;
-}
-
-
-.cartSpecial
-{
-    margin: 20px 70px;
-    padding: 10px 20px 10px 20px;
-    font-size: 15px;
-    border-radius: 10px;
-    background-color: #ebba31c9;
-}
-
-.dealsImg img:hover
-{
-    transform: scale(104%);
-    transition: 0.1s;
-    cursor: pointer;
-    color: #df960e;
-}
-
-.cartSpecial:hover
-{
-    transform: scale(104%);
-    transition: 0.1s;
-    cursor: pointer;
-    color: papayawhip;
-    background-color: #e21010e1;
-    border: 1px solid papayawhip;
-}
-
-.salegroup
-{
-    position: absolute;
-    top: 15px;
-    right: 15.5px;
-    background-color: rgba(240, 4, 4, 0.719);
-    padding: 5px;
-    border-radius: 7px;
-}
-
-.salegroup:hover
-{
-    color: papayawhip;
-    font-weight: bold;
-    transition: 0.1s;
-}
-
-.sale, .discount
-{
-    color: papayawhip;
-}
-
-/*UTENSILS*/
-.path
-{
-    display: flex;
-}
-
-.path a, .path span
-{
-    margin: 10px;
-    text-decoration: none;
-    color: #333;
-}
-
-.path a:hover
-{
-    transform: scale(102%);
-}
-
