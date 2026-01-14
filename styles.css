@@ -7,6 +7,36 @@
     scroll-behavior: smooth;
 }
 
+.backtotop
+{
+    position: fixed;
+    right: 5px;
+    bottom: 250px;
+    width: 40px;
+    text-align: center;
+    background-color: rgba(128, 128, 128, 0.336);
+    font-size: 13px;
+    border-radius: 7px;
+    padding: 5px;
+}
+
+.backtotop:hover
+{
+    color:#9c6b0f;
+    cursor: pointer;
+}
+
+.backtotop a
+{
+    text-decoration: none;
+    color: #0e0d0d;
+}
+
+.backtotop a:hover
+{
+    color:#9c6b0f;
+}
+
 body
 {
     background-color: whitesmoke;
@@ -70,7 +100,7 @@ body
     border: 1px solid black;
     border-radius: 20px 0 0 20px;
     background: #f1eeee83;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.4);
+    box-shadow: 0 2px 6px rgba(0,0,0,0.4);
 }
 
 .searcher button
@@ -85,6 +115,16 @@ body
 }
 
     /*-cart, -sign in, -contact us*/
+.signIn
+{position: relative;
+}
+
+#addcartUpdate
+{
+    position: absolute;
+    font-size: 100rem;
+}
+
 .signIn ul
 {
     display: flex;
@@ -180,6 +220,34 @@ body
 }
 
 /*GLASSWARES*/
+.glasswaresOptions ul
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.glasswaresOptions li
+{
+    list-style: none;
+    margin: 0 20px;
+}
+
+.glasswaresOptions a
+{
+    text-decoration: none;
+}
+
+
+.mugsLabel
+{
+    text-align: center;
+    font-size: 4rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    color: #333;
+}
+
 .mugs, .wineGlass
 {
     position: relative;
@@ -199,7 +267,7 @@ body
     margin-bottom: 5rem;
 }
 
-.mugsLabel, .wineglassLabel
+.wineglassLabel
 {
     text-align: center;
     font-size: 4rem;
@@ -531,6 +599,23 @@ body
     gap: 10px;
 }
 
+.wholefeature:hover
+{
+    color: #8b6b2e;
+}
+
+.wholefeature img:hover
+{
+    border-radius: 8px;
+    transform: scale(105%);
+    transition: 0.2s;
+    cursor: pointer;
+    color:  #8b6b2e;
+    border: 1px solid #333;
+    padding: 1px;
+    box-shadow: 0 3px 6px #333;
+}
+
 .featured img
 {
     width: 100%;
@@ -543,11 +628,13 @@ body
 {
     font-size: 1.3rem;
     text-align: center;
+    margin-top: 7px;
 }
 
 .imgLabelf
 {
     text-align: center;
+    margin-top: 6px;
 }
 
 .price
@@ -599,7 +686,17 @@ body
     border-radius: 8px;
 }
 
-.collection figure:hover, .organizer figure:hover, .featured figure:hover
+.collectionEach:hover
+{
+    color:  #8b6b2e;
+}
+
+.organizer figure:hover
+{
+color:  #8b6b2e;
+}
+
+.collectionEach img:hover, .organizer img:hover
 {
     border-radius: 8px;
     transform: scale(105%);
@@ -609,17 +706,6 @@ body
     border: 1px solid #333;
     padding: 1px;
     box-shadow: 0 3px 6px #333;
-}
-
-
-.footer
-{
-    display: flex;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-    background-color: rgba(128, 128, 128, 0.322);
-    height: 40px;
 }
 
 .clearanceSection
@@ -688,6 +774,15 @@ body
 }
 
 /*ALL ABOUT FOOTER*/
+.footer
+{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(128, 128, 128, 0.322);
+    height: 40px;
+}
 
 .section4Bottom
 {
