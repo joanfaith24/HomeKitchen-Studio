@@ -55,10 +55,38 @@
         </header>
     </section>
 
-    <div>
-        <h1>This is Sign In Page</h1>
-    </div>
+    <section class="signInMain">
+        <form class="signInForm">
+            <img src="images/official logo TRANSPARTENT BG - CROPPED.png" alt="Page Logo">
+            <h3>Sign In</h3>
+            <div class="labels">
+            <label for="username">Username:</label>
+            <input type="text" id="username" placeholder="Enter your username" required>
+            </div>
+            <div class="labels">
+            <label for="password">Password:</label>
+            <input type="password" id="password" placeholder="Enter your Password">
+            <span><i id="togglePassword" class="fa fa-eye"></i></span>
+            </div>
+            <div class="checkbox">
+            <input type="checkbox">
+            <p>I agree to Terms ond Conditions of HomeKitchen Studio</p>
+            </div id="signInSubmit">
+                <button type="submit" id="submit">Sign In</button>
+            <div>
+            <div class="noAccount">
+                <p>Don't have an account yet?</p>
+                <p><a href="">Sign Up</a></p>
+            </div>
 
+            </div>
+        </form>
+
+    </section>
+    
+
+
+    
     <script src="script.js"></script>
 </body>
 </html>

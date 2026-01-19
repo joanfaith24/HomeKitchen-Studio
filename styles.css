@@ -59,13 +59,22 @@ body
 {
     width: 250px;
     height: auto;
-    border-radius: 50%;
     margin: 10px;
     background: transparent;
     mix-blend-mode: multiply;
     opacity: 0.8;
     filter: drop-shadow(0 2px 6px rgba(0,0,0,0.25));
-    transform: scale(0.95);
+    padding: 10px;
+}
+
+.imgLogo:hover
+{
+    transform: scale(101%);
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-shadow: -3px 3px 4px rgba(0, 0, 0, .2);
+    border-radius: 50%;
+    padding: 10px;
 }
 
     /*-content*/
@@ -114,7 +123,8 @@ body
     box-shadow: 0 2px 6px rgba(0,0,0,0.4);
 }
 
-    /*-cart, -sign in, -contact us*/
+    /*-cart, -sign in, -contact us*================/
+/*SIGN IN*/
 .signIn
 {position: relative;
 }
@@ -161,6 +171,125 @@ body
     transform: scale(102%);
 }
 
+.signInMain
+{
+    display: flex;
+    height: 77vh;
+    align-items: center;
+    justify-content: center;
+    background-image: url(images/background\ photo.png);
+    background-size: cover;
+    background-position: center;
+    
+}
+
+
+
+.signInForm
+{
+    position: relative;
+    width: 35%;
+    border: 1px solid #333;
+    padding: 3rem 3rem 2rem 3rem;
+    display: block;
+    justify-content: center;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(2000px);
+}
+
+.signInForm img
+{
+    display:block;
+    width: 100px;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;
+}
+
+.signInForm p
+{
+    font-size: 12px;
+}
+
+.signInForm h3
+{
+    text-align: center;
+    margin: 20px;
+    font-size: 30px;
+}
+
+.labels
+{
+    display: flex;
+    flex-direction: row;
+    width:100%;
+    margin-bottom: 25px;
+}
+
+.labels label
+{
+    width: 100px;
+    margin: 0 10px;
+}
+
+#password
+{
+    width: 300px;
+}
+
+.labels i
+{
+    margin-left: 5px;
+}
+
+.labels input
+{
+    width: 100%;
+    border-radius: 4px;
+    height: 24px;
+    border: 0.5px solid #333;
+}
+
+.checkbox
+{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 14px;
+    font-size: 14px;
+}
+
+.noAccount
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.noAccount p
+{
+    margin: 0 4px;
+}
+
+.noAccount a
+{
+    color:#533c0f;
+}
+
+.noAccount a:hover
+{
+    transform: scale(102%);
+    transition: 0.2s;
+    color: papayawhip;
+    border: 1px solid papayawhip;
+    background: #333;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
 /*CATERGORIES*/
     /*category list*/
 .categories
@@ -192,12 +321,15 @@ body
     /*color: rgb(24, 24, 24);*/
     color: #333;
     font-weight: 500;
+    padding: 4px;
 }
 
 .categories li a:hover
 {
     color: #745416;
-    transition: 0.2s;
+    transition: all 0.3s ease;
+    box-shadow: -3px 3px 4px rgba(0, 0, 0, .2);
+    border: 0.001px solid #333;
 }
 
 /*UTENSILS*/
@@ -456,8 +588,9 @@ body
     transform: scale(103%);
     color: papayawhip;
     border: 1px solid papayawhip;
-    transition: 0.2s;
     background-color: #333;
+    transition: all 0.2s ease;
+    box-shadow: -3px 3px 4px rgba(0, 0, 0, .2);
 }
 
 .banner1ShopNow:active
@@ -541,21 +674,22 @@ body
 .dealsImg img:hover
 {
     transform: scale(104%);
-    transition: 0.1s;
     cursor: pointer;
     color: #df960e;
     border: 1px solid #333;
     padding: 1px;
-    box-shadow: 0 3px 6px #333;
+    transition: all 0.2s ease;
+    box-shadow: -3px 3px 4px rgba(0, 0, 0, .2);
 }
 
 .addtocart:hover
 {
     transform: scale(104%);
-    transition: 0.1s;
+    transition: all 0.2s ease;
+    box-shadow: -3px 3px 4px rgba(0, 0, 0, .2);
     cursor: pointer;
     color: papayawhip;
-    background-color: #e21010e1;
+    background-color: #3d2b1f;
     border: 1px solid papayawhip;
 }
 
@@ -581,6 +715,11 @@ body
     color: papayawhip;
 }
 
+.updateCart
+{
+    text-align: center;
+    color: red;
+}
 
 /*FEATURED*/
 .h2
@@ -643,25 +782,29 @@ body
     font-weight: 700;
 }
 
-.addtocartf
+.addtocartf, #submit
 {
     display: flex;
     margin: 10px auto;
     padding: 10px 20px 10px 20px;
     font-size: 15px;
-    border-radius: 9px;
-    background-color: #ebba31c9;
+    border: none;
+    border-radius: 2px;
+    background-color: #d4af37;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.addtocartf:hover
+.addtocartf:hover, #submit:hover
 {
     transform: scale(104%);
-    transition: 0.1s;
     cursor: pointer;
     color: papayawhip;
-    background-color: #e21010e1;
-    border: 1px solid papayawhip;
+    background-color:#1a1a1a;
+    transition: all 0.2s ease;
+    box-shadow: -3px 3px 4px rgba(0, 0, 0, .2);
 }
+
+
 
 /*COLLECTIONS & ORGANIZERS*/
 

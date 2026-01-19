@@ -24,44 +24,92 @@ backtotop.onclick = function (){
 
 
 
-//ADD TO CART BUTTON//
+//ADD TO CART BUTTON-FEATURED//
 
-const addtocartf = document.querySelectorAll('.addtocartf');
+const addtocart = document.querySelectorAll('.addtocartf');
 
 let cart = getCart();
 
-function getCart(){
+function getCart()
+{
     return JSON.parse(localStorage.getItem('cart')) || [];
 }
 
-function saveToCart(cart)
+function savetoCart(cart)
 {
     localStorage.setItem('cart', JSON.stringify(cart));
 }
 
-addtocartf.forEach(button=>{
+addtocart.forEach(button => {
     button.addEventListener('click',()=>{
-        const wholefeature= button.closest('.wholefeature');
+        const wholefeature = button.closest('.wholefeature');
 
-        const product = 
-        {
+        const product = {
             id: wholefeature.dataset.id,
             name: wholefeature.dataset.name,
-            price: Number(wholefeature.dataset.price),
+            price: Number(wholefeature.dataset.id),
             quantity: 1
         }
 
-        const existing = cart.find(item=> item.id === product.id);
+        const existing = cart.find(item => item.id === product.id);
 
         if(existing){
-            existing.quantity += 1;
+            existing.quantity +=1;
         }
-        else
-        {
+        else{
             cart.push(product);
         }
 
-        saveToCart(cart);
+        savetoCart(cart);
+
         console.log(cart);
-    });
+    }) ;
 });
+
+
+//ADD TO CART BUTTON-SPECIAL DEALS//
+
+const addtocartSpecial = document.querySelectorAll('.addtocart');
+
+let mySpecialCart = getSpecialCart();
+
+function getSpecialCart() {
+return JSON.parse(localStorage.getItem('mySpecialCart')) || [];
+
+}
+
+function newSpecialCart(mySpecialCart)
+{
+    localStorage.setItem('mySpecialCart', JSON.stringify(mySpecialCart));
+}
+
+addtocartSpecial.forEach(button =>{
+    button.addEventListener('click', () =>{
+
+    let deals = button.closest('.dealsImg');
+    let updateDisplay = deals.querySelector('.updateCart');
+
+    let items = {
+        id: deals.dataset.id,
+        name: deals.dataset.name,
+        oldPrice: Number(deals.dataset.oldPrice),
+        newPrice: Number(deals.dataset.newPrice),
+        quantity: 1
+    }
+
+    let alreadyInCart = mySpecialCart.find(item => item.id === items.id);
+
+    if(alreadyInCart){
+        alreadyInCart.quantity += 1;
+    }else{
+        mySpecialCart.push(items);
+    }
+
+    newSpecialCart(mySpecialCart);
+    updateDisplay.textContent =  "Added to Cart!";
+    console.log(mySpecialCart);
+});
+});
+
+
+
