@@ -1,0 +1,283 @@
+
+
+/*HERO-Essentials for Everyday Cooking*/
+.hero-content
+{
+    text-align: center;
+    padding: 3rem;
+    margin-top: -40px;
+}
+
+.hero-content h1
+{
+    font-size: 3.2rem;
+    font-weight: 700;
+    margin-bottom: 16px;
+    line-height: 1.2;
+    letter-spacing: -0.5px;
+}
+
+.hero-content p
+{
+    font-size: 1.1rem;
+    color: #666;
+    max-width: 520px;
+    margin: 0 auto;
+    font-weight: 400;
+    margin-top: 12px;
+}
+
+/*MAIN BANNER-shop now*/
+.banner1 img
+{
+    width: 100%;
+    height: 50vh;
+    opacity: 0.85;
+}
+
+.banner1message
+{
+    position: absolute;
+    background-color: rgba(228, 234, 238, 0.747);
+    bottom: 330px;
+    font-size: 1.47rem;
+    line-height: 1.4;
+    letter-spacing: -1px;
+    width: 90%;
+    margin-left: 4.85%;
+    padding: 20px;
+    border: 5px solid rgba(238, 228, 228, 0.08);
+    border-radius: 8px;
+}
+
+.banner1ShopNow
+{
+    position: absolute;
+    bottom: 160px;
+    font-size: 1.3rem;
+    left: 570px;
+    border: 0.1px solid #333;
+    padding: 7px 10px 7px 10px;
+    font-family: "Nunito", sans-serif;
+    border-radius: 8px;
+    letter-spacing: -1px;
+    cursor: pointer;
+    background-color:  #d4af37;
+    text-decoration: none;
+    color: #333;
+}
+
+
+.banner1ShopNow:hover
+{
+    transform: scale(103%);
+    color: papayawhip;
+    border: 1px solid papayawhip;
+    background-color: #333;
+    transition: all 0.2s ease;
+    box-shadow: -4px 4px 4px rgba(202, 196, 196, 0.829);
+    
+}
+
+.banner1ShopNow:active
+{
+    color: red;
+}
+
+
+/*FEATURED*/
+.h2
+{
+    text-align: center;
+    font-size: 2rem;
+    margin-top: 4rem;
+    margin-bottom: 2rem;
+}
+
+.featured
+{
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    padding: 20px;
+    gap: 10px;
+}
+
+.wholefeature:hover
+{
+    color: #8b6b2e;
+}
+
+.wholefeature img:hover
+{
+    border-radius: 8px;
+    transform: scale(105%);
+    transition: 0.2s;
+    cursor: pointer;
+    color:  #8b6b2e;
+    border: 1px solid #333;
+    padding: 1px;
+    box-shadow: 0 3px 6px #333;
+}
+
+.featured img
+{
+    width: 100%;
+    height: 180px;
+    display: block;
+    border-radius: 8px;
+}
+
+.imgLabel
+{
+    font-size: 1.3rem;
+    text-align: center;
+    margin-top: 7px;
+}
+
+.imgLabelf
+{
+    text-align: center;
+    margin-top: 6px;
+}
+
+.price
+{
+    text-align: center;
+    font-weight: 700;
+}
+
+.addtocartf
+{
+    display: flex;
+    margin: 10px auto;
+    padding: 10px 20px 10px 20px;
+    font-size: 15px;
+    border: none;
+    border-radius: 2px;
+    background-color: #d4af37;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.addtocartf:hover
+{
+    transform: scale(104%);
+    cursor: pointer;
+    color: papayawhip;
+    background-color:#1a1a1a;
+    transition: all 0.2s ease;
+    box-shadow: -3px 3px 4px rgba(0, 0, 0, .2);
+}
+
+
+
+/*COLLECTIONS & ORGANIZERS*/
+
+.collection, .organizer
+{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 20px;
+    gap: 25px;
+}
+
+.organizer
+{
+    margin-bottom: 5rem;
+}
+
+.collection img, .organizer img
+{
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+}
+
+.collectionEach:hover
+{
+    color:  #8b6b2e;
+}
+
+.organizer figure:hover
+{
+color:  #8b6b2e;
+}
+
+.collectionEach img:hover, .organizer img:hover
+{
+    border-radius: 8px;
+    transform: scale(105%);
+    transition: 0.2s;
+    cursor: pointer;
+    color:  #8b6b2e;
+    border: 1px solid #333;
+    padding: 1px;
+    box-shadow: 0 3px 6px #333;
+}
+
+.clearanceSection
+{
+    position:relative;
+    bottom: -6px;
+}
+
+.clearanceBanner
+{
+    position:relative;
+}
+
+.clearanceSection img
+{
+    width: 100%;
+    height: auto;
+}
+
+.clearanceMessage1
+{
+    position: absolute;
+    font-size: 5rem;
+    background-color: #ee7c7885;
+    text-align: center;
+    margin-top: -430px;
+    padding: 20px;
+    letter-spacing: -3px;
+    color: #202020;
+}
+
+.clearanceMessage2
+{
+    position: absolute;
+    font-size: 2rem;
+    background-color: #eeeee8e5;
+    text-align: center;
+    margin-top: -270px;
+    margin-left: 20px;
+    letter-spacing: -1px;
+    padding: 12px;
+}
+
+.clearanceButton
+{
+    position: absolute;
+    bottom: 70px;
+    font-size: 1.3rem;
+    left: 570px;
+    border: 0.1px solid rgb(180, 179, 179);
+    padding: 7px 10px 7px 10px;
+    font-family: "Nunito", sans-serif;
+    border-radius: 8px;
+    letter-spacing: -1px;
+    cursor: pointer;
+    background-color: #cca04f;
+}
+
+.clearanceButton:hover
+{
+    transform: scale(103%);
+    color: papayawhip;
+    border: 1px solid papayawhip;
+    transition: 0.2s;
+    background-color: #333;
+    box-shadow: -3px 3px 4px #807777;
+}
+

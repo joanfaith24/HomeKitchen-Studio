@@ -1,0 +1,30 @@
+/*BACK TO TOP*/
+.backtotop
+{
+    position: fixed;
+    right: 5px;
+    bottom: 250px;
+    width: 40px;
+    text-align: center;
+    background-color: rgba(128, 128, 128, 0.336);
+    font-size: 13px;
+    border-radius: 7px;
+    padding: 5px;
+}
+
+.backtotop:hover
+{
+    color:#9c6b0f;
+    cursor: pointer;
+}
+
+.backtotop a
+{
+    text-decoration: none;
+    color: #0e0d0d;
+}
+
+.backtotop a:hover
+{
+    color:#9c6b0f;
+}

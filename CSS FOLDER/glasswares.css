@@ -1,0 +1,165 @@
+
+/*GLASSWARES*/
+.glasswaresOptions ul
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.glasswaresOptions li
+{
+    list-style: none;
+    margin: 0 20px;
+}
+
+.glasswaresOptions a
+{
+    text-decoration: none;
+}
+
+
+.mugsLabel
+{
+    text-align: center;
+    font-size: 4rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    color: #333;
+}
+
+.mugs, .wineGlass
+{
+    position: relative;
+}
+
+.mugs img
+{
+    width: 100%;
+    height: auto;
+    margin-bottom: 5rem;
+}
+
+.wineGlass img
+{
+    width: 100%;
+    height: 390px;
+    margin-bottom: 5rem;
+}
+
+.wineglassLabel
+{
+    text-align: center;
+    font-size: 4rem;
+    margin-top: 7rem;
+    margin-bottom: 2rem;
+    color: #333;
+}
+
+.mugGroup, .wineglassGroup
+{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    padding: 20px;
+    gap: 10px;
+}
+
+.mugGroup img, .wineglassGroup img
+{
+    width: 100%;
+    display: block;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+
+
+.mugGroup img:hover, .wineglassGroup img:hover
+{
+    transform: scale(103%);
+    transition: 0.2s;
+    border: 1px solid #333;
+    padding: 1px;
+    box-shadow: 0 3px 6px #333;
+    cursor: pointer;
+}
+
+.mugGroup figure:hover, .wineglassGroup figure:hover
+{
+    color: #8b6b2e;
+}
+
+.imgLabel
+{
+    font-size: 1.3rem;
+    text-align: center;
+}
+
+.price
+{
+    margin-bottom: 30px;
+}
+
+.mugsBannerLabel, .wineglassBannerLabel
+{
+    position: absolute;
+    top: 80px;
+    background-color: #f1ecece1;
+    font-size: 2.5rem;
+    margin-left: 30px;
+    padding: 30px;
+    border-radius: 5px;
+}
+
+.mugsP1, .wineglassP1
+{
+    background-color: rgba(221, 179, 62, 0.616);
+    width: 70%;
+    border-radius: 3px;
+    padding: 20px 10px 20px 10px;
+    font-weight: 800;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.mugsP2, .wineglassP2
+{
+    font-size: 2rem;
+    width: 100%;
+}
+
+.viewmore
+{
+    position:relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 100px;
+}
+
+.viewmoreButton
+{
+    position: absolute;
+    bottom: -50px;
+    font-size: 1.3rem;
+    left: 570px;
+    border: 0.1px solid rgb(100, 99, 99);
+    padding: 6px 10px 6px 10px;
+    font-family: "Nunito", sans-serif;
+    border-radius: 8px;
+    letter-spacing: -1px;
+    cursor: pointer;
+    background-color: rgb(216, 177, 115);
+}
+
+.viewmoreButton:hover
+{
+    cursor: pointer;
+    transform: scale(110%);
+    color: papayawhip;
+    border: 1px solid papayawhip;
+    transition: 0.15s;
+    background-color: #333;
+}
+
+

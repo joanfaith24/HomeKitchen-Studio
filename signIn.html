@@ -4,14 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HomeKitchen Studio</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="CSS FOLDER/signin.css">
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
     <link rel="icon" type="image/png" href="images/official logo WHITE BG.jpg">
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 
 
@@ -59,34 +57,38 @@
         <form class="signInForm">
             <img src="images/official logo TRANSPARTENT BG - CROPPED.png" alt="Page Logo">
             <h3>Sign In</h3>
+
             <div class="labels">
-            <label for="username">Username:</label>
-            <input type="text" id="username" placeholder="Enter your username" required>
+                <label for="username">Username:</label>
+                <input type="text" id="username" placeholder="Enter your username" required>
             </div>
+                <p id="usernameMessage"></p>
+
             <div class="labels">
-            <label for="password">Password:</label>
-            <input type="password" id="password" placeholder="Enter your Password">
-            <span><i id="togglePassword" class="fa fa-eye"></i></span>
+                <label for="password">Password:</label>
+                <input type="password" id="password" placeholder="Enter your Password">
+                <span id="togglePassword">👁️</span>
             </div>
+                <p id="passwordMessage"></p>
+
+
             <div class="checkbox">
-            <input type="checkbox">
-            <p>I agree to Terms ond Conditions of HomeKitchen Studio</p>
-            </div id="signInSubmit">
-                <button type="submit" id="submit">Sign In</button>
-            <div>
+                <input type="checkbox">
+                <p>I agree to Terms ond Conditions of HomeKitchen Studio</p>
+            </div>
+
+            <div id="signInSubmit">
+                <button type="submit" id="signInButton">Sign In</button>
+            </div>
+
             <div class="noAccount">
                 <p>Don't have an account yet?</p>
                 <p><a href="">Sign Up</a></p>
             </div>
-
-            </div>
         </form>
-
     </section>
-    
 
 
-    
-    <script src="script.js"></script>
+    <script src="JS FOLDER/signin.js"></script>
 </body>
 </html>
