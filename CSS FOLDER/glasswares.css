@@ -139,6 +139,7 @@
 
 .viewmoreButton
 {
+    /*
     position: absolute;
     bottom: -50px;
     font-size: 1.3rem;
@@ -149,17 +150,52 @@
     border-radius: 8px;
     letter-spacing: -1px;
     cursor: pointer;
-    background-color: rgb(216, 177, 115);
+    background-color: rgb(216, 177, 115);*/
+     position: absolute;
+     font-family: "Nunito", sans-serif;
+    bottom: -50px;
+    font-size: 1.3rem;
+    left: 570px;
+    display: flex;
+    margin: 10px auto;
+    padding: 10px 20px 10px 20px;
+    font-size: 15px;
+    border: none;
+    border-radius: 2px;
+    background-color: #d4af37;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .viewmoreButton:hover
 {
     cursor: pointer;
-    transform: scale(110%);
+    transform: scale(105%);
     color: papayawhip;
     border: 1px solid papayawhip;
     transition: 0.15s;
     background-color: #333;
+    box-shadow: -3px 3px 4px rgba(0, 0, 0, .2);
 }
 
+#signInButton
+{
+    display: flex;
+    margin: 10px auto;
+    padding: 10px 20px 10px 20px;
+    font-size: 15px;
+    border: none;
+    border-radius: 2px;
+    background-color: #d4af37;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#signInButton:hover
+{
+    transform: scale(104%);
+    cursor: pointer;
+    color: papayawhip;
+    background-color:#1a1a1a;
+    transition: all 0.2s ease;
+    box-shadow: -3px 3px 4px rgba(0, 0, 0, .2);
+}
 
