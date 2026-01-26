@@ -12,3 +12,11 @@ body
     min-height: 100vh;
     font-family: 'Nunito', sans-serif;
 }
+
+/*DISABLE (A) ELEMENTS STYLE*/
+/*
+a{
+    text-decoration: none;
+    cursor: pointer;
+    color: inherit ;
+}*/

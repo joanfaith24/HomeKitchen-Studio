@@ -59,9 +59,9 @@
 .mugGroup, .wineglassGroup
 {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     padding: 20px;
-    gap: 10px;
+    gap: 22px;
 }
 
 .mugGroup img, .wineglassGroup img
