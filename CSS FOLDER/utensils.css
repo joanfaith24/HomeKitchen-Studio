@@ -127,15 +127,17 @@
     color: #8b6b2e;
 }
 
-.imgLabel
+.imgLabelf
 {
-    font-size: 1.3rem;
+    font-size: 1rem;
     text-align: center;
 }
+
 
 .price
 {
     margin-bottom: 30px;
+    text-align: center;
 }
 
 .utensilBannerLabel, .wineglassBannerLabel
