@@ -1,0 +1,45 @@
+
+/*HEADER*/
+
+.headerGroup
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 10px;
+    padding: 2px 0;
+}
+
+.pageLogoBox
+{
+    width: 30%;
+}
+.inputBarHeader
+{
+    text-align: center;
+}
+.inputBarHeader input
+{
+    height: 25px;
+    width: 60%;
+    border-radius: 4px;
+}
+
+.pageLogo
+{
+    width: 100%;
+}
+
+.fa-magnifying-glass:hover
+{
+    cursor: pointer;
+}
+.cart-Log-Call-Group
+{
+    display: flex;
+}
+
+.cart-Log-Call-Group div
+{
+    margin: 0 8px;
+}

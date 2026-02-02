@@ -1,0 +1,17 @@
+
+.categories
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    row-gap: 3px;
+    background-color: #dddada80;
+}
+
+.categories a
+{
+    font-size: 12px;
+    
+}

@@ -9,14 +9,31 @@
 body
 {
     background-color: whitesmoke;
-    min-height: 100vh;
     font-family: 'Nunito', sans-serif;
+    color: var(--DARK-GRAY);
 }
 
-/*DISABLE (A) ELEMENTS STYLE*/
-/*
-a{
+:root
+{
+    /*MAIN COLORS*/
+    --LIGHT-GRAY:  rgba(194, 189, 189, 0.575); /*for BG*/
+    --DARK-GRAY: #1d1c1c; /*for TEXT*/
+    --WHITESMOKE: whitesmoke;
+    --PAPAYAWHIP: papayawhip;
+    --GOLDEN-BROWN: #8b6b2e;
+    --DARK-YELLOW:  #9c6b0f; /*for HOVERS*/
+    --MID-YELLOW:  #d4af37;
+    --MID-YELLOW-2: #ebaa31c9; /*for BUTTONS*/
+    --DARK-RED: #e21010e1;
+
+
+    /*SHADOW*/    /*-3px 3px 4px */
+    --MY-BOX-SHADOW:rgba(0, 0, 0, .2);
+
+}
+
+a
+{
     text-decoration: none;
-    cursor: pointer;
-    color: inherit ;
-}*/
+    color: inherit;
+}
