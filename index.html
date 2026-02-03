@@ -10,6 +10,9 @@
     <link rel="stylesheet" href="CSS FOLDER/categories.css">
     <link rel="stylesheet" href="CSS FOLDER/mainPage.css">
     <link rel="stylesheet" href="CSS FOLDER/footermobile.css">
+    <link rel="stylesheet" href="CSS FOLDER/backtotop.css">
+    <link rel="stylesheet" href="CSS FOLDER/signIn.css">
+    <link rel="stylesheet" href="CSS FOLDER/signUp.css">
 
     <link rel="icon" type="image/png" href="images/LOGO&BACKGROUND/official logo TRANSPARTENT BG - CROPPED.png">
 
@@ -22,7 +25,7 @@
 <body>
     <header class="headerGroup">
         <div class="pageLogoBox">
-            <a href="main.html"><img class="pageLogo" src="images/LOGO&BACKGROUND/official logo TRANSPARTENT BG - CROPPED.png" alt="Home Kitchen Studio Logo"></a>
+            <a href="index.html"><img class="pageLogo" src="images/LOGO&BACKGROUND/official logo TRANSPARTENT BG - CROPPED.png" alt="Home Kitchen Studio Logo"></a>
         </div>
         <div class="inputBarHeader">
             <input type="text" placeholder="Search...">
@@ -33,7 +36,7 @@
                 <a href="cart.html"><i class="fa-solid fa-cart-shopping"></i></a>
             </div>
             <div>
-                <a href="signin.html"><i class="fa-solid fa-user"></i></a>
+                <a href="javascript:void(0)" onclick="openSignIn()"><i class="fa-solid fa-user"></i></a>
             </div>
             <div>
                 <a href="contactus.html"><i class="fa-solid fa-phone"></i></a>
@@ -463,5 +466,67 @@
 <div class="backtotop" id="backtotop">
     <p>▲ Back To Top</p>
 </div>
+
+
+
+
+<div class="signInOverlay" id="signInOverlay">
+    <div class="signInForm">
+        <button id="closeSignInFormButton" class="closeSignInFormButton">&times;</button>
+        <h2>Sign In</h2>
+        <form>
+            <div class="emailLabelGroup">
+                <label for="email">Email:</label><input type="email" id="email" placeholder="Enter Email" required>
+                <p id="emailMessageResult"></p>
+            </div>
+            <div class="passwordLabelGroup">
+                <label for="password">Password:</label>
+                <div class="passwordInput">
+                    <input type="password" id="password" placeholder="Enter Password" required><i class="mainEye fa-solid fa-eye" id="togglePassword"></i>
+                    <p id="passwordMessageResult"></p>
+                </div>
+            </div>
+            <button type="button" id="signInButton" onclick="signInSuccessful()">Sign In</button>
+            <p id="finalSignInMessage"></p>
+            <p class="noAccount">No account yet? <a href="javascript:void(0)" onclick="openSignUp()">Sign Up</a></p>
+        </form>
+    </div>
+</div>
+
+
+
+
+<div class="signUpOverlay" id="signUpOverlay">
+    <div class="signUpForm">
+        <button id="closeSignUpFormButton" class="closeSignUpFormButton">&times;</button>
+        <h2>Sign Up</h2>
+        <form>
+            <div class="emailLabelGroup">
+                <label for="email">Email:</label><input type="email" id="email" placeholder="Enter Email" required>
+            </div>
+            <div class="passwordLabelGroup">
+                <label for="password">Password:</label>
+                    <input type="password" id="password" placeholder="Enter Password" required><i class="firstEye fa-solid fa-eye" id="togglePassword"></i>
+            </div>
+            <div class="passwordLabelGroupRepeat">
+                <label for="password">Re-enter Password:</label>
+                <input type="password" id="password" placeholder="Re-enterPassword" required><i class="secondEye fa-solid fa-eye" id="togglePassword"></i>
+            </div>
+            <div class="tcGroup">
+                <input type="checkbox">
+                <p>I agree to <a href="">Home Kitchen Studio's Terms and Conditions</a></p>
+            </div>
+            <button id="signUpButton">Sign Up</button>
+            <p class="hasAccount">Already have an account? <a href="javascript:void(0)" onclick="switchToSignIn()">Sign In</a></p>
+        </form>
+    </div>
+</div>
+
+
+
+
+<script src="/JS FOLDER/backtotop.js"></script>
+<script src="/JS FOLDER/signIn&signUpFORM.js"></script>
+<script src="/JS FOLDER/showhidePASSWORD&SignInButton.js"></script>
 </body>
 </html>

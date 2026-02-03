@@ -1,0 +1,169 @@
+
+/* SIGN UP */
+
+
+.signUpOverlay
+{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(2px);
+    z-index: 2000;
+    justify-content: center;
+    align-items: center;
+}
+
+.signUpForm
+{
+    background: whitesmoke;
+    padding: 25px;
+    border-radius: 8px;
+    position: relative;
+    width: 80%;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+
+    animation: popIn 0.3s ease-out forwards;
+}
+
+.signUpForm h2
+{
+    text-align: center;
+}
+
+.emailLabelGroup, .passwordLabelGroup, .passwordLabelGroupRepeat
+{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+    font-size: 14px;
+}
+
+.signUpForm input[type="email"],
+.signUpForm input[type="password"]
+{
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%;
+}
+
+.closeSignUpFormButton
+{
+    position: absolute;
+    top: 3px;
+    right: 3px;
+    font-size: 40px;
+    border: none;
+    cursor: pointer;
+    padding: 0 7px;
+}
+
+.closeSignUpFormButton:hover
+{
+    border: 1px solid #333;
+    border-radius: 7px;
+    background-color: rgb(206, 204, 204);
+    transition: 0.2s;
+}
+
+#signUpButton
+{
+    width: 100%;
+    padding: 7px;
+    background-color: #333;
+    color: whitesmoke;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 10px 0;
+    font-size: 18px;
+}
+
+#signUpButton:hover
+{
+    color: #9c9a0f;
+    transform: scale(101%);
+    transition: 0.2s;
+    
+}
+
+.hasAccount
+{
+    font-size: 14px;
+    text-align: center;
+}
+
+.signUpForm a
+{
+    color: #8b6b2e;
+    font-weight: 600;
+}
+
+.signUpForm a:hover
+{
+    color:  #9c9a0f;
+}
+
+.tcGroup
+{
+    display: flex;
+
+}
+
+.tcGroup input
+{
+    width: 6%;
+    margin-right: 10px;
+}
+
+.tcGroup p
+{
+    font-size: 10px;
+}
+.firstEye
+{
+    position: absolute;
+    font-size: 18px;
+    top: 39%;
+    right: 33px;
+    cursor: pointer;
+}
+
+.secondEye
+{
+    position: absolute;
+    font-size: 18px;
+    top: 57.5%;
+    right: 33px;
+    cursor: pointer;
+}
+
+.fa-eye:hover
+{
+    color:  #9c9a0f;
+}
+
+.fa-eye:active
+{
+    color: #e21010e1;
+}
+
+
+@keyframes popIn
+{
+    from
+    {
+        opacity: 0;
+        transform: scale(70%);
+    }
+
+    to
+    {
+        opacity: 1;
+        transform: scale(100%);
+    }
+}
