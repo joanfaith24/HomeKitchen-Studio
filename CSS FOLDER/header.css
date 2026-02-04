@@ -43,3 +43,17 @@
 {
     margin: 0 8px;
 }
+
+.cartBadge
+{
+    position: absolute;
+    border-radius: 50%;
+    background-color: red;
+    font-weight: 700;
+    color: white;
+    text-align: center;
+    padding: 0 5px;
+    font-size: 10px;
+    top: 17px;
+    right: 68px;
+}

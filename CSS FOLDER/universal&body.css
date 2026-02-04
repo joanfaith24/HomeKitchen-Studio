@@ -37,3 +37,18 @@ a
     text-decoration: none;
     color: inherit;
 }
+
+.addToCartPopUp
+{
+    display: none;
+    position: fixed;
+    top: 50%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 15px;
+    color: whitesmoke;
+    left: 32%;
+    padding: 7px 12px;
+    background-color: #333;   
+}
+

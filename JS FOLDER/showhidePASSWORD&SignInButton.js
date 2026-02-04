@@ -79,8 +79,19 @@ function signInSuccessful()
         email.value = "";
         password.value = "";
 
+        const btn = document.getElementById('signInButton');
+        btn.disabled = true;
+        btn.style.opacity = "0.5";
+        btn.style.cursor = "not-allowed";
+
+
         setTimeout(()=>{
             signInOverlay.style.display = "none";
+
+            btn.disabled = false;
+            btn.style.opacity = "1";
+            btn.style.cursor = "pointer";
+
             resetForm();
         }, 1500);
         
