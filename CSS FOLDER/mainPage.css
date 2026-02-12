@@ -87,6 +87,11 @@
     padding: 2px 4px;
 }
 
+#addToCart:hover
+{
+    cursor: pointer;
+}
+
 .viewMore
 {
     display: flex;
@@ -107,4 +112,11 @@
 .bottomCategoryBlock a
 {
     border: 0.01px solid #333;
+}
+
+.trash
+{
+    display: none;
+    color: red;
+    cursor: pointer;
 }

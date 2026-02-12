@@ -1,16 +1,24 @@
-*
+*,
+*::before,
+*::after
 {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+html
+{
     scroll-behavior: smooth;
 }
 
 body
 {
+    width: 100%;
     background-color: whitesmoke;
     font-family: 'Nunito', sans-serif;
     color: var(--DARK-GRAY);
+    overflow-x: hidden;
 }
 
 :root
@@ -25,6 +33,7 @@ body
     --MID-YELLOW:  #d4af37; /*for active clicks*/
     --MID-YELLOW-2: #ebaa31c9; /*for BUTTONS*/
     --DARK-RED: #e21010e1;
+    --SEMI-DARG-GRAY: #333; /*for hover text*/
 
 
     /*SHADOW*/    /*-3px 3px 4px */
@@ -38,17 +47,27 @@ a
     color: inherit;
 }
 
-.addToCartPopUp
+#addToCartPopUp
 {
     display: none;
     position: fixed;
+    background-color: rgb(2, 197, 2);
+    padding: 1px 5px;
+    color: black;
+    border-radius: 3px;
+    z-index: 2000;
     top: 50%;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 15px;
-    color: whitesmoke;
-    left: 32%;
-    padding: 7px 12px;
-    background-color: #333;   
+    left: 50%;
+    transform: translateX(-50%, -50%);
 }
 
+@keyframes popAndFade {
+    0% { opacity: 0; transform: translate(-50%, -40%) scale(0.8); }
+    20% { opacity: 1; transform: translate(-50%, -50%) scale(1.1); }
+    80% { opacity: 1; transform: translate(-50%, -50%) scale(1); }
+    100% { opacity: 0; transform: translate(-50%, -60%) scale(0.9); }
+}
+.fadePop
+{
+    animation: popAndFade 1s ease-in-out forwards;
+}

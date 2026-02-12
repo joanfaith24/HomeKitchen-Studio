@@ -8,7 +8,7 @@ const closeSignUpForm = document.getElementById('closeSignUpFormButton');
 
 function openSignIn()
 {
-    signInOverlay.style.display = "flex";
+    signInOverlay.style.display= "flex";
     signUpOverlay.style.display = "none";
 }
 

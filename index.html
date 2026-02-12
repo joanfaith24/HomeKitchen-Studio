@@ -28,14 +28,31 @@
             <a href="index.html"><img class="pageLogo" src="images/LOGO&BACKGROUND/official logo TRANSPARTENT BG - CROPPED.png" alt="Home Kitchen Studio Logo"></a>
         </div>
         <div class="inputBarHeader">
-            <input type="text" placeholder="Search...">
+            <input type="text" placeholder="Search..." id="searchInput">
             <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
         </div>
         <div class="cart-Log-Call-Group">
-            <div>
-                <a href="cart.html"><i class="fa-solid fa-cart-shopping"></i></a>
-                <p id="cartBadge" class="cartBadge"></p>
+            <div id="cartIcon" class="cartIcon"  onclick="openCartPop(event)">
+                <a href="javascript:void(0)"><i class="fa-solid fa-cart-shopping"></i></a>
+                <p id="cartBadge" class="cartBadge">0</p>
+
+                <div class="cartSidePopUpPage hideCart">
+                    <div class="cartPageHeader">
+                        <p id="cartHeaderLabel" class="cartHeaderLabel">Cart Items:<span class="totalItems" id="totalItems">1</span></p>
+                        <p id="closeCartPop" class="closeCartPop" onclick="closePop(event)">&times;</p>
+                    </div>
+
+                    <div id="cartDetails" class="cartDetails">
+                        <p class="cartTotalLabel" id="cartTotalLabel">Cart Total: <strong><span id="subtotalPrice" class="subTotalPrice">0.00</span></strong></p>
+                        <button id="checkoutSideCartButton" class="checkoutSideCartButton">Proceed to Checkout</button>
+                    </div>
+
+                    <div id="itemsOnCartDetails" class="itemsOnCartDetails">
+                    </div>
+                </div>
             </div>
+
+
             <div>
                 <a href="javascript:void(0)" onclick="openSignIn()"><i class="fa-solid fa-user"></i></a>
             </div>
@@ -74,7 +91,8 @@
         </figure>
         <figcaption class="productCaption">Mini Portable Lunch Carrier</figcaption>
         <p class="price">₱195.00</p>
-        <button id="addToCart" class="addToCart">Add to Cart</button>
+        <div class="addandTrashSection">
+        <button id="addToCart" class="addToCart">Add to Cart</button><span><i class="fa-solid fa-trash-can trash"></i></span></div>
     </div>
     
     <div class="eachProduct">
@@ -524,14 +542,14 @@
 </div>
 
 <div class="addToCartPopUp" id="addToCartPopUp">
-    <p id="addToCartMessage">Added to cart!</p>
+    <p>Added to Cart!</p>
 </div>
-
 
 
 <script src="/JS FOLDER/backtotop.js"></script>
 <script src="/JS FOLDER/signIn&signUpFORM.js"></script>
 <script src="/JS FOLDER/showhidePASSWORD&SignInButton.js"></script>
-<script src="/JS FOLDER/addToCart.js"></script>
+<script src="/JS FOLDER/cartBadge&ADDTOCART.js"></script>
+<script src="/JS FOLDER/open&closeCart.js"></script>
 </body>
 </html>
