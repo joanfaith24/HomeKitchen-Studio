@@ -30,6 +30,8 @@ function openSignIn()
 {
     signInOverlay.style.display= "flex";
     signUpOverlay.style.display = "none";
+
+    togglePasswordSignUp();
 }
 
 function openSignUp()
@@ -37,20 +39,25 @@ function openSignUp()
     signInOverlay.style.display = "none";
     signUpOverlay.style.display = "flex";
 
-
-
-    togglePasswordSignUp();
+togglePasswordSignUp();
 }
 
-closeSignInForm.onclick = function ()
-{
+
+
+closeSignInForm.addEventListener('click', ()=>{
+    {
     signInOverlay.style.display = "none";
-}
+    }
+})
 
-closeSignUpForm.onclick = function ()
-{
+
+
+closeSignUpForm.addEventListener('click', ()=>{
+    {
     signUpOverlay.style.display = "none";
-}
+    }
+})
+
 
 function switchToSignIn()
 {

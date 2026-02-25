@@ -268,17 +268,3 @@ margin-left: -10px;
     width: 40px;
     padding: 0 4px;
 }
-
-.eachTrash
-{
-    visibility: hidden;
-    margin: 0 8px;
-    font-size: 15px;
-    margin-top: 2px;
-}
-
-.fa-trash-can:hover
-{
-    color: red;
-    cursor: pointer;
-}

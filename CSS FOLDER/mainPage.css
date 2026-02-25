@@ -113,3 +113,22 @@
 {
     border: 0.01px solid #333;
 }
+
+.addandTrashSection
+{
+    position: relative;
+}
+
+.fa-trash-can
+{
+    visibility: hidden;
+    position: absolute;
+    right: -30px;
+    top: 3px;
+
+}
+
+.fa-trash-can:hover
+{
+    color: red;
+}
