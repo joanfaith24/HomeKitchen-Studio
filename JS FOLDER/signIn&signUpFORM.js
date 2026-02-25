@@ -6,6 +6,26 @@ const closeSignInForm = document.getElementById('closeSignInFormButton');
 const closeSignUpForm = document.getElementById('closeSignUpFormButton');
 
 
+
+function togglePasswordSignUp()
+{
+    let email = document.querySelector('#email');
+    let password = document.querySelector('.password');
+    let passwordToggle = document.querySelector('.togglePasswordSignUp');
+
+    if(password.type === "password")
+    {
+        password.type = "text";
+        passwordToggle.classList.replace('fa-eye', 'fa-eye-slash');
+    }
+    else
+    {
+        password.type= "password";
+        passwordToggle.classList.replace('fa-eye-slash', 'fa-eye');
+    }
+};
+
+
 function openSignIn()
 {
     signInOverlay.style.display= "flex";
@@ -17,6 +37,9 @@ function openSignUp()
     signInOverlay.style.display = "none";
     signUpOverlay.style.display = "flex";
 
+
+
+    togglePasswordSignUp();
 }
 
 closeSignInForm.onclick = function ()

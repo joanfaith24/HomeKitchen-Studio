@@ -11,51 +11,122 @@
     <link rel="stylesheet" href="../CSS FOLDER/mainPage.css">
     <link rel="stylesheet" href="../CSS FOLDER/footermobile.css">
     <link rel="stylesheet" href="../CSS FOLDER/backtotop.css">
-    
+    <link rel="stylesheet" href="../CSS FOLDER/signIn.css">
+    <link rel="stylesheet" href="../CSS FOLDER/signUp.css">
 
-    <link rel="icon" type="image/png" href="../images/LOGO&BACKGROUND/official logo TRANSPARTENT BG - CROPPED.png">
+    <link rel="icon" type="image/png" href="images/LOGO&BACKGROUND/official logo TRANSPARTENT BG - CROPPED.png">
 
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"><link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    
 </head>
 
 <body>
     <header class="headerGroup">
+        <div class="burgerIcon" id="burgerIcon" onclick="openBurger()">
+            <div class="burgerLine"></div>
+            <div class="burgerLine"></div>
+            <div class="burgerLine"></div>
+        </div>
         <div class="pageLogoBox">
             <a href="/index.html"><img class="pageLogo" src="/images/LOGO&BACKGROUND/official logo TRANSPARTENT BG - CROPPED.png" alt="Home Kitchen Studio Logo"></a>
         </div>
-        <div class="inputBarHeader">
-            <input type="text" placeholder="Search...">
-            <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
-        </div>
         <div class="cart-Log-Call-Group">
-            <div>
-                <a href="/cart.html"><i class="fa-solid fa-cart-shopping"></i></a>
+            <div id="cartIcon" class="cartIcon"  onclick="openCartPop(event)">
+                <a href="javascript:void(0)"><i class="fa-solid fa-cart-shopping"></i></a>
+                <p id="cartBadge" class="cartBadge">0</p>
+
+                <div class="cartSidePopUpPage hideCart">
+                    <div class="cartPageHeader">
+                        <p id="cartHeaderLabel" class="cartHeaderLabel">Cart Items:<span class="totalItems" id="totalItems">0</span></p>
+                        <p id="closeCartPop" class="closeCartPop" onclick="closePop(event)">&times;</p>
+                    </div>
+
+                    <div id="cartDetails" class="cartDetails">
+                        <p class="cartTotalLabel" id="cartTotalLabel">Cart Total: <strong><span id="subtotalPrice" class="subTotalPrice">0.00</span></strong></p>
+                        <button id="checkoutSideCartButton" class="checkoutSideCartButton" onclick="proceedToCheckout()">Proceed to Checkout</button>
+                    </div>
+
+                    <div id="itemsOnCartDetails" class="itemsOnCartDetails">
+                    </div>
+                </div>
             </div>
+
+
             <div>
-                <a href="/signin.html"><i class="fa-solid fa-user"></i></a>
+                <a href="javascript:void(0)" onclick="openSignIn()"><i class="fa-solid fa-user"></i></a>
             </div>
-            <div>
-                <a href="/contactus.html"><i class="fa-solid fa-phone"></i></a>
-            </div>
+
         </div>
     </header>
-    <hr>
+        <div class="inputBarHeader">
+            <input type="text" placeholder="Search product here..." id="searchInput">
+            <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
+        </div>
 
-<nav class="categories">
-    <a href="accessories.html">ACCESSORIES</a>
-    <a href="bakingtools.html">BAKING TOOLS</a>
-    <a href="storage.html">STORAGE</a>
-    <a href="glasswares.html">GLASSWARES</a>
-    <a href="kitchenappliances.html">KITCHEN APPLIANCES</a>
-    <a href="knives.html">KNIVES</a>
-    <a href="cookwares.html">COOKWARES</a>
-    <a href="utensils.html">UTENSILS</a>
+<nav class="categories" id="categories">
+    <span><i class="fa-solid fa-xmark" onclick="closeCatPop()"></i></span>
+    <div class="eachCategory">
+        <a href="/HTML-CATEGORIES/accessories.html">ACCESSORIES</a>
+    </div>
+    <div class="eachCategory">
+        <a href="/HTML-CATEGORIES/bakingtools.html">BAKING TOOLS</a>
+    </div>
+    <div class="eachCategory">
+        <a href="/HTML-CATEGORIES/storage.html">STORAGE</a>
+        <button onclick="storage()"><i class="fa-solid fa-chevron-right"></i></button>
+    </div>
+    <div class="eachCategory">
+        <a href="/HTML-CATEGORIES/glasswares.html">GLASSWARES</a>
+        <button onclick="glasswares()"><i class="fa-solid fa-chevron-right"></i></button>
+    </div>
+    <div class="eachCategory">
+        <a href="/HTML-CATEGORIES/kitchenappliances.html">KITCHEN APPLIANCES</a>
+    </div>
+    <div class="eachCategory">
+        <a href="/HTML-CATEGORIES/knives.html">KNIVES</a>
+        <button onclick="knives()"><i class="fa-solid fa-chevron-right"></i></button>
+    </div>
+    <div class="eachCategory">
+        <a href="/HTML-CATEGORIES/cookwares.html">COOKWARES</a>
+        <button onclick="cookwares()"><i class="fa-solid fa-chevron-right"></i></button>
+    </div>
+    <div class="eachCategory">
+        <a href="/HTML-CATEGORIES/utensils.html">UTENSILS</a>
+        <button onclick="utensils()"><i class="fa-solid fa-chevron-right"></i></button>
+    </div>
 </nav>
 <hr>
+
+<div class="categorySubGroup">
+    <ul class="eachCategorySubStorage">
+        <a href="/HTML-CATEGORIES/storage.html" >Single Storage</a>
+        <a href="/HTML-CATEGORIES/storage.html">Storage Set</a>
+    </ul>
+    <ul class="eachCategorySubGlasses">
+        <a href="/HTML-CATEGORIES/glasswares.html">Wine Glasses</a>
+        <a href="/HTML-CATEGORIES/glasswares.html">Mugs</a>
+        <a href="/HTML-CATEGORIES/glasswares.html">Drinking Glasses</a>
+    </ul>
+    <ul class="eachCategorySubKnife">
+        <a href="/HTML-CATEGORIES/knives.html">Knife Set</a>
+        <a href="/HTML-CATEGORIES/knives.html">Bread Knife</a>
+        <a href="/HTML-CATEGORIES/knives.html">Paring Knife</a>
+        <a href="/HTML-CATEGORIES/knives.html">Utility Knife</a>
+    </ul>
+    <ul class="eachCategorySubCookwares">
+        <a href="/HTML-CATEGORIES/cookwares.html">Frying Pan</a>
+        <a href="/HTML-CATEGORIES/cookwares.html">Grill Pan</a>
+        <a href="/HTML-CATEGORIES/cookwares.html">Pots</a>
+    </ul>
+    <ul class="eachCategorySubUtensils">
+        <a href="/HTML-CATEGORIES/utensils.html">Utensil Set</a>
+        <a href="/HTML-CATEGORIES/utensils.html">Spoon, Fork & Ladle</a>
+        <a href="/HTML-CATEGORIES/utensils.html">Spatula and Turner</a>
+    </ul>
+</div>
+
 
 
 <div class="banners">
@@ -71,7 +142,7 @@
         </figure>
         <figcaption class="productCaption">12inches x 10meters Plastic Wrap</figcaption>
         <p class="price">₱239.00</p>
-        <button id="addToCart" class="addToCart">Add to Cart</button>
+        <button class="addToCart">Add to Cart</button>
     </div>
 
     <div class="eachProduct">
@@ -80,7 +151,7 @@
         </figure>
         <figcaption class="productCaption">12inches x 10meters Aluminum Foil</figcaption>
         <p class="price">₱310.00</p>
-        <button id="addToCart" class="addToCart">Add to Cart</button>
+        <button class="addToCart">Add to Cart</button>
     </div>
 
     <div class="eachProduct">
@@ -89,7 +160,7 @@
         </figure>
         <figcaption class="productCaption">Aluminum Paper Towel with Holder</figcaption>
         <p class="price">₱179.00</p>
-        <button id="addToCart" class="addToCart">Add to Cart</button>
+        <button class="addToCart">Add to Cart</button>
     </div>
 
     <div class="eachProduct">
@@ -98,7 +169,7 @@
         </figure>
         <figcaption class="productCaption">9inches Single Knitted Trivet</figcaption>
         <p class="price">₱110.00</p>
-        <button id="addToCart" class="addToCart">Add to Cart</button>
+        <button class="addToCart">Add to Cart</button>
     </div>
 
         <div class="eachProduct">
@@ -107,7 +178,7 @@
         </figure>
         <figcaption class="productCaption">Plain Black Apron with Pocket</figcaption>
         <p class="price">₱174.00</p>
-        <button id="addToCart" class="addToCart">Add to Cart</button>
+        <button class="addToCart">Add to Cart</button>
     </div>
 
     <div class="eachProduct">
@@ -116,7 +187,7 @@
         </figure>
         <figcaption class="productCaption">Transparent Vacuum Sealer Rolls</figcaption>
         <p class="price">₱275.00</p>
-        <button id="addToCart" class="addToCart">Add to Cart</button>
+        <button class="addToCart">Add to Cart</button>
     </div>
 
 
@@ -126,7 +197,7 @@
         </figure>
         <figcaption class="productCaption">Fruit-Patterned Table Cloth 60inches x 90inches</figcaption>
         <p class="price">₱190.00</p>
-        <button id="addToCart" class="addToCart">Add to Cart</button>
+        <button class="addToCart">Add to Cart</button>
     </div>
 
     <div class="eachProduct">
@@ -135,7 +206,7 @@
         </figure>
         <figcaption class="productCaption">Colorful Fruit and Vegetable Dishcloths</figcaption>
         <p class="price">₱358.00</p>
-        <button id="addToCart" class="addToCart">Add to Cart</button>
+        <button class="addToCart">Add to Cart</button>
     </div>
 
     <div class="eachProduct">
@@ -144,7 +215,7 @@
         </figure>
         <figcaption class="productCaption">Fruit-Themed Square Coasters</figcaption>
         <p class="price">₱295.00</p>
-        <button id="addToCart" class="addToCart">Add to Cart</button>
+        <button class="addToCart">Add to Cart</button>
     </div>
 
     <div class="eachProduct">
@@ -153,7 +224,7 @@
         </figure>
         <figcaption class="productCaption">Industrial Napkin Holder with Clip</figcaption>
         <p class="price">₱95.00</p>
-        <button id="addToCart" class="addToCart">Add to Cart</button>
+        <button class="addToCart">Add to Cart</button>
     </div>
 
     <div class="eachProduct">
@@ -162,7 +233,7 @@
         </figure>
         <figcaption class="productCaption">White Fruit-Patterned Oven Mitt</figcaption>
         <p class="price">₱187.00</p>
-        <button id="addToCart" class="addToCart">Add to Cart</button>
+        <button class="addToCart">Add to Cart</button>
     </div>
 
     <div class="eachProduct">
@@ -171,7 +242,7 @@
         </figure>
         <figcaption class="productCaption">Fruit-Patterned Square Pot Holder</figcaption>
         <p class="price">₱104.00</p>
-        <button id="addToCart" class="addToCart">Add to Cart</button>
+        <button class="addToCart">Add to Cart</button>
     </div>
 
     <div class="eachProduct">
@@ -180,7 +251,7 @@
         </figure>
         <figcaption class="productCaption">Shades of Brown Pot Protectors</figcaption>
         <p class="price">₱422.00</p>
-        <button id="addToCart" class="addToCart">Add to Cart</button>
+        <button class="addToCart">Add to Cart</button>
     </div>
 
     <div class="eachProduct">
@@ -189,7 +260,7 @@
         </figure>
         <figcaption class="productCaption">Stainless Steel Splatter Screen</figcaption>
         <p class="price">₱139.00</p>
-        <button id="addToCart" class="addToCart">Add to Cart</button>
+        <button class="addToCart">Add to Cart</button>
     </div>
 
     <div class="eachProduct">
@@ -198,7 +269,7 @@
         </figure>
         <figcaption class="productCaption">Compact two-stage Knife Sharpener</figcaption>
         <p class="price">₱597.00</p>
-        <button id="addToCart" class="addToCart">Add to Cart</button>
+        <button class="addToCart">Add to Cart</button>
     </div>
 
     <div class="eachProduct">
@@ -207,7 +278,7 @@
         </figure>
         <figcaption class="productCaption">Blue-colored Seafood Shears</figcaption>
         <p class="price">₱139.00</p>
-        <button id="addToCart" class="addToCart">Add to Cart</button>
+        <button class="addToCart">Add to Cart</button>
     </div> 
 </div>
 
@@ -369,5 +440,10 @@
 </div>
 
 <script src="/JS FOLDER/backtotop.js"></script>
+<script src="/JS FOLDER/signIn&signUpFORM.js"></script>
+<script src="/JS FOLDER/showhidePASSWORD&SignInButton.js"></script>
+<script src="/JS FOLDER/cartBadge&ADDTOCART.js"></script>
+<script src="/JS FOLDER/open&closeCart.js"></script>
+<script src="/JS FOLDER/openBurger.js"></script>
 </body>
 </html>

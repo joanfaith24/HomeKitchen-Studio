@@ -4,7 +4,7 @@
 let password = document.getElementById('password');
 let passwordToggle = document.getElementById('togglePassword');
 
-passwordToggle.onclick = function ()
+function togglePassword()
 {
     if(password.type === "password")
     {
@@ -17,7 +17,6 @@ passwordToggle.onclick = function ()
         passwordToggle.classList.replace('fa-eye-slash', 'fa-eye');
     }
 };
-
 
 
 

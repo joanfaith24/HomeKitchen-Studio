@@ -11,50 +11,122 @@
     <link rel="stylesheet" href="../CSS FOLDER/mainPage.css">
     <link rel="stylesheet" href="../CSS FOLDER/footermobile.css">
     <link rel="stylesheet" href="../CSS FOLDER/backtotop.css">
+    <link rel="stylesheet" href="../CSS FOLDER/signIn.css">
+    <link rel="stylesheet" href="../CSS FOLDER/signUp.css">
 
-    <link rel="icon" type="image/png" href="../images/LOGO&BACKGROUND/official logo TRANSPARTENT BG - CROPPED.png">
+    <link rel="icon" type="image/png" href="images/LOGO&BACKGROUND/official logo TRANSPARTENT BG - CROPPED.png">
 
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"><link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    
 </head>
 
 <body>
     <header class="headerGroup">
+        <div class="burgerIcon" id="burgerIcon" onclick="openBurger()">
+            <div class="burgerLine"></div>
+            <div class="burgerLine"></div>
+            <div class="burgerLine"></div>
+        </div>
         <div class="pageLogoBox">
             <a href="/index.html"><img class="pageLogo" src="/images/LOGO&BACKGROUND/official logo TRANSPARTENT BG - CROPPED.png" alt="Home Kitchen Studio Logo"></a>
         </div>
-        <div class="inputBarHeader">
-            <input type="text" placeholder="Search...">
-            <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
-        </div>
         <div class="cart-Log-Call-Group">
-            <div>
-                <a href="/cart.html"><i class="fa-solid fa-cart-shopping"></i></a>
+            <div id="cartIcon" class="cartIcon"  onclick="openCartPop(event)">
+                <a href="javascript:void(0)"><i class="fa-solid fa-cart-shopping"></i></a>
+                <p id="cartBadge" class="cartBadge">0</p>
+
+                <div class="cartSidePopUpPage hideCart">
+                    <div class="cartPageHeader">
+                        <p id="cartHeaderLabel" class="cartHeaderLabel">Cart Items:<span class="totalItems" id="totalItems">0</span></p>
+                        <p id="closeCartPop" class="closeCartPop" onclick="closePop(event)">&times;</p>
+                    </div>
+
+                    <div id="cartDetails" class="cartDetails">
+                        <p class="cartTotalLabel" id="cartTotalLabel">Cart Total: <strong><span id="subtotalPrice" class="subTotalPrice">0.00</span></strong></p>
+                        <button id="checkoutSideCartButton" class="checkoutSideCartButton" onclick="proceedToCheckout()">Proceed to Checkout</button>
+                    </div>
+
+                    <div id="itemsOnCartDetails" class="itemsOnCartDetails">
+                    </div>
+                </div>
             </div>
+
+
             <div>
-                <a href="/signin.html"><i class="fa-solid fa-user"></i></a>
+                <a href="javascript:void(0)" onclick="openSignIn()"><i class="fa-solid fa-user"></i></a>
             </div>
-            <div>
-                <a href="/contactus.html"><i class="fa-solid fa-phone"></i></a>
-            </div>
+
         </div>
     </header>
-    <hr>
+        <div class="inputBarHeader">
+            <input type="text" placeholder="Search product here..." id="searchInput">
+            <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
+        </div>
 
-<nav class="categories">
-    <a href="accessories.html">ACCESSORIES</a>
-    <a href="accessories.html">BAKING TOOLS</a>
-    <a href="storage.html">STORAGE</a>
-    <a href="glasswares.html">GLASSWARES</a>
-    <a href="kitchenappliances.html">KITCHEN APPLIANCES</a>
-    <a href="knives.html">KNIVES</a>
-    <a href="cookwares.html">COOKWARES</a>
-    <a href="utensils.html">UTENSILS</a>
+<nav class="categories" id="categories">
+    <span><i class="fa-solid fa-xmark" onclick="closeCatPop()"></i></span>
+    <div class="eachCategory">
+        <a href="/HTML-CATEGORIES/accessories.html">ACCESSORIES</a>
+    </div>
+    <div class="eachCategory">
+        <a href="/HTML-CATEGORIES/bakingtools.html">BAKING TOOLS</a>
+    </div>
+    <div class="eachCategory">
+        <a href="/HTML-CATEGORIES/storage.html">STORAGE</a>
+        <button onclick="storage()"><i class="fa-solid fa-chevron-right"></i></button>
+    </div>
+    <div class="eachCategory">
+        <a href="/HTML-CATEGORIES/glasswares.html">GLASSWARES</a>
+        <button onclick="glasswares()"><i class="fa-solid fa-chevron-right"></i></button>
+    </div>
+    <div class="eachCategory">
+        <a href="/HTML-CATEGORIES/kitchenappliances.html">KITCHEN APPLIANCES</a>
+    </div>
+    <div class="eachCategory">
+        <a href="/HTML-CATEGORIES/knives.html">KNIVES</a>
+        <button onclick="knives()"><i class="fa-solid fa-chevron-right"></i></button>
+    </div>
+    <div class="eachCategory">
+        <a href="/HTML-CATEGORIES/cookwares.html">COOKWARES</a>
+        <button onclick="cookwares()"><i class="fa-solid fa-chevron-right"></i></button>
+    </div>
+    <div class="eachCategory">
+        <a href="/HTML-CATEGORIES/utensils.html">UTENSILS</a>
+        <button onclick="utensils()"><i class="fa-solid fa-chevron-right"></i></button>
+    </div>
 </nav>
 <hr>
+
+<div class="categorySubGroup">
+    <ul class="eachCategorySubStorage">
+        <a href="/HTML-CATEGORIES/storage.html" >Single Storage</a>
+        <a href="/HTML-CATEGORIES/storage.html">Storage Set</a>
+    </ul>
+    <ul class="eachCategorySubGlasses">
+        <a href="/HTML-CATEGORIES/glasswares.html">Wine Glasses</a>
+        <a href="/HTML-CATEGORIES/glasswares.html">Mugs</a>
+        <a href="/HTML-CATEGORIES/glasswares.html">Drinking Glasses</a>
+    </ul>
+    <ul class="eachCategorySubKnife">
+        <a href="/HTML-CATEGORIES/knives.html">Knife Set</a>
+        <a href="/HTML-CATEGORIES/knives.html">Bread Knife</a>
+        <a href="/HTML-CATEGORIES/knives.html">Paring Knife</a>
+        <a href="/HTML-CATEGORIES/knives.html">Utility Knife</a>
+    </ul>
+    <ul class="eachCategorySubCookwares">
+        <a href="/HTML-CATEGORIES/cookwares.html">Frying Pan</a>
+        <a href="/HTML-CATEGORIES/cookwares.html">Grill Pan</a>
+        <a href="/HTML-CATEGORIES/cookwares.html">Pots</a>
+    </ul>
+    <ul class="eachCategorySubUtensils">
+        <a href="/HTML-CATEGORIES/utensils.html">Utensil Set</a>
+        <a href="/HTML-CATEGORIES/utensils.html">Spoon, Fork & Ladle</a>
+        <a href="/HTML-CATEGORIES/utensils.html">Spatula and Turner</a>
+    </ul>
+</div>
+
 
 
 <div class="banners">
@@ -71,7 +143,7 @@
         </figure>
         <figcaption class="productCaption">12pcs Kitchen Knife Block Set</figcaption>
         <p class="price">₱2,455.00</p>
-        <button id="addToCart" class="addToCart">Add to Cart</button>
+        <button class="addToCart">Add to Cart</button>
     </div>
 
     <div class="eachProduct">
@@ -80,7 +152,7 @@
         </figure>
         <figcaption class="productCaption">6pcs Elegant Kitchen Knife Set</figcaption>
         <p class="price">₱1,100.00</p>
-        <button id="addToCart" class="addToCart">Add to Cart</button>
+        <button class="addToCart">Add to Cart</button>
     </div>
 
     <div class="eachProduct">
@@ -89,7 +161,7 @@
         </figure>
         <figcaption class="productCaption">5pcs Knife Block Set with Wood Handle</figcaption>
         <p class="price">₱1,499.00</p>
-        <button id="addToCart" class="addToCart">Add to Cart</button>
+        <button class="addToCart">Add to Cart</button>
     </div>
 
     <div class="eachProduct">
@@ -98,7 +170,7 @@
         </figure>
         <figcaption class="productCaption">6pcs Stainless Steel Knife Roll Set</figcaption>
         <p class="price">₱1,359.00</p>
-        <button id="addToCart" class="addToCart">Add to Cart</button>
+        <button class="addToCart">Add to Cart</button>
     </div>
 
     <div class="eachProduct">
@@ -107,7 +179,7 @@
         </figure>
         <figcaption class="productCaption">5pcs Stainless Steel Knives with Magnetic Holder</figcaption>
         <p class="price">₱1,560.00</p>
-        <button id="addToCart" class="addToCart">Add to Cart</button>
+        <button class="addToCart">Add to Cart</button>
     </div>
 
     <div class="eachProduct">
@@ -116,7 +188,7 @@
         </figure>
         <figcaption class="productCaption">4pcs Kitchen Knife Block Set</figcaption>
         <p class="price">₱1,780.00</p>
-        <button id="addToCart" class="addToCart">Add to Cart</button>
+        <button class="addToCart">Add to Cart</button>
     </div>
 
     <div class="eachProduct">
@@ -125,7 +197,7 @@
         </figure>
         <figcaption class="productCaption">7pcs Chef's Choice Knife Set</figcaption>
         <p class="price">₱2,370.00</p>
-        <button id="addToCart" class="addToCart">Add to Cart</button>
+        <button class="addToCart">Add to Cart</button>
     </div>
 
     <div class="eachProduct">
@@ -134,7 +206,7 @@
         </figure>
         <figcaption class="productCaption">5pcs Floral Handle Knives with Magnetic Holder</figcaption>
         <p class="price">₱1,945.00</p>
-        <button id="addToCart" class="addToCart">Add to Cart</button>
+        <button class="addToCart">Add to Cart</button>
     </div>
 </div>
 
@@ -151,7 +223,7 @@
         </figure>
         <figcaption class="productCaption">10inches Commercial Bread Knife</figcaption>
         <p class="price">₱239.00</p>
-        <button id="addToCart" class="addToCart">Add to Cart</button>
+        <button class="addToCart">Add to Cart</button>
     </div>
 
     <div class="eachProduct">
@@ -160,7 +232,7 @@
         </figure>
         <figcaption class="productCaption">9inches Modern Offset Bread Knife</figcaption>
         <p class="price">₱320.00</p>
-        <button id="addToCart" class="addToCart">Add to Cart</button>
+        <button class="addToCart">Add to Cart</button>
     </div>
 
     <div class="eachProduct">
@@ -169,7 +241,7 @@
         </figure>
         <figcaption class="productCaption">8inches Bread Knife with Sheath</figcaption>
         <p class="price">₱399.00</p>
-        <button id="addToCart" class="addToCart">Add to Cart</button>
+        <button class="addToCart">Add to Cart</button>
     </div>
 
     <div class="eachProduct">
@@ -178,7 +250,7 @@
         </figure>
         <figcaption class="productCaption">10inches Confectioner's Knife</figcaption>
         <p class="price">₱305.00</p>
-        <button id="addToCart" class="addToCart">Add to Cart</button>
+        <button class="addToCart">Add to Cart</button>
     </div>
 
     <div class="eachProduct">
@@ -187,7 +259,7 @@
         </figure>
         <figcaption class="productCaption">10inches Curved Bread Knife</figcaption>
         <p class="price">₱299.00</p>
-        <button id="addToCart" class="addToCart">Add to Cart</button>
+        <button class="addToCart">Add to Cart</button>
     </div>
 
     <div class="eachProduct">
@@ -196,7 +268,7 @@
         </figure>
         <figcaption class="productCaption">10inches Classic Wide Bread Knife</figcaption>
         <p class="price">₱420.00</p>
-        <button id="addToCart" class="addToCart">Add to Cart</button>
+        <button class="addToCart">Add to Cart</button>
     </div>
 
     <div class="eachProduct">
@@ -205,7 +277,7 @@
         </figure>
         <figcaption class="productCaption">9inches Curved Bread Knife</figcaption>
         <p class="price">₱365.00</p>
-        <button id="addToCart" class="addToCart">Add to Cart</button>
+        <button class="addToCart">Add to Cart</button>
     </div>
 
     <div class="eachProduct">
@@ -214,7 +286,7 @@
         </figure>
         <figcaption class="productCaption">8inches Professional Bread Knife</figcaption>
         <p class="price">₱390.00</p>
-        <button id="addToCart" class="addToCart">Add to Cart</button>
+        <button class="addToCart">Add to Cart</button>
     </div>
 </div>
 
@@ -230,7 +302,7 @@
         </figure>
         <figcaption class="productCaption">3.5inches Paring Knife with Black Handle</figcaption>
         <p class="price">₱310.00</p>
-        <button id="addToCart" class="addToCart">Add to Cart</button>
+        <button class="addToCart">Add to Cart</button>
     </div>
 
     <div class="eachProduct">
@@ -239,7 +311,7 @@
         </figure>
         <figcaption class="productCaption">3.5inches White Paring Knife</figcaption>
         <p class="price">₱355.00</p>
-        <button id="addToCart" class="addToCart">Add to Cart</button>
+        <button class="addToCart">Add to Cart</button>
     </div>
 
     <div class="eachProduct">
@@ -257,7 +329,7 @@
         </figure>
         <figcaption class="productCaption">4inches Stainless Steel Paring Knife</figcaption>
         <p class="price">₱290.00</p>
-        <button id="addToCart" class="addToCart">Add to Cart</button>
+        <button class="addToCart">Add to Cart</button>
     </div>
 
     <div class="eachProduct">
@@ -266,7 +338,7 @@
         </figure>
         <figcaption class="productCaption">4inches Paring Knife with Wooden Handle</figcaption>
         <p class="price">₱265.00</p>
-        <button id="addToCart" class="addToCart">Add to Cart</button>
+        <button class="addToCart">Add to Cart</button>
     </div>
 
     <div class="eachProduct">
@@ -275,7 +347,7 @@
         </figure>
         <figcaption class="productCaption">4inches Vegetable Knife with Wood Handle</figcaption>
         <p class="price">₱248.00</p>
-        <button id="addToCart" class="addToCart">Add to Cart</button>
+        <button class="addToCart">Add to Cart</button>
     </div>
 
     <div class="eachProduct">
@@ -284,7 +356,7 @@
         </figure>
         <figcaption class="productCaption">3inches Serrated Paring Knife</figcaption>
         <p class="price">₱277.00</p>
-        <button id="addToCart" class="addToCart">Add to Cart</button>
+        <button class="addToCart">Add to Cart</button>
     </div>
 
     <div class="eachProduct">
@@ -293,7 +365,7 @@
         </figure>
         <figcaption class="productCaption">3.5inches Green Paring Knife with Sheath</figcaption>
         <p class="price">₱458.00</p>
-        <button id="addToCart" class="addToCart">Add to Cart</button>
+        <button class="addToCart">Add to Cart</button>
     </div>
 </div>
 
@@ -309,7 +381,7 @@
         </figure>
         <figcaption class="productCaption">9inches Stainless Steel Utility Knife</figcaption>
         <p class="price">₱360.00</p>
-        <button id="addToCart" class="addToCart">Add to Cart</button>
+        <button class="addToCart">Add to Cart</button>
     </div>
 
     <div class="eachProduct">
@@ -318,7 +390,7 @@
         </figure>
         <figcaption class="productCaption">8inches Classic Utility Knife</figcaption>
         <p class="price">₱320.00</p>
-        <button id="addToCart" class="addToCart">Add to Cart</button>
+        <button class="addToCart">Add to Cart</button>
     </div>
 
     <div class="eachProduct">
@@ -327,7 +399,7 @@
         </figure>
         <figcaption class="productCaption">6inches Modern Utility Knife</figcaption>
         <p class="price">₱304.00</p>
-        <button id="addToCart" class="addToCart">Add to Cart</button>
+        <button class="addToCart">Add to Cart</button>
     </div>
 
     <div class="eachProduct">
@@ -336,7 +408,7 @@
         </figure>
         <figcaption class="productCaption">5inches White Serrated Utility Knife</figcaption>
         <p class="price">₱480.00</p>
-        <button id="addToCart" class="addToCart">Add to Cart</button>
+        <button class="addToCart">Add to Cart</button>
     </div>
 
     <div class="eachProduct">
@@ -345,7 +417,7 @@
         </figure>
         <figcaption class="productCaption">7inches Stainless Steel Asian Utility Knife</figcaption>
         <p class="price">₱670.00</p>
-        <button id="addToCart" class="addToCart">Add to Cart</button>
+        <button class="addToCart">Add to Cart</button>
     </div>
 
     <div class="eachProduct">
@@ -354,7 +426,7 @@
         </figure>
         <figcaption class="productCaption">6.5inches Master Utility Knife</figcaption>
         <p class="price">₱295.00</p>
-        <button id="addToCart" class="addToCart">Add to Cart</button>
+        <button class="addToCart">Add to Cart</button>
     </div>
 
     <div class="eachProduct">
@@ -363,7 +435,7 @@
         </figure>
         <figcaption class="productCaption">5inches Stainless Steel Utility Knife</figcaption>
         <p class="price">₱259.00</p>
-        <button id="addToCart" class="addToCart">Add to Cart</button>
+        <button class="addToCart">Add to Cart</button>
     </div>
 
     <div class="eachProduct">
@@ -372,7 +444,7 @@
         </figure>
         <figcaption class="productCaption">6inches Serrated Utility Knife</figcaption>
         <p class="price">₱330.00</p>
-        <button id="addToCart" class="addToCart">Add to Cart</button>
+        <button class="addToCart">Add to Cart</button>
     </div>
 </div>
 
@@ -539,5 +611,10 @@
 </div>
 
 <script src="/JS FOLDER/backtotop.js"></script>
+<script src="/JS FOLDER/signIn&signUpFORM.js"></script>
+<script src="/JS FOLDER/showhidePASSWORD&SignInButton.js"></script>
+<script src="/JS FOLDER/cartBadge&ADDTOCART.js"></script>
+<script src="/JS FOLDER/open&closeCart.js"></script>
+<script src="/JS FOLDER/openBurger.js"></script>
 </body>
 </html>

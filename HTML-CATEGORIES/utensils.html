@@ -11,50 +11,123 @@
     <link rel="stylesheet" href="../CSS FOLDER/mainPage.css">
     <link rel="stylesheet" href="../CSS FOLDER/footermobile.css">
     <link rel="stylesheet" href="../CSS FOLDER/backtotop.css">
+    <link rel="stylesheet" href="../CSS FOLDER/signIn.css">
+    <link rel="stylesheet" href="../CSS FOLDER/signUp.css">
 
-    <link rel="icon" type="image/png" href="../images/LOGO&BACKGROUND/official logo TRANSPARTENT BG - CROPPED.png">
+    <link rel="icon" type="image/png" href="images/LOGO&BACKGROUND/official logo TRANSPARTENT BG - CROPPED.png">
 
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"><link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    
 </head>
 
 <body>
     <header class="headerGroup">
+        <div class="burgerIcon" id="burgerIcon" onclick="openBurger()">
+            <div class="burgerLine"></div>
+            <div class="burgerLine"></div>
+            <div class="burgerLine"></div>
+        </div>
         <div class="pageLogoBox">
             <a href="/index.html"><img class="pageLogo" src="/images/LOGO&BACKGROUND/official logo TRANSPARTENT BG - CROPPED.png" alt="Home Kitchen Studio Logo"></a>
         </div>
-        <div class="inputBarHeader">
-            <input type="text" placeholder="Search...">
-            <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
-        </div>
         <div class="cart-Log-Call-Group">
-            <div>
-                <a href="/cart.html"><i class="fa-solid fa-cart-shopping"></i></a>
+            <div id="cartIcon" class="cartIcon"  onclick="openCartPop(event)">
+                <a href="javascript:void(0)"><i class="fa-solid fa-cart-shopping"></i></a>
+                <p id="cartBadge" class="cartBadge">0</p>
+
+                <div class="cartSidePopUpPage hideCart">
+                    <div class="cartPageHeader">
+                        <p id="cartHeaderLabel" class="cartHeaderLabel">Cart Items:<span class="totalItems" id="totalItems">0</span></p>
+                        <p id="closeCartPop" class="closeCartPop" onclick="closePop(event)">&times;</p>
+                    </div>
+
+                    <div id="cartDetails" class="cartDetails">
+                        <p class="cartTotalLabel" id="cartTotalLabel">Cart Total: <strong><span id="subtotalPrice" class="subTotalPrice">0.00</span></strong></p>
+                        <button id="checkoutSideCartButton" class="checkoutSideCartButton" onclick="proceedToCheckout()">Proceed to Checkout</button>
+                    </div>
+
+                    <div id="itemsOnCartDetails" class="itemsOnCartDetails">
+                    </div>
+                </div>
             </div>
+
+
             <div>
-                <a href="/signin.html"><i class="fa-solid fa-user"></i></a>
+                <a href="javascript:void(0)" onclick="openSignIn()"><i class="fa-solid fa-user"></i></a>
             </div>
-            <div>
-                <a href="/contactus.html"><i class="fa-solid fa-phone"></i></a>
-            </div>
+
         </div>
     </header>
-    <hr>
+        <div class="inputBarHeader">
+            <input type="text" placeholder="Search product here..." id="searchInput">
+            <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
+        </div>
 
-<nav class="categories">
-    <a href="accessories.html">ACCESSORIES</a>
-    <a href="bakingtools.html">BAKING TOOLS</a>
-    <a href="storage.html">STORAGE</a>
-    <a href="glasswares.html">GLASSWARES</a>
-    <a href="kitchenappliances.html">KITCHEN APPLIANCES</a>
-    <a href="knives.html">KNIVES</a>
-    <a href="cookwares.html">COOKWARES</a>
-    <a href="utensils.html">UTENSILS</a>
+<nav class="categories" id="categories">
+    <span><i class="fa-solid fa-xmark" onclick="closeCatPop()"></i></span>
+    <div class="eachCategory">
+        <a href="/HTML-CATEGORIES/accessories.html">ACCESSORIES</a>
+    </div>
+    <div class="eachCategory">
+        <a href="/HTML-CATEGORIES/bakingtools.html">BAKING TOOLS</a>
+    </div>
+    <div class="eachCategory">
+        <a href="/HTML-CATEGORIES/storage.html">STORAGE</a>
+        <button onclick="storage()"><i class="fa-solid fa-chevron-right"></i></button>
+    </div>
+    <div class="eachCategory">
+        <a href="/HTML-CATEGORIES/glasswares.html">GLASSWARES</a>
+        <button onclick="glasswares()"><i class="fa-solid fa-chevron-right"></i></button>
+    </div>
+    <div class="eachCategory">
+        <a href="/HTML-CATEGORIES/kitchenappliances.html">KITCHEN APPLIANCES</a>
+    </div>
+    <div class="eachCategory">
+        <a href="/HTML-CATEGORIES/knives.html">KNIVES</a>
+        <button onclick="knives()"><i class="fa-solid fa-chevron-right"></i></button>
+    </div>
+    <div class="eachCategory">
+        <a href="/HTML-CATEGORIES/cookwares.html">COOKWARES</a>
+        <button onclick="cookwares()"><i class="fa-solid fa-chevron-right"></i></button>
+    </div>
+    <div class="eachCategory">
+        <a href="/HTML-CATEGORIES/utensils.html">UTENSILS</a>
+        <button onclick="utensils()"><i class="fa-solid fa-chevron-right"></i></button>
+    </div>
 </nav>
 <hr>
+
+<div class="categorySubGroup">
+    <ul class="eachCategorySubStorage">
+        <a href="/HTML-CATEGORIES/storage.html" >Single Storage</a>
+        <a href="/HTML-CATEGORIES/storage.html">Storage Set</a>
+    </ul>
+    <ul class="eachCategorySubGlasses">
+        <a href="/HTML-CATEGORIES/glasswares.html">Wine Glasses</a>
+        <a href="/HTML-CATEGORIES/glasswares.html">Mugs</a>
+        <a href="/HTML-CATEGORIES/glasswares.html">Drinking Glasses</a>
+    </ul>
+    <ul class="eachCategorySubKnife">
+        <a href="/HTML-CATEGORIES/knives.html">Knife Set</a>
+        <a href="/HTML-CATEGORIES/knives.html">Bread Knife</a>
+        <a href="/HTML-CATEGORIES/knives.html">Paring Knife</a>
+        <a href="/HTML-CATEGORIES/knives.html">Utility Knife</a>
+    </ul>
+    <ul class="eachCategorySubCookwares">
+        <a href="/HTML-CATEGORIES/cookwares.html">Frying Pan</a>
+        <a href="/HTML-CATEGORIES/cookwares.html">Grill Pan</a>
+        <a href="/HTML-CATEGORIES/cookwares.html">Pots</a>
+    </ul>
+    <ul class="eachCategorySubUtensils">
+        <a href="/HTML-CATEGORIES/utensils.html">Utensil Set</a>
+        <a href="/HTML-CATEGORIES/utensils.html">Spoon, Fork & Ladle</a>
+        <a href="/HTML-CATEGORIES/utensils.html">Spatula and Turner</a>
+    </ul>
+</div>
+
+
 
 
 <div class="banners">
@@ -71,7 +144,7 @@
         </figure>
         <figcaption class="productCaption">3pcs Starter Kitchen Tool Set</figcaption>
         <p class="price">₱435.00</p>
-        <button id="addToCart" class="addToCart">Add to Cart</button>
+        <button class="addToCart">Add to Cart</button>
     </div>
 
     <div class="eachProduct">
@@ -80,7 +153,7 @@
         </figure>
         <figcaption class="productCaption">5pcs Stainless Steel Kitchen Tool Set</figcaption>
         <p class="price">₱699.00</p>
-        <button id="addToCart" class="addToCart">Add to Cart</button>
+        <button class="addToCart">Add to Cart</button>
     </div>
 
     <div class="eachProduct">
@@ -89,7 +162,7 @@
         </figure>
         <figcaption class="productCaption">Set of 4 Black Kitchen Utensils</figcaption>
         <p class="price">₱498.00</p>
-        <button id="addToCart" class="addToCart">Add to Cart</button>
+        <button class="addToCart">Add to Cart</button>
     </div>
 
     <div class="eachProduct">
@@ -98,7 +171,7 @@
         </figure>
         <figcaption class="productCaption">3pcs  Stainless Steel Grilling Set</figcaption>
         <p class="price">₱410.00</p>
-        <button id="addToCart" class="addToCart">Add to Cart</button>
+        <button class="addToCart">Add to Cart</button>
     </div>
 
     <div class="eachProduct">
@@ -107,7 +180,7 @@
         </figure>
         <figcaption class="productCaption">Set of 5 NonStick Utensil Set</figcaption>
         <p class="price">₱615.00</p>
-        <button id="addToCart" class="addToCart">Add to Cart</button>
+        <button class="addToCart">Add to Cart</button>
     </div>
 
     <div class="eachProduct">
@@ -116,7 +189,7 @@
         </figure>
         <figcaption class="productCaption">Classic Essential Kitchen Tool Set of 4</figcaption>
         <p class="price">₱679.00</p>
-        <button id="addToCart" class="addToCart">Add to Cart</button>
+        <button class="addToCart">Add to Cart</button>
     </div>
 
     <div class="eachProduct">
@@ -125,7 +198,7 @@
         </figure>
         <figcaption class="productCaption">8pcs Stainless Steel Utensil Set</figcaption>
         <p class="price">₱790.00</p>
-        <button id="addToCart" class="addToCart">Add to Cart</button>
+        <button class="addToCart">Add to Cart</button>
     </div>
 
     <div class="eachProduct">
@@ -134,7 +207,7 @@
         </figure>
         <figcaption class="productCaption">Gray Utensil Crock with Silicone Tools</figcaption>
         <p class="price">₱499.00</p>
-        <button id="addToCart" class="addToCart">Add to Cart</button>
+        <button class="addToCart">Add to Cart</button>
     </div>
 </div>
 
@@ -151,7 +224,7 @@
         </figure>
         <figcaption class="productCaption">Elegant Stainless Steel Flatware Set</figcaption>
         <p class="price">₱365.00</p>
-        <button id="addToCart" class="addToCart">Add to Cart</button>
+        <button class="addToCart">Add to Cart</button>
     </div>
 
     <div class="eachProduct">
@@ -160,7 +233,7 @@
         </figure>
         <figcaption class="productCaption">Set of 5 Stainless Steel Flatware Set</figcaption>
         <p class="price">₱415.00</p>
-        <button id="addToCart" class="addToCart">Add to Cart</button>
+        <button class="addToCart">Add to Cart</button>
     </div>
 
     <div class="eachProduct">
@@ -169,7 +242,7 @@
         </figure>
         <figcaption class="productCaption">Classic Sleek Flatware Set</figcaption>
         <p class="price">₱320.00</p>
-        <button id="addToCart" class="addToCart">Add to Cart</button>
+        <button class="addToCart">Add to Cart</button>
     </div>
 
     <div class="eachProduct">
@@ -178,7 +251,7 @@
         </figure>
         <figcaption class="productCaption">5pcs Modern Flatware Set</figcaption>
         <p class="price">₱309.00</p>
-        <button id="addToCart" class="addToCart">Add to Cart</button>
+        <button class="addToCart">Add to Cart</button>
     </div>
 
     <div class="eachProduct">
@@ -187,7 +260,7 @@
         </figure>
         <figcaption class="productCaption">9pcs  Stainless Steel Elegant Flatware Set</figcaption>
         <p class="price">₱575.00</p>
-        <button id="addToCart" class="addToCart">Add to Cart</button>
+        <button class="addToCart">Add to Cart</button>
     </div>
 
     <div class="eachProduct">
@@ -196,7 +269,7 @@
         </figure>
         <figcaption class="productCaption">12pcs Polished Flatware Set</figcaption>
         <p class="price">₱795.00</p>
-        <button id="addToCart" class="addToCart">Add to Cart</button>
+        <button class="addToCart">Add to Cart</button>
     </div>
 
     <div class="eachProduct">
@@ -205,7 +278,7 @@
         </figure>
         <figcaption class="productCaption">Elegant Copper Flatware Set</figcaption>
         <p class="price">₱499.00</p>
-        <button id="addToCart" class="addToCart">Add to Cart</button>
+        <button class="addToCart">Add to Cart</button>
     </div>
 
     <div class="eachProduct">
@@ -214,7 +287,7 @@
         </figure>
         <figcaption class="productCaption">Set of 12 Wooden Handled Flatware Set</figcaption>
         <p class="price">₱1,105.00</p>
-        <button id="addToCart" class="addToCart">Add to Cart</button>
+        <button class="addToCart">Add to Cart</button>
     </div>
 </div>
 
@@ -232,7 +305,7 @@
         </figure>
         <figcaption class="productCaption">Stainless Steel Fish Turner</figcaption>
         <p class="price">₱278.00</p>
-        <button id="addToCart" class="addToCart">Add to Cart</button>
+        <button class="addToCart">Add to Cart</button>
     </div>
 
     <div class="eachProduct">
@@ -241,7 +314,7 @@
         </figure>
         <figcaption class="productCaption">Black Slotted Spatula</figcaption>
         <p class="price">₱250.00</p>
-        <button id="addToCart" class="addToCart">Add to Cart</button>
+        <button class="addToCart">Add to Cart</button>
     </div>
 
     <div class="eachProduct">
@@ -250,7 +323,7 @@
         </figure>
         <figcaption class="productCaption">Nylon Square Turner</figcaption>
         <p class="price">₱215.00</p>
-        <button id="addToCart" class="addToCart">Add to Cart</button>
+        <button class="addToCart">Add to Cart</button>
     </div>
 
     <div class="eachProduct">
@@ -259,7 +332,7 @@
         </figure>
         <figcaption class="productCaption">Nylon Flexible Turner</figcaption>
         <p class="price">₱220.00</p>
-        <button id="addToCart" class="addToCart">Add to Cart</button>
+        <button class="addToCart">Add to Cart</button>
     </div>
 
     <div class="eachProduct">
@@ -268,7 +341,7 @@
         </figure>
         <figcaption class="productCaption">Cut and Serve Turner</figcaption>
         <p class="price">₱219.00</p>
-        <button id="addToCart" class="addToCart">Add to Cart</button>
+        <button class="addToCart">Add to Cart</button>
     </div>
 
     <div class="eachProduct">
@@ -277,7 +350,7 @@
         </figure>
         <figcaption class="productCaption">Stainless Steel Spatula</figcaption>
         <p class="price">₱299.00</p>
-        <button id="addToCart" class="addToCart">Add to Cart</button>
+        <button class="addToCart">Add to Cart</button>
     </div>
 
     <div class="eachProduct">
@@ -286,7 +359,7 @@
         </figure>
         <figcaption class="productCaption">Cookie Spatula</figcaption>
         <p class="price">₱204.00</p>
-        <button id="addToCart" class="addToCart">Add to Cart</button>
+        <button class="addToCart">Add to Cart</button>
     </div>
 
     <div class="eachProduct">
@@ -295,7 +368,7 @@
         </figure>
         <figcaption class="productCaption">13in. Flexible Turner</figcaption>
         <p class="price">₱249.00</p>
-        <button id="addToCart" class="addToCart">Add to Cart</button>
+        <button class="addToCart">Add to Cart</button>
     </div>
 </div>
 
@@ -458,5 +531,10 @@
 </div>
 
 <script src="/JS FOLDER/backtotop.js"></script>
+<script src="/JS FOLDER/signIn&signUpFORM.js"></script>
+<script src="/JS FOLDER/showhidePASSWORD&SignInButton.js"></script>
+<script src="/JS FOLDER/cartBadge&ADDTOCART.js"></script>
+<script src="/JS FOLDER/open&closeCart.js"></script>
+<script src="/JS FOLDER/openBurger.js"></script>
 </body>
 </html>

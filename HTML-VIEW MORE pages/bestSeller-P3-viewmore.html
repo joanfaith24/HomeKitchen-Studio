@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -10,6 +11,8 @@
     <link rel="stylesheet" href="../CSS FOLDER/mainPage.css">
     <link rel="stylesheet" href="../CSS FOLDER/footermobile.css">
     <link rel="stylesheet" href="../CSS FOLDER/backtotop.css">
+    <link rel="stylesheet" href="../CSS FOLDER/signIn.css">
+    <link rel="stylesheet" href="../CSS FOLDER/signUp.css">
 
     <link rel="icon" type="image/png" href="images/LOGO&BACKGROUND/official logo TRANSPARTENT BG - CROPPED.png">
 
@@ -21,38 +24,108 @@
 
 <body>
     <header class="headerGroup">
-        <div class="pageLogoBox">
-            <a href="/index.html"><img class="pageLogo" src="../images/LOGO&BACKGROUND/official logo TRANSPARTENT BG - CROPPED.png" alt="Home Kitchen Studio Logo"></a>
+        <div class="burgerIcon" id="burgerIcon" onclick="openBurger()">
+            <div class="burgerLine"></div>
+            <div class="burgerLine"></div>
+            <div class="burgerLine"></div>
         </div>
-        <div class="inputBarHeader">
-            <input type="text" placeholder="Search...">
-            <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
+        <div class="pageLogoBox">
+            <a href="/index.html"><img class="pageLogo" src="/images/LOGO&BACKGROUND/official logo TRANSPARTENT BG - CROPPED.png" alt="Home Kitchen Studio Logo"></a>
         </div>
         <div class="cart-Log-Call-Group">
-            <div>
-                <a href="/cart.html"><i class="fa-solid fa-cart-shopping"></i></a>
+            <div id="cartIcon" class="cartIcon"  onclick="openCartPop(event)">
+                <a href="javascript:void(0)"><i class="fa-solid fa-cart-shopping"></i></a>
+                <p id="cartBadge" class="cartBadge">0</p>
+
+                <div class="cartSidePopUpPage hideCart">
+                    <div class="cartPageHeader">
+                        <p id="cartHeaderLabel" class="cartHeaderLabel">Cart Items:<span class="totalItems" id="totalItems">0</span></p>
+                        <p id="closeCartPop" class="closeCartPop" onclick="closePop(event)">&times;</p>
+                    </div>
+
+                    <div id="cartDetails" class="cartDetails">
+                        <p class="cartTotalLabel" id="cartTotalLabel">Cart Total: <strong><span id="subtotalPrice" class="subTotalPrice">0.00</span></strong></p>
+                        <button id="checkoutSideCartButton" class="checkoutSideCartButton" onclick="proceedToCheckout()">Proceed to Checkout</button>
+                    </div>
+
+                    <div id="itemsOnCartDetails" class="itemsOnCartDetails">
+                    </div>
+                </div>
             </div>
+
+
             <div>
-                <a href="/signin.html"><i class="fa-solid fa-user"></i></a>
+                <a href="javascript:void(0)" onclick="openSignIn()"><i class="fa-solid fa-user"></i></a>
             </div>
-            <div>
-                <a href="/contactus.html"><i class="fa-solid fa-phone"></i></a>
-            </div>
+
         </div>
     </header>
-    <hr>
+        <div class="inputBarHeader">
+            <input type="text" placeholder="Search product here..." id="searchInput">
+            <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
+        </div>
 
-<nav class="categories">
-    <a href="/HTML-CATEGORIES/accessories.html">ACCESSORIES</a>
-    <a href="/HTML-CATEGORIES/bakingtools.html">BAKING TOOLS</a>
-    <a href="/HTML-CATEGORIES/storage.html">STORAGE</a>
-    <a href="/HTML-CATEGORIES/glasswares.html">GLASSWARES</a>
-    <a href="/HTML-CATEGORIES/kitchenappliances.html">KITCHEN APPLIANCES</a>
-    <a href="/HTML-CATEGORIES/knives.html">KNIVES</a>
-    <a href="/HTML-CATEGORIES/cookwares.html">COOKWARES</a>
-    <a href="/HTML-CATEGORIES/utensils.html">UTENSILS</a>
+<nav class="categories" id="categories">
+    <span><i class="fa-solid fa-xmark" onclick="closeCatPop()"></i></span>
+    <div class="eachCategory">
+        <a href="/HTML-CATEGORIES/accessories.html">ACCESSORIES</a>
+    </div>
+    <div class="eachCategory">
+        <a href="/HTML-CATEGORIES/bakingtools.html">BAKING TOOLS</a>
+    </div>
+    <div class="eachCategory">
+        <a href="/HTML-CATEGORIES/storage.html">STORAGE</a>
+        <button onclick="storage()"><i class="fa-solid fa-chevron-right"></i></button>
+    </div>
+    <div class="eachCategory">
+        <a href="/HTML-CATEGORIES/glasswares.html">GLASSWARES</a>
+        <button onclick="glasswares()"><i class="fa-solid fa-chevron-right"></i></button>
+    </div>
+    <div class="eachCategory">
+        <a href="/HTML-CATEGORIES/kitchenappliances.html">KITCHEN APPLIANCES</a>
+    </div>
+    <div class="eachCategory">
+        <a href="/HTML-CATEGORIES/knives.html">KNIVES</a>
+        <button onclick="knives()"><i class="fa-solid fa-chevron-right"></i></button>
+    </div>
+    <div class="eachCategory">
+        <a href="/HTML-CATEGORIES/cookwares.html">COOKWARES</a>
+        <button onclick="cookwares()"><i class="fa-solid fa-chevron-right"></i></button>
+    </div>
+    <div class="eachCategory">
+        <a href="/HTML-CATEGORIES/utensils.html">UTENSILS</a>
+        <button onclick="utensils()"><i class="fa-solid fa-chevron-right"></i></button>
+    </div>
 </nav>
 <hr>
+
+<div class="categorySubGroup">
+    <ul class="eachCategorySubStorage">
+        <a href="/HTML-CATEGORIES/storage.html" >Single Storage</a>
+        <a href="/HTML-CATEGORIES/storage.html">Storage Set</a>
+    </ul>
+    <ul class="eachCategorySubGlasses">
+        <a href="/HTML-CATEGORIES/glasswares.html">Wine Glasses</a>
+        <a href="/HTML-CATEGORIES/glasswares.html">Mugs</a>
+        <a href="/HTML-CATEGORIES/glasswares.html">Drinking Glasses</a>
+    </ul>
+    <ul class="eachCategorySubKnife">
+        <a href="/HTML-CATEGORIES/knives.html">Knife Set</a>
+        <a href="/HTML-CATEGORIES/knives.html">Bread Knife</a>
+        <a href="/HTML-CATEGORIES/knives.html">Paring Knife</a>
+        <a href="/HTML-CATEGORIES/knives.html">Utility Knife</a>
+    </ul>
+    <ul class="eachCategorySubCookwares">
+        <a href="/HTML-CATEGORIES/cookwares.html">Frying Pan</a>
+        <a href="/HTML-CATEGORIES/cookwares.html">Grill Pan</a>
+        <a href="/HTML-CATEGORIES/cookwares.html">Pots</a>
+    </ul>
+    <ul class="eachCategorySubUtensils">
+        <a href="/HTML-CATEGORIES/utensils.html">Utensil Set</a>
+        <a href="/HTML-CATEGORIES/utensils.html">Spoon, Fork & Ladle</a>
+        <a href="/HTML-CATEGORIES/utensils.html">Spatula and Turner</a>
+    </ul>
+</div>
 
 <div>
     <ul>
@@ -69,7 +142,7 @@
         </figure>
         <figcaption class="productCaption">Set of 3 Golden-Brown Cocottes</figcaption>
         <p class="price">₱1,055.00</p>
-        <button id="addToCart" class="addToCart">Add to Cart</button>
+        <button class="addToCart">Add to Cart</button>
     </div>
 
     <div class="eachProduct">
@@ -78,7 +151,7 @@
         </figure>
         <figcaption class="productCaption">Black Modern Cookware Set of 3</figcaption>
         <p class="price">₱1,359.00</p>
-        <button id="addToCart" class="addToCart">Add to Cart</button>
+        <button class="addToCart">Add to Cart</button>
     </div>
 
     <div class="eachProduct">
@@ -87,7 +160,7 @@
         </figure>
         <figcaption class="productCaption">Grilling Tools in a Sleek Aluminum Case</figcaption>
         <p class="price">₱1,785.00</p>
-        <button id="addToCart" class="addToCart">Add to Cart</button>
+        <button class="addToCart">Add to Cart</button>
     </div>
 
     <div class="eachProduct">
@@ -96,7 +169,7 @@
         </figure>
         <figcaption class="productCaption">Colorful Mini Frying Pan Set of 4</figcaption>
         <p class="price">₱890.00</p>
-        <button id="addToCart" class="addToCart">Add to Cart</button>
+        <button class="addToCart">Add to Cart</button>
     </div>
 </div>
 
@@ -271,5 +344,10 @@
 </div>
 
 <script src="/JS FOLDER/backtotop.js"></script>
+<script src="/JS FOLDER/signIn&signUpFORM.js"></script>
+<script src="/JS FOLDER/showhidePASSWORD&SignInButton.js"></script>
+<script src="/JS FOLDER/cartBadge&ADDTOCART.js"></script>
+<script src="/JS FOLDER/open&closeCart.js"></script>
+<script src="/JS FOLDER/openBurger.js"></script>
 </body>
 </html>

@@ -24,12 +24,13 @@
 
 <body>
     <header class="headerGroup">
+        <div class="burgerIcon" id="burgerIcon" onclick="openBurger()">
+            <div class="burgerLine"></div>
+            <div class="burgerLine"></div>
+            <div class="burgerLine"></div>
+        </div>
         <div class="pageLogoBox">
             <a href="index.html"><img class="pageLogo" src="images/LOGO&BACKGROUND/official logo TRANSPARTENT BG - CROPPED.png" alt="Home Kitchen Studio Logo"></a>
-        </div>
-        <div class="inputBarHeader">
-            <input type="text" placeholder="Search..." id="searchInput">
-            <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
         </div>
         <div class="cart-Log-Call-Group">
             <div id="cartIcon" class="cartIcon"  onclick="openCartPop(event)">
@@ -38,13 +39,13 @@
 
                 <div class="cartSidePopUpPage hideCart">
                     <div class="cartPageHeader">
-                        <p id="cartHeaderLabel" class="cartHeaderLabel">Cart Items:<span class="totalItems" id="totalItems">1</span></p>
+                        <p id="cartHeaderLabel" class="cartHeaderLabel">Cart Items:<span class="totalItems" id="totalItems">0</span></p>
                         <p id="closeCartPop" class="closeCartPop" onclick="closePop(event)">&times;</p>
                     </div>
 
                     <div id="cartDetails" class="cartDetails">
                         <p class="cartTotalLabel" id="cartTotalLabel">Cart Total: <strong><span id="subtotalPrice" class="subTotalPrice">0.00</span></strong></p>
-                        <button id="checkoutSideCartButton" class="checkoutSideCartButton">Proceed to Checkout</button>
+                        <button id="checkoutSideCartButton" class="checkoutSideCartButton" onclick="proceedToCheckout()">Proceed to Checkout</button>
                     </div>
 
                     <div id="itemsOnCartDetails" class="itemsOnCartDetails">
@@ -56,31 +57,81 @@
             <div>
                 <a href="javascript:void(0)" onclick="openSignIn()"><i class="fa-solid fa-user"></i></a>
             </div>
-            <div>
-                <a href="contactus.html"><i class="fa-solid fa-phone"></i></a>
-            </div>
+
         </div>
     </header>
-    <hr>
+        <div class="inputBarHeader">
+            <input type="text" placeholder="Search product here..." id="searchInput">
+            <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
+        </div>
 
-<nav class="categories">
-    <a href="HTML-CATEGORIES/accessories.html">ACCESSORIES</a>
-    <a href="HTML-CATEGORIES/bakingtools.html">BAKING TOOLS</a>
-    <a href="HTML-CATEGORIES/storage.html">STORAGE</a>
-    <a href="HTML-CATEGORIES/glasswares.html">GLASSWARES</a>
-    <a href="HTML-CATEGORIES/kitchenappliances.html">KITCHEN APPLIANCES</a>
-    <a href="HTML-CATEGORIES/knives.html">KNIVES</a>
-    <a href="HTML-CATEGORIES/cookwares.html">COOKWARES</a>
-    <a href="HTML-CATEGORIES/utensils.html">UTENSILS</a>
+<nav class="categories" id="categories">
+    <span><i class="fa-solid fa-xmark" onclick="closeCatPop()"></i></span>
+    <div class="eachCategory">
+        <a href="HTML-CATEGORIES/accessories.html">ACCESSORIES</a>
+    </div>
+    <div class="eachCategory">
+        <a href="HTML-CATEGORIES/bakingtools.html">BAKING TOOLS</a>
+    </div>
+    <div class="eachCategory">
+        <a href="HTML-CATEGORIES/storage.html">STORAGE</a>
+        <button onclick="storage()"><i class="fa-solid fa-chevron-right"></i></button>
+    </div>
+    <div class="eachCategory">
+        <a href="HTML-CATEGORIES/glasswares.html">GLASSWARES</a>
+        <button onclick="glasswares()"><i class="fa-solid fa-chevron-right"></i></button>
+    </div>
+    <div class="eachCategory">
+        <a href="HTML-CATEGORIES/kitchenappliances.html">KITCHEN APPLIANCES</a>
+    </div>
+    <div class="eachCategory">
+        <a href="HTML-CATEGORIES/knives.html">KNIVES</a>
+        <button onclick="knives()"><i class="fa-solid fa-chevron-right"></i></button>
+    </div>
+    <div class="eachCategory">
+        <a href="HTML-CATEGORIES/cookwares.html">COOKWARES</a>
+        <button onclick="cookwares()"><i class="fa-solid fa-chevron-right"></i></button>
+    </div>
+    <div class="eachCategory">
+        <a href="HTML-CATEGORIES/utensils.html">UTENSILS</a>
+        <button onclick="utensils()"><i class="fa-solid fa-chevron-right"></i></button>
+    </div>
 </nav>
 <hr>
 
+<div class="categorySubGroup">
+    <ul class="eachCategorySubStorage">
+        <a href="/HTML-CATEGORIES/storage.html" >Single Storage</a>
+        <a href="/HTML-CATEGORIES/storage.html">Storage Set</a>
+    </ul>
+    <ul class="eachCategorySubGlasses">
+        <a href="/HTML-CATEGORIES/glasswares.html">Wine Glasses</a>
+        <a href="/HTML-CATEGORIES/glasswares.html">Mugs</a>
+        <a href="/HTML-CATEGORIES/glasswares.html">Drinking Glasses</a>
+    </ul>
+    <ul class="eachCategorySubKnife">
+        <a href="/HTML-CATEGORIES/knives.html">Knife Set</a>
+        <a href="/HTML-CATEGORIES/knives.html">Bread Knife</a>
+        <a href="/HTML-CATEGORIES/knives.html">Paring Knife</a>
+        <a href="/HTML-CATEGORIES/knives.html">Utility Knife</a>
+    </ul>
+    <ul class="eachCategorySubCookwares">
+        <a href="/HTML-CATEGORIES/cookwares.html">Frying Pan</a>
+        <a href="/HTML-CATEGORIES/cookwares.html">Grill Pan</a>
+        <a href="/HTML-CATEGORIES/cookwares.html">Pots</a>
+    </ul>
+    <ul class="eachCategorySubUtensils">
+        <a href="/HTML-CATEGORIES/utensils.html">Utensil Set</a>
+        <a href="/HTML-CATEGORIES/utensils.html">Spoon, Fork & Ladle</a>
+        <a href="/HTML-CATEGORIES/utensils.html">Spatula and Turner</a>
+    </ul>
+</div>
 
 <div class="banners">
     <img src="images/BANNERS/Banner-MainHeader.jpg" alt="Home Kitchen Studio Main Banner">
     <p class="bannerMessageMain">Elevate Your Everyday.</p>
     <p class="bannerMessageSub">Transform your kitchen with a curated collection of sleek, high-performance essentials.</p>
-    <button id="shopNowButton"><a href="HTML-VIEW MORE pages/newArrival-P2-viewmore.html">SHOP NOW!</a></button>
+    <button class="shopNowButton"><a href="HTML-VIEW MORE pages/newArrival-P2-viewmore.html">SHOP NOW!</a></button>
 </div>
 
 <h2 class="h2Main">New Arrivals</h2>
@@ -92,7 +143,7 @@
         <figcaption class="productCaption">Mini Portable Lunch Carrier</figcaption>
         <p class="price">₱195.00</p>
         <div class="addandTrashSection">
-        <button id="addToCart" class="addToCart">Add to Cart</button><span><i class="fa-solid fa-trash-can trash"></i></span></div>
+        <button class="addToCart">Add to Cart</button><span><i class="fa-solid fa-trash-can eachTrash hide"></i></span></div>
     </div>
     
     <div class="eachProduct">
@@ -101,7 +152,7 @@
         </figure>
         <figcaption class="productCaption">Glass Casserole with Lid</figcaption>
         <p class="price">₱230.00</p>
-        <button id="addToCart" class="addToCart">Add to Cart</button>
+        <button class="addToCart">Add to Cart</button>
     </div>
 
     <div class="eachProduct">
@@ -110,7 +161,7 @@
         </figure>
         <figcaption class="productCaption">Dual Serving Slow Cooker</figcaption>
         <p class="price">₱2,999.00</p>
-        <button id="addToCart" class="addToCart">Add to Cart</button>
+        <button class="addToCart">Add to Cart</button>
     </div>
 
     <div class="eachProduct">
@@ -119,7 +170,7 @@
         </figure>
         <figcaption class="productCaption">Gray Ombre Kettle</figcaption>
         <p class="price">₱1,249.00</p>
-        <button id="addToCart" class="addToCart">Add to Cart</button>
+        <button class="addToCart">Add to Cart</button>
     </div>
 </div>
 
@@ -134,7 +185,7 @@
     <img src="images/BANNERS/Banner-Best Seller.jpg" alt="Home Kitchen Studio Best Seller Banner">
     <p class="bannerMessageMain">Top-Tier Favorites.</p>
     <p class="bannerMessageSub">Experience the peak of performance with our most-loved kitchen essentials.</p>
-    <button id="shopNowButton"><a href="HTML-VIEW MORE pages/bestSeller-P2-viewmore.html">SHOP NOW!</a></button>
+    <button class="shopNowButton"><a href="HTML-VIEW MORE pages/bestSeller-P2-viewmore.html">SHOP NOW!</a></button>
 </div>
 
 <h2 class="h2Main">Our Best Sellers</h2>
@@ -145,7 +196,7 @@
         </figure>
         <figcaption class="productCaption">Glass Bowls Set of 5</figcaption>
         <p class="price">₱349.00</p>
-        <button id="addToCart" class="addToCart">Add to Cart</button>
+        <button class="addToCart">Add to Cart</button>
     </div>
     
     <div class="eachProduct">
@@ -154,7 +205,7 @@
         </figure>
         <figcaption class="productCaption">Portable Blender</figcaption>
         <p class="price">₱420.00</p>
-        <button id="addToCart" class="addToCart">Add to Cart</button>
+        <button class="addToCart">Add to Cart</button>
     </div>
 
     <div class="eachProduct">
@@ -163,7 +214,7 @@
         </figure>
         <figcaption class="productCaption">Dinnerware Set of 5</figcaption>
         <p class="price">₱545.00</p>
-        <button id="addToCart" class="addToCart">Add to Cart</button>
+        <button class="addToCart">Add to Cart</button>
     </div>
 
     <div class="eachProduct">
@@ -172,7 +223,7 @@
         </figure>
         <figcaption class="productCaption">3 Ceramic Baking Dishes</figcaption>
         <p class="price">₱1,249.00</p>
-        <button id="addToCart" class="addToCart">Add to Cart</button>
+        <button class="addToCart">Add to Cart</button>
     </div>
 </div>
 
@@ -188,7 +239,7 @@
     <img src="images/BANNERS/Banner-Special Deals.jpg" alt="Home Kitchen Studio Special Deals Banner">
     <p class="bannerMessageMain">Exclusive Savings for You!</p>
     <p class="bannerMessageSub">A handpicked selection of studio favorites, available at a limited-time price.</p>
-    <button id="shopNowButton"><a href="HTML-VIEW MORE pages/limitedOffer-P2-viewmore.html">SHOP NOW!</a></button>
+    <button class="shopNowButton"><a href="HTML-VIEW MORE pages/limitedOffer-P2-viewmore.html">SHOP NOW!</a></button>
 </div>
 
 <h2 class="h2Main">Limited Offers</h2>
@@ -199,7 +250,7 @@
         </figure>
         <figcaption class="productCaption">Gold Measuring Set</figcaption>
         <p class="price">₱270.00</p>
-        <button id="addToCart" class="addToCart">Add to Cart</button>
+        <button class="addToCart">Add to Cart</button>
     </div>
     
     <div class="eachProduct">
@@ -208,7 +259,7 @@
         </figure>
         <figcaption class="productCaption">Stoneware Dinnerware Set</figcaption>
         <p class="price">₱339.00</p>
-        <button id="addToCart" class="addToCart">Add to Cart</button>
+        <button class="addToCart">Add to Cart</button>
     </div>
 
     <div class="eachProduct">
@@ -217,7 +268,7 @@
         </figure>
         <figcaption class="productCaption">Minimalist Sushi Setting</figcaption>
         <p class="price">₱299.00</p>
-        <button id="addToCart" class="addToCart">Add to Cart</button>
+        <button class="addToCart">Add to Cart</button>
     </div>
 
     <div class="eachProduct">
@@ -226,7 +277,7 @@
         </figure>
         <figcaption class="productCaption">4pcs Ceramic Crocks</figcaption>
         <p class="price">₱315.00</p>
-        <button id="addToCart" class="addToCart">Add to Cart</button>
+        <button class="addToCart">Add to Cart</button>
     </div>
 </div>
 
@@ -242,7 +293,7 @@
     <img src="images/BANNERS/Banner-Bundle Deals.jpg" alt="Home Kitchen Studio Bundle Deals Banner">
     <p class="bannerMessageMain">Curated Kitchen Bundles</p>
     <p class="bannerMessageSub">The perfect match for your countertop. Professional tools that look even better together.</p>
-    <button id="shopNowButton"><a href="HTML-VIEW MORE pages/bundleDeals-P2-viewmore.html">SHOP NOW!</a></button>
+    <button class="shopNowButton"><a href="HTML-VIEW MORE pages/bundleDeals-P2-viewmore.html">SHOP NOW!</a></button>
 </div>
 
 <h2 class="h2Main">Bundle Deals</h2>
@@ -253,7 +304,7 @@
         </figure>
         <figcaption class="productCaption">Bundled Kitchen Essentials</figcaption>
         <p class="price">₱270.00</p>
-        <button id="addToCart" class="addToCart">Add to Cart</button>
+        <button class="addToCart">Add to Cart</button>
     </div>
     
     <div class="eachProduct">
@@ -262,7 +313,7 @@
         </figure>
         <figcaption class="productCaption">Modern Cookware Set</figcaption>
         <p class="price">₱339.00</p>
-        <button id="addToCart" class="addToCart">Add to Cart</button>
+        <button class="addToCart">Add to Cart</button>
     </div>
 
     <div class="eachProduct">
@@ -271,7 +322,7 @@
         </figure>
         <figcaption class="productCaption">Home Dining Essentials Bundle</figcaption>
         <p class="price">₱299.00</p>
-        <button id="addToCart" class="addToCart">Add to Cart</button>
+        <button class="addToCart">Add to Cart</button>
     </div>
 
     <div class="eachProduct">
@@ -280,7 +331,7 @@
         </figure>
         <figcaption class="productCaption">Set of 6 Stainless Steel Cookware Set</figcaption>
         <p class="price">₱315.00</p>
-        <button id="addToCart" class="addToCart">Add to Cart</button>
+        <button class="addToCart">Add to Cart</button>
     </div>
 </div>
 
@@ -299,7 +350,7 @@
         </figure>
         <figcaption class="productCaption">7pcs Bakeware Set</figcaption>
         <p class="price">₱1,279.00</p>
-        <button id="addToCart" class="addToCart">Add to Cart</button>
+        <button class="addToCart">Add to Cart</button>
     </div>
 
     <div class="eachProduct">
@@ -308,7 +359,7 @@
         </figure>
         <figcaption class="productCaption">Black Electric Griddle</figcaption>
         <p class="price">₱1,340.00</p>
-        <button id="addToCart" class="addToCart">Add to Cart</button>
+        <button class="addToCart">Add to Cart</button>
     </div>
 
     <div class="eachProduct">
@@ -317,7 +368,7 @@
         </figure>
         <figcaption class="productCaption">Kitchen Utensil Set of 17</figcaption>
         <p class="price">₱815.00</p>
-        <button id="addToCart" class="addToCart">Add to Cart</button>
+        <button class="addToCart">Add to Cart</button>
     </div>
 
     <div class="eachProduct">
@@ -326,7 +377,7 @@
         </figure>
         <figcaption class="productCaption">Silver Stand Mixer</figcaption>
         <p class="price">₱2,149.00</p>
-        <button id="addToCart" class="addToCart">Add to Cart</button>
+        <button class="addToCart">Add to Cart</button>
     </div>
 </div>
 
@@ -525,11 +576,11 @@
             </div>
             <div class="passwordLabelGroup">
                 <label for="password">Password:</label>
-                    <input type="password" id="password" placeholder="Enter Password" required><i class="firstEye fa-solid fa-eye" id="togglePassword"></i>
+                    <input type="password" class="password" placeholder="Enter Password" required><i class="firstEye fa-solid fa-eye" class="togglePasswordSignUp"></i>
             </div>
             <div class="passwordLabelGroupRepeat">
                 <label for="password">Re-enter Password:</label>
-                <input type="password" id="password" placeholder="Re-enterPassword" required><i class="secondEye fa-solid fa-eye" id="togglePassword"></i>
+                <input type="password" class="password" placeholder="Re-enterPassword" required><i class="secondEye fa-solid fa-eye" class="togglePasswordSignUp"></i>
             </div>
             <div class="tcGroup">
                 <input type="checkbox">
@@ -546,10 +597,13 @@
 </div>
 
 
+
+
 <script src="/JS FOLDER/backtotop.js"></script>
 <script src="/JS FOLDER/signIn&signUpFORM.js"></script>
 <script src="/JS FOLDER/showhidePASSWORD&SignInButton.js"></script>
 <script src="/JS FOLDER/cartBadge&ADDTOCART.js"></script>
 <script src="/JS FOLDER/open&closeCart.js"></script>
+<script src="/JS FOLDER/openBurger.js"></script>
 </body>
 </html>

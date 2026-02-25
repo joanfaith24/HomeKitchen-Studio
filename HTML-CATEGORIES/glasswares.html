@@ -11,50 +11,121 @@
     <link rel="stylesheet" href="../CSS FOLDER/mainPage.css">
     <link rel="stylesheet" href="../CSS FOLDER/footermobile.css">
     <link rel="stylesheet" href="../CSS FOLDER/backtotop.css">
+    <link rel="stylesheet" href="../CSS FOLDER/signIn.css">
+    <link rel="stylesheet" href="../CSS FOLDER/signUp.css">
 
-    <link rel="icon" type="image/png" href="../images/LOGO&BACKGROUND/official logo TRANSPARTENT BG - CROPPED.png">
+    <link rel="icon" type="image/png" href="images/LOGO&BACKGROUND/official logo TRANSPARTENT BG - CROPPED.png">
 
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"><link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    
 </head>
 
 <body>
     <header class="headerGroup">
+        <div class="burgerIcon" id="burgerIcon" onclick="openBurger()">
+            <div class="burgerLine"></div>
+            <div class="burgerLine"></div>
+            <div class="burgerLine"></div>
+        </div>
         <div class="pageLogoBox">
             <a href="/index.html"><img class="pageLogo" src="/images/LOGO&BACKGROUND/official logo TRANSPARTENT BG - CROPPED.png" alt="Home Kitchen Studio Logo"></a>
         </div>
-        <div class="inputBarHeader">
-            <input type="text" placeholder="Search...">
-            <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
-        </div>
         <div class="cart-Log-Call-Group">
-            <div>
-                <a href="/cart.html"><i class="fa-solid fa-cart-shopping"></i></a>
+            <div id="cartIcon" class="cartIcon"  onclick="openCartPop(event)">
+                <a href="javascript:void(0)"><i class="fa-solid fa-cart-shopping"></i></a>
+                <p id="cartBadge" class="cartBadge">0</p>
+
+                <div class="cartSidePopUpPage hideCart">
+                    <div class="cartPageHeader">
+                        <p id="cartHeaderLabel" class="cartHeaderLabel">Cart Items:<span class="totalItems" id="totalItems">0</span></p>
+                        <p id="closeCartPop" class="closeCartPop" onclick="closePop(event)">&times;</p>
+                    </div>
+
+                    <div id="cartDetails" class="cartDetails">
+                        <p class="cartTotalLabel" id="cartTotalLabel">Cart Total: <strong><span id="subtotalPrice" class="subTotalPrice">0.00</span></strong></p>
+                        <button id="checkoutSideCartButton" class="checkoutSideCartButton" onclick="proceedToCheckout()">Proceed to Checkout</button>
+                    </div>
+
+                    <div id="itemsOnCartDetails" class="itemsOnCartDetails">
+                    </div>
+                </div>
             </div>
+
+
             <div>
-                <a href="/signin.html"><i class="fa-solid fa-user"></i></a>
+                <a href="javascript:void(0)" onclick="openSignIn()"><i class="fa-solid fa-user"></i></a>
             </div>
-            <div>
-                <a href="/contactus.html"><i class="fa-solid fa-phone"></i></a>
-            </div>
+
         </div>
     </header>
-    <hr>
+        <div class="inputBarHeader">
+            <input type="text" placeholder="Search product here..." id="searchInput">
+            <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
+        </div>
 
-<nav class="categories">
-    <a href="accessories.html">ACCESSORIES</a>
-    <a href="bakingtools.html">BAKING TOOLS</a>
-    <a href="storage.html">STORAGE</a>
-    <a href="glasswares.html">GLASSWARES</a>
-    <a href="kitchenappliances.html">KITCHEN APPLIANCES</a>
-    <a href="knives.html">KNIVES</a>
-    <a href="cookwares.html">COOKWARES</a>
-    <a href="utensils.html">UTENSILS</a>
+<nav class="categories" id="categories">
+    <span><i class="fa-solid fa-xmark" onclick="closeCatPop()"></i></span>
+    <div class="eachCategory">
+        <a href="/HTML-CATEGORIES/accessories.html">ACCESSORIES</a>
+    </div>
+    <div class="eachCategory">
+        <a href="/HTML-CATEGORIES/bakingtools.html">BAKING TOOLS</a>
+    </div>
+    <div class="eachCategory">
+        <a href="/HTML-CATEGORIES/storage.html">STORAGE</a>
+        <button onclick="storage()"><i class="fa-solid fa-chevron-right"></i></button>
+    </div>
+    <div class="eachCategory">
+        <a href="/HTML-CATEGORIES/glasswares.html">GLASSWARES</a>
+        <button onclick="glasswares()"><i class="fa-solid fa-chevron-right"></i></button>
+    </div>
+    <div class="eachCategory">
+        <a href="/HTML-CATEGORIES/kitchenappliances.html">KITCHEN APPLIANCES</a>
+    </div>
+    <div class="eachCategory">
+        <a href="/HTML-CATEGORIES/knives.html">KNIVES</a>
+        <button onclick="knives()"><i class="fa-solid fa-chevron-right"></i></button>
+    </div>
+    <div class="eachCategory">
+        <a href="/HTML-CATEGORIES/cookwares.html">COOKWARES</a>
+        <button onclick="cookwares()"><i class="fa-solid fa-chevron-right"></i></button>
+    </div>
+    <div class="eachCategory">
+        <a href="/HTML-CATEGORIES/utensils.html">UTENSILS</a>
+        <button onclick="utensils()"><i class="fa-solid fa-chevron-right"></i></button>
+    </div>
 </nav>
 <hr>
+
+<div class="categorySubGroup">
+    <ul class="eachCategorySubStorage">
+        <a href="/HTML-CATEGORIES/storage.html" >Single Storage</a>
+        <a href="/HTML-CATEGORIES/storage.html">Storage Set</a>
+    </ul>
+    <ul class="eachCategorySubGlasses">
+        <a href="/HTML-CATEGORIES/glasswares.html">Wine Glasses</a>
+        <a href="/HTML-CATEGORIES/glasswares.html">Mugs</a>
+        <a href="/HTML-CATEGORIES/glasswares.html">Drinking Glasses</a>
+    </ul>
+    <ul class="eachCategorySubKnife">
+        <a href="/HTML-CATEGORIES/knives.html">Knife Set</a>
+        <a href="/HTML-CATEGORIES/knives.html">Bread Knife</a>
+        <a href="/HTML-CATEGORIES/knives.html">Paring Knife</a>
+        <a href="/HTML-CATEGORIES/knives.html">Utility Knife</a>
+    </ul>
+    <ul class="eachCategorySubCookwares">
+        <a href="/HTML-CATEGORIES/cookwares.html">Frying Pan</a>
+        <a href="/HTML-CATEGORIES/cookwares.html">Grill Pan</a>
+        <a href="/HTML-CATEGORIES/cookwares.html">Pots</a>
+    </ul>
+    <ul class="eachCategorySubUtensils">
+        <a href="/HTML-CATEGORIES/utensils.html">Utensil Set</a>
+        <a href="/HTML-CATEGORIES/utensils.html">Spoon, Fork & Ladle</a>
+        <a href="/HTML-CATEGORIES/utensils.html">Spatula and Turner</a>
+    </ul>
+</div>
 
 
 <div class="banners">
@@ -71,7 +142,7 @@
         </figure>
         <figcaption class="productCaption">Classic Short Stem Wine Glass</figcaption>
         <p class="price">₱129.00</p>
-        <button id="addToCart" class="addToCart">Add to Cart</button>
+        <button class="addToCart">Add to Cart</button>
     </div>
 
     <div class="eachProduct">
@@ -80,7 +151,7 @@
         </figure>
         <figcaption class="productCaption">Classic Long Stem Wine Glass</figcaption>
         <p class="price">₱115.00</p>
-        <button id="addToCart" class="addToCart">Add to Cart</button>
+        <button class="addToCart">Add to Cart</button>
     </div>
 
     <div class="eachProduct">
@@ -89,7 +160,7 @@
         </figure>
         <figcaption class="productCaption">Elegant Ribbed Flute Wine Glass</figcaption>
         <p class="price">₱128.00</p>
-        <button id="addToCart" class="addToCart">Add to Cart</button>
+        <button class="addToCart">Add to Cart</button>
     </div>
 
     <div class="eachProduct">
@@ -98,7 +169,7 @@
         </figure>
         <figcaption class="productCaption">Elegant Ribbed Style Wine Glass</figcaption>
         <p class="price">₱145.00</p>
-        <button id="addToCart" class="addToCart">Add to Cart</button>
+        <button class="addToCart">Add to Cart</button>
     </div>
 
     <div class="eachProduct">
@@ -107,7 +178,7 @@
         </figure>
         <figcaption class="productCaption">Opal Curve Classic Wine Glass</figcaption>
         <p class="price">₱136.00</p>
-        <button id="addToCart" class="addToCart">Add to Cart</button>
+        <button class="addToCart">Add to Cart</button>
     </div>
 
     <div class="eachProduct">
@@ -116,7 +187,7 @@
         </figure>
         <figcaption class="productCaption">Classic Haven Table Wine Glass</figcaption>
         <p class="price">₱120.00</p>
-        <button id="addToCart" class="addToCart">Add to Cart</button>
+        <button class="addToCart">Add to Cart</button>
     </div>
 
     <div class="eachProduct">
@@ -125,7 +196,7 @@
         </figure>
         <figcaption class="productCaption">New Moon Design Wine Glass</figcaption>
         <p class="price">₱149.00</p>
-        <button id="addToCart" class="addToCart">Add to Cart</button>
+        <button class="addToCart">Add to Cart</button>
     </div>
 
     <div class="eachProduct">
@@ -134,7 +205,7 @@
         </figure>
         <figcaption class="productCaption">Champagne Flute Wine Glass</figcaption>
         <p class="price">₱152.00</p>
-        <button id="addToCart" class="addToCart">Add to Cart</button>
+        <button class="addToCart">Add to Cart</button>
     </div>
 
     <div class="eachProduct">
@@ -143,7 +214,7 @@
         </figure>
         <figcaption class="productCaption">Modern Style Crystal Wine Glass</figcaption>
         <p class="price">₱179.00</p>
-        <button id="addToCart" class="addToCart">Add to Cart</button>
+        <button class="addToCart">Add to Cart</button>
     </div>
 
     <div class="eachProduct">
@@ -152,7 +223,7 @@
         </figure>
         <figcaption class="productCaption">Modern Style Bloom Wine Glass</figcaption>
         <p class="price">₱134.00</p>
-        <button id="addToCart" class="addToCart">Add to Cart</button>
+        <button class="addToCart">Add to Cart</button>
     </div>
 </div>
 
@@ -168,7 +239,7 @@
         </figure>
         <figcaption class="productCaption">Soft Floral Ceramic Mug</figcaption>
         <p class="price">₱85.00</p>
-        <button id="addToCart" class="addToCart">Add to Cart</button>
+        <button class="addToCart">Add to Cart</button>
     </div>
 
     <div class="eachProduct">
@@ -177,7 +248,7 @@
         </figure>
         <figcaption class="productCaption">Blush Pink Ceramic Mug</figcaption>
         <p class="price">₱77.00</p>
-        <button id="addToCart" class="addToCart">Add to Cart</button>
+        <button class="addToCart">Add to Cart</button>
     </div>
 
     <div class="eachProduct">
@@ -186,7 +257,7 @@
         </figure>
         <figcaption class="productCaption">Puppy Print Mug</figcaption>
         <p class="price">₱72.00</p>
-        <button id="addToCart" class="addToCart">Add to Cart</button>
+        <button class="addToCart">Add to Cart</button>
     </div>
 
     <div class="eachProduct">
@@ -195,7 +266,7 @@
         </figure>
         <figcaption class="productCaption">Rainbow Ceramic Mug</figcaption>
         <p class="price">₱65.00</p>
-        <button id="addToCart" class="addToCart">Add to Cart</button>
+        <button class="addToCart">Add to Cart</button>
     </div>
 
     <div class="eachProduct">
@@ -204,7 +275,7 @@
         </figure>
         <figcaption class="productCaption">Geometric Pattern Mug</figcaption>
         <p class="price">₱70.00</p>
-        <button id="addToCart" class="addToCart">Add to Cart</button>
+        <button class="addToCart">Add to Cart</button>
     </div>
 
     <div class="eachProduct">
@@ -213,7 +284,7 @@
         </figure>
         <figcaption class="productCaption">Soft Botanical Mug</figcaption>
         <p class="price">₱59.00</p>
-        <button id="addToCart" class="addToCart">Add to Cart</button>
+        <button class="addToCart">Add to Cart</button>
     </div>
 
     <div class="eachProduct">
@@ -222,7 +293,7 @@
         </figure>
         <figcaption class="productCaption">Warm Abstract Heart Mug</figcaption>
         <p class="price">₱63.00</p>
-        <button id="addToCart" class="addToCart">Add to Cart</button>
+        <button class="addToCart">Add to Cart</button>
     </div>
 
     <div class="eachProduct">
@@ -231,7 +302,7 @@
         </figure>
         <figcaption class="productCaption">Leaf Texture Mug</figcaption>
         <p class="price">₱70.00</p>
-        <button id="addToCart" class="addToCart">Add to Cart</button>
+        <button class="addToCart">Add to Cart</button>
     </div>
 
     <div class="eachProduct">
@@ -240,7 +311,7 @@
         </figure>
         <figcaption class="productCaption">Earthy Rainbow Mug</figcaption>
         <p class="price">₱62.00</p>
-        <button id="addToCart" class="addToCart">Add to Cart</button>
+        <button class="addToCart">Add to Cart</button>
     </div>
 
     <div class="eachProduct">
@@ -249,7 +320,7 @@
         </figure>
         <figcaption class="productCaption">Golden Wave Accent Mug</figcaption>
         <p class="price">₱65.00</p>
-        <button id="addToCart" class="addToCart">Add to Cart</button>
+        <button class="addToCart">Add to Cart</button>
     </div>
 </div>
 
@@ -266,7 +337,7 @@
         </figure>
         <figcaption class="productCaption">12oz Ribbed Style Drinking Glass</figcaption>
         <p class="price">₱47.00</p>
-        <button id="addToCart" class="addToCart">Add to Cart</button>
+        <button class="addToCart">Add to Cart</button>
     </div>
 
     <div class="eachProduct">
@@ -275,7 +346,7 @@
         </figure>
         <figcaption class="productCaption">13.25oz. Dimpled Drinking Glass</figcaption>
         <p class="price">₱59.00</p>
-        <button id="addToCart" class="addToCart">Add to Cart</button>
+        <button class="addToCart">Add to Cart</button>
     </div>
 
     <div class="eachProduct">
@@ -284,7 +355,7 @@
         </figure>
         <figcaption class="productCaption">15oz. Classic Style Drinking Glass</figcaption>
         <p class="price">₱40.00</p>
-        <button id="addToCart" class="addToCart">Add to Cart</button>
+        <button class="addToCart">Add to Cart</button>
     </div>
 
     <div class="eachProduct">
@@ -293,7 +364,7 @@
         </figure>
         <figcaption class="productCaption">16.25oz. Faceted Highball Drinking Glass</figcaption>
         <p class="price">₱74.00</p>
-        <button id="addToCart" class="addToCart">Add to Cart</button>
+        <button class="addToCart">Add to Cart</button>
     </div>
 
     <div class="eachProduct">
@@ -302,7 +373,7 @@
         </figure>
         <figcaption class="productCaption">14.25oz. Crystal Cut Drinking Glass</figcaption>
         <p class="price">₱66.00</p>
-        <button id="addToCart" class="addToCart">Add to Cart</button>
+        <button class="addToCart">Add to Cart</button>
     </div>
 
     <div class="eachProduct">
@@ -311,7 +382,7 @@
         </figure>
         <figcaption class="productCaption">13oz. Round Clear Drinking Glass</figcaption>
         <p class="price">₱57.00</p>
-        <button id="addToCart" class="addToCart">Add to Cart</button>
+        <button class="addToCart">Add to Cart</button>
     </div>
 
     <div class="eachProduct">
@@ -320,7 +391,7 @@
         </figure>
         <figcaption class="productCaption">14.5oz. Plain High RseDrinking Glass</figcaption>
         <p class="price">₱60.00</p>
-        <button id="addToCart" class="addToCart">Add to Cart</button>
+        <button class="addToCart">Add to Cart</button>
     </div>
 
     <div class="eachProduct">
@@ -329,7 +400,7 @@
         </figure>
         <figcaption class="productCaption">13oz. Classic Clear Drinking Glass</figcaption>
         <p class="price">₱58.00</p>
-        <button id="addToCart" class="addToCart">Add to Cart</button>
+        <button class="addToCart">Add to Cart</button>
     </div>
 </div>
 
@@ -498,5 +569,10 @@
 </div>
 
 <script src="/JS FOLDER/backtotop.js"></script>
+<script src="/JS FOLDER/signIn&signUpFORM.js"></script>
+<script src="/JS FOLDER/showhidePASSWORD&SignInButton.js"></script>
+<script src="/JS FOLDER/cartBadge&ADDTOCART.js"></script>
+<script src="/JS FOLDER/open&closeCart.js"></script>
+<script src="/JS FOLDER/openBurger.js"></script>
 </body>
 </html>
