@@ -1,4 +1,7 @@
 
+
+
+
 let categories  = document.getElementById('categories');
 let burgerIcon = document.getElementById('burgerIcon');
 
@@ -8,11 +11,27 @@ function openBurger()
     categories.classList.toggle('active');
 }
 
+
+window.addEventListener('click', function(event){
+if(
+    !categories.contains(event.target) &&
+    !burgerIcon.contains(event.target)
+    )
+{
+    categories.classList.remove('active');
+}
+});
+
+
+
 function closeCatPop(event)
 {
     if(event) event.stopPropagation();
     categories.classList.remove('active');
 }
+
+
+
 
 
 

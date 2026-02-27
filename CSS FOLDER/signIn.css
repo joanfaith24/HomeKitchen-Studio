@@ -123,18 +123,19 @@
     position: relative;
 }
 
+.passwordInputAndEye
+{
+    position: relative;
+}
 .mainEye
 {
     position: absolute;
     font-size: 18px;
-    top: 26%;
+    top: 50%;
+    transform: translateY(-50%);
     right: 10px;
     cursor: pointer;
-}
 
-.mainEye:hover
-{
-    color:  #9c9a0f;
 }
 
 .fa-eye:active
@@ -142,17 +143,3 @@
     color: #e21010e1;
 }
 
-@keyframes popIn
-{
-    from
-    {
-        opacity: 0;
-        transform: scale(70%);
-    }
-
-    to
-    {
-        opacity: 1;
-        transform: scale(100%);
-    }
-}
