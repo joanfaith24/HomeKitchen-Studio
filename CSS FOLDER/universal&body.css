@@ -34,6 +34,8 @@ body
     --MID-YELLOW-2: #ebaa31c9; /*for BUTTONS*/
     --DARK-RED: #e21010e1;
     --SEMI-DARG-GRAY: #333; /*for hover text*/
+    --LIGHT-GREEN: #28a745; /*for buttons*/
+    --LIGHTER-GREEN: #09af09; /*for buttons*/
 
 
     /*SHADOW*/    /*-3px 3px 4px */
@@ -58,7 +60,10 @@ a
     z-index: 2000;
     top: 50%;
     left: 50%;
-    transform: translateX(-50%, -50%);
+    font-size: 15px;
+    transform: translate(-50%, -50%);
+
+    animation: popAndFade 1s ease-in-out forwards;
 }
 
 @keyframes popAndFade {

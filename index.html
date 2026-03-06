@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="CSS FOLDER/backtotop.css">
     <link rel="stylesheet" href="CSS FOLDER/signIn.css">
     <link rel="stylesheet" href="CSS FOLDER/signUp.css">
+    <link rel="stylesheet" href="CSS FOLDER/checkout.css">
 
     <link rel="icon" type="image/png" href="images/LOGO&BACKGROUND/official logo TRANSPARTENT BG - CROPPED.png">
 
@@ -36,24 +37,24 @@
             <div id="cartIcon" class="cartIcon"  onclick="openCartPop(event)">
                 <a href="javascript:void(0)"><i class="fa-solid fa-cart-shopping"></i></a>
                 <p id="cartBadge" class="cartBadge">0</p>
-
+            </div>
                 <div class="cartSidePopUpPage hideCart">
+
                     <div class="cartPageHeader">
                         <p id="cartHeaderLabel" class="cartHeaderLabel">Cart Items:<span class="totalItems" id="totalItems">0</span></p>
                         <p id="closeCartPop" class="closeCartPop" onclick="closePop(event)">&times;</p>
                     </div>
 
                     <div id="cartDetails" class="cartDetails">
-                        <p class="cartTotalLabel" id="cartTotalLabel">Cart Total: <strong><span id="subtotalPrice" class="subTotalPrice">0.00</span></strong></p>
-                        <button id="checkoutSideCartButton" class="checkoutSideCartButton" onclick="proceedToCheckout()">Proceed to Checkout</button>
+                        <p class="cartTotalLabel" id="cartTotalLabel">Cart Subtotal: <strong><span id="subtotalPrice" class="subTotalPrice">0.00</span></strong></p>
                     </div>
 
                     <div id="itemsOnCartDetails" class="itemsOnCartDetails">
                     </div>
+                    <button id="checkoutSideCartButton" class="checkoutSideCartButton" onclick="proceedToCheckout()">Proceed to Checkout
+                    </button>   
                 </div>
-            </div>
-
-
+        </div>
             <div>
                 <a href="javascript:void(0)" onclick="openSignIn()"><i class="fa-solid fa-user"></i></a>
             </div>
@@ -62,7 +63,7 @@
     </header>
         <div class="inputBarHeader">
             <input type="text" placeholder="Search product here..." id="searchInput">
-            <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
+            <i class="fa-solid fa-magnifying-glass"></i>
         </div>
 
 <nav class="categories" id="categories">
@@ -585,7 +586,7 @@
         <h2>Sign In</h2>
         <form id="signInForm">
             <div class="emailLabelGroup">
-                <label for="email">Email:</label><input type="email" id="email" placeholder="Enter Email" required>
+                <label for="email">Email:</label><input type="email" id="email" class="emailSignIn" placeholder="Enter Email" required>
                 <p id="emailMessageResult"></p>
             </div>
             <div class="passwordLabelGroup">
@@ -612,26 +613,29 @@
         <button id="closeSignUpFormButton" class="closeSignUpFormButton">&times;</button>
         <h2>Sign Up</h2>
         <form id="signUpForm">
+            <div class="usernameLabelGroup">
+                <label for="username">Username:</label><input type="text" id="username" class="usernameSignUp" placeholder="Create Username" required>
+            </div>
             <div class="emailLabelGroup">
-                <label for="email">Email:</label><input type="email" id="email" placeholder="Enter Email" required>
+                <label for="email">Email:</label><input type="email" id="email" class="emailSignUp" placeholder="Enter Email" required>
             </div>
             <div class="passwordLabelGroup">
                 <label for="password">Password:</label>
                 <div class="firstPasswordWrapper">
-                    <input type="password" class="password" placeholder="Enter Password" required><i class="firstEye fa-solid fa-eye"></i>
+                    <input type="password" class="password" id="firstPasswordSignUp" placeholder="Enter Password" required><i class="firstEye fa-solid fa-eye"></i>
                 </div>
             </div>
             <div class="passwordLabelGroupRepeat">
                 <label for="password">Re-enter Password:</label>
                 <div class="secondPasswordWrapper">
-                <input type="password" class="passwordSecond" placeholder="Re-enterPassword" required><i class="secondEye fa-solid fa-eye"></i>
+                <input type="password" class="passwordSecond" id="secondPasswordSignUp" placeholder="Re-enterPassword" required><i class="secondEye fa-solid fa-eye"></i>
                 </div>
             </div>
             <div class="tcGroup">
                 <input type="checkbox">
                 <p>I agree to <a href="">Home Kitchen Studio's Terms and Conditions</a></p>
             </div>
-            <button id="signUpButton">Sign Up</button>
+            <button type="button" id="signUpButton">Sign Up</button>
             <p class="hasAccount">Already have an account? <a href="javascript:void(0)" onclick="switchToSignIn()">Sign In</a></p>
         </form>
     </div>
@@ -643,11 +647,10 @@
 
 
 
-
 <script src="/JS FOLDER/backtotop.js" defer></script>
-<script src="/JS FOLDER/signIn&signUpFORM.js" defer></script>
-<script src="/JS FOLDER/cartBadge&ADDTOCART.js" defer></script>
-<script src="/JS FOLDER/open&closeCart.js" defer></script>
+<script src="/JS FOLDER/signInSignUpFORM.js" defer></script>
+<script src="/JS FOLDER/cart.js" defer></script>
 <script src="/JS FOLDER/openBurger.js" defer></script>
+<script src="/JS FOLDER/search.js" defer></script>
 </body>
 </html>

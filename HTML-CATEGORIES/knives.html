@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="../CSS FOLDER/backtotop.css">
     <link rel="stylesheet" href="../CSS FOLDER/signIn.css">
     <link rel="stylesheet" href="../CSS FOLDER/signUp.css">
+    <link rel="stylesheet" href="../CSS FOLDER/checkout.css">
 
     <link rel="icon" type="image/png" href="images/LOGO&BACKGROUND/official logo TRANSPARTENT BG - CROPPED.png">
 
@@ -36,23 +37,24 @@
             <div id="cartIcon" class="cartIcon"  onclick="openCartPop(event)">
                 <a href="javascript:void(0)"><i class="fa-solid fa-cart-shopping"></i></a>
                 <p id="cartBadge" class="cartBadge">0</p>
-
+            </div>
                 <div class="cartSidePopUpPage hideCart">
+
                     <div class="cartPageHeader">
                         <p id="cartHeaderLabel" class="cartHeaderLabel">Cart Items:<span class="totalItems" id="totalItems">0</span></p>
                         <p id="closeCartPop" class="closeCartPop" onclick="closePop(event)">&times;</p>
                     </div>
 
                     <div id="cartDetails" class="cartDetails">
-                        <p class="cartTotalLabel" id="cartTotalLabel">Cart Total: <strong><span id="subtotalPrice" class="subTotalPrice">0.00</span></strong></p>
-                        <button id="checkoutSideCartButton" class="checkoutSideCartButton" onclick="proceedToCheckout()">Proceed to Checkout</button>
+                        <p class="cartTotalLabel" id="cartTotalLabel">Cart Subtotal: <strong><span id="subtotalPrice" class="subTotalPrice">0.00</span></strong></p>
                     </div>
 
                     <div id="itemsOnCartDetails" class="itemsOnCartDetails">
                     </div>
+                    <button id="checkoutSideCartButton" class="checkoutSideCartButton" onclick="proceedToCheckout()">Proceed to Checkout
+                    </button>   
                 </div>
-            </div>
-
+        </div>
 
             <div>
                 <a href="javascript:void(0)" onclick="openSignIn()"><i class="fa-solid fa-user"></i></a>
@@ -674,10 +676,10 @@
     <p>▲ Back To Top</p>
 </div>
 
-<script src="/JS FOLDER/backtotop.js"></script>
-<script src="/JS FOLDER/signIn&signUpFORM.js"></script>
-<script src="/JS FOLDER/cartBadge&ADDTOCART.js"></script>
-<script src="/JS FOLDER/open&closeCart.js"></script>
-<script src="/JS FOLDER/openBurger.js"></script>
+<script src="/JS FOLDER/backtotop.js" defer></script>
+<script src="/JS FOLDER/signIn&signUpFORM.js" defer></script>
+<script src="/JS FOLDER/cart.js" defer></script>
+<script src="/JS FOLDER/openBurger.js" defer></script>
+<script src="/JS FOLDER/search.js" defer></script>
 </body>
 </html>

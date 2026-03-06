@@ -62,14 +62,18 @@
 
 
 
-.emailLabelGroup, .passwordLabelGroup, .passwordLabelGroupRepeat
+.emailLabelGroup,
+.usernameLabelGroup,
+.passwordLabelGroup,
+.passwordLabelGroupRepeat
 {
     display: flex;
     flex-direction: column;
-    margin-bottom: 15px;
+    margin: 15px 0;
     font-size: 14px;
 }
 
+.signUpForm input[type="text"],
 .signUpForm input[type="email"],
 .signUpForm input[type="password"]
 {
@@ -78,6 +82,7 @@
     border-radius: 4px;
     width: 100%;
 }
+
 
 .closeSignUpFormButton
 {
