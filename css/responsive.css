@@ -1,0 +1,617 @@
+/* =============================================
+   RESPONSIVE CSS — Home Kitchen Studio
+   Mobile-first
+   ============================================= */
+
+/* ── MOBILE DEFAULT ── */
+/* envelope hidden on mobile */
+.contactUsIcon {
+    display: none;
+}
+
+/* safety net — desktop nav never shows on mobile */
+#desktopInlineNav {
+    display: none;
+}
+/*MOBILE 0PX - 480PX*/
+
+/*TABLET 481px-768px*/
+@media (min-width: 481px) and (max-width:768px)
+{
+    .inputBarHeader
+    {
+        width: 85%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #searchInput
+    {
+        width: 80%;
+    }
+
+    .cartSidePopUpPage
+    {
+        width: 50%;
+    }
+
+    .banners img
+    {
+        height: 37vh;
+    }
+
+    .bannerMessageMain
+    {
+        height: 24vh;
+        top: 12px;
+        font-size: 45px;
+    }
+
+    .bannerMessageSub
+    {
+        top: 42%;
+        font-size: 16px;
+        padding: 0 1rem;
+    }
+
+    .handPointer
+    {
+        bottom: 10px;
+        font-size: 2rem;
+        left: 30%;
+    }
+
+    .shopNowButton
+    {
+        bottom: 14px;
+        padding: 10px 30px;
+        font-size: 20px;
+        font-weight: 600;
+    }
+
+    .h2Main
+    {
+        font-size: 45px;
+    }
+
+    .productCaption
+    {
+        font-size: 16px;
+        letter-spacing: -0.5px;
+    }
+
+    .price
+    {
+        font-size: 16px;
+        font-weight: 700;
+    }
+
+    .addToCart
+    {
+        font-size: 16px;
+        padding: 3px 6px;
+    }
+
+    .fa-trash-can
+    {
+        font-size: 18px;
+    }
+
+    .bottomCategoryBlock a
+    {
+        font-size: 17px;
+    }
+
+    .subscribe h3
+    {
+        font-size: 20px;
+    }
+
+    .subscribeContent input
+    {
+        height: 4.2vh;
+    }
+
+    .subscribeContent button
+    {
+        font-size: 17px;
+    }
+
+    .subscribeContent p
+    {
+        font-size: 14px;
+    }
+
+    .moreInfoGroup h4
+    {
+        font-size: 23px;
+        font-weight: bold;
+    }
+    .moreInfoGroup a,
+    .moreInfoGroup p
+    {
+        font-size: 17px;
+    }
+
+    .paymentGroup
+    {
+        display: flex;
+        flex-direction: row;
+
+    }
+
+    .cards
+    {
+        width: 100%;
+    }
+    .cards img
+    {
+        width: 50%;
+        height: 5vh;
+    }
+
+    .paymentSocialShippingGroup h4
+    {
+        font-size: 23px;
+    }
+
+    .socialShipGroup
+    {
+        display: flex;
+        flex-direction: column;
+        width: 40%;
+        margin: 15px 0;
+    }
+
+    .socialMedia img
+    {
+        width: 40%;
+        height: auto;
+    }
+
+    .shippingGroup
+    {
+    padding-left: 0;
+    }
+
+    .footer p,
+    .aboutPageP
+    {
+        font-size: 15px;
+    }
+
+    .aboutPageP a
+    {
+        font-size: 17px;
+    }
+
+    .aboutPageP a:hover
+    {
+        color: #d4a800;
+    }
+}
+
+
+
+
+
+/* ─────────────────────────────────────────
+laptop/small pc 769px - 1024px
+───────────────────────────────────────────*/
+@media (min-width: 769px) {
+
+    /* hide burger */
+    .burgerIcon {
+        display: none !important;
+    }
+
+    .pageLogoBox
+    {
+        width: 150px;
+    }
+
+
+    /* search input — constrained so right side has breathing room */
+    .inputBarHeader {
+        flex: 1;
+        max-width: 65%;
+    }
+
+    .inputBarHeader input {
+        width: 90%;
+        height: 36px;
+    }
+
+    .fa-magnifying-glass
+    {
+        padding: 9.2px !important;
+    }
+    .cartIcon
+    {
+        font-size: 25px !important;
+    }
+
+    .cartBadge
+    {
+        position: absolute;
+        left: 22px;
+        top: -1px;
+        font-size: 18px;
+        height: 28px;
+        width: 28px;
+    }
+
+    /* cart, sign-in, envelope — even spacing */
+    .cart-Log-Call-Group,
+    .signInIconDiv,
+    .contactUsIcon {
+        flex-shrink: 0;
+        font-size: 22px;
+    }
+
+    .signInIconDiv a,
+    .signInIconDiv .userWelcomeGroup {
+        padding: 0 5px 0 10px;
+    }
+
+    /* show envelope icon */
+    .contactUsIcon {
+        display: flex;
+    }
+
+    .contactUsIcon a {
+        color: #333;
+        font-size: 25px;
+        text-decoration: none;
+        padding: 0 20px;
+        transition: color 0.2s;
+    }
+
+    .contactUsIcon a:hover {
+        color: #9c6b0f;
+    }
+
+    /* nav row below header */
+    #desktopInlineNav {
+        display: flex !important;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        border-top: 1px solid #e8e8e8;
+        flex-wrap: wrap;
+        background-color: #2b2b2b;
+    }
+
+    #desktopInlineNav a
+    {
+        color: #f5c518;
+    }
+
+    #desktopInlineNav a:hover
+    {
+        color: #f5c518;
+        background-color: #5c5b5b;
+    }
+
+    
+    /* signed-in welcome text — compact */
+    .userWelcomeGroup {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        line-height: 1.3;
+        font-size: 50px;
+        white-space: nowrap;
+    }
+
+    .userWelcomeText {
+        font-size: 24px;
+        margin-left: 15px;
+    }
+
+    .signOutLink {
+        font-size: 20px;
+        color: #c0392b;
+        text-decoration: none;
+        margin-top: 4px;
+        margin-left: 5px;
+    }
+
+    .signOutLink:hover {
+        text-decoration: underline;
+    }
+
+    .dNavItem {
+        position: relative;
+        display: flex;
+        align-items: center;
+    }
+
+    .dNavItem > a {
+        display: flex;
+        align-items: center;
+        padding: 0 12px;
+        height: 40px;
+        font-size: 0.73rem;
+        font-weight: 700;
+        letter-spacing: 0.04em;
+        color: #222;
+        text-decoration: none;
+        white-space: nowrap;
+        transition: color 0.2s, background 0.2s;
+    }
+
+    .dNavItem > a:hover {
+        color: #9c6b0f;
+        background: #f5f5f5;
+    }
+
+    .dNavDropdown {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background: #fff;
+        border: 1px solid #e0e0e0;
+        border-top: 2px solid #9c6b0f;
+        min-width: 160px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        z-index: 999;
+        flex-direction: column;
+    }
+
+    .dNavHasDropdown:hover .dNavDropdown {
+        display: flex;
+    }
+
+    .dNavDropdown a {
+        padding: 10px 16px;
+        font-size: 0.82rem;
+        color: #333 !important;
+        text-decoration: none;
+        white-space: nowrap;
+        transition: background 0.15s, color 0.15s;
+        font-size: 17px;
+    }
+
+    .dNavDropdown a:hover {
+        background: #f9f4ec !important;
+        color: #9c6b0f !important;
+    }
+
+    .h2Main
+    {
+        margin-top: 3rem;
+        font-size: 3rem;
+    }
+
+    .mainProductsGroup
+    {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    }
+
+    .productCaption,
+    .price,
+    .addToCart
+    {
+        font-size: 20px;
+        letter-spacing: -1px;
+    }
+
+    .addToCart
+    {
+        padding: 4px 10px;
+    }
+
+    .fa-trash-can
+    {
+        top: 5px;
+        font-size: 20px;
+    }
+
+    .viewMore
+    {
+        margin-bottom: 7rem;
+        margin-top: 3rem;
+    }
+
+    .banners img
+    {
+        width: 100%;
+        height: auto;
+    }
+
+    .bannerMessageMain
+    {
+        height: 33vh;
+        top: 10vh;
+        font-size: 5rem;
+        letter-spacing: -2px;
+
+    }
+
+    .bannerMessageSub
+    {
+        font-size: 1.8rem;
+        top: 40%;
+        color: #75521d;
+        padding: 0 1rem;
+    }
+
+    .shopNowButton
+    {
+        bottom: 3.2rem;
+        font-size: 1.5rem;
+        font-weight: 500;
+        padding: 10px;
+    }
+
+    .handPointer
+    {
+        bottom: 3rem;
+        font-size: 2.2rem;
+        left: 38.5%;
+    }
+
+    .cartSidePopUpPage
+    {
+        width: 50%;
+    }
+
+    .eachCartOnPopUp img
+    {
+        width: 100px;
+        height: auto;
+    }
+
+    .eachCartLabel
+    {
+        font-size: 18px;
+    }
+
+    .eachCartPrice
+    {
+        font-size: 15px;
+        font-weight: 600;
+    }
+
+    .plusBtn, .minusBtn, .eachItemTotal, .removeTrash
+    {
+        font-size: 16px;
+    }
+
+    .plusBtn:hover, .minusBtn:hover
+    {
+        cursor: pointer;
+        background-color: #333;
+        color:#d4a800;
+        transform: scale(102%);
+        transition: 0.2s;
+        border-radius: 2px;
+        font-size: 20px;
+    }
+
+    .removeTrash:hover
+    {
+        transform: scale(120%);
+        transition: 0.2s;
+        cursor: pointer;
+    }
+
+    #checkoutSideCartButton
+    {
+        margin-bottom: 15px;
+    }
+
+    .subscribeContent button
+    {
+        padding: 6.4px;
+    }
+
+    .moreInfoGroup h4
+    {
+        font-size: 20px;
+    }
+
+    .moreInfoGroup a
+    {
+        font-size: 16px;
+    }
+
+    .paymentGroup
+    {
+        padding: 0 30px;
+    }
+
+    .paymentGroup img
+    {
+        margin-top: 50px;
+        transform: translateY(-50%);
+        width: 60px;
+        height: 30px;
+    }
+
+    .socialMediaGroup
+    {
+        width: 150px;
+        margin: -10px 50px 0 30px;
+    }
+
+    .shippingGroup
+    {
+        width: 250px;
+        margin-top: -10px;
+    }
+
+    .socialMediaGroup h4, .shippingGroup h4
+    {
+        width: 150px !important;
+    }
+
+
+    .paymentSocialShippingGroup
+    {
+        display: flex;
+    }
+
+    .paymentSocialShippingGroup h4
+    {
+        width: 60px;
+        margin-top: 20px;
+    }
+
+    .bottomLogo img
+    {
+        width: 20%;
+        height: auto;
+    }
+
+    .signInForm
+    {
+        width: 25%;
+    }
+
+    .signUpForm
+    {
+        width: 25%;
+    }
+}
+
+
+
+
+/* ─────────────────────────────────────────
+large screen/ DESKTOP 1025px-1200px
+───────────────────────────────────────────*/
+@media (min-width: 1025px) {
+
+    .dNavItem > a {
+        padding: 0 16px;
+        height: 44px;
+        font-size: 0.76rem;
+    }
+
+}
+
+
+/* ─────────────────────────────────────────
+biggest(extra large) 1201px and up --
+LARGE DESKTOP 1440px+
+───────────────────────────────────────────*/
+@media (min-width: 1440px) {
+
+    .dNavItem > a {
+        padding: 0 20px;
+    }
+
+}
+
+
+/* ─────────────────────────────────────────
+FULL HD 1920px+
+───────────────────────────────────────────*/
+@media (min-width: 1920px) {
+
+}

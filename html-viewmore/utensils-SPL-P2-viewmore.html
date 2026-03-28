@@ -4,10 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home Kitchen Studio</title>
-    <link rel="icon" type="image/png" href="images/LOGO&BACKGROUND/official logo TRANSPARTENT BG - CROPPED.png">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"><link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/css/header.css">
     <link rel="stylesheet" href="/css/universal&body.css">
     <link rel="stylesheet" href="/css/mobilefirst.css">
@@ -18,9 +14,14 @@
     <link rel="stylesheet" href="/css/signIn.css">
     <link rel="stylesheet" href="/css/signUp.css">
     <link rel="stylesheet" href="/css/checkout.css">
-    <link rel="stylesheet" href="/css/responsive.css">
     <script src="/js/skeleton.js"></script>
 
+    <link rel="icon" type="image/png" href="images/LOGO&BACKGROUND/official logo TRANSPARTENT BG - CROPPED.png">
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"><link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -33,11 +34,6 @@
         <div class="pageLogoBox">
             <a href="/index.html"><img class="pageLogo" src="/images/LOGO&BACKGROUND/official logo TRANSPARTENT BG - CROPPED.png" alt="Home Kitchen Studio Logo"></a>
         </div>
-        <div class="inputBarHeader">
-            <input type="text" placeholder="Search product here..." id="searchInput">
-            <i class="fa-solid fa-magnifying-glass"></i>
-        </div>
-
         <div class="cart-Log-Call-Group">
             <div id="cartIcon" class="cartIcon"  onclick="openCartPop(event)">
                 <a href="javascript:void(0)"><i class="fa-solid fa-cart-shopping"></i></a>
@@ -60,44 +56,47 @@
                     </button>   
                 </div>
         </div>
-        <div class="signInIconDiv">
-            <a href="javascript:void(0)" onclick="openSignIn()"><i class="fa-solid fa-user"></i></a>
-        </div>
-        <div class="contactUsIcon">
-            <a href="/footer-links/getInTouch-EMAIL.html" title="Contact Us">
-            <i class="fa-solid fa-envelope"></i></a>
+
+            <div>
+                <a href="javascript:void(0)" onclick="openSignIn()"><i class="fa-solid fa-user"></i></a>
+            </div>
+
         </div>
     </header>
+        <div class="inputBarHeader">
+            <input type="text" placeholder="Search product here..." id="searchInput">
+            <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
+        </div>
 
 <nav class="categories" id="categories">
     <span><i class="fa-solid fa-xmark" onclick="closeCatPop()"></i></span>
     <div class="eachCategory">
-        <a href="/html-categories/accessories.html">ACCESSORIES</a>
+        <a href="/HTML-CATEGORIES/accessories.html">ACCESSORIES</a>
     </div>
     <div class="eachCategory">
-        <a href="/html-categories/bakingtools.html">BAKING TOOLS</a>
+        <a href="/HTML-CATEGORIES/bakingtools.html">BAKING TOOLS</a>
     </div>
     <div class="eachCategory">
-        <a href="/html-categories/storage.html">STORAGE</a>
+        <a href="/HTML-CATEGORIES/storage.html">STORAGE</a>
         <button onclick="storage()"><i class="fa-solid fa-chevron-right"></i></button>
     </div>
     <div class="eachCategory">
-        <a href="/html-categories/glasswares.html">GLASSWARES</a>
+        <a href="/HTML-CATEGORIES/glasswares.html">GLASSWARES</a>
         <button onclick="glasswares()"><i class="fa-solid fa-chevron-right"></i></button>
     </div>
     <div class="eachCategory">
-        <a href="/html-categories/kitchenappliances.html">KITCHEN APPLIANCES</a>
+        <a href="/HTML-CATEGORIES/kitchenappliances.html">KITCHEN APPLIANCES</a>
     </div>
     <div class="eachCategory">
-        <a href="/html-categories/knives.html">KNIVES</a>
+        <a href="/HTML-CATEGORIES/knives.html">KNIVES</a>
         <button onclick="knives()"><i class="fa-solid fa-chevron-right"></i></button>
     </div>
     <div class="eachCategory">
-        <a href="/html-categories/cookwares.html">COOKWARES</a>
+        <a href="/HTML-CATEGORIES/cookwares.html">COOKWARES</a>
         <button onclick="cookwares()"><i class="fa-solid fa-chevron-right"></i></button>
     </div>
     <div class="eachCategory">
-        <a href="/html-categories/utensils.html">UTENSILS</a>
+        <a href="/HTML-CATEGORIES/utensils.html">UTENSILS</a>
         <button onclick="utensils()"><i class="fa-solid fa-chevron-right"></i></button>
     </div>
 </nav>
@@ -105,45 +104,48 @@
 
 <div class="categorySubGroup">
     <ul class="eachCategorySubStorage">
-        <a href="/html-categories/" >Single Storage</a>
-        <a href="/html-categories/">Storage Set</a>
+        <a href="/HTML-CATEGORIES/storage.html" >Single Storage</a>
+        <a href="/HTML-CATEGORIES/storage.html">Storage Set</a>
     </ul>
     <ul class="eachCategorySubGlasses">
-        <a href="/html-categories/glasswares.html">Wine Glasses</a>
-        <a href="/html-categories/glasswares.html">Mugs</a>
-        <a href="/html-categories/glasswares.html">Drinking Glasses</a>
+        <a href="/HTML-CATEGORIES/glasswares.html">Wine Glasses</a>
+        <a href="/HTML-CATEGORIES/glasswares.html">Mugs</a>
+        <a href="/HTML-CATEGORIES/glasswares.html">Drinking Glasses</a>
     </ul>
     <ul class="eachCategorySubKnife">
-        <a href="/html-categories/knives.html">Knife Set</a>
-        <a href="/html-categories/knives.html">Bread Knife</a>
-        <a href="/html-categories/knives.html">Paring Knife</a>
-        <a href="/html-categories/knives.html">Utility Knife</a>
+        <a href="/HTML-CATEGORIES/knives.html">Knife Set</a>
+        <a href="/HTML-CATEGORIES/knives.html">Bread Knife</a>
+        <a href="/HTML-CATEGORIES/knives.html">Paring Knife</a>
+        <a href="/HTML-CATEGORIES/knives.html">Utility Knife</a>
     </ul>
     <ul class="eachCategorySubCookwares">
-        <a href="/html-categories/cookwares.html">Frying Pan</a>
-        <a href="/html-categories/cookwares.html">Grill Pan</a>
-        <a href="/html-categories/cookwares.html">Pots</a>
+        <a href="/HTML-CATEGORIES/cookwares.html">Frying Pan</a>
+        <a href="/HTML-CATEGORIES/cookwares.html">Grill Pan</a>
+        <a href="/HTML-CATEGORIES/cookwares.html">Pots</a>
     </ul>
     <ul class="eachCategorySubUtensils">
-        <a href="/html-categories/utensils.html">Utensil Set</a>
-        <a href="/html-categories/utensils.html">Spoon, Fork & Ladle</a>
-        <a href="/html-categories/utensils.html">Spatula and Turner</a>
+        <a href="/HTML-CATEGORIES/utensils.html">Utensil Set</a>
+        <a href="/HTML-CATEGORIES/utensils.html">Spoon, Fork & Ladle</a>
+        <a href="/HTML-CATEGORIES/utensils.html">Spatula and Turner</a>
     </ul>
 </div>
 
-<div class="banners">
-    <img src="../images/BANNERS/Banner-Kitchen Appliances.jpg" alt="Kitchen Appliances Banner">
-    <p class="bannerMessageMain">The High-Tech Kitchen</p>
-    <p class="bannerMessageSub">Commercial-grade power, redesigned for the elegance of your home kitchen.</p>
+<div>
+    <ul>
+        <li><a href="/index.html">HOME</a></li>
+        <li><a href="/HTML-CATEGORIES/utensils.html">UTENSILS</a></li>
+        <li><a href="utensils-SPL-P2-viewmore.html">SPOON, FORK AND LADLE</a></li>
+    </ul>
 </div>
 
-<div class="mainProductsGroup" data-category="kitchenappliances">
+<h2 class="h2Main">Spoon, Fork and Ladle</h2>
+<div class="mainProductsGroup">
     <div class="eachProduct">
         <figure>
-            <img src="../images/CATEGORIES/KITCHEN APPLIANCES/KITCHEN.APPLIANCES-1-Stainless Ultra Blender.png" alt="Five-Speed Stainless Ultra Blender">
+            <img src="../images/CATEGORIES/UTENSILS/SPOON&FORK&LADLE/Utensils-SFL-MORE-1-5pcs Flatware Set.png" alt="5pcs Flatware Set">
         </figure>
-        <figcaption class="productCaption">Five-Speed Stainless Ultra Blender</figcaption>
-        <p class="price">₱1,740.00</p>
+        <figcaption class="productCaption">5-piece Stainless Steel Flatware Set</figcaption>
+        <p class="price">₱409.00</p>
         <div class="addandTrashSection">
             <button class="addToCart">Add to Cart</button><span><i class="fa-solid fa-trash-can"></i></span>
         </div>
@@ -151,10 +153,10 @@
 
     <div class="eachProduct">
         <figure>
-            <img src="../images/CATEGORIES/KITCHEN APPLIANCES/KITCHEN.APPLIANCES-2-Compact Blender and To-Go Bottle.png" alt="Compact Blender with one To-Go Bottle">
+            <img src="../images/CATEGORIES/UTENSILS/SPOON&FORK&LADLE/Utensils-SFL-MORE-2-1 Set of Spoon, Fork and Knife.png" alt="1 Set of Spoon, Fork and Knife">
         </figure>
-        <figcaption class="productCaption">Compact Blender with one To-Go Bottle</figcaption>
-        <p class="price">₱1,099.00</p>
+        <figcaption class="productCaption">1 Set of Stainless Steel Spoon, Fork and Knife</figcaption>
+        <p class="price">₱389.00</p>
         <div class="addandTrashSection">
             <button class="addToCart">Add to Cart</button><span><i class="fa-solid fa-trash-can"></i></span>
         </div>
@@ -162,10 +164,10 @@
 
     <div class="eachProduct">
         <figure>
-            <img src="../images/CATEGORIES/KITCHEN APPLIANCES/KITCHEN.APPLIANCES-3-Personal Blender.png" alt="Black Two-Speed Personal Blender">
+            <img src="../images/CATEGORIES/UTENSILS/SPOON&FORK&LADLE/Utensils-SFL-MORE-3-Spoon and Fork Set.png" alt="3-piece Spoon and Fork Set">
         </figure>
-        <figcaption class="productCaption">Black Two-Speed Personal Blender</figcaption>
-        <p class="price">₱935.00</p>
+        <figcaption class="productCaption">3-piece Stainless Steel Spoon and Fork Set</figcaption>
+        <p class="price">₱370.00</p>
         <div class="addandTrashSection">
             <button class="addToCart">Add to Cart</button><span><i class="fa-solid fa-trash-can"></i></span>
         </div>
@@ -173,10 +175,10 @@
 
     <div class="eachProduct">
         <figure>
-            <img src="../images/CATEGORIES/KITCHEN APPLIANCES/KITCHEN.APPLIANCES-4-Hand Blender with Accessories.png" alt="Hand Blender with Accessories">
+            <img src="../images/CATEGORIES/UTENSILS/SPOON&FORK&LADLE/Utensils-SFL-MORE-4-1Pair Elegant Spoon and Fork.png" alt="1Pair Elegant Spoon and Fork">
         </figure>
-        <figcaption class="productCaption">Hand Blender with Accessories</figcaption>
-        <p class="price">₱1,035.00</p>
+        <figcaption class="productCaption">1Pair Elegant Stainless Steel Spoon and Fork</figcaption>
+        <p class="price">₱239.00</p>
         <div class="addandTrashSection">
             <button class="addToCart">Add to Cart</button><span><i class="fa-solid fa-trash-can"></i></span>
         </div>
@@ -184,10 +186,10 @@
 
     <div class="eachProduct">
         <figure>
-            <img src="../images/CATEGORIES/KITCHEN APPLIANCES/KITCHEN.APPLIANCES-5-Stainless Steel Immersion Blender.png" alt="Stainless Steel Immersion Blender">
+            <img src="../images/CATEGORIES/UTENSILS/SPOON&FORK&LADLE/Utensils-SFL-MORE-5-Slotted Spoon.png" alt="Slotted Spoon">
         </figure>
-        <figcaption class="productCaption">Stainless Steel Immersion Blender</figcaption>
-        <p class="price">₱679.00</p>
+        <figcaption class="productCaption">1-piece Slotted Spoon with Black Plastic Handle</figcaption>
+        <p class="price">₱119.00</p>
         <div class="addandTrashSection">
             <button class="addToCart">Add to Cart</button><span><i class="fa-solid fa-trash-can"></i></span>
         </div>
@@ -195,10 +197,10 @@
 
     <div class="eachProduct">
         <figure>
-            <img src="../images/CATEGORIES/KITCHEN APPLIANCES/KITCHEN.APPLIANCES-6-Silver Elite Juicer.png" alt="Modern Style Silver Elite Juicer">
+            <img src="../images/CATEGORIES/UTENSILS/SPOON&FORK&LADLE/Utensils-SFL-MORE-6-Stainless Steel Polished Ladle.png" alt="Stainless Steel Polished Ladle">
         </figure>
-        <figcaption class="productCaption">Modern Style Silver Elite Juicer</figcaption>
-        <p class="price">₱1,835.00</p>
+        <figcaption class="productCaption">1-piece Stainless Steel Polished Ladle</figcaption>
+        <p class="price">₱179.00</p>
         <div class="addandTrashSection">
             <button class="addToCart">Add to Cart</button><span><i class="fa-solid fa-trash-can"></i></span>
         </div>
@@ -206,10 +208,10 @@
 
     <div class="eachProduct">
         <figure>
-            <img src="../images/CATEGORIES/KITCHEN APPLIANCES/KITCHEN.APPLIANCES-7-Stainless Steel Modern Juicer.png" alt="Stainless Steel Modern Juicer">
+            <img src="../images/CATEGORIES/UTENSILS/SPOON&FORK&LADLE/Utensils-SFL-MORE-7-Sleek Stainless Steel Pasta Server.png" alt="Sleek Stainless Steel Pasta Server">
         </figure>
-        <figcaption class="productCaption">Stainless Steel Modern Juicer</figcaption>
-        <p class="price">₱2,300.00</p>
+        <figcaption class="productCaption">1-piece Sleek Stainless Steel Pasta Server</figcaption>
+        <p class="price">₱205.00</p>
         <div class="addandTrashSection">
             <button class="addToCart">Add to Cart</button><span><i class="fa-solid fa-trash-can"></i></span>
         </div>
@@ -217,10 +219,10 @@
 
     <div class="eachProduct">
         <figure>
-            <img src="../images/CATEGORIES/KITCHEN APPLIANCES/KITCHEN.APPLIANCES-8-Citrus Juicer.png" alt="Trending Manual Citrus Juicer">
+            <img src="../images/CATEGORIES/UTENSILS/SPOON&FORK&LADLE/Utensils-SFL-MORE-8-Gray Angled Mixing Spoon.png" alt="Gray Angled Mixing Spoon">
         </figure>
-        <figcaption class="productCaption">Trending Manual Citrus Juicer</figcaption>
-        <p class="price">₱855.00</p>
+        <figcaption class="productCaption">1-piece Gray Angled Mixing Spoon</figcaption>
+        <p class="price">₱190.00</p>
         <div class="addandTrashSection">
             <button class="addToCart">Add to Cart</button><span><i class="fa-solid fa-trash-can"></i></span>
         </div>
@@ -228,10 +230,10 @@
 
     <div class="eachProduct">
         <figure>
-            <img src="../images/CATEGORIES/KITCHEN APPLIANCES/KITCHEN.APPLIANCES-9-Modern Soda Maker.png" alt="Single Black Modern Soda Maker">
+            <img src="../images/CATEGORIES/UTENSILS/SPOON&FORK&LADLE/Utensils-SFL-MORE-9-Multi-Purpose Silicone Spoon.png" alt="Multi-Purpose Silicone Spoon">
         </figure>
-        <figcaption class="productCaption">Single Black Modern Soda Maker</figcaption>
-        <p class="price">₱995.00</p>
+        <figcaption class="productCaption">1-piece Multi-Purpose Silicone Spoon</figcaption>
+        <p class="price">₱165.00</p>
         <div class="addandTrashSection">
             <button class="addToCart">Add to Cart</button><span><i class="fa-solid fa-trash-can"></i></span>
         </div>
@@ -239,10 +241,10 @@
 
     <div class="eachProduct">
         <figure>
-            <img src="../images/CATEGORIES/KITCHEN APPLIANCES/KITCHEN.APPLIANCES-10-Stainless Steel Food Processor and Accessories.png" alt="Stainless Steel Food Processor and Accessories">
+            <img src="../images/CATEGORIES/UTENSILS/SPOON&FORK&LADLE/Utensils-SFL-MORE-10-Black Soup Ladle.png" alt="Black Soup Ladle">
         </figure>
-        <figcaption class="productCaption">Stainless Steel Food Processor and Accessories</figcaption>
-        <p class="price">₱2,939.00</p>
+        <figcaption class="productCaption">1-piece Modern Black Soup Ladle</figcaption>
+        <p class="price">₱159.00</p>
         <div class="addandTrashSection">
             <button class="addToCart">Add to Cart</button><span><i class="fa-solid fa-trash-can"></i></span>
         </div>
@@ -250,10 +252,10 @@
 
     <div class="eachProduct">
         <figure>
-            <img src="../images/CATEGORIES/KITCHEN APPLIANCES/KITCHEN.APPLIANCES-11-Stainless Steel Meat Grinder and Accessories.png" alt="Stainless Steel Meat Grinder and Accessories">
+            <img src="../images/CATEGORIES/UTENSILS/SPOON&FORK&LADLE/Utensils-SFL-MORE-11-Simple Silicone Ladle.png" alt="1-piece Silicone Ladle with Wooden Handle">
         </figure>
-        <figcaption class="productCaption">Stainless Steel Meat Grinder and Accessories</figcaption>
-        <p class="price">₱3,495.00</p>
+        <figcaption class="productCaption">1-piece Silicone Ladle with Wooden Handle</figcaption>
+        <p class="price">₱149.00</p>
         <div class="addandTrashSection">
             <button class="addToCart">Add to Cart</button><span><i class="fa-solid fa-trash-can"></i></span>
         </div>
@@ -261,77 +263,44 @@
 
     <div class="eachProduct">
         <figure>
-            <img src="../images/CATEGORIES/KITCHEN APPLIANCES/KITCHEN.APPLIANCES-12-Fully Automatic Espresso Machine.png" alt="Fully Automatic Espresso Machine">
+            <img src="../images/CATEGORIES/UTENSILS/SPOON&FORK&LADLE/Utensils-SFL-MORE-12-Black Slotted Spoon.png" alt="Black Slotted Spoon">
         </figure>
-        <figcaption class="productCaption">Fully Automatic Espresso Machine</figcaption>
-        <p class="price">₱2,905.00</p>
+        <figcaption class="productCaption">1-piece Matte Black Slotted Spoon</figcaption>
+        <p class="price">₱179.00</p>
         <div class="addandTrashSection">
             <button class="addToCart">Add to Cart</button><span><i class="fa-solid fa-trash-can"></i></span>
         </div>
     </div>
-
-    <div class="eachProduct">
-        <figure>
-            <img src="../images/CATEGORIES/KITCHEN APPLIANCES/KITCHEN.APPLIANCES-13-Manual Espresso Coffee Machine.png" alt="Manual Espresso Coffee Machine">
-        </figure>
-        <figcaption class="productCaption">Manual Espresso Coffee Machine</figcaption>
-        <p class="price">₱2,160.00</p>
-        <div class="addandTrashSection">
-            <button class="addToCart">Add to Cart</button><span><i class="fa-solid fa-trash-can"></i></span>
-        </div>
-    </div>
-
-    <div class="eachProduct">
-        <figure>
-            <img src="../images/CATEGORIES/KITCHEN APPLIANCES/KITCHEN.APPLIANCES-14-Electric Kettle.png" alt="Elegant Stainless Steel Electric Kettle">
-        </figure>
-        <figcaption class="productCaption">Elegant Stainless Steel Electric Kettle</figcaption>
-        <p class="price">₱1,569.00</p>
-        <div class="addandTrashSection">
-            <button class="addToCart">Add to Cart</button><span><i class="fa-solid fa-trash-can"></i></span>
-        </div>
-    </div>
-
-    <div class="eachProduct">
-        <figure>
-            <img src="../images/CATEGORIES/KITCHEN APPLIANCES/KITCHEN.APPLIANCES-15-Stainless Steel Electric Kettle.png" alt="Classic Stainless Steel Electric Kettle">
-        </figure>
-        <figcaption class="productCaption">Classic Stainless Steel Electric Kettle</figcaption>
-        <p class="price">₱1,499.00</p>
-        <div class="addandTrashSection">
-            <button class="addToCart">Add to Cart</button><span><i class="fa-solid fa-trash-can"></i></span>
-        </div>
-    </div>
-
-    <div class="eachProduct">
-        <figure>
-            <img src="../images/CATEGORIES/KITCHEN APPLIANCES/KITCHEN.APPLIANCES-16-Black Milk Frother.png" alt="Durable Classic Black Milk Frother">
-        </figure>
-        <figcaption class="productCaption">Durable Classic Black Milk Frother</figcaption>
-        <p class="price">₱1,570.00</p>
-        <div class="addandTrashSection">
-            <button class="addToCart">Add to Cart</button><span><i class="fa-solid fa-trash-can"></i></span>
-        </div>
-    </div>
-
 </div>
 
 <div class="viewMore">
-    <button id="viewMoreButton"><a href="/html-viewmore/kitchenappliances-P2-viewmore.html">View More</a></button>
+    <button id="viewMoreButton"><a href="/HTML-CATEGORIES/utensils.html">◀</a></button>
+    <button id="viewMoreButton"><a href="/HTML-CATEGORIES/utensils.html">1</a></button>
+    <button id="viewMoreButton"><a href="utensils-SPL-P2-viewmore.html">2</a></button>
+</div>
+
+<div>
+    <ul>
+        <li><a href="/index.html">Featured Products</a></li>
+        <li><a href="/index.html">Best Sellers</a></li>
+        <li><a href="/index.html">Limited Offers</a></li>
+        <li><a href="/index.html">Bundle Deals</a></li>
+    </ul>
 </div>
 
 
 <h2 class="h2Main">Shop by Category</h2>
 <div class="bottomCategoryBlock">
-    <a href="accessories.html">ACCESSORIES</a>
-    <a href="bakingtools.html">BAKING TOOLS</a>
-    <a href="cookwares.html">COOKWARES</a>
-    <a href="glasswares.html">GLASSWARES</a>
-    <a href="kitchenappliances.html">KITCHEN APPLIANCES</a>
-    <a href="knives.html">KNIVES</a>
-    <a href="storage.html">STORAGE</a>
-    <a href="utensils.html">UTENSILS</a>
+    <a href="/HTML-CATEGORIES/accessories.html">ACCESSORIES</a>
+    <a href="/HTML-CATEGORIES/bakingtools.html">BAKING TOOLS</a>
+    <a href="/HTML-CATEGORIES/cookwares.html">COOKWARES</a>
+    <a href="/HTML-CATEGORIES/glasswares.html">GLASSWARES</a>
+    <a href="/HTML-CATEGORIES/kitchenappliances.html">KITCHEN APPLIANCES</a>
+    <a href="/HTML-CATEGORIES/knives.html">KNIVES</a>
+    <a href="/HTML-CATEGORIES/storage.html">STORAGE</a>
+    <a href="/HTML-CATEGORIES/utensils.html">UTENSILS</a>
 </div>
+
 
 
 

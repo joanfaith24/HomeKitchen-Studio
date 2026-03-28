@@ -1,0 +1,253 @@
+
+/* IMAGE BANNER WITH SHOP NOW*/
+
+.banners
+{
+    position: relative;
+    margin-bottom: 30px;
+}
+.banners img
+{
+    width: 100%;
+    height: 24vh;
+}
+
+.bannerMessageMain
+{
+    position: absolute;
+    top: 10px;
+    left: 5%;
+    background-color: whitesmoke;
+    width: 90%;
+    height: 15vh;
+    font-size: 30px;
+    text-align: center;
+    padding-top: 2px;
+    border-radius: 2px;
+
+}
+
+.bannerMessageSub
+{
+    position: absolute;
+    top: 35%;
+    background-color: transparent;
+    width: 90%;
+    font-size: 12px;
+    text-align: center;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 2px;
+    font-weight: 600;
+    color: #75521d;
+    padding: 0 10px;
+
+
+}
+@keyframes slideRight {
+    0%   { transform: translateX(0px); }
+    50%  { transform: translateX(18px); }
+    100% { transform: translateX(0px); }
+}
+
+.shopNowGroup {
+    display: flex;
+    position: relative;
+}
+
+.handPointer {
+    position: absolute;
+    bottom: 8px;
+    animation: slideRight 1200ms ease-in-out infinite;
+    filter: brightness(0) saturate(100%) invert(80%) sepia(60%) saturate(500%) hue-rotate(0deg) brightness(105%);
+    left: 27%;
+    font-size: 1.5rem;
+    z-index: 1000;
+}
+
+.shopNowButton
+{
+    position: absolute;
+    bottom: 12px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 5px;
+    border-radius: 2px;
+    border: none;
+    background-color: #F5C518;
+    color: #1a1a1a;
+    font-weight: 700;
+}
+
+
+.shopNowButton:active
+{
+    color: #F5C518;
+}
+
+
+
+.h2Main
+{
+    text-align: center;
+    font-size: 30px;
+    margin-top: 30px;
+}
+
+.mainProductsGroup
+{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.eachProduct
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 10px;
+}
+
+.eachProduct img
+{
+    width: 100%;
+    border-radius: 3px;
+}
+
+.productCaption, .price
+{
+    font-size: 13px;
+    text-align: center;
+}
+
+.price
+{
+    font-weight: 700;
+}
+
+.addToCart,
+.subscribeContent button
+{
+    padding: 3px 6px;
+    background-color: #F5C518;
+    color: #1a1a1a;
+    border: none;
+    border-radius: 2px;
+}
+
+.addandTrashSection
+{
+    position: relative;
+}
+
+.popupMsg {
+    position: absolute;
+    bottom: 110%;
+    left: 50%;
+    transform: translateX(-50%) translateY(0px);
+    background-color: #1a1a1a;
+    color: #fff;
+    padding: 6px 14px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: 600;
+    white-space: nowrap;
+    opacity: 1;
+    animation: floatUp 1s ease-out forwards;
+    pointer-events: none;
+    z-index: 99;
+}
+
+.popupMsg.removed {
+    background-color: #c0392b;
+}
+
+@keyframes floatUp {
+    0%   { opacity: 1; transform: translateX(-50%) translateY(0px); }
+    70%  { opacity: 1; transform: translateX(-50%) translateY(-20px); }
+    100% { opacity: 0; transform: translateX(-50%) translateY(-30px); }
+}
+
+.viewMore
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 20px 60px 20px;
+}
+
+.viewMoreButton
+{
+    background-color: #D4A800;
+    border: 1px solid #2B2B2B;
+    color: #1A1A1A;
+    padding: 8px 24px;
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: 2px;
+}
+
+.shopNowButton:hover,
+.addToCart:hover,
+.viewMoreButton:hover,
+.bottomCategoryBlock a:hover,
+.subscribeContent button:hover
+{
+    background-color: #2B2B2B;
+    color: #F5C518;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+
+
+
+.bottomCategoryBlock
+{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    text-align: center;
+    border: 1.5px solid #D4A800;
+    font-size: 13px;
+    background-color: #FBF8F0;
+}
+
+.bottomCategoryBlock a
+{
+    border: 1px solid #D4A800;
+    color: #1A1A1A;
+}
+
+.addandTrashSection
+{
+    position: relative;
+}
+
+.fa-trash-can
+{
+    visibility: hidden;
+    position: absolute;
+    right: -30px;
+    top: 3px;
+
+}
+
+.fa-trash-can:hover
+{
+    color: red;
+    cursor: pointer;
+}
+
+.subscribeContent button
+{
+    border-radius: 0 2px 2px 0;
+}
+
+.subscribeContent input
+{
+    border-radius: 2px 0 0 2px;
+    border: 0.01px solid #2B2B2B;
+    height: 2.94vh;
+}
+
