@@ -4,6 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home Kitchen Studio</title>
+    <link rel="icon" type="image/png" href="images/LOGO&BACKGROUND/official logo TRANSPARTENT BG - CROPPED.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"><link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/css/header.css">
     <link rel="stylesheet" href="/css/universal&body.css">
     <link rel="stylesheet" href="/css/mobilefirst.css">
@@ -14,14 +18,9 @@
     <link rel="stylesheet" href="/css/signIn.css">
     <link rel="stylesheet" href="/css/signUp.css">
     <link rel="stylesheet" href="/css/checkout.css">
+    <link rel="stylesheet" href="/css/responsive.css">
     <script src="/js/skeleton.js"></script>
 
-    <link rel="icon" type="image/png" href="images/LOGO&BACKGROUND/official logo TRANSPARTENT BG - CROPPED.png">
-
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"><link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -34,6 +33,11 @@
         <div class="pageLogoBox">
             <a href="/index.html"><img class="pageLogo" src="/images/LOGO&BACKGROUND/official logo TRANSPARTENT BG - CROPPED.png" alt="Home Kitchen Studio Logo"></a>
         </div>
+        <div class="inputBarHeader">
+            <input type="text" placeholder="Search product here..." id="searchInput">
+            <i class="fa-solid fa-magnifying-glass"></i>
+        </div>
+
         <div class="cart-Log-Call-Group">
             <div id="cartIcon" class="cartIcon"  onclick="openCartPop(event)">
                 <a href="javascript:void(0)"><i class="fa-solid fa-cart-shopping"></i></a>
@@ -56,47 +60,44 @@
                     </button>   
                 </div>
         </div>
-
-            <div>
-                <a href="javascript:void(0)" onclick="openSignIn()"><i class="fa-solid fa-user"></i></a>
-            </div>
-
+        <div class="signInIconDiv">
+            <a href="javascript:void(0)" onclick="openSignIn()"><i class="fa-solid fa-user"></i></a>
+        </div>
+        <div class="contactUsIcon">
+            <a href="/footer-links/getInTouch-EMAIL.html" title="Contact Us">
+            <i class="fa-solid fa-envelope"></i></a>
         </div>
     </header>
-        <div class="inputBarHeader">
-            <input type="text" placeholder="Search product here..." id="searchInput">
-            <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
-        </div>
 
 <nav class="categories" id="categories">
     <span><i class="fa-solid fa-xmark" onclick="closeCatPop()"></i></span>
     <div class="eachCategory">
-        <a href="/HTML-CATEGORIES/accessories.html">ACCESSORIES</a>
+        <a href="/html-categories/accessories.html">ACCESSORIES</a>
     </div>
     <div class="eachCategory">
-        <a href="/HTML-CATEGORIES/bakingtools.html">BAKING TOOLS</a>
+        <a href="/html-categories/bakingtools.html">BAKING TOOLS</a>
     </div>
     <div class="eachCategory">
-        <a href="/HTML-CATEGORIES/storage.html">STORAGE</a>
+        <a href="/html-categories/storage.html">STORAGE</a>
         <button onclick="storage()"><i class="fa-solid fa-chevron-right"></i></button>
     </div>
     <div class="eachCategory">
-        <a href="/HTML-CATEGORIES/glasswares.html">GLASSWARES</a>
+        <a href="/html-categories/glasswares.html">GLASSWARES</a>
         <button onclick="glasswares()"><i class="fa-solid fa-chevron-right"></i></button>
     </div>
     <div class="eachCategory">
-        <a href="/HTML-CATEGORIES/kitchenappliances.html">KITCHEN APPLIANCES</a>
+        <a href="/html-categories/kitchenappliances.html">KITCHEN APPLIANCES</a>
     </div>
     <div class="eachCategory">
-        <a href="/HTML-CATEGORIES/knives.html">KNIVES</a>
+        <a href="/html-categories/knives.html">KNIVES</a>
         <button onclick="knives()"><i class="fa-solid fa-chevron-right"></i></button>
     </div>
     <div class="eachCategory">
-        <a href="/HTML-CATEGORIES/cookwares.html">COOKWARES</a>
+        <a href="/html-categories/cookwares.html">COOKWARES</a>
         <button onclick="cookwares()"><i class="fa-solid fa-chevron-right"></i></button>
     </div>
     <div class="eachCategory">
-        <a href="/HTML-CATEGORIES/utensils.html">UTENSILS</a>
+        <a href="/html-categories/utensils.html">UTENSILS</a>
         <button onclick="utensils()"><i class="fa-solid fa-chevron-right"></i></button>
     </div>
 </nav>
@@ -104,45 +105,42 @@
 
 <div class="categorySubGroup">
     <ul class="eachCategorySubStorage">
-        <a href="/HTML-CATEGORIES/storage.html" >Single Storage</a>
-        <a href="/HTML-CATEGORIES/storage.html">Storage Set</a>
+        <a href="/html-categories/storage.html" >Single Storage</a>
+        <a href="/html-categories/storage.html">Storage Set</a>
     </ul>
     <ul class="eachCategorySubGlasses">
-        <a href="/HTML-CATEGORIES/glasswares.html">Wine Glasses</a>
-        <a href="/HTML-CATEGORIES/glasswares.html">Mugs</a>
-        <a href="/HTML-CATEGORIES/glasswares.html">Drinking Glasses</a>
+        <a href="/html-categories/glasswares.html">Wine Glasses</a>
+        <a href="/html-categories/glasswares.html">Mugs</a>
+        <a href="/html-categories/glasswares.html">Drinking Glasses</a>
     </ul>
     <ul class="eachCategorySubKnife">
-        <a href="/HTML-CATEGORIES/knives.html">Knife Set</a>
-        <a href="/HTML-CATEGORIES/knives.html">Bread Knife</a>
-        <a href="/HTML-CATEGORIES/knives.html">Paring Knife</a>
-        <a href="/HTML-CATEGORIES/knives.html">Utility Knife</a>
+        <a href="/html-categories/knives.html">Knife Set</a>
+        <a href="/html-categories/knives.html">Bread Knife</a>
+        <a href="/html-categories/knives.html">Paring Knife</a>
+        <a href="/html-categories/knives.html">Utility Knife</a>
     </ul>
     <ul class="eachCategorySubCookwares">
-        <a href="/HTML-CATEGORIES/cookwares.html">Frying Pan</a>
-        <a href="/HTML-CATEGORIES/cookwares.html">Grill Pan</a>
-        <a href="/HTML-CATEGORIES/cookwares.html">Pots</a>
+        <a href="/html-categories/cookwares.html">Frying Pan</a>
+        <a href="/html-categories/cookwares.html">Grill Pan</a>
+        <a href="/html-categories/cookwares.html">Pots</a>
     </ul>
     <ul class="eachCategorySubUtensils">
-        <a href="/HTML-CATEGORIES/utensils.html">Utensil Set</a>
-        <a href="/HTML-CATEGORIES/utensils.html">Spoon, Fork & Ladle</a>
-        <a href="/HTML-CATEGORIES/utensils.html">Spatula and Turner</a>
+        <a href="/html-categories/utensils.html">Utensil Set</a>
+        <a href="/html-categories/utensils.html">Spoon, Fork & Ladle</a>
+        <a href="/html-categories/utensils.html">Spatula and Turner</a>
     </ul>
 </div>
 
-<div>
-    <ul>
-        <li><a href="/index.html">HOME</a></li>
-        <li><a href="/HTML-CATEGORIES/cookwares.html">COOKWARES</a></li>
-        <li><a href="cookwares-pots-P2-viewmore.html">POTS</a></li>
-    </ul>
+
+<div class="pageSub">
+    <a href="/index.html">HOME </a><span>➜</span><a href="/html-categories/cookwares.html"> COOKWARES</a><span>➜</span><a href="cookwares-pots-P2-viewmore.html"> POTS</a>
 </div>
 
 <h2 class="h2Main">Pots</h2>
 <div class="mainProductsGroup">
     <div class="eachProduct">
         <figure>
-            <img src="../images/CATEGORIES/COOKWARES/POTS/Cookware-Pots-MORE-1-8Qt. Nonstick Hard Anodized Induction Stockpot with Lid.png" alt="8Qt. Nonstick Hard Anodized Induction Stockpot with Lid">
+            <img src="/images/CATEGORIES/COOKWARES/POTS/Cookware-Pots-MORE-1-8Qt. Nonstick Hard Anodized Induction Stockpot with Lid.png" alt="8Qt. Nonstick Hard Anodized Induction Stockpot with Lid">
         </figure>
         <figcaption class="productCaption">8Qt. Nonstick Stockpot with Lid</figcaption>
         <p class="price">₱379.00</p>
@@ -153,7 +151,7 @@
 
     <div class="eachProduct">
         <figure>
-            <img src="../images/CATEGORIES/COOKWARES/POTS/Cookware-Pots-MORE-2-4Qt. Non-stick Stockpot with Lid.png" alt="4Qt. Non-stick Stockpot with Lid">
+            <img src="/images/CATEGORIES/COOKWARES/POTS/Cookware-Pots-MORE-2-4Qt. Non-stick Stockpot with Lid.png" alt="4Qt. Non-stick Stockpot with Lid">
         </figure>
         <figcaption class="productCaption">4Qt. Non-stick Stockpot with Lid</figcaption>
         <p class="price">₱295.00</p>
@@ -164,7 +162,7 @@
 
     <div class="eachProduct">
         <figure>
-            <img src="../images/CATEGORIES/COOKWARES/POTS/Cookware-Pots-MORE-3-8Qt. Non-Stick Stockpot with Lid.png" alt="8Qt. Non-Stick Stockpot with Lid">
+            <img src="/images/CATEGORIES/COOKWARES/POTS/Cookware-Pots-MORE-3-8Qt. Non-Stick Stockpot with Lid.png" alt="8Qt. Non-Stick Stockpot with Lid">
         </figure>
         <figcaption class="productCaption">8Qt. Non-Stick Stockpot with Lid</figcaption>
         <p class="price">389.00</p>
@@ -175,7 +173,7 @@
 
     <div class="eachProduct">
         <figure>
-            <img src="../images/CATEGORIES/COOKWARES/POTS/Cookware-Pots-MORE-4-4Qt. Non-stick Ceramic Stockpot with Lid.png" alt="4Qt. Non-stick Ceramic Stockpot with Lid">
+            <img src="/images/CATEGORIES/COOKWARES/POTS/Cookware-Pots-MORE-4-4Qt. Non-stick Ceramic Stockpot with Lid.png" alt="4Qt. Non-stick Ceramic Stockpot with Lid">
         </figure>
         <figcaption class="productCaption">4Qt. Non-stick Ceramic Stockpot with Lid</figcaption>
         <p class="price">₱399.00</p>
@@ -186,7 +184,7 @@
 
     <div class="eachProduct">
         <figure>
-            <img src="../images/CATEGORIES/COOKWARES/POTS/Cookware-Pots-MORE-5-3.8Qt. Petite Enamel On Steel Stockpot.png" alt="3.8Qt. Petite Enamel On Steel Stockpot">
+            <img src="/images/CATEGORIES/COOKWARES/POTS/Cookware-Pots-MORE-5-3.8Qt. Petite Enamel On Steel Stockpot.png" alt="3.8Qt. Petite Enamel On Steel Stockpot">
         </figure>
         <figcaption class="productCaption">3.8Qt. Petite Enamel On Steel Stockpot</figcaption>
         <p class="price">₱424.00</p>
@@ -197,7 +195,7 @@
 
     <div class="eachProduct">
         <figure>
-            <img src="../images/CATEGORIES/COOKWARES/POTS/Cookware-Pots-MORE-6-10Qt. Aluminum Stockpot.png" alt="10Qt. Aluminum Stockpot with Lid">
+            <img src="/images/CATEGORIES/COOKWARES/POTS/Cookware-Pots-MORE-6-10Qt. Aluminum Stockpot.png" alt="10Qt. Aluminum Stockpot with Lid">
         </figure>
         <figcaption class="productCaption">10Qt. Aluminum Stockpot with Lid</figcaption>
         <p class="price">₱409.00</p>
@@ -208,7 +206,7 @@
 
     <div class="eachProduct">
         <figure>
-            <img src="../images/CATEGORIES/COOKWARES/POTS/Cookware-Pots-MORE-7-10Qt. Enamel on Steel Stockpot with Stainless Steel Knob.png" alt="10Qt. Enamel on Steel Stockpot with Stainless Steel Knob">
+            <img src="/images/CATEGORIES/COOKWARES/POTS/Cookware-Pots-MORE-7-10Qt. Enamel on Steel Stockpot with Stainless Steel Knob.png" alt="10Qt. Enamel on Steel Stockpot with Stainless Steel Knob">
         </figure>
         <figcaption class="productCaption">10Qt. Enamel Stockpot with Knob</figcaption>
         <p class="price">₱785.00</p>
@@ -219,7 +217,7 @@
 
     <div class="eachProduct">
         <figure>
-            <img src="../images/CATEGORIES/COOKWARES/POTS/Cookware-Pots-MORE-8-9Qt. Olive-green Steel Stockpot.png" alt="9Qt. Olive-green Steel Stockpot">
+            <img src="/images/CATEGORIES/COOKWARES/POTS/Cookware-Pots-MORE-8-9Qt. Olive-green Steel Stockpot.png" alt="9Qt. Olive-green Steel Stockpot">
         </figure>
         <figcaption class="productCaption">9Qt. Olive-green Steel Stockpot</figcaption>
         <p class="price">₱670.00</p>
@@ -230,9 +228,9 @@
 </div>
 
 <div class="viewMore">
-    <button id="viewMoreButton"><a href="/HTML-CATEGORIES/cookwares.html">◀</a></button>
-    <button id="viewMoreButton"><a href="/HTML-CATEGORIES/cookwares.html">1</a></button>
-    <button id="viewMoreButton"><a href="cookwares-pots-P2-viewmore.html">2</a></button>
+    <button class="viewMoreButton"><a href="/html-categories/cookwares.html">◀</a></button>
+    <button class="viewMoreButton"><a href="/html-categories/cookwares.html">1</a></button>
+    <button class="viewMoreButton"><a href="cookwares-pots-P2-viewmore.html">2</a></button>
 </div>
 
 <div>

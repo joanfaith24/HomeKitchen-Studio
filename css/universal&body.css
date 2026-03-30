@@ -97,12 +97,27 @@ a
 /*HOVERS*/
 /*a*/
 .addToCart:hover,
-.viewmore:hover
+.viewmore:hover,
+ul a:hover
+{
+    color: #D4A800;
+    transition: 0.2s;
+}
+
+.pageSub
+{
+    margin-top: 15px;
+}
+.pageSub a
+{
+    margin: 0 10px 0 10px;
+    font-weight: 700;
+}
+
+.pageSub a:hover
 {
     color: #D4A800;
 }
-
-
 
 
 #addToCartPopUp

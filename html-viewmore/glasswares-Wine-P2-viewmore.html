@@ -4,6 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home Kitchen Studio</title>
+    <link rel="icon" type="image/png" href="images/LOGO&BACKGROUND/official logo TRANSPARTENT BG - CROPPED.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"><link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/css/header.css">
     <link rel="stylesheet" href="/css/universal&body.css">
     <link rel="stylesheet" href="/css/mobilefirst.css">
@@ -14,14 +18,9 @@
     <link rel="stylesheet" href="/css/signIn.css">
     <link rel="stylesheet" href="/css/signUp.css">
     <link rel="stylesheet" href="/css/checkout.css">
+    <link rel="stylesheet" href="/css/responsive.css">
     <script src="/js/skeleton.js"></script>
 
-    <link rel="icon" type="image/png" href="images/LOGO&BACKGROUND/official logo TRANSPARTENT BG - CROPPED.png">
-
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"><link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -34,6 +33,11 @@
         <div class="pageLogoBox">
             <a href="/index.html"><img class="pageLogo" src="/images/LOGO&BACKGROUND/official logo TRANSPARTENT BG - CROPPED.png" alt="Home Kitchen Studio Logo"></a>
         </div>
+        <div class="inputBarHeader">
+            <input type="text" placeholder="Search product here..." id="searchInput">
+            <i class="fa-solid fa-magnifying-glass"></i>
+        </div>
+
         <div class="cart-Log-Call-Group">
             <div id="cartIcon" class="cartIcon"  onclick="openCartPop(event)">
                 <a href="javascript:void(0)"><i class="fa-solid fa-cart-shopping"></i></a>
@@ -56,47 +60,44 @@
                     </button>   
                 </div>
         </div>
-
-            <div>
-                <a href="javascript:void(0)" onclick="openSignIn()"><i class="fa-solid fa-user"></i></a>
-            </div>
-
+        <div class="signInIconDiv">
+            <a href="javascript:void(0)" onclick="openSignIn()"><i class="fa-solid fa-user"></i></a>
+        </div>
+        <div class="contactUsIcon">
+            <a href="/footer-links/getInTouch-EMAIL.html" title="Contact Us">
+            <i class="fa-solid fa-envelope"></i></a>
         </div>
     </header>
-        <div class="inputBarHeader">
-            <input type="text" placeholder="Search product here..." id="searchInput">
-            <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
-        </div>
 
 <nav class="categories" id="categories">
     <span><i class="fa-solid fa-xmark" onclick="closeCatPop()"></i></span>
     <div class="eachCategory">
-        <a href="/HTML-CATEGORIES/accessories.html">ACCESSORIES</a>
+        <a href="/html-categories/accessories.html">ACCESSORIES</a>
     </div>
     <div class="eachCategory">
-        <a href="/HTML-CATEGORIES/bakingtools.html">BAKING TOOLS</a>
+        <a href="/html-categories/bakingtools.html">BAKING TOOLS</a>
     </div>
     <div class="eachCategory">
-        <a href="/HTML-CATEGORIES/storage.html">STORAGE</a>
+        <a href="/html-categories/storage.html">STORAGE</a>
         <button onclick="storage()"><i class="fa-solid fa-chevron-right"></i></button>
     </div>
     <div class="eachCategory">
-        <a href="/HTML-CATEGORIES/glasswares.html">GLASSWARES</a>
+        <a href="/html-categories/glasswares.html">GLASSWARES</a>
         <button onclick="glasswares()"><i class="fa-solid fa-chevron-right"></i></button>
     </div>
     <div class="eachCategory">
-        <a href="/HTML-CATEGORIES/kitchenappliances.html">KITCHEN APPLIANCES</a>
+        <a href="/html-categories/kitchenappliances.html">KITCHEN APPLIANCES</a>
     </div>
     <div class="eachCategory">
-        <a href="/HTML-CATEGORIES/knives.html">KNIVES</a>
+        <a href="/html-categories/knives.html">KNIVES</a>
         <button onclick="knives()"><i class="fa-solid fa-chevron-right"></i></button>
     </div>
     <div class="eachCategory">
-        <a href="/HTML-CATEGORIES/cookwares.html">COOKWARES</a>
+        <a href="/html-categories/cookwares.html">COOKWARES</a>
         <button onclick="cookwares()"><i class="fa-solid fa-chevron-right"></i></button>
     </div>
     <div class="eachCategory">
-        <a href="/HTML-CATEGORIES/utensils.html">UTENSILS</a>
+        <a href="/html-categories/utensils.html">UTENSILS</a>
         <button onclick="utensils()"><i class="fa-solid fa-chevron-right"></i></button>
     </div>
 </nav>
@@ -104,44 +105,43 @@
 
 <div class="categorySubGroup">
     <ul class="eachCategorySubStorage">
-        <a href="/HTML-CATEGORIES/storage.html" >Single Storage</a>
-        <a href="/HTML-CATEGORIES/storage.html">Storage Set</a>
+        <a href="/html-categories/storage.html" >Single Storage</a>
+        <a href="/html-categories/storage.html">Storage Set</a>
     </ul>
     <ul class="eachCategorySubGlasses">
-        <a href="/HTML-CATEGORIES/glasswares.html">Wine Glasses</a>
-        <a href="/HTML-CATEGORIES/glasswares.html">Mugs</a>
-        <a href="/HTML-CATEGORIES/glasswares.html">Drinking Glasses</a>
+        <a href="/html-categories/glasswares.html">Wine Glasses</a>
+        <a href="/html-categories/glasswares.html">Mugs</a>
+        <a href="/html-categories/glasswares.html">Drinking Glasses</a>
     </ul>
     <ul class="eachCategorySubKnife">
-        <a href="/HTML-CATEGORIES/knives.html">Knife Set</a>
-        <a href="/HTML-CATEGORIES/knives.html">Bread Knife</a>
-        <a href="/HTML-CATEGORIES/knives.html">Paring Knife</a>
-        <a href="/HTML-CATEGORIES/knives.html">Utility Knife</a>
+        <a href="/html-categories/knives.html">Knife Set</a>
+        <a href="/html-categories/knives.html">Bread Knife</a>
+        <a href="/html-categories/knives.html">Paring Knife</a>
+        <a href="/html-categories/knives.html">Utility Knife</a>
     </ul>
     <ul class="eachCategorySubCookwares">
-        <a href="/HTML-CATEGORIES/cookwares.html">Frying Pan</a>
-        <a href="/HTML-CATEGORIES/cookwares.html">Grill Pan</a>
-        <a href="/HTML-CATEGORIES/cookwares.html">Pots</a>
+        <a href="/html-categories/cookwares.html">Frying Pan</a>
+        <a href="/html-categories/cookwares.html">Grill Pan</a>
+        <a href="/html-categories/cookwares.html">Pots</a>
     </ul>
     <ul class="eachCategorySubUtensils">
-        <a href="/HTML-CATEGORIES/utensils.html">Utensil Set</a>
-        <a href="/HTML-CATEGORIES/utensils.html">Spoon, Fork & Ladle</a>
-        <a href="/HTML-CATEGORIES/utensils.html">Spatula and Turner</a>
+        <a href="/html-categories/utensils.html">Utensil Set</a>
+        <a href="/html-categories/utensils.html">Spoon, Fork & Ladle</a>
+        <a href="/html-categories/utensils.html">Spatula and Turner</a>
     </ul>
 </div>
-<div>
-    <ul>
-        <li><a href="/index.html">HOME</a></li>
-        <li><a href="/HTML-CATEGORIES/glasswares.html">GLASSWARES</a></li>
-        <li><a href="glasswares-Wine-P2-viewmore.html">WINE GLASSES</a></li>
-    </ul>
+
+
+
+<div class="pageSub">
+    <a href="/index.html">HOME </a><span>➜</span><a href="/html-categories/glasswares.html"> GLASSWARES</a><span>➜</span><a href="glasswares-Wine-P2-viewmore.html"> WINE GLASSES</a>
 </div>
 
 <h2 class="h2Main">Wine Glasses</h2>
 <div class="mainProductsGroup">
     <div class="eachProduct">
         <figure>
-            <img src="../images/CATEGORIES/GLASSWARES/WINEGLASSES/Glasswares-WineGlasses-MORE-1-Set of 5 Elegant Champagne Glasses.png" alt="Set of 5 Elegant Champagne Glasses">
+            <img src="/images/CATEGORIES/GLASSWARES/WINEGLASSES/Glasswares-WineGlasses-MORE-1-Set of 5 Elegant Champagne Glasses.png" alt="Set of 5 Elegant Champagne Glasses">
         </figure>
         <figcaption class="productCaption">Set of 5 Elegant Champagne Glasses</figcaption>
         <p class="price">₱799.00</p>
@@ -152,7 +152,7 @@
 
     <div class="eachProduct">
         <figure>
-            <img src="../images/CATEGORIES/GLASSWARES/WINEGLASSES/Glasswares-WineGlasses-MORE-2-Set of 5 Elegant Crystal Decanter and Glasses.png" alt="Set of 5 Elegant Crystal Decanter and Glasses">
+            <img src="/images/CATEGORIES/GLASSWARES/WINEGLASSES/Glasswares-WineGlasses-MORE-2-Set of 5 Elegant Crystal Decanter and Glasses.png" alt="Set of 5 Elegant Crystal Decanter and Glasses">
         </figure>
         <figcaption class="productCaption">5-Piece Crystal Decanter & Glass Set</figcaption>
         <p class="price">₱979.00</p>
@@ -163,7 +163,7 @@
 
     <div class="eachProduct">
         <figure>
-            <img src="../images/CATEGORIES/GLASSWARES/WINEGLASSES/Glasswares-WineGlasses-MORE-3-Set of 5 Crystal-Cut Champagne Ice Bucket & Coupe.png" alt="Set of 5 Crystal-Cut Champagne Ice Bucket & Coupe">
+            <img src="/images/CATEGORIES/GLASSWARES/WINEGLASSES/Glasswares-WineGlasses-MORE-3-Set of 5 Crystal-Cut Champagne Ice Bucket & Coupe.png" alt="Set of 5 Crystal-Cut Champagne Ice Bucket & Coupe">
         </figure>
         <figcaption class="productCaption">Set of 5 Crystal-Cut Champagne Ice Bucket & Coupe</figcaption>
         <p class="price">₱780.00</p>
@@ -174,7 +174,7 @@
 
     <div class="eachProduct">
         <figure>
-            <img src="../images/CATEGORIES/GLASSWARES/WINEGLASSES/Glasswares-WineGlasses-MORE-4-Set of 4 Whiskey Decanter Combo.png" alt="Set of 4 Whiskey Decanter Combo">
+            <img src="/images/CATEGORIES/GLASSWARES/WINEGLASSES/Glasswares-WineGlasses-MORE-4-Set of 4 Whiskey Decanter Combo.png" alt="Set of 4 Whiskey Decanter Combo">
         </figure>
         <figcaption class="productCaption">Set of 4 Whiskey Decanter Combo</figcaption>
         <p class="price">₱1,109.00</p>
@@ -185,7 +185,7 @@
 
     <div class="eachProduct">
         <figure>
-            <img src="../images/CATEGORIES/GLASSWARES/WINEGLASSES/Glasswares-WineGlasses-MORE-5-Set of 4 Champagne Flute.png" alt="Set of 4 Champagne Flute">
+            <img src="/images/CATEGORIES/GLASSWARES/WINEGLASSES/Glasswares-WineGlasses-MORE-5-Set of 4 Champagne Flute.png" alt="Set of 4 Champagne Flute">
         </figure>
         <figcaption class="productCaption">Set of 4 Champagne Flute</figcaption>
         <p class="price">₱575.00</p>
@@ -196,7 +196,7 @@
 
     <div class="eachProduct">
         <figure>
-            <img src="../images/CATEGORIES/GLASSWARES/WINEGLASSES/Glasswares-WineGlasses-MORE-6-Set of 4 Elegant Champagne Flute.png" alt="Set of 4 Elegant Champagne Flute">
+            <img src="/images/CATEGORIES/GLASSWARES/WINEGLASSES/Glasswares-WineGlasses-MORE-6-Set of 4 Elegant Champagne Flute.png" alt="Set of 4 Elegant Champagne Flute">
         </figure>
         <figcaption class="productCaption">Set of 4 Elegant Champagne Flute</figcaption>
         <p class="price">₱505.00</p>
@@ -207,7 +207,7 @@
 
     <div class="eachProduct">
         <figure>
-            <img src="../images/CATEGORIES/GLASSWARES/WINEGLASSES/Glasswares-WineGlasses-MORE-7-Set of 4 Wine Glasses.png" alt="Set of 4 Wine Glasses">
+            <img src="/images/CATEGORIES/GLASSWARES/WINEGLASSES/Glasswares-WineGlasses-MORE-7-Set of 4 Wine Glasses.png" alt="Set of 4 Wine Glasses">
         </figure>
         <figcaption class="productCaption">Set of 4 Wine Glasses</figcaption>
         <p class="price">₱525.00</p>
@@ -218,7 +218,7 @@
 
     <div class="eachProduct">
         <figure>
-            <img src="../images/CATEGORIES/GLASSWARES/WINEGLASSES/Glasswares-WineGlasses-MORE-8-Set of 4 Rainbow Champagne Flute.png" alt="Set of 4 Rainbow Champagne Flute">
+            <img src="/images/CATEGORIES/GLASSWARES/WINEGLASSES/Glasswares-WineGlasses-MORE-8-Set of 4 Rainbow Champagne Flute.png" alt="Set of 4 Rainbow Champagne Flute">
         </figure>
         <figcaption class="productCaption">Set of 4 Rainbow Champagne Flute</figcaption>
         <p class="price">₱570.00</p>
@@ -229,7 +229,7 @@
 
     <div class="eachProduct">
         <figure>
-            <img src="../images/CATEGORIES/GLASSWARES/WINEGLASSES/Glasswares-WineGlasses-MORE-9-Set of 4 Elegant Vintage Crystal Glass.png" alt="Set of 4 Elegant Vintage Crystal Glass">
+            <img src="/images/CATEGORIES/GLASSWARES/WINEGLASSES/Glasswares-WineGlasses-MORE-9-Set of 4 Elegant Vintage Crystal Glass.png" alt="Set of 4 Elegant Vintage Crystal Glass">
         </figure>
         <figcaption class="productCaption">Set of 4 Elegant Vintage Crystal Glass</figcaption>
         <p class="price">₱608.00</p>
@@ -240,7 +240,7 @@
 
     <div class="eachProduct">
         <figure>
-            <img src="../images/CATEGORIES/GLASSWARES/WINEGLASSES/Glasswares-WineGlasses-MORE-10-Set of 4 Elegant Stemless Champagne Flutes.png" alt="Set of 4 Elegant Stemless Champagne Flutes">
+            <img src="/images/CATEGORIES/GLASSWARES/WINEGLASSES/Glasswares-WineGlasses-MORE-10-Set of 4 Elegant Stemless Champagne Flutes.png" alt="Set of 4 Elegant Stemless Champagne Flutes">
         </figure>
         <figcaption class="productCaption">Set of 4 Elegant Stemless Champagne Flutes</figcaption>
         <p class="price">₱579.00</p>
@@ -251,7 +251,7 @@
 
     <div class="eachProduct">
         <figure>
-            <img src="../images/CATEGORIES/GLASSWARES/WINEGLASSES/Glasswares-WineGlasses-MORE-11-Set of 5 Crystal-Cut Shot Glasses.png" alt="Set of 5 Crystal-Cut Shot Glasses">
+            <img src="/images/CATEGORIES/GLASSWARES/WINEGLASSES/Glasswares-WineGlasses-MORE-11-Set of 5 Crystal-Cut Shot Glasses.png" alt="Set of 5 Crystal-Cut Shot Glasses">
         </figure>
         <figcaption class="productCaption">Set of 5 Crystal-Cut Shot Glasses</figcaption>
         <p class="price">₱599.00</p>
@@ -262,7 +262,7 @@
 
     <div class="eachProduct">
         <figure>
-            <img src="../images/CATEGORIES/GLASSWARES/WINEGLASSES/Glasswares-WineGlasses-MORE-12-Set of 4 Elegant Stemless Wine Glasses.png" alt="Set of 4 Elegant Stemless Wine Glasses">
+            <img src="/images/CATEGORIES/GLASSWARES/WINEGLASSES/Glasswares-WineGlasses-MORE-12-Set of 4 Elegant Stemless Wine Glasses.png" alt="Set of 4 Elegant Stemless Wine Glasses">
         </figure>
         <figcaption class="productCaption">Set of 4 Elegant Stemless Wine Glasses</figcaption>
         <p class="price">₱534.00</p>
@@ -273,9 +273,9 @@
 </div>
 
 <div class="viewMore">
-    <button id="viewMoreButton"><a href="/HTML-CATEGORIES/glasswares.html">◀</a></button>
-    <button id="viewMoreButton"><a href="/HTML-CATEGORIES/glasswares.html">1</a></button>
-    <button id="viewMoreButton"><a href="glasswares-Wine-P2-viewmore.html">2</a></button>
+    <button class="viewMoreButton"><a href="/html-categories/glasswares.html">◀</a></button>
+    <button class="viewMoreButton"><a href="/html-categories/glasswares.html">1</a></button>
+    <button class="viewMoreButton"><a href="glasswares-Wine-P2-viewmore.html">2</a></button>
 </div>
 
 <div>

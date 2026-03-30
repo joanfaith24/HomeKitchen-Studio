@@ -4,6 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home Kitchen Studio</title>
+    <link rel="icon" type="image/png" href="images/LOGO&BACKGROUND/official logo TRANSPARTENT BG - CROPPED.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"><link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/css/header.css">
     <link rel="stylesheet" href="/css/universal&body.css">
     <link rel="stylesheet" href="/css/mobilefirst.css">
@@ -14,14 +18,9 @@
     <link rel="stylesheet" href="/css/signIn.css">
     <link rel="stylesheet" href="/css/signUp.css">
     <link rel="stylesheet" href="/css/checkout.css">
+    <link rel="stylesheet" href="/css/responsive.css">
     <script src="/js/skeleton.js"></script>
 
-    <link rel="icon" type="image/png" href="images/LOGO&BACKGROUND/official logo TRANSPARTENT BG - CROPPED.png">
-
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"><link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -34,6 +33,11 @@
         <div class="pageLogoBox">
             <a href="/index.html"><img class="pageLogo" src="/images/LOGO&BACKGROUND/official logo TRANSPARTENT BG - CROPPED.png" alt="Home Kitchen Studio Logo"></a>
         </div>
+        <div class="inputBarHeader">
+            <input type="text" placeholder="Search product here..." id="searchInput">
+            <i class="fa-solid fa-magnifying-glass"></i>
+        </div>
+
         <div class="cart-Log-Call-Group">
             <div id="cartIcon" class="cartIcon"  onclick="openCartPop(event)">
                 <a href="javascript:void(0)"><i class="fa-solid fa-cart-shopping"></i></a>
@@ -56,46 +60,44 @@
                     </button>   
                 </div>
         </div>
-            <div>
-                <a href="javascript:void(0)" onclick="openSignIn()"><i class="fa-solid fa-user"></i></a>
-            </div>
-
+        <div class="signInIconDiv">
+            <a href="javascript:void(0)" onclick="openSignIn()"><i class="fa-solid fa-user"></i></a>
+        </div>
+        <div class="contactUsIcon">
+            <a href="/footer-links/getInTouch-EMAIL.html" title="Contact Us">
+            <i class="fa-solid fa-envelope"></i></a>
         </div>
     </header>
-        <div class="inputBarHeader">
-            <input type="text" placeholder="Search product here..." id="searchInput">
-            <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
-        </div>
 
 <nav class="categories" id="categories">
     <span><i class="fa-solid fa-xmark" onclick="closeCatPop()"></i></span>
     <div class="eachCategory">
-        <a href="/HTML-CATEGORIES/accessories.html">ACCESSORIES</a>
+        <a href="/html-categories/accessories.html">ACCESSORIES</a>
     </div>
     <div class="eachCategory">
-        <a href="/HTML-CATEGORIES/bakingtools.html">BAKING TOOLS</a>
+        <a href="/html-categories/bakingtools.html">BAKING TOOLS</a>
     </div>
     <div class="eachCategory">
-        <a href="/HTML-CATEGORIES/storage.html">STORAGE</a>
+        <a href="/html-categories/storage.html">STORAGE</a>
         <button onclick="storage()"><i class="fa-solid fa-chevron-right"></i></button>
     </div>
     <div class="eachCategory">
-        <a href="/HTML-CATEGORIES/glasswares.html">GLASSWARES</a>
+        <a href="/html-categories/glasswares.html">GLASSWARES</a>
         <button onclick="glasswares()"><i class="fa-solid fa-chevron-right"></i></button>
     </div>
     <div class="eachCategory">
-        <a href="/HTML-CATEGORIES/kitchenappliances.html">KITCHEN APPLIANCES</a>
+        <a href="/html-categories/kitchenappliances.html">KITCHEN APPLIANCES</a>
     </div>
     <div class="eachCategory">
-        <a href="/HTML-CATEGORIES/knives.html">KNIVES</a>
+        <a href="/html-categories/knives.html">KNIVES</a>
         <button onclick="knives()"><i class="fa-solid fa-chevron-right"></i></button>
     </div>
     <div class="eachCategory">
-        <a href="/HTML-CATEGORIES/cookwares.html">COOKWARES</a>
+        <a href="/html-categories/cookwares.html">COOKWARES</a>
         <button onclick="cookwares()"><i class="fa-solid fa-chevron-right"></i></button>
     </div>
     <div class="eachCategory">
-        <a href="/HTML-CATEGORIES/utensils.html">UTENSILS</a>
+        <a href="/html-categories/utensils.html">UTENSILS</a>
         <button onclick="utensils()"><i class="fa-solid fa-chevron-right"></i></button>
     </div>
 </nav>
@@ -103,45 +105,41 @@
 
 <div class="categorySubGroup">
     <ul class="eachCategorySubStorage">
-        <a href="/HTML-CATEGORIES/storage.html" >Single Storage</a>
-        <a href="/HTML-CATEGORIES/storage.html">Storage Set</a>
+        <a href="/html-categories/storage.html" >Single Storage</a>
+        <a href="/html-categories/storage.html">Storage Set</a>
     </ul>
     <ul class="eachCategorySubGlasses">
-        <a href="/HTML-CATEGORIES/glasswares.html">Wine Glasses</a>
-        <a href="/HTML-CATEGORIES/glasswares.html">Mugs</a>
-        <a href="/HTML-CATEGORIES/glasswares.html">Drinking Glasses</a>
+        <a href="/html-categories/glasswares.html">Wine Glasses</a>
+        <a href="/html-categories/glasswares.html">Mugs</a>
+        <a href="/html-categories/glasswares.html">Drinking Glasses</a>
     </ul>
     <ul class="eachCategorySubKnife">
-        <a href="/HTML-CATEGORIES/knives.html">Knife Set</a>
-        <a href="/HTML-CATEGORIES/knives.html">Bread Knife</a>
-        <a href="/HTML-CATEGORIES/knives.html">Paring Knife</a>
-        <a href="/HTML-CATEGORIES/knives.html">Utility Knife</a>
+        <a href="/html-categories/knives.html">Knife Set</a>
+        <a href="/html-categories/knives.html">Bread Knife</a>
+        <a href="/html-categories/knives.html">Paring Knife</a>
+        <a href="/html-categories/knives.html">Utility Knife</a>
     </ul>
     <ul class="eachCategorySubCookwares">
-        <a href="/HTML-CATEGORIES/cookwares.html">Frying Pan</a>
-        <a href="/HTML-CATEGORIES/cookwares.html">Grill Pan</a>
-        <a href="/HTML-CATEGORIES/cookwares.html">Pots</a>
+        <a href="/html-categories/cookwares.html">Frying Pan</a>
+        <a href="/html-categories/cookwares.html">Grill Pan</a>
+        <a href="/html-categories/cookwares.html">Pots</a>
     </ul>
     <ul class="eachCategorySubUtensils">
-        <a href="/HTML-CATEGORIES/utensils.html">Utensil Set</a>
-        <a href="/HTML-CATEGORIES/utensils.html">Spoon, Fork & Ladle</a>
-        <a href="/HTML-CATEGORIES/utensils.html">Spatula and Turner</a>
+        <a href="/html-categories/utensils.html">Utensil Set</a>
+        <a href="/html-categories/utensils.html">Spoon, Fork & Ladle</a>
+        <a href="/html-categories/utensils.html">Spatula and Turner</a>
     </ul>
 </div>
 
-<div>
-    <ul>
-        <li><a href="/index.html">HOME</a></li>
-        <li><a href="/HTML-CATEGORIES/cookwares.html">COOKWARES</a></li>
-        <li><a href="cookwares-frying-P2-viewmore.html">FRYING PAN</a></li>
-    </ul>
+<div class="pageSub">
+    <a href="/index.html">HOME </a><span>➜</span><a href="/html-categories/cookwares.html"> COOKWARES</a><span>➜</span><a href="cookwares-frying-P2-viewmore.html"> FRYING PAN</a>
 </div>
 
 <h2 class="h2Main">Frying Pan</h2>
 <div class="mainProductsGroup">
     <div class="eachProduct">
         <figure>
-            <img src="../images/CATEGORIES/COOKWARES/FRYING/Cookware-Fry Pan-MORE-1-5inches Mini Ceramic Nonstick Egg Pan.png" alt="5inches Mini Ceramic Nonstick Egg Pan">
+            <img src="/images/CATEGORIES/COOKWARES/FRYING/Cookware-Fry Pan-MORE-1-5inches Mini Ceramic Nonstick Egg Pan.png" alt="5inches Mini Ceramic Nonstick Egg Pan">
         </figure>
         <figcaption class="productCaption">5inches Mini Ceramic Nonstick Egg Pan</figcaption>
         <p class="price">₱387.00</p>
@@ -152,7 +150,7 @@
 
     <div class="eachProduct">
         <figure>
-            <img src="../images/CATEGORIES/COOKWARES/FRYING/Cookware-Fry Pan-MORE-2-11inches NonStick Paella Pan.png" alt="11inches NonStick Black Paella Pan">
+            <img src="/images/CATEGORIES/COOKWARES/FRYING/Cookware-Fry Pan-MORE-2-11inches NonStick Paella Pan.png" alt="11inches NonStick Black Paella Pan">
         </figure>
         <figcaption class="productCaption">11inches Black NonStick Paella Pan</figcaption>
         <p class="price">₱320.00</p>
@@ -163,7 +161,7 @@
 
     <div class="eachProduct">
         <figure>
-            <img src="../images/CATEGORIES/COOKWARES/FRYING/Cookware-Fry Pan-MORE-3-12.25inches Hard Anodized Ceramic FryingPan.png" alt="12in Hard Anodized Ceramic FryingPan">
+            <img src="/images/CATEGORIES/COOKWARES/FRYING/Cookware-Fry Pan-MORE-3-12.25inches Hard Anodized Ceramic FryingPan.png" alt="12in Hard Anodized Ceramic FryingPan">
         </figure>
         <figcaption class="productCaption">12in Hard Anodized Ceramic FryingPan</figcaption>
         <p class="price">₱380.00</p>
@@ -174,7 +172,7 @@
 
     <div class="eachProduct">
         <figure>
-            <img src="../images/CATEGORIES/COOKWARES/FRYING/Cookware-Fry Pan-MORE-4-12inches Black Carbon Steel Frying Pan.png" alt="12inches Black Carbon Steel Frying Pan">
+            <img src="/images/CATEGORIES/COOKWARES/FRYING/Cookware-Fry Pan-MORE-4-12inches Black Carbon Steel Frying Pan.png" alt="12inches Black Carbon Steel Frying Pan">
         </figure>
         <figcaption class="productCaption">12inches Black Carbon Steel Frying Pan</figcaption>
         <p class="price">₱299.00</p>
@@ -185,7 +183,7 @@
 
     <div class="eachProduct">
         <figure>
-            <img src="../images/CATEGORIES/COOKWARES/FRYING/Cookware-Fry Pan-MORE-5-12inches Pink Cast Iron Frying Pan.png" alt="12inches Pink Cast Iron Frying Pan">
+            <img src="/images/CATEGORIES/COOKWARES/FRYING/Cookware-Fry Pan-MORE-5-12inches Pink Cast Iron Frying Pan.png" alt="12inches Pink Cast Iron Frying Pan">
         </figure>
         <figcaption class="productCaption">12inches Pink Cast Iron Frying Pan</figcaption>
         <p class="price">₱375.00</p>
@@ -196,7 +194,7 @@
 
     <div class="eachProduct">
         <figure>
-            <img src="../images/CATEGORIES/COOKWARES/FRYING/Cookware-Fry Pan-MORE-6-10inches Black Cast Iron Skillet.png" alt="10inches Black Cast Iron Skillet">
+            <img src="/images/CATEGORIES/COOKWARES/FRYING/Cookware-Fry Pan-MORE-6-10inches Black Cast Iron Skillet.png" alt="10inches Black Cast Iron Skillet">
         </figure>
         <figcaption class="productCaption">10inches Black Cast Iron Skillet</figcaption>
         <p class="price">₱323.00</p>
@@ -207,7 +205,7 @@
 
     <div class="eachProduct">
         <figure>
-            <img src="../images/CATEGORIES/COOKWARES/FRYING/Cookware-Fry Pan-MORE-7-12inches Oval Fry Pan with Lid.png" alt="12inches Oval Fry Pan with Lid">
+            <img src="/images/CATEGORIES/COOKWARES/FRYING/Cookware-Fry Pan-MORE-7-12inches Oval Fry Pan with Lid.png" alt="12inches Oval Fry Pan with Lid">
         </figure>
         <figcaption class="productCaption">12inches Oval Fry Pan with Lid</figcaption>
         <p class="price">₱385.00</p>
@@ -218,7 +216,7 @@
 
     <div class="eachProduct">
         <figure>
-            <img src="../images/CATEGORIES/COOKWARES/FRYING/Cookware-Fry Pan-MORE-8-10inches Stainless Steel Frying Pan.png" alt="10inches Stainless Steel Frying Pan">
+            <img src="/images/CATEGORIES/COOKWARES/FRYING/Cookware-Fry Pan-MORE-8-10inches Stainless Steel Frying Pan.png" alt="10inches Stainless Steel Frying Pan">
         </figure>
         <figcaption class="productCaption">10inches Stainless Steel Frying Pan</figcaption>
         <p class="price">₱270.00</p>
@@ -229,9 +227,9 @@
 </div>
 
 <div class="viewMore">
-    <button id="viewMoreButton"><a href="/HTML-CATEGORIES/cookwares.html">◀</a></button>
-    <button id="viewMoreButton"><a href="/HTML-CATEGORIES/cookwares.html">1</a></button>
-    <button id="viewMoreButton"><a href="cookwares-frying-P2-viewmore.html">2</a></button>
+    <button class="viewMoreButton"><a href="/html-categories/cookwares.html">◀</a></button>
+    <button class="viewMoreButton"><a href="/html-categories/cookwares.html">1</a></button>
+    <button class="viewMoreButton"><a href="cookwares-frying-P2-viewmore.html">2</a></button>
 </div>
 
 <div>

@@ -4,6 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home Kitchen Studio</title>
+    <link rel="icon" type="image/png" href="images/LOGO&BACKGROUND/official logo TRANSPARTENT BG - CROPPED.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"><link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/css/header.css">
     <link rel="stylesheet" href="/css/universal&body.css">
     <link rel="stylesheet" href="/css/mobilefirst.css">
@@ -14,14 +18,9 @@
     <link rel="stylesheet" href="/css/signIn.css">
     <link rel="stylesheet" href="/css/signUp.css">
     <link rel="stylesheet" href="/css/checkout.css">
+    <link rel="stylesheet" href="/css/responsive.css">
     <script src="/js/skeleton.js"></script>
 
-    <link rel="icon" type="image/png" href="images/LOGO&BACKGROUND/official logo TRANSPARTENT BG - CROPPED.png">
-
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"><link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -34,6 +33,11 @@
         <div class="pageLogoBox">
             <a href="/index.html"><img class="pageLogo" src="/images/LOGO&BACKGROUND/official logo TRANSPARTENT BG - CROPPED.png" alt="Home Kitchen Studio Logo"></a>
         </div>
+        <div class="inputBarHeader">
+            <input type="text" placeholder="Search product here..." id="searchInput">
+            <i class="fa-solid fa-magnifying-glass"></i>
+        </div>
+
         <div class="cart-Log-Call-Group">
             <div id="cartIcon" class="cartIcon"  onclick="openCartPop(event)">
                 <a href="javascript:void(0)"><i class="fa-solid fa-cart-shopping"></i></a>
@@ -56,47 +60,44 @@
                     </button>   
                 </div>
         </div>
-
-            <div>
-                <a href="javascript:void(0)" onclick="openSignIn()"><i class="fa-solid fa-user"></i></a>
-            </div>
-
+        <div class="signInIconDiv">
+            <a href="javascript:void(0)" onclick="openSignIn()"><i class="fa-solid fa-user"></i></a>
+        </div>
+        <div class="contactUsIcon">
+            <a href="/footer-links/getInTouch-EMAIL.html" title="Contact Us">
+            <i class="fa-solid fa-envelope"></i></a>
         </div>
     </header>
-        <div class="inputBarHeader">
-            <input type="text" placeholder="Search product here..." id="searchInput">
-            <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
-        </div>
 
 <nav class="categories" id="categories">
     <span><i class="fa-solid fa-xmark" onclick="closeCatPop()"></i></span>
     <div class="eachCategory">
-        <a href="/HTML-CATEGORIES/accessories.html">ACCESSORIES</a>
+        <a href="/html-categories/accessories.html">ACCESSORIES</a>
     </div>
     <div class="eachCategory">
-        <a href="/HTML-CATEGORIES/bakingtools.html">BAKING TOOLS</a>
+        <a href="/html-categories/bakingtools.html">BAKING TOOLS</a>
     </div>
     <div class="eachCategory">
-        <a href="/HTML-CATEGORIES/storage.html">STORAGE</a>
+        <a href="/html-categories/storage.html">STORAGE</a>
         <button onclick="storage()"><i class="fa-solid fa-chevron-right"></i></button>
     </div>
     <div class="eachCategory">
-        <a href="/HTML-CATEGORIES/glasswares.html">GLASSWARES</a>
+        <a href="/html-categories/glasswares.html">GLASSWARES</a>
         <button onclick="glasswares()"><i class="fa-solid fa-chevron-right"></i></button>
     </div>
     <div class="eachCategory">
-        <a href="/HTML-CATEGORIES/kitchenappliances.html">KITCHEN APPLIANCES</a>
+        <a href="/html-categories/kitchenappliances.html">KITCHEN APPLIANCES</a>
     </div>
     <div class="eachCategory">
-        <a href="/HTML-CATEGORIES/knives.html">KNIVES</a>
+        <a href="/html-categories/knives.html">KNIVES</a>
         <button onclick="knives()"><i class="fa-solid fa-chevron-right"></i></button>
     </div>
     <div class="eachCategory">
-        <a href="/HTML-CATEGORIES/cookwares.html">COOKWARES</a>
+        <a href="/html-categories/cookwares.html">COOKWARES</a>
         <button onclick="cookwares()"><i class="fa-solid fa-chevron-right"></i></button>
     </div>
     <div class="eachCategory">
-        <a href="/HTML-CATEGORIES/utensils.html">UTENSILS</a>
+        <a href="/html-categories/utensils.html">UTENSILS</a>
         <button onclick="utensils()"><i class="fa-solid fa-chevron-right"></i></button>
     </div>
 </nav>
@@ -104,45 +105,42 @@
 
 <div class="categorySubGroup">
     <ul class="eachCategorySubStorage">
-        <a href="/HTML-CATEGORIES/storage.html" >Single Storage</a>
-        <a href="/HTML-CATEGORIES/storage.html">Storage Set</a>
+        <a href="/html-categories/storage.html" >Single Storage</a>
+        <a href="/html-categories/storage.html">Storage Set</a>
     </ul>
     <ul class="eachCategorySubGlasses">
-        <a href="/HTML-CATEGORIES/glasswares.html">Wine Glasses</a>
-        <a href="/HTML-CATEGORIES/glasswares.html">Mugs</a>
-        <a href="/HTML-CATEGORIES/glasswares.html">Drinking Glasses</a>
+        <a href="/html-categories/glasswares.html">Wine Glasses</a>
+        <a href="/html-categories/glasswares.html">Mugs</a>
+        <a href="/html-categories/glasswares.html">Drinking Glasses</a>
     </ul>
     <ul class="eachCategorySubKnife">
-        <a href="/HTML-CATEGORIES/knives.html">Knife Set</a>
-        <a href="/HTML-CATEGORIES/knives.html">Bread Knife</a>
-        <a href="/HTML-CATEGORIES/knives.html">Paring Knife</a>
-        <a href="/HTML-CATEGORIES/knives.html">Utility Knife</a>
+        <a href="/html-categories/knives.html">Knife Set</a>
+        <a href="/html-categories/knives.html">Bread Knife</a>
+        <a href="/html-categories/knives.html">Paring Knife</a>
+        <a href="/html-categories/knives.html">Utility Knife</a>
     </ul>
     <ul class="eachCategorySubCookwares">
-        <a href="/HTML-CATEGORIES/cookwares.html">Frying Pan</a>
-        <a href="/HTML-CATEGORIES/cookwares.html">Grill Pan</a>
-        <a href="/HTML-CATEGORIES/cookwares.html">Pots</a>
+        <a href="/html-categories/cookwares.html">Frying Pan</a>
+        <a href="/html-categories/cookwares.html">Grill Pan</a>
+        <a href="/html-categories/cookwares.html">Pots</a>
     </ul>
     <ul class="eachCategorySubUtensils">
-        <a href="/HTML-CATEGORIES/utensils.html">Utensil Set</a>
-        <a href="/HTML-CATEGORIES/utensils.html">Spoon, Fork & Ladle</a>
-        <a href="/HTML-CATEGORIES/utensils.html">Spatula and Turner</a>
+        <a href="/html-categories/utensils.html">Utensil Set</a>
+        <a href="/html-categories/utensils.html">Spoon, Fork & Ladle</a>
+        <a href="/html-categories/utensils.html">Spatula and Turner</a>
     </ul>
 </div>
 
-<div>
-    <ul>
-        <li><a href="/index.html">HOME</a></li>
-        <li><a href="/HTML-CATEGORIES/utensils.html">UTENSILS</a></li>
-        <li><a href="utensils-SPL-P2-viewmore.html">SPOON, FORK AND LADLE</a></li>
-    </ul>
+
+<div class="pageSub">
+    <a href="/index.html">HOME </a><span>➜</span><a href="/html-categories/utensils.html"> UTENSILS</a><span>➜</span><a href="utensils-SPL-P2-viewmore.html"> SPOON, FORK AND LADLE</a>
 </div>
 
 <h2 class="h2Main">Spoon, Fork and Ladle</h2>
 <div class="mainProductsGroup">
     <div class="eachProduct">
         <figure>
-            <img src="../images/CATEGORIES/UTENSILS/SPOON&FORK&LADLE/Utensils-SFL-MORE-1-5pcs Flatware Set.png" alt="5pcs Flatware Set">
+            <img src="/images/CATEGORIES/UTENSILS/SPOON&FORK&LADLE/Utensils-SFL-MORE-1-5pcs Flatware Set.png" alt="5pcs Flatware Set">
         </figure>
         <figcaption class="productCaption">5-piece Stainless Steel Flatware Set</figcaption>
         <p class="price">₱409.00</p>
@@ -153,7 +151,7 @@
 
     <div class="eachProduct">
         <figure>
-            <img src="../images/CATEGORIES/UTENSILS/SPOON&FORK&LADLE/Utensils-SFL-MORE-2-1 Set of Spoon, Fork and Knife.png" alt="1 Set of Spoon, Fork and Knife">
+            <img src="/images/CATEGORIES/UTENSILS/SPOON&FORK&LADLE/Utensils-SFL-MORE-2-1 Set of Spoon, Fork and Knife.png" alt="1 Set of Spoon, Fork and Knife">
         </figure>
         <figcaption class="productCaption">1 Set of Stainless Steel Spoon, Fork and Knife</figcaption>
         <p class="price">₱389.00</p>
@@ -164,7 +162,7 @@
 
     <div class="eachProduct">
         <figure>
-            <img src="../images/CATEGORIES/UTENSILS/SPOON&FORK&LADLE/Utensils-SFL-MORE-3-Spoon and Fork Set.png" alt="3-piece Spoon and Fork Set">
+            <img src="/images/CATEGORIES/UTENSILS/SPOON&FORK&LADLE/Utensils-SFL-MORE-3-Spoon and Fork Set.png" alt="3-piece Spoon and Fork Set">
         </figure>
         <figcaption class="productCaption">3-piece Stainless Steel Spoon and Fork Set</figcaption>
         <p class="price">₱370.00</p>
@@ -175,7 +173,7 @@
 
     <div class="eachProduct">
         <figure>
-            <img src="../images/CATEGORIES/UTENSILS/SPOON&FORK&LADLE/Utensils-SFL-MORE-4-1Pair Elegant Spoon and Fork.png" alt="1Pair Elegant Spoon and Fork">
+            <img src="/images/CATEGORIES/UTENSILS/SPOON&FORK&LADLE/Utensils-SFL-MORE-4-1Pair Elegant Spoon and Fork.png" alt="1Pair Elegant Spoon and Fork">
         </figure>
         <figcaption class="productCaption">1Pair Elegant Stainless Steel Spoon and Fork</figcaption>
         <p class="price">₱239.00</p>
@@ -186,7 +184,7 @@
 
     <div class="eachProduct">
         <figure>
-            <img src="../images/CATEGORIES/UTENSILS/SPOON&FORK&LADLE/Utensils-SFL-MORE-5-Slotted Spoon.png" alt="Slotted Spoon">
+            <img src="/images/CATEGORIES/UTENSILS/SPOON&FORK&LADLE/Utensils-SFL-MORE-5-Slotted Spoon.png" alt="Slotted Spoon">
         </figure>
         <figcaption class="productCaption">1-piece Slotted Spoon with Black Plastic Handle</figcaption>
         <p class="price">₱119.00</p>
@@ -197,7 +195,7 @@
 
     <div class="eachProduct">
         <figure>
-            <img src="../images/CATEGORIES/UTENSILS/SPOON&FORK&LADLE/Utensils-SFL-MORE-6-Stainless Steel Polished Ladle.png" alt="Stainless Steel Polished Ladle">
+            <img src="/images/CATEGORIES/UTENSILS/SPOON&FORK&LADLE/Utensils-SFL-MORE-6-Stainless Steel Polished Ladle.png" alt="Stainless Steel Polished Ladle">
         </figure>
         <figcaption class="productCaption">1-piece Stainless Steel Polished Ladle</figcaption>
         <p class="price">₱179.00</p>
@@ -208,7 +206,7 @@
 
     <div class="eachProduct">
         <figure>
-            <img src="../images/CATEGORIES/UTENSILS/SPOON&FORK&LADLE/Utensils-SFL-MORE-7-Sleek Stainless Steel Pasta Server.png" alt="Sleek Stainless Steel Pasta Server">
+            <img src="/images/CATEGORIES/UTENSILS/SPOON&FORK&LADLE/Utensils-SFL-MORE-7-Sleek Stainless Steel Pasta Server.png" alt="Sleek Stainless Steel Pasta Server">
         </figure>
         <figcaption class="productCaption">1-piece Sleek Stainless Steel Pasta Server</figcaption>
         <p class="price">₱205.00</p>
@@ -219,7 +217,7 @@
 
     <div class="eachProduct">
         <figure>
-            <img src="../images/CATEGORIES/UTENSILS/SPOON&FORK&LADLE/Utensils-SFL-MORE-8-Gray Angled Mixing Spoon.png" alt="Gray Angled Mixing Spoon">
+            <img src="/images/CATEGORIES/UTENSILS/SPOON&FORK&LADLE/Utensils-SFL-MORE-8-Gray Angled Mixing Spoon.png" alt="Gray Angled Mixing Spoon">
         </figure>
         <figcaption class="productCaption">1-piece Gray Angled Mixing Spoon</figcaption>
         <p class="price">₱190.00</p>
@@ -230,7 +228,7 @@
 
     <div class="eachProduct">
         <figure>
-            <img src="../images/CATEGORIES/UTENSILS/SPOON&FORK&LADLE/Utensils-SFL-MORE-9-Multi-Purpose Silicone Spoon.png" alt="Multi-Purpose Silicone Spoon">
+            <img src="/images/CATEGORIES/UTENSILS/SPOON&FORK&LADLE/Utensils-SFL-MORE-9-Multi-Purpose Silicone Spoon.png" alt="Multi-Purpose Silicone Spoon">
         </figure>
         <figcaption class="productCaption">1-piece Multi-Purpose Silicone Spoon</figcaption>
         <p class="price">₱165.00</p>
@@ -241,7 +239,7 @@
 
     <div class="eachProduct">
         <figure>
-            <img src="../images/CATEGORIES/UTENSILS/SPOON&FORK&LADLE/Utensils-SFL-MORE-10-Black Soup Ladle.png" alt="Black Soup Ladle">
+            <img src="/images/CATEGORIES/UTENSILS/SPOON&FORK&LADLE/Utensils-SFL-MORE-10-Black Soup Ladle.png" alt="Black Soup Ladle">
         </figure>
         <figcaption class="productCaption">1-piece Modern Black Soup Ladle</figcaption>
         <p class="price">₱159.00</p>
@@ -252,7 +250,7 @@
 
     <div class="eachProduct">
         <figure>
-            <img src="../images/CATEGORIES/UTENSILS/SPOON&FORK&LADLE/Utensils-SFL-MORE-11-Simple Silicone Ladle.png" alt="1-piece Silicone Ladle with Wooden Handle">
+            <img src="/images/CATEGORIES/UTENSILS/SPOON&FORK&LADLE/Utensils-SFL-MORE-11-Simple Silicone Ladle.png" alt="1-piece Silicone Ladle with Wooden Handle">
         </figure>
         <figcaption class="productCaption">1-piece Silicone Ladle with Wooden Handle</figcaption>
         <p class="price">₱149.00</p>
@@ -263,7 +261,7 @@
 
     <div class="eachProduct">
         <figure>
-            <img src="../images/CATEGORIES/UTENSILS/SPOON&FORK&LADLE/Utensils-SFL-MORE-12-Black Slotted Spoon.png" alt="Black Slotted Spoon">
+            <img src="/images/CATEGORIES/UTENSILS/SPOON&FORK&LADLE/Utensils-SFL-MORE-12-Black Slotted Spoon.png" alt="Black Slotted Spoon">
         </figure>
         <figcaption class="productCaption">1-piece Matte Black Slotted Spoon</figcaption>
         <p class="price">₱179.00</p>
@@ -274,9 +272,9 @@
 </div>
 
 <div class="viewMore">
-    <button id="viewMoreButton"><a href="/HTML-CATEGORIES/utensils.html">◀</a></button>
-    <button id="viewMoreButton"><a href="/HTML-CATEGORIES/utensils.html">1</a></button>
-    <button id="viewMoreButton"><a href="utensils-SPL-P2-viewmore.html">2</a></button>
+    <button class="viewMoreButton"><a href="/html-categories/utensils.html">◀</a></button>
+    <button class="viewMoreButton"><a href="/html-categories/utensils.html">1</a></button>
+    <button class="viewMoreButton"><a href="utensils-SPL-P2-viewmore.html">2</a></button>
 </div>
 
 <div>
