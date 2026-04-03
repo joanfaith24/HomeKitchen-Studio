@@ -3,9 +3,554 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Home Kitchen Studio</title>
+    <link rel="icon" type="image/png" href="/images/LOGO&BACKGROUND/officiallogoWHITEBG.jpg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"><link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/header.css">
+    <link rel="stylesheet" href="/css/universal&body.css">
+    <link rel="stylesheet" href="/css/mobilefirst.css">
+    <link rel="stylesheet" href="/css/categories.css">
+    <link rel="stylesheet" href="/css/mainPage.css">
+    <link rel="stylesheet" href="/css/footermobile.css">
+    <link rel="stylesheet" href="/css/backtotop.css">
+    <link rel="stylesheet" href="/css/signIn.css">
+    <link rel="stylesheet" href="/css/signUp.css">
+    <link rel="stylesheet" href="/css/checkout.css">
+    <link rel="stylesheet" href="/css/responsive.css">
+    <link rel="stylesheet" href="/css/footerLinks.css/discounts.css">
+    <script src="/js/skeleton.js"></script>
 </head>
+
 <body>
-    <h2>Discounts</h2>
+    <header class="headerGroup">
+        <div class="burgerIcon" id="burgerIcon" onclick="openBurger()">
+            <div class="burgerLine"></div>
+            <div class="burgerLine"></div>
+            <div class="burgerLine"></div>
+        </div>
+        <div class="pageLogoBox">
+            <a href="/index.html"><img class="pageLogo" src="/images/LOGO&BACKGROUND/officiallogoTRANSPARTENTBG-CROPPED.png" alt="Home Kitchen Studio Logo"></a>
+        </div>
+        <div class="inputBarHeader">
+            <input type="text" placeholder="Search product here..." id="searchInput">
+            <i class="fa-solid fa-magnifying-glass"></i>
+        </div>
+
+        <div class="cart-Log-Call-Group">
+            <div id="cartIcon" class="cartIcon"  onclick="openCartPop(event)">
+                <a href="javascript:void(0)"><i class="fa-solid fa-cart-shopping"></i></a>
+                <p id="cartBadge" class="cartBadge">0</p>
+            </div>
+                <div class="cartSidePopUpPage hideCart">
+
+                    <div class="cartPageHeader">
+                        <p id="cartHeaderLabel" class="cartHeaderLabel">Cart Items:<span class="totalItems" id="totalItems">0</span></p>
+                        <p id="closeCartPop" class="closeCartPop" onclick="closePop(event)">&times;</p>
+                    </div>
+
+                    <div id="cartDetails" class="cartDetails">
+                        <p class="cartTotalLabel" id="cartTotalLabel">Cart Subtotal: <strong><span id="subtotalPrice" class="subTotalPrice">0.00</span></strong></p>
+                    </div>
+
+                    <div id="itemsOnCartDetails" class="itemsOnCartDetails">
+                    </div>
+                    <button id="checkoutSideCartButton" class="checkoutSideCartButton" onclick="proceedToCheckout()">Proceed to Checkout
+                    </button>   
+                </div>
+        </div>
+        <div class="signInIconDiv">
+            <a href="javascript:void(0)" onclick="openSignIn()"><i class="fa-solid fa-user"></i></a>
+        </div>
+        <div class="contactUsIcon">
+            <a href="/footer-links/getInTouch-EMAIL.html" title="Contact Us">
+            <i class="fa-solid fa-envelope"></i></a>
+        </div>
+    </header>
+
+<nav class="categories" id="categories">
+    <span><i class="fa-solid fa-xmark" onclick="closeCatPop()"></i></span>
+    <div class="eachCategory">
+        <a href="/html-categories/accessories.html">ACCESSORIES</a>
+    </div>
+    <div class="eachCategory">
+        <a href="/html-categories/bakingtools.html">BAKING TOOLS</a>
+    </div>
+    <div class="eachCategory">
+        <a href="/html-categories/storage.html">STORAGE</a>
+        <button onclick="storage()"><i class="fa-solid fa-chevron-right"></i></button>
+    </div>
+    <div class="eachCategory">
+        <a href="/html-categories/glasswares.html">GLASSWARES</a>
+        <button onclick="glasswares()"><i class="fa-solid fa-chevron-right"></i></button>
+    </div>
+    <div class="eachCategory">
+        <a href="/html-categories/kitchenappliances.html">KITCHEN APPLIANCES</a>
+    </div>
+    <div class="eachCategory">
+        <a href="/html-categories/knives.html">KNIVES</a>
+        <button onclick="knives()"><i class="fa-solid fa-chevron-right"></i></button>
+    </div>
+    <div class="eachCategory">
+        <a href="/html-categories/cookwares.html">COOKWARES</a>
+        <button onclick="cookwares()"><i class="fa-solid fa-chevron-right"></i></button>
+    </div>
+    <div class="eachCategory">
+        <a href="/html-categories/utensils.html">UTENSILS</a>
+        <button onclick="utensils()"><i class="fa-solid fa-chevron-right"></i></button>
+    </div>
+</nav>
+<hr>
+
+<div class="categorySubGroup">
+    <ul class="eachCategorySubStorage">
+        <a href="/html-categories/storage.html#singleStorage">Single Storage</a>
+        <a href="/html-categories/storage.html#storageSet">Storage Set</a>
+    </ul>
+    <ul class="eachCategorySubGlasses">
+        <a href="/html-categories/glasswares.html#wineGlasses">Wine Glasses</a>
+        <a href="/html-categories/glasswares.html#mugs">Mugs</a>
+        <a href="/html-categories/glasswares.html#drinkingGlasses">Drinking Glasses</a>
+    </ul>
+    <ul class="eachCategorySubKnife">
+        <a href="/html-categories/knives.html#knifeSet">Knife Set</a>
+        <a href="/html-categories/knives.html#breadKnife">Bread Knife</a>
+        <a href="/html-categories/knives.html#paringKnife">Paring Knife</a>
+        <a href="/html-categories/knives.html#utilityKnife">Utility Knife</a>
+    </ul>
+    <ul class="eachCategorySubCookwares">
+        <a href="/html-categories/cookwares.html#fryingPan">Frying Pan</a>
+        <a href="/html-categories/cookwares.html#grillPan">Grill Pan</a>
+        <a href="/html-categories/cookwares.html#pots">Pots</a>
+    </ul>
+    <ul class="eachCategorySubUtensils">
+        <a href="/html-categories/utensils.html#utensilSet">Utensil Set</a>
+        <a href="/html-categories/utensils.html#spoonForkLadle">Spoon, Fork & Ladle</a>
+        <a href="/html-categories/utensils.html#spatulaTurner">Spatula and Turner</a>
+    </ul>
+</div>
+
+ <!-- HERO -->
+  <section class="hero">
+    <span class="eyebrow">✦ Exclusive Deals & Promos</span>
+    <h1>Discounts & Offers</h1>
+    <p>Save more every time you shop with us. Check out our latest promos, coupon codes, and special deals.</p>
+    <div class="hero-badge">🔥 Limited Time Offers Available</div>
+  </section>
+
+  <!-- FILTERS -->
+  <div class="filter-row">
+    <button class="filter-btn active" onclick="filterPromos(this,'all')">All Promos</button>
+    <button class="filter-btn" onclick="filterPromos(this,'coupon')">🏷️ Coupon Codes</button>
+    <button class="filter-btn" onclick="filterPromos(this,'sale')">🔖 Sales</button>
+    <button class="filter-btn" onclick="filterPromos(this,'shipping')">🚚 Free Shipping</button>
+    <button class="filter-btn" onclick="filterPromos(this,'bogo')">🎁 Buy 1 Get 1</button>
+  </div>
+
+  <!-- PROMO CARDS -->
+  <div class="promos-wrap" id="promosGrid">
+
+    <!-- COUPON 1 -->
+    <div class="promo-card" data-type="coupon">
+      <div class="card-band band-coupon" data-emoji="🏷️">
+        <div class="card-type-label">Coupon Code</div>
+        <div class="card-title">₱100 Off Your First Order</div>
+        <div class="card-subtitle">Welcome gift for new customers</div>
+        <div class="expiry-badge">⏰ Valid until June 30, 2026</div>
+      </div>
+      <div class="card-body">
+        <p class="card-desc">New to our store? Use this code at checkout and get ₱100 off on your very first order. One-time use only.</p>
+        <ul class="terms-list">
+          <li>Minimum order of ₱300</li>
+          <li>Valid for first-time customers only</li>
+          <li>Cannot be combined with other promos</li>
+        </ul>
+        <div class="coupon-box">
+          <span class="coupon-code">WELCOME100</span>
+          <button class="copy-btn" onclick="copyCode(this,'WELCOME100')">📋 Copy</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- SALE 1 -->
+    <div class="promo-card" data-type="sale">
+      <div class="card-band band-sale" data-emoji="🔖">
+        <div class="card-type-label">Flash Sale</div>
+        <div class="card-title">20% Off Selected Items</div>
+        <div class="card-subtitle">This week only — grab it fast!</div>
+        <div class="expiry-badge">⏰ Valid until June 5, 2026</div>
+      </div>
+      <div class="card-body">
+        <p class="card-desc">Get 20% off on our best-selling products this week. Sale items are marked in the shop — no code needed!</p>
+        <ul class="terms-list">
+          <li>Applies to sale-tagged items only</li>
+          <li>No minimum order required</li>
+          <li>While stocks last</li>
+          <li>Cannot be combined with coupon codes</li>
+        </ul>
+        <div class="no-code-badge">✅ No code needed — discount applied automatically</div>
+      </div>
+    </div>
+
+    <!-- FREE SHIPPING 1 -->
+    <div class="promo-card" data-type="shipping">
+      <div class="card-band band-shipping" data-emoji="🚚">
+        <div class="card-type-label">Free Shipping</div>
+        <div class="card-title">Free Delivery on Orders ₱500+</div>
+        <div class="card-subtitle">Within Davao City only</div>
+        <div class="expiry-badge">⏰ Ongoing promo</div>
+      </div>
+      <div class="card-body">
+        <p class="card-desc">Spend ₱500 or more in a single order and enjoy FREE delivery within Davao City. Shop more, save more!</p>
+        <ul class="terms-list">
+          <li>Minimum order of ₱500</li>
+          <li>Within Davao City deliveries only</li>
+          <li>Applied automatically at checkout</li>
+          <li>Can be combined with coupon codes</li>
+        </ul>
+        <div class="no-code-badge">✅ No code needed — free shipping auto-applied</div>
+      </div>
+    </div>
+
+    <!-- BOGO 1 -->
+    <div class="promo-card" data-type="bogo">
+      <div class="card-band band-bogo" data-emoji="🎁">
+        <div class="card-type-label">Buy 1 Get 1</div>
+        <div class="card-title">BOGO on Selected Products</div>
+        <div class="card-subtitle">Double the value, same price!</div>
+        <div class="expiry-badge">⏰ Valid until June 15, 2026</div>
+      </div>
+      <div class="card-body">
+        <p class="card-desc">Buy any BOGO-tagged item and get a second one absolutely FREE! Great for stocking up or sharing with loved ones.</p>
+        <ul class="terms-list">
+          <li>Applies to BOGO-tagged items only</li>
+          <li>Free item must be of equal or lesser value</li>
+          <li>Maximum 2 BOGO pairs per order</li>
+          <li>While stocks last</li>
+        </ul>
+        <div class="coupon-box">
+          <span class="coupon-code">BOGO2026</span>
+          <button class="copy-btn" onclick="copyCode(this,'BOGO2026')">📋 Copy</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- COUPON 2 -->
+    <div class="promo-card" data-type="coupon">
+      <div class="card-band band-coupon" data-emoji="🏷️">
+        <div class="card-type-label">Coupon Code</div>
+        <div class="card-title">₱50 Off for Loyal Shoppers</div>
+        <div class="card-subtitle">Thank you for coming back!</div>
+        <div class="expiry-badge">⏰ Valid until June 30, 2026</div>
+      </div>
+      <div class="card-body">
+        <p class="card-desc">Already ordered from us before? Use this code as our thank-you for your continued support. Valid for repeat customers.</p>
+        <ul class="terms-list">
+          <li>Minimum order of ₱200</li>
+          <li>For repeat customers only</li>
+          <li>One use per customer</li>
+        </ul>
+        <div class="coupon-box">
+          <span class="coupon-code">LOYAL50</span>
+          <button class="copy-btn" onclick="copyCode(this,'LOYAL50')">📋 Copy</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- FREE SHIPPING 2 -->
+    <div class="promo-card" data-type="shipping">
+      <div class="card-band band-shipping" data-emoji="🚚">
+        <div class="card-type-label">Free Shipping</div>
+        <div class="card-title">Free Shipping Weekend</div>
+        <div class="card-subtitle">Every Saturday & Sunday</div>
+        <div class="expiry-badge">⏰ Every weekend — ongoing</div>
+      </div>
+      <div class="card-body">
+        <p class="card-desc">Every Saturday and Sunday, enjoy free shipping on ANY order size — no minimum spend required!</p>
+        <ul class="terms-list">
+          <li>No minimum order required</li>
+          <li>Davao City deliveries only</li>
+          <li>Saturdays and Sundays only</li>
+          <li>Use code at checkout</li>
+        </ul>
+        <div class="coupon-box">
+          <span class="coupon-code">WEEKENDS</span>
+          <button class="copy-btn" onclick="copyCode(this,'WEEKENDS')">📋 Copy</button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- HOW TO USE -->
+  <section class="how-section">
+    <div class="how-inner">
+      <h2>How to Use a Coupon Code</h2>
+      <p class="sub">It only takes 3 simple steps to save!</p>
+      <div class="steps-row">
+        <div class="how-step">
+          <div class="how-num">1</div>
+          <h4>Copy the Code</h4>
+          <p>Click the "Copy" button on any coupon above to copy the code to your clipboard.</p>
+        </div>
+        <div class="how-step">
+          <div class="how-num">2</div>
+          <h4>Add Items to Cart</h4>
+          <p>Browse our shop and add your preferred items to your cart as usual.</p>
+        </div>
+        <div class="how-step">
+          <div class="how-num">3</div>
+          <h4>Paste at Checkout</h4>
+          <p>Enter the coupon code in the promo code field at checkout and click Apply.</p>
+        </div>
+        <div class="how-step">
+          <div class="how-num">4</div>
+          <h4>Enjoy Your Savings!</h4>
+          <p>Your discount will be applied instantly and shown in your order total.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+<section class="footerGroup">
+
+    <div class="subscribe">
+        <h3>Subscribe</h3>
+        <div class="subscribeContent">
+            <input type="email" placeholder="Enter your Email Address"><button type="submit">Subscribe</button><br>
+            <p class="subscribeMessage">Stay updated with new collections, layout improvements, and feature updates from HomeKitchen Studio.</p>
+            <p>Subscribe to receive:</p>
+            <ul>
+                <li>*Product layout previews & UI updates</li>
+                <li>*Design improvements and feature experiments</li>
+                <li>*Project milestones and build highlights</li>
+            </ul><br>
+
+            <p class="subscribeDisclaimer">This is a demo subscription for portfolio purposes only. No real messages will be sent.</p>
+        </div>
+    </div>
+
+    <div class="sectionCombined">
+    <div class="moreInfoGroup">
+        <div>
+            <h4>About Us</h4>
+                <ul>
+                    <li><a href="/footer-links/aboutUs-BLOG.html">Blog</a></li>
+                    <li><a href="/footer-links/aboutUs-CAREERS.html">Careers</a></li>
+                    <li><a href="/footer-links/aboutUs-SHOPREVIEWS.html">Shop Reviews</a></li>
+                </ul>
+        </div>
+        
+        <div>
+            <h4>Get in Touch</h4>
+                <ul>
+                    <li><a href="/footer-links/getInTouch-HELPCENTER.html">Help Center</a></li>
+                    <li><a href="/footer-links/getInTouch-EMAIL.html">Email Us</a></li>
+                    <li><a href="/footer-links/getInTouch-CONTACT.html">Contact Us</a></li>
+                </ul>
+        </div>
+
+        <div>
+            <h4>About Order</h4>
+                <ul>
+                    <li><a href="/footer-links/aboutOrder-TRACKORDER.html">Track Order</a></li>
+                    <li><a href="/footer-links/aboutOrder-DISCOUNTS.html">Discounts</a></li>
+                    <li><a href="/footer-links/aboutOrder-SHIPPINGOPTIONS.html">Shipping Options</a></li>
+                </ul>
+        </div>
+
+        <div>
+            <h4>Our Policies</h4>
+                <ul>
+                    <li><a href="/footer-links/ourPolicies-SHIPPING.html">Shipping Policies</a></li>
+                    <li><a href="/footer-links/ourPolicies-RETURN&REFUND.html">Return & Refund</a></li>
+                    <li><a href="/footer-links/ourPolicies-PRIVACY.html">Privacy Policy</a></li>
+                </ul>
+        </div>
+
+        <div>
+            <h4>Our Location</h4>
+                <p>Calinan District</p>
+                <p>Davao City, Philippines</p>
+        </div>
+
+        <div>
+            <h4>Store Hours</h4>
+                <p>Mondays to Sundays</p>
+                <p>Open 24 hours</p>
+        </div>
+    </div>
+
+
+    <div class="paymentSocialShippingGroup">
+        <h4>Payment Options</h4>
+        <div class="paymentGroup">
+                <div class="cards">
+                    <img src="/images/FOOTER-IMAGES/Payment-VISA-logo.jpg" alt="Visa Card Image" aria-label="Visa">
+                </div>
+                <div class="cards">
+                    <img src="/images/FOOTER-IMAGES/Payment-Maya-logo.jpg" alt="Maya Card Image" aria-label="Maya">
+                </div>
+                <div class="cards">
+                    <img src="/images/FOOTER-IMAGES/Payment-BPI-logo.jpg" alt="BPI Card Image" aria-label="BPI">
+                </div>
+                <div class="cards">
+                    <img src="/images/FOOTER-IMAGES/Payment-BDO-logo.jpg" alt="BDO Card Image" aria-label="BDO">
+                </div>
+                <div class="cards">
+                    <img src="/images/FOOTER-IMAGES/Payment-Mastercard-logo.webp" alt="Mastercard Image" aria-label="Mastercard">
+                </div>
+                <div class="cards">
+                    <img src="/images/FOOTER-IMAGES/Payment-Gcash-logo.webp" alt="Gcash Card Image" aria-label="Gcash">
+                </div>
+        </div>
+
+        <div class="socialShipGroup">
+        <div class="socialMediaGroup">
+            <h4>Follow Us</h4>
+                <div class="socialMedia">
+                    <a href="https://www.facebook.com" aria-label="Facebook Link" target="_blank"><img src="/images/FOOTER-IMAGES/fblogo.png" alt="fb logo"></a>
+                    <a href="https://www.Twitter.com" aria-label="Twitter Link" target="_blank"><img src="/images/FOOTER-IMAGES/twitterlogo.png" alt="twitter logo"></a>
+                    <a href="https://www.Instagram.com" aria-label="Instagram Link" target="_blank"><img src="/images/FOOTER-IMAGES/instagramlogo.png" alt="Instagram Logo"></a>
+                    <a href="https://www.LinkedIn.com" aria-label="LinkedIn Link" target="_blank"><img src="/images/FOOTER-IMAGES/linkedinlogo.png" alt="LinkedIn logo"></a>
+                </div>
+        </div>
+
+        <div class="shippingGroup">
+            <h4>Shipping Courriers</h4>
+                <div class="shipping">
+                    <img src="/images/FOOTER-IMAGES/Delivery-FlashExpress.png" alt="Flash Express logo">
+                    <img src="/images/FOOTER-IMAGES/Delivery-FedEx.png" alt="Fedex logo">
+                    <img src="/images/FOOTER-IMAGES/Delivery-NinjaVan.png" alt="NinjaVan Logo">
+                    <img src="/images/FOOTER-IMAGES/Deliver-LBCExpress.png" alt="LBC Express logo">
+                </div>
+        </div>
+        </div>
+    </div>
+    </div>
+
+    <div class="pageDescriptionGroup">
+        <div class="bottomLogo">
+            <img src="/images/LOGO&BACKGROUND/officiallogoTRANSPARTENTBG-CROPPED.png" alt="Home Kitchen Studio Logo">
+        </div>
+
+        <div class="aboutPage">
+            <p class="aboutPageP">This website was built as a portfolio project to practice and demonstrate skills in HTML, CSS, JavaScript, and responsive webdesign.HomeKitchen Studio is not a real store, but a concept project inspired by modern e-commerce platforms and kitchen lifestyle brands. All products and images are for demonstration purposes only.<br><br>
+
+            <a href="/index.html" class="Explore">Explore the Build</a>
+        </div>
+    </div>
+</section>
+
+<footer class="footer">
+    <p>@ 2026 HomeKitchen Studio. All Rights Reserved</p>
+    <p>Designed by Joan Faith </p>
+</footer>
+</div>
+
+<div class="backtotop" id="backtotop">
+    <p>▲ Back To Top</p>
+</div>
+
+
+
+
+<div class="signInOverlay" id="signInOverlay">
+    <div class="signInForm">
+        <button id="closeSignInFormButton" class="closeSignInFormButton">&times;</button>
+        <h2>Sign In</h2>
+        <form id="signInForm">
+            <div class="emailLabelGroup">
+                <label for="email">Email:</label><input type="email" id="email" class="emailSignIn" placeholder="Enter Email" required>
+                <p id="emailMessageResult"></p>
+            </div>
+            <div class="passwordLabelGroup">
+                <label for="password">Password:</label>
+                <div class="passwordInput">
+                    <div class="passwordInputAndEye">
+                    <input type="password" class="passwordSignIn" placeholder="Enter Password" required><i class="mainEye fa-solid fa-eye"></i>
+                    </div>
+                    <p id="passwordMessageResult"></p>
+                </div>
+            </div>
+            <button id="signInButton" onclick="signInSuccessful()">Sign In</button>
+            <p id="finalSignInMessage"></p>
+            <p class="noAccount">No account yet? <a href="#" class="signUp">Sign Up</a></p>
+        </form>
+    </div>
+</div>
+
+
+
+
+<div class="signUpOverlay" id="signUpOverlay">
+    <div class="signUpForm">
+        <button id="closeSignUpFormButton" class="closeSignUpFormButton">&times;</button>
+        <h2>Sign Up</h2>
+        <form id="signUpForm">
+            <div class="usernameLabelGroup">
+                <label for="username">Username:</label><input type="text" id="username" class="usernameSignUp" placeholder="Create Username" required>
+            </div>
+            <div class="emailLabelGroup">
+                <label for="email">Email:</label><input type="email" id="email" class="emailSignUp" placeholder="Enter Email" required>
+            </div>
+            <div class="passwordLabelGroup">
+                <label for="password">Password:</label>
+                <div class="firstPasswordWrapper">
+                    <input type="password" class="password" id="firstPasswordSignUp" placeholder="Enter Password" required><i class="firstEye fa-solid fa-eye"></i>
+                </div>
+            </div>
+            <div class="passwordLabelGroupRepeat">
+                <label for="password">Re-enter Password:</label>
+                <div class="secondPasswordWrapper">
+                <input type="password" class="passwordSecond" id="secondPasswordSignUp" placeholder="Re-enterPassword" required><i class="secondEye fa-solid fa-eye"></i>
+                </div>
+            </div>
+            <div class="tcGroup">
+                <input type="checkbox">
+                <p>I agree to <a href="">Home Kitchen Studio's Terms and Conditions</a></p>
+            </div>
+            <button type="button" id="signUpButton">Sign Up</button>
+            <p class="hasAccount">Already have an account? <a href="javascript:void(0)" onclick="switchToSignIn()">Sign In</a></p>
+        </form>
+    </div>
+</div>
+
+<div class="addToCartPopUp" id="addToCartPopUp">
+    <p>Added to Cart!</p>
+</div>
+
+
+  <script>
+    function filterPromos(btn, type) {
+      document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      document.querySelectorAll('.promo-card').forEach(card => {
+        card.style.display = (type === 'all' || card.dataset.type === type) ? 'flex' : 'none';
+      });
+    }
+
+    function copyCode(btn, code) {
+      navigator.clipboard.writeText(code).then(() => {
+        const original = btn.innerHTML;
+        btn.innerHTML = '✅ Copied!';
+        btn.classList.add('copied');
+        setTimeout(() => {
+          btn.innerHTML = original;
+          btn.classList.remove('copied');
+        }, 2000);
+      });
+    }
+  </script>
+<script src="/js/backtotop.js" defer></script>
+<script src="/js/signInSignUpFORM.js" defer></script>
+<script src="/js/cart.js" defer></script>
+<script src="/js/openBurger.js" defer></script>
+<script src="/js/search.js" defer></script>
+<script src="/js/sort.js" defer></script>
+<script src="/js/desktopNav.js" defer></script>
+
 </body>
 </html>

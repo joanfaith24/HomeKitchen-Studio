@@ -217,15 +217,15 @@ AllAddButtons.forEach(add => {
         const eachProduct = add.closest('.eachProduct');
         let productName = eachProduct.querySelector('.productCaption').innerText.trim();
         let eachPriceText = eachProduct.querySelector('.price').innerText;
-
-        // FIX: parsePrice handles ₱1,249.00 correctly on all devices/browsers
         let price = parsePrice(eachPriceText);
-        let image = eachProduct.querySelector('img').src;
+
+        // FIX: always store image as absolute path from root
+        let rawSrc = eachProduct.querySelector('img').getAttribute('src');
+        let image = rawSrc.startsWith('/') ? rawSrc : '/' + rawSrc;
 
         addToCart(productName, price, image);
         syncPageButtons();
 
-        // Floating popup above the Add to Cart button
         const wrapper = add.closest('.addandTrashSection');
         if (wrapper) showFloatingPopup(wrapper, '✓ Added to Cart', 'added');
     });

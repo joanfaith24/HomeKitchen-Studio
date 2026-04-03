@@ -125,6 +125,10 @@
 {
     font-weight: 700;
 }
+.addToCart
+{
+    margin-bottom: 40px;
+}
 
 .addToCart,
 .subscribeContent button
@@ -134,6 +138,7 @@
     color: #1a1a1a;
     border: none;
     border-radius: 2px;
+    margin-bottom: 10px;
 }
 
 .addandTrashSection
@@ -186,6 +191,22 @@
     font-weight: 600;
     cursor: pointer;
     border-radius: 2px;
+}
+
+.thisPage
+{
+    background-color: none;
+    border: 1px solid #2B2B2B;
+    color: #1A1A1A;
+    padding: 8px 24px;
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: 2px;
+}
+
+.thisPage:hover
+{
+    cursor: default;
 }
 
 .shopNowButton:hover,

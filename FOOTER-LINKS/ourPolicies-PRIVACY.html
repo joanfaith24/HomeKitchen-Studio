@@ -3,9 +3,629 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Home Kitchen Studio</title>
+    <link rel="icon" type="image/png" href="/images/LOGO&BACKGROUND/officiallogoWHITEBG.jpg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"><link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/header.css">
+    <link rel="stylesheet" href="/css/universal&body.css">
+    <link rel="stylesheet" href="/css/mobilefirst.css">
+    <link rel="stylesheet" href="/css/categories.css">
+    <link rel="stylesheet" href="/css/mainPage.css">
+    <link rel="stylesheet" href="/css/footermobile.css">
+    <link rel="stylesheet" href="/css/backtotop.css">
+    <link rel="stylesheet" href="/css/signIn.css">
+    <link rel="stylesheet" href="/css/signUp.css">
+    <link rel="stylesheet" href="/css/checkout.css">
+    <link rel="stylesheet" href="/css/responsive.css">
+    <link rel="stylesheet" href="/css/footerLinks.css/privacyPolicy.css">
+    <script src="/js/skeleton.js"></script>
 </head>
+
 <body>
-    <h2>Privacy</h2>
+    <header class="headerGroup">
+        <div class="burgerIcon" id="burgerIcon" onclick="openBurger()">
+            <div class="burgerLine"></div>
+            <div class="burgerLine"></div>
+            <div class="burgerLine"></div>
+        </div>
+        <div class="pageLogoBox">
+            <a href="/index.html"><img class="pageLogo" src="/images/LOGO&BACKGROUND/officiallogoTRANSPARTENTBG-CROPPED.png" alt="Home Kitchen Studio Logo"></a>
+        </div>
+        <div class="inputBarHeader">
+            <input type="text" placeholder="Search product here..." id="searchInput">
+            <i class="fa-solid fa-magnifying-glass"></i>
+        </div>
+
+        <div class="cart-Log-Call-Group">
+            <div id="cartIcon" class="cartIcon"  onclick="openCartPop(event)">
+                <a href="javascript:void(0)"><i class="fa-solid fa-cart-shopping"></i></a>
+                <p id="cartBadge" class="cartBadge">0</p>
+            </div>
+                <div class="cartSidePopUpPage hideCart">
+
+                    <div class="cartPageHeader">
+                        <p id="cartHeaderLabel" class="cartHeaderLabel">Cart Items:<span class="totalItems" id="totalItems">0</span></p>
+                        <p id="closeCartPop" class="closeCartPop" onclick="closePop(event)">&times;</p>
+                    </div>
+
+                    <div id="cartDetails" class="cartDetails">
+                        <p class="cartTotalLabel" id="cartTotalLabel">Cart Subtotal: <strong><span id="subtotalPrice" class="subTotalPrice">0.00</span></strong></p>
+                    </div>
+
+                    <div id="itemsOnCartDetails" class="itemsOnCartDetails">
+                    </div>
+                    <button id="checkoutSideCartButton" class="checkoutSideCartButton" onclick="proceedToCheckout()">Proceed to Checkout
+                    </button>   
+                </div>
+        </div>
+        <div class="signInIconDiv">
+            <a href="javascript:void(0)" onclick="openSignIn()"><i class="fa-solid fa-user"></i></a>
+        </div>
+        <div class="contactUsIcon">
+            <a href="/footer-links/getInTouch-EMAIL.html" title="Contact Us">
+            <i class="fa-solid fa-envelope"></i></a>
+        </div>
+    </header>
+
+<nav class="categories" id="categories">
+    <span><i class="fa-solid fa-xmark" onclick="closeCatPop()"></i></span>
+    <div class="eachCategory">
+        <a href="/html-categories/accessories.html">ACCESSORIES</a>
+    </div>
+    <div class="eachCategory">
+        <a href="/html-categories/bakingtools.html">BAKING TOOLS</a>
+    </div>
+    <div class="eachCategory">
+        <a href="/html-categories/storage.html">STORAGE</a>
+        <button onclick="storage()"><i class="fa-solid fa-chevron-right"></i></button>
+    </div>
+    <div class="eachCategory">
+        <a href="/html-categories/glasswares.html">GLASSWARES</a>
+        <button onclick="glasswares()"><i class="fa-solid fa-chevron-right"></i></button>
+    </div>
+    <div class="eachCategory">
+        <a href="/html-categories/kitchenappliances.html">KITCHEN APPLIANCES</a>
+    </div>
+    <div class="eachCategory">
+        <a href="/html-categories/knives.html">KNIVES</a>
+        <button onclick="knives()"><i class="fa-solid fa-chevron-right"></i></button>
+    </div>
+    <div class="eachCategory">
+        <a href="/html-categories/cookwares.html">COOKWARES</a>
+        <button onclick="cookwares()"><i class="fa-solid fa-chevron-right"></i></button>
+    </div>
+    <div class="eachCategory">
+        <a href="/html-categories/utensils.html">UTENSILS</a>
+        <button onclick="utensils()"><i class="fa-solid fa-chevron-right"></i></button>
+    </div>
+</nav>
+<hr>
+
+<div class="categorySubGroup">
+    <ul class="eachCategorySubStorage">
+        <a href="/html-categories/storage.html#singleStorage">Single Storage</a>
+        <a href="/html-categories/storage.html#storageSet">Storage Set</a>
+    </ul>
+    <ul class="eachCategorySubGlasses">
+        <a href="/html-categories/glasswares.html#wineGlasses">Wine Glasses</a>
+        <a href="/html-categories/glasswares.html#mugs">Mugs</a>
+        <a href="/html-categories/glasswares.html#drinkingGlasses">Drinking Glasses</a>
+    </ul>
+    <ul class="eachCategorySubKnife">
+        <a href="/html-categories/knives.html#knifeSet">Knife Set</a>
+        <a href="/html-categories/knives.html#breadKnife">Bread Knife</a>
+        <a href="/html-categories/knives.html#paringKnife">Paring Knife</a>
+        <a href="/html-categories/knives.html#utilityKnife">Utility Knife</a>
+    </ul>
+    <ul class="eachCategorySubCookwares">
+        <a href="/html-categories/cookwares.html#fryingPan">Frying Pan</a>
+        <a href="/html-categories/cookwares.html#grillPan">Grill Pan</a>
+        <a href="/html-categories/cookwares.html#pots">Pots</a>
+    </ul>
+    <ul class="eachCategorySubUtensils">
+        <a href="/html-categories/utensils.html#utensilSet">Utensil Set</a>
+        <a href="/html-categories/utensils.html#spoonForkLadle">Spoon, Fork & Ladle</a>
+        <a href="/html-categories/utensils.html#spatulaTurner">Spatula and Turner</a>
+    </ul>
+</div>
+
+
+
+
+  <!-- HERO -->
+  <section class="hero">
+    <span class="eyebrow">✦ Your Privacy Matters</span>
+    <h1>Privacy Policy</h1>
+    <p>We are committed to protecting your personal information. This policy explains what data we collect, how we use it, and your rights as a customer.</p>
+    <span class="last-updated">Last updated: April 2026</span>
+  </section>
+
+  <!-- COMMITMENT STRIP -->
+  <div class="commit-strip">
+    <div class="commit-card">
+      <div class="cc-icon">🔒</div>
+      <div class="cc-title">Data Security</div>
+      <div class="cc-label">Your data is protected and securely stored</div>
+    </div>
+    <div class="commit-card">
+      <div class="cc-icon">🚫</div>
+      <div class="cc-title">No Selling</div>
+      <div class="cc-label">We never sell your personal data to third parties</div>
+    </div>
+    <div class="commit-card">
+      <div class="cc-icon">👁️</div>
+      <div class="cc-title">Transparency</div>
+      <div class="cc-label">You always know how your data is used</div>
+    </div>
+    <div class="commit-card">
+      <div class="cc-icon">✋</div>
+      <div class="cc-title">Your Control</div>
+      <div class="cc-label">You can request to view or delete your data anytime</div>
+    </div>
+  </div>
+
+  <!-- MAIN -->
+  <div class="page-wrap">
+
+    <!-- TOC -->
+    <div class="toc">
+      <h4>Contents</h4>
+      <ul>
+        <li><a href="#collect">📥 Data We Collect</a></li>
+        <li><a href="#use">🎯 How We Use It</a></li>
+        <li><a href="#sharing">🤝 Data Sharing</a></li>
+        <li><a href="#security">🔒 Data Security</a></li>
+        <li><a href="#cookies">🍪 Cookies</a></li>
+        <li><a href="#rights">✋ Your Rights</a></li>
+        <li><a href="#retention">🗄️ Data Retention</a></li>
+        <li><a href="#changes">📝 Policy Changes</a></li>
+      </ul>
+    </div>
+
+    <!-- POLICY CONTENT -->
+    <div class="policy-content">
+
+      <!-- DATA WE COLLECT -->
+      <div class="policy-section" id="collect">
+        <div class="section-head">
+          <div class="section-icon">📥</div>
+          <h2>Data We Collect</h2>
+        </div>
+        <div class="section-body">
+          <p>When you shop with us or get in touch, we may collect the following types of personal information. We only collect what is necessary to process your orders and provide good service.</p>
+          <div class="data-grid">
+            <div class="data-card">
+              <div class="dc-icon">👤</div>
+              <div class="dc-title">Personal Details</div>
+              <div class="dc-desc">Name, email address, phone number</div>
+            </div>
+            <div class="data-card">
+              <div class="dc-icon">📍</div>
+              <div class="dc-title">Delivery Address</div>
+              <div class="dc-desc">Street, barangay, city, province, ZIP code</div>
+            </div>
+            <div class="data-card">
+              <div class="dc-icon">💳</div>
+              <div class="dc-title">Payment Info</div>
+              <div class="dc-desc">Payment method used (we do not store card details)</div>
+            </div>
+            <div class="data-card">
+              <div class="dc-icon">📦</div>
+              <div class="dc-title">Order History</div>
+              <div class="dc-desc">Items purchased, order dates, and amounts</div>
+            </div>
+            <div class="data-card">
+              <div class="dc-icon">💬</div>
+              <div class="dc-title">Messages</div>
+              <div class="dc-desc">Inquiries, complaints, or feedback you send us</div>
+            </div>
+            <div class="data-card">
+              <div class="dc-icon">📱</div>
+              <div class="dc-title">Device Info</div>
+              <div class="dc-desc">Browser type and device used to access our site</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- HOW WE USE IT -->
+      <div class="policy-section" id="use">
+        <div class="section-head">
+          <div class="section-icon">🎯</div>
+          <h2>How We Use Your Data</h2>
+        </div>
+        <div class="section-body">
+          <p>We use the information we collect solely to operate our store and provide you with the best possible experience. We do not use your data for anything unrelated to your transactions with us.</p>
+          <ul class="policy-list">
+            <li>To process and fulfill your orders and arrange delivery</li>
+            <li>To send you order confirmations, tracking updates, and delivery notifications</li>
+            <li>To respond to your inquiries, complaints, or return requests</li>
+            <li>To verify your identity and prevent fraudulent transactions</li>
+            <li>To improve our products, services, and website based on customer feedback</li>
+            <li>To send you promos, discounts, and store updates — only if you have opted in</li>
+            <li>To comply with legal obligations required by Philippine law</li>
+          </ul>
+          <div class="highlight-box">
+            <span class="hb-icon">📣</span>
+            <div class="hb-text">
+              <h4>Marketing Messages</h4>
+              <p>We only send promotional messages to customers who have agreed to receive them. You can opt out at any time by messaging us directly or replying STOP to any promotional message.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- DATA SHARING -->
+      <div class="policy-section" id="sharing">
+        <div class="section-head">
+          <div class="section-icon">🤝</div>
+          <h2>Data Sharing</h2>
+        </div>
+        <div class="section-body">
+          <p>We do not sell, rent, or trade your personal information to any third party for marketing purposes. We only share your data with trusted partners who help us operate our business:</p>
+          <ul class="policy-list">
+            <li><strong>Courier partners</strong> (LBC, Ninja Van, Flash Express, FedEx) — receive your name, address, and contact number to deliver your order</li>
+            <li><strong>Payment platforms</strong> (GCash, Maya, banks) — process your payment securely on our behalf</li>
+            <li><strong>Government authorities</strong> — only when required by law, court order, or legitimate legal process</li>
+          </ul>
+          <div class="warning-box">
+            <span>⚠️</span>
+            <p>We require all third-party partners to handle your data responsibly and in accordance with applicable data privacy laws. We do not allow them to use your data for their own marketing purposes.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- DATA SECURITY -->
+      <div class="policy-section" id="security">
+        <div class="section-head">
+          <div class="section-icon">🔒</div>
+          <h2>Data Security</h2>
+        </div>
+        <div class="section-body">
+          <p>We take the security of your personal information seriously. We implement appropriate measures to protect your data from unauthorized access, disclosure, or misuse.</p>
+          <ul class="policy-list">
+            <li>Customer data is stored securely and accessible only to authorized personnel</li>
+            <li>We do not store full credit card or debit card numbers</li>
+            <li>Payment transactions are handled by secure, encrypted payment platforms</li>
+            <li>We regularly review our data handling practices to ensure your information is protected</li>
+            <li>In the event of a data breach that affects your information, we will notify you promptly</li>
+          </ul>
+          <div class="highlight-box">
+            <span class="hb-icon">🔐</span>
+            <div class="hb-text">
+              <h4>Never Share Your OTP</h4>
+              <p>We will NEVER ask for your OTP, password, or full payment details over chat or SMS. If someone claims to be from our store and asks for this information, do not share it and report it to us immediately.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- COOKIES -->
+      <div class="policy-section" id="cookies">
+        <div class="section-head">
+          <div class="section-icon">🍪</div>
+          <h2>Cookies & Tracking</h2>
+        </div>
+        <div class="section-body">
+          <p>Our website may use cookies — small text files stored on your device — to improve your browsing experience. Cookies help us remember your preferences and understand how visitors use our site.</p>
+          <ul class="policy-list">
+            <li><strong>Essential cookies</strong> — required for the website to function properly (e.g., keeping items in your cart)</li>
+            <li><strong>Analytics cookies</strong> — help us understand how customers navigate our site so we can improve it</li>
+            <li><strong>Preference cookies</strong> — remember your settings and choices for a better experience</li>
+          </ul>
+          <p>You can control or disable cookies through your browser settings. Note that disabling cookies may affect some features of our website. We do not use cookies to track you across other websites.</p>
+        </div>
+      </div>
+
+      <!-- YOUR RIGHTS -->
+      <div class="policy-section" id="rights">
+        <div class="section-head">
+          <div class="section-icon">✋</div>
+          <h2>Your Rights</h2>
+        </div>
+        <div class="section-body">
+          <p>Under the Philippine Data Privacy Act of 2012 (Republic Act 10173), you have the following rights regarding your personal data. You may exercise these rights by contacting us at any time.</p>
+          <div class="rights-grid">
+            <div class="right-card">
+              <h4>👁️ Right to Access</h4>
+              <p>You can request a copy of the personal data we hold about you at any time.</p>
+            </div>
+            <div class="right-card">
+              <h4>✏️ Right to Correct</h4>
+              <p>You can request that we correct any inaccurate or outdated information we have about you.</p>
+            </div>
+            <div class="right-card">
+              <h4>🗑️ Right to Erasure</h4>
+              <p>You can request that we delete your personal data, subject to legal and operational requirements.</p>
+            </div>
+            <div class="right-card">
+              <h4>🚫 Right to Object</h4>
+              <p>You can object to the processing of your data for marketing purposes at any time.</p>
+            </div>
+            <div class="right-card">
+              <h4>📤 Right to Data Portability</h4>
+              <p>You can request a copy of your data in a commonly used, machine-readable format.</p>
+            </div>
+            <div class="right-card">
+              <h4>⚖️ Right to Complain</h4>
+              <p>You may file a complaint with the National Privacy Commission (NPC) if you believe your rights have been violated.</p>
+            </div>
+          </div>
+          <p style="margin-top:1rem;">To exercise any of these rights, please contact us via our <a href="getInTouch-CONTACT.html" style="color:var(--gold)">Contact page</a> or email <a href="mailto:support@homekitchenstudio.com" style="color:var(--gold)">support@homekitchenstudio.com</a>. We will respond within 15 business days.</p>
+        </div>
+      </div>
+
+      <!-- DATA RETENTION -->
+      <div class="policy-section" id="retention">
+        <div class="section-head">
+          <div class="section-icon">🗄️</div>
+          <h2>Data Retention</h2>
+        </div>
+        <div class="section-body">
+          <p>We only keep your personal data for as long as it is necessary to fulfil the purposes it was collected for, or as required by law.</p>
+          <ul class="policy-list">
+            <li>Order and transaction records are kept for up to 5 years for tax and legal compliance</li>
+            <li>Customer account and contact information is retained while you remain an active customer</li>
+            <li>Inactive customer data is reviewed and securely deleted after <strong>2 years</strong> of inactivity</li>
+            <li>Messages and support inquiries are kept for up to 1 year for reference</li>
+          </ul>
+          <p>When your data is no longer needed, it is permanently deleted or anonymized so it can no longer be linked to you.</p>
+        </div>
+      </div>
+
+      <!-- POLICY CHANGES -->
+      <div class="policy-section" id="changes">
+        <div class="section-head">
+          <div class="section-icon">📝</div>
+          <h2>Changes to This Policy</h2>
+        </div>
+        <div class="section-body">
+          <p>We may update this Privacy Policy from time to time to reflect changes in our practices, legal requirements, or business operations. When we do, we will update the "Last updated" date at the top of this page.</p>
+          <ul class="policy-list">
+            <li>Significant changes will be announced via our website or through a direct message to affected customers</li>
+            <li>Continued use of our store after changes are posted means you accept the updated policy</li>
+            <li>We encourage you to review this page periodically to stay informed</li>
+          </ul>
+          <div class="warning-box">
+            <span>📌</span>
+            <p>If you have any questions or concerns about this Privacy Policy or how we handle your data, please don't hesitate to reach out to us. We are always happy to explain.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- NEED HELP -->
+      <div class="need-help">
+        <h3>Questions About Your Privacy?</h3>
+        <p>We're happy to explain how we handle your data. Our team is available 24/7 to answer any privacy-related questions.</p>
+        <div class="help-btns">
+          <a href="getInTouch-CONTACT.html" class="help-btn primary">💬 Contact Us</a>
+          <a href="getInTouch-EMAIL.html" class="help-btn">✉️ Email Us</a>
+          <a href="getInTouch-HELPCENTER.html" class="help-btn">❓ Help Center</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+<section class="footerGroup">
+
+    <div class="subscribe">
+        <h3>Subscribe</h3>
+        <div class="subscribeContent">
+            <input type="email" placeholder="Enter your Email Address"><button type="submit">Subscribe</button><br>
+            <p class="subscribeMessage">Stay updated with new collections, layout improvements, and feature updates from HomeKitchen Studio.</p>
+            <p>Subscribe to receive:</p>
+            <ul>
+                <li>*Product layout previews & UI updates</li>
+                <li>*Design improvements and feature experiments</li>
+                <li>*Project milestones and build highlights</li>
+            </ul><br>
+
+            <p class="subscribeDisclaimer">This is a demo subscription for portfolio purposes only. No real messages will be sent.</p>
+        </div>
+    </div>
+
+    <div class="sectionCombined">
+    <div class="moreInfoGroup">
+        <div>
+            <h4>About Us</h4>
+                <ul>
+                    <li><a href="/footer-links/aboutUs-BLOG.html">Blog</a></li>
+                    <li><a href="/footer-links/aboutUs-CAREERS.html">Careers</a></li>
+                    <li><a href="/footer-links/aboutUs-SHOPREVIEWS.html">Shop Reviews</a></li>
+                </ul>
+        </div>
+        
+        <div>
+            <h4>Get in Touch</h4>
+                <ul>
+                    <li><a href="/footer-links/getInTouch-HELPCENTER.html">Help Center</a></li>
+                    <li><a href="/footer-links/getInTouch-EMAIL.html">Email Us</a></li>
+                    <li><a href="/footer-links/getInTouch-CONTACT.html">Contact Us</a></li>
+                </ul>
+        </div>
+
+        <div>
+            <h4>About Order</h4>
+                <ul>
+                    <li><a href="/footer-links/aboutOrder-TRACKORDER.html">Track Order</a></li>
+                    <li><a href="/footer-links/aboutOrder-DISCOUNTS.html">Discounts</a></li>
+                    <li><a href="/footer-links/aboutOrder-SHIPPINGOPTIONS.html">Shipping Options</a></li>
+                </ul>
+        </div>
+
+        <div>
+            <h4>Our Policies</h4>
+                <ul>
+                    <li><a href="/footer-links/ourPolicies-SHIPPING.html">Shipping Policies</a></li>
+                    <li><a href="/footer-links/ourPolicies-RETURN&REFUND.html">Return & Refund</a></li>
+                    <li><a href="/footer-links/ourPolicies-PRIVACY.html">Privacy Policy</a></li>
+                </ul>
+        </div>
+
+        <div>
+            <h4>Our Location</h4>
+                <p>Calinan District</p>
+                <p>Davao City, Philippines</p>
+        </div>
+
+        <div>
+            <h4>Store Hours</h4>
+                <p>Mondays to Sundays</p>
+                <p>Open 24 hours</p>
+        </div>
+    </div>
+
+    <div class="paymentSocialShippingGroup">
+        <h4>Payment Options</h4>
+        <div class="paymentGroup">
+                <div class="cards">
+                    <img src="/images/FOOTER-IMAGES/Payment-VISA-logo.jpg" alt="Visa Card Image" aria-label="Visa">
+                </div>
+                <div class="cards">
+                    <img src="/images/FOOTER-IMAGES/Payment-Maya-logo.jpg" alt="Maya Card Image" aria-label="Maya">
+                </div>
+                <div class="cards">
+                    <img src="/images/FOOTER-IMAGES/Payment-BPI-logo.jpg" alt="BPI Card Image" aria-label="BPI">
+                </div>
+                <div class="cards">
+                    <img src="/images/FOOTER-IMAGES/Payment-BDO-logo.jpg" alt="BDO Card Image" aria-label="BDO">
+                </div>
+                <div class="cards">
+                    <img src="/images/FOOTER-IMAGES/Payment-Mastercard-logo.webp" alt="Mastercard Image" aria-label="Mastercard">
+                </div>
+                <div class="cards">
+                    <img src="/images/FOOTER-IMAGES/Payment-Gcash-logo.webp" alt="Gcash Card Image" aria-label="Gcash">
+                </div>
+        </div>
+
+        <div class="socialShipGroup">
+        <div class="socialMediaGroup">
+            <h4>Follow Us</h4>
+                <div class="socialMedia">
+                    <a href="https://www.facebook.com" aria-label="Facebook Link" target="_blank"><img src="/images/FOOTER-IMAGES/fblogo.png" alt="fb logo"></a>
+                    <a href="https://www.Twitter.com" aria-label="Twitter Link" target="_blank"><img src="/images/FOOTER-IMAGES/twitterlogo.png" alt="twitter logo"></a>
+                    <a href="https://www.Instagram.com" aria-label="Instagram Link" target="_blank"><img src="/images/FOOTER-IMAGES/instagramlogo.png" alt="Instagram Logo"></a>
+                    <a href="https://www.LinkedIn.com" aria-label="LinkedIn Link" target="_blank"><img src="/images/FOOTER-IMAGES/linkedinlogo.png" alt="LinkedIn logo"></a>
+                </div>
+        </div>
+
+        <div class="shippingGroup">
+            <h4>Shipping Courriers</h4>
+                <div class="shipping">
+                    <img src="/images/FOOTER-IMAGES/Delivery-FlashExpress.png" alt="Flash Express logo">
+                    <img src="/images/FOOTER-IMAGES/Delivery-FedEx.png" alt="Fedex logo">
+                    <img src="/images/FOOTER-IMAGES/Delivery-NinjaVan.png" alt="NinjaVan Logo">
+                    <img src="/images/FOOTER-IMAGES/Deliver-LBCExpress.png" alt="LBC Express logo">
+                </div>
+        </div>
+        </div>
+    </div>
+    </div>
+
+    <div class="pageDescriptionGroup">
+        <div class="bottomLogo">
+            <img src="/images/LOGO&BACKGROUND/officiallogoTRANSPARTENTBG-CROPPED.png" alt="Home Kitchen Studio Logo">
+        </div>
+
+        <div class="aboutPage">
+            <p class="aboutPageP">This website was built as a portfolio project to practice and demonstrate skills in HTML, CSS, JavaScript, and responsive webdesign.HomeKitchen Studio is not a real store, but a concept project inspired by modern e-commerce platforms and kitchen lifestyle brands. All products and images are for demonstration purposes only.<br><br>
+
+            <a href="/index.html" class="Explore">Explore the Build</a>
+        </div>
+    </div>
+</section>
+
+<footer class="footer">
+    <p>@ 2026 HomeKitchen Studio. All Rights Reserved</p>
+    <p>Designed by Joan Faith </p>
+</footer>
+</div>
+
+<div class="backtotop" id="backtotop">
+    <p>▲ Back To Top</p>
+</div>
+
+
+
+
+<div class="signInOverlay" id="signInOverlay">
+    <div class="signInForm">
+        <button id="closeSignInFormButton" class="closeSignInFormButton">&times;</button>
+        <h2>Sign In</h2>
+        <form id="signInForm">
+            <div class="emailLabelGroup">
+                <label for="email">Email:</label><input type="email" id="email" class="emailSignIn" placeholder="Enter Email" required>
+                <p id="emailMessageResult"></p>
+            </div>
+            <div class="passwordLabelGroup">
+                <label for="password">Password:</label>
+                <div class="passwordInput">
+                    <div class="passwordInputAndEye">
+                    <input type="password" class="passwordSignIn" placeholder="Enter Password" required><i class="mainEye fa-solid fa-eye"></i>
+                    </div>
+                    <p id="passwordMessageResult"></p>
+                </div>
+            </div>
+            <button id="signInButton" onclick="signInSuccessful()">Sign In</button>
+            <p id="finalSignInMessage"></p>
+            <p class="noAccount">No account yet? <a href="#" class="signUp">Sign Up</a></p>
+        </form>
+    </div>
+</div>
+
+
+
+
+<div class="signUpOverlay" id="signUpOverlay">
+    <div class="signUpForm">
+        <button id="closeSignUpFormButton" class="closeSignUpFormButton">&times;</button>
+        <h2>Sign Up</h2>
+        <form id="signUpForm">
+            <div class="usernameLabelGroup">
+                <label for="username">Username:</label><input type="text" id="username" class="usernameSignUp" placeholder="Create Username" required>
+            </div>
+            <div class="emailLabelGroup">
+                <label for="email">Email:</label><input type="email" id="email" class="emailSignUp" placeholder="Enter Email" required>
+            </div>
+            <div class="passwordLabelGroup">
+                <label for="password">Password:</label>
+                <div class="firstPasswordWrapper">
+                    <input type="password" class="password" id="firstPasswordSignUp" placeholder="Enter Password" required><i class="firstEye fa-solid fa-eye"></i>
+                </div>
+            </div>
+            <div class="passwordLabelGroupRepeat">
+                <label for="password">Re-enter Password:</label>
+                <div class="secondPasswordWrapper">
+                <input type="password" class="passwordSecond" id="secondPasswordSignUp" placeholder="Re-enterPassword" required><i class="secondEye fa-solid fa-eye"></i>
+                </div>
+            </div>
+            <div class="tcGroup">
+                <input type="checkbox">
+                <p>I agree to <a href="">Home Kitchen Studio's Terms and Conditions</a></p>
+            </div>
+            <button type="button" id="signUpButton">Sign Up</button>
+            <p class="hasAccount">Already have an account? <a href="javascript:void(0)" onclick="switchToSignIn()">Sign In</a></p>
+        </form>
+    </div>
+</div>
+
+<div class="addToCartPopUp" id="addToCartPopUp">
+    <p>Added to Cart!</p>
+</div>
+
+
+<script src="/js/backtotop.js" defer></script>
+<script src="/js/signInSignUpFORM.js" defer></script>
+<script src="/js/cart.js" defer></script>
+<script src="/js/openBurger.js" defer></script>
+<script src="/js/search.js" defer></script>
+<script src="/js/sort.js" defer></script>
+<script src="/js/desktopNav.js" defer></script>
+
 </body>
 </html>

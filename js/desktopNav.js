@@ -22,42 +22,42 @@
             <div class="dNavItem dNavHasDropdown">
                 <a href="/html-categories/storage.html">STORAGE &#9662;</a>
                 <div class="dNavDropdown">
-                    <a href="/html-categories/storage.html">Single Storage</a>
-                    <a href="/html-categories/storage.html">Storage Set</a>
+                    <a href="/html-categories/storage.html#singleStorage">Single Storage</a>
+                    <a href="/html-categories/storage.html#storageSet">Storage Set</a>
                 </div>
             </div>
             <div class="dNavItem dNavHasDropdown">
                 <a href="/html-categories/glasswares.html">GLASSWARES &#9662;</a>
                 <div class="dNavDropdown">
-                    <a href="/html-categories/glasswares.html">Wine Glasses</a>
-                    <a href="/html-categories/glasswares.html">Mugs</a>
-                    <a href="/html-categories/glasswares.html">Drinking Glasses</a>
+                    <a href="/html-categories/glasswares.html#wineGlasses">Wine Glasses</a>
+                    <a href="/html-categories/glasswares.html#mugs">Mugs</a>
+                    <a href="/html-categories/glasswares.html#drinkingGlasses">Drinking Glasses</a>
                 </div>
             </div>
             <div class="dNavItem"><a href="/html-categories/kitchenappliances.html">KITCHEN APPLIANCES</a></div>
             <div class="dNavItem dNavHasDropdown">
                 <a href="/html-categories/knives.html">KNIVES &#9662;</a>
                 <div class="dNavDropdown">
-                    <a href="/html-categories/knives.html">Knife Set</a>
-                    <a href="/html-categories/knives.html">Bread Knife</a>
-                    <a href="/html-categories/knives.html">Paring Knife</a>
-                    <a href="/html-categories/knives.html">Utility Knife</a>
+                    <a href="/html-categories/knives.html#knifeSet">Knife Set</a>
+                    <a href="/html-categories/knives.html#breadKnife">Bread Knife</a>
+                    <a href="/html-categories/knives.html#paringKnife">Paring Knife</a>
+                    <a href="/html-categories/knives.html#utilityKnife">Utility Knife</a>
                 </div>
             </div>
             <div class="dNavItem dNavHasDropdown">
                 <a href="/html-categories/cookwares.html">COOKWARES &#9662;</a>
                 <div class="dNavDropdown">
-                    <a href="/html-categories/cookwares.html">Frying Pan</a>
-                    <a href="/html-categories/cookwares.html">Grill Pan</a>
-                    <a href="/html-categories/cookwares.html">Pots</a>
+                    <a href="/html-categories/cookwares.html#fryingPan">Frying Pan</a>
+                    <a href="/html-categories/cookwares.html#grillPan">Grill Pan</a>
+                    <a href="/html-categories/cookwares.html#pots">Pots</a>
                 </div>
             </div>
             <div class="dNavItem dNavHasDropdown">
                 <a href="/html-categories/utensils.html">UTENSILS &#9662;</a>
                 <div class="dNavDropdown">
-                    <a href="/html-categories/utensils.html">Utensil Set</a>
-                    <a href="/html-categories/utensils.html">Spoon, Fork &amp; Ladle</a>
-                    <a href="/html-categories/utensils.html">Spatula and Turner</a>
+                    <a href="/html-categories/utensils.html#utensilSet">Utensil Set</a>
+                    <a href="/html-categories/utensils.html#spoonForkLadle">Spoon, Fork &amp; Ladle</a>
+                    <a href="/html-categories/utensils.html#spatulaTurner">Spatula and Turner</a>
                 </div>
             </div>
         `;

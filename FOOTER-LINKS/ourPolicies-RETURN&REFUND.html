@@ -3,9 +3,624 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Home Kitchen Studio</title>
+    <link rel="icon" type="image/png" href="/images/LOGO&BACKGROUND/officiallogoWHITEBG.jpg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"><link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/header.css">
+    <link rel="stylesheet" href="/css/universal&body.css">
+    <link rel="stylesheet" href="/css/mobilefirst.css">
+    <link rel="stylesheet" href="/css/categories.css">
+    <link rel="stylesheet" href="/css/mainPage.css">
+    <link rel="stylesheet" href="/css/footermobile.css">
+    <link rel="stylesheet" href="/css/backtotop.css">
+    <link rel="stylesheet" href="/css/signIn.css">
+    <link rel="stylesheet" href="/css/signUp.css">
+    <link rel="stylesheet" href="/css/checkout.css">
+    <link rel="stylesheet" href="/css/responsive.css">
+    <link rel="stylesheet" href="/css/footerLinks.css/returnRefund.css">
+    <script src="/js/skeleton.js"></script>
 </head>
+
 <body>
-    <h2>return and Refund</h2>
+    <header class="headerGroup">
+        <div class="burgerIcon" id="burgerIcon" onclick="openBurger()">
+            <div class="burgerLine"></div>
+            <div class="burgerLine"></div>
+            <div class="burgerLine"></div>
+        </div>
+        <div class="pageLogoBox">
+            <a href="/index.html"><img class="pageLogo" src="/images/LOGO&BACKGROUND/officiallogoTRANSPARTENTBG-CROPPED.png" alt="Home Kitchen Studio Logo"></a>
+        </div>
+        <div class="inputBarHeader">
+            <input type="text" placeholder="Search product here..." id="searchInput">
+            <i class="fa-solid fa-magnifying-glass"></i>
+        </div>
+
+        <div class="cart-Log-Call-Group">
+            <div id="cartIcon" class="cartIcon"  onclick="openCartPop(event)">
+                <a href="javascript:void(0)"><i class="fa-solid fa-cart-shopping"></i></a>
+                <p id="cartBadge" class="cartBadge">0</p>
+            </div>
+                <div class="cartSidePopUpPage hideCart">
+
+                    <div class="cartPageHeader">
+                        <p id="cartHeaderLabel" class="cartHeaderLabel">Cart Items:<span class="totalItems" id="totalItems">0</span></p>
+                        <p id="closeCartPop" class="closeCartPop" onclick="closePop(event)">&times;</p>
+                    </div>
+
+                    <div id="cartDetails" class="cartDetails">
+                        <p class="cartTotalLabel" id="cartTotalLabel">Cart Subtotal: <strong><span id="subtotalPrice" class="subTotalPrice">0.00</span></strong></p>
+                    </div>
+
+                    <div id="itemsOnCartDetails" class="itemsOnCartDetails">
+                    </div>
+                    <button id="checkoutSideCartButton" class="checkoutSideCartButton" onclick="proceedToCheckout()">Proceed to Checkout
+                    </button>   
+                </div>
+        </div>
+        <div class="signInIconDiv">
+            <a href="javascript:void(0)" onclick="openSignIn()"><i class="fa-solid fa-user"></i></a>
+        </div>
+        <div class="contactUsIcon">
+            <a href="/footer-links/getInTouch-EMAIL.html" title="Contact Us">
+            <i class="fa-solid fa-envelope"></i></a>
+        </div>
+    </header>
+
+<nav class="categories" id="categories">
+    <span><i class="fa-solid fa-xmark" onclick="closeCatPop()"></i></span>
+    <div class="eachCategory">
+        <a href="/html-categories/accessories.html">ACCESSORIES</a>
+    </div>
+    <div class="eachCategory">
+        <a href="/html-categories/bakingtools.html">BAKING TOOLS</a>
+    </div>
+    <div class="eachCategory">
+        <a href="/html-categories/storage.html">STORAGE</a>
+        <button onclick="storage()"><i class="fa-solid fa-chevron-right"></i></button>
+    </div>
+    <div class="eachCategory">
+        <a href="/html-categories/glasswares.html">GLASSWARES</a>
+        <button onclick="glasswares()"><i class="fa-solid fa-chevron-right"></i></button>
+    </div>
+    <div class="eachCategory">
+        <a href="/html-categories/kitchenappliances.html">KITCHEN APPLIANCES</a>
+    </div>
+    <div class="eachCategory">
+        <a href="/html-categories/knives.html">KNIVES</a>
+        <button onclick="knives()"><i class="fa-solid fa-chevron-right"></i></button>
+    </div>
+    <div class="eachCategory">
+        <a href="/html-categories/cookwares.html">COOKWARES</a>
+        <button onclick="cookwares()"><i class="fa-solid fa-chevron-right"></i></button>
+    </div>
+    <div class="eachCategory">
+        <a href="/html-categories/utensils.html">UTENSILS</a>
+        <button onclick="utensils()"><i class="fa-solid fa-chevron-right"></i></button>
+    </div>
+</nav>
+<hr>
+
+<div class="categorySubGroup">
+    <ul class="eachCategorySubStorage">
+        <a href="/html-categories/storage.html#singleStorage">Single Storage</a>
+        <a href="/html-categories/storage.html#storageSet">Storage Set</a>
+    </ul>
+    <ul class="eachCategorySubGlasses">
+        <a href="/html-categories/glasswares.html#wineGlasses">Wine Glasses</a>
+        <a href="/html-categories/glasswares.html#mugs">Mugs</a>
+        <a href="/html-categories/glasswares.html#drinkingGlasses">Drinking Glasses</a>
+    </ul>
+    <ul class="eachCategorySubKnife">
+        <a href="/html-categories/knives.html#knifeSet">Knife Set</a>
+        <a href="/html-categories/knives.html#breadKnife">Bread Knife</a>
+        <a href="/html-categories/knives.html#paringKnife">Paring Knife</a>
+        <a href="/html-categories/knives.html#utilityKnife">Utility Knife</a>
+    </ul>
+    <ul class="eachCategorySubCookwares">
+        <a href="/html-categories/cookwares.html#fryingPan">Frying Pan</a>
+        <a href="/html-categories/cookwares.html#grillPan">Grill Pan</a>
+        <a href="/html-categories/cookwares.html#pots">Pots</a>
+    </ul>
+    <ul class="eachCategorySubUtensils">
+        <a href="/html-categories/utensils.html#utensilSet">Utensil Set</a>
+        <a href="/html-categories/utensils.html#spoonForkLadle">Spoon, Fork & Ladle</a>
+        <a href="/html-categories/utensils.html#spatulaTurner">Spatula and Turner</a>
+    </ul>
+</div>
+
+
+ <!-- HERO -->
+  <section class="hero">
+    <span class="eyebrow">✦ Our Policies</span>
+    <h1>Return & Refund Policy</h1>
+    <p>We want you to be 100% satisfied with your purchase. Here's everything you need to know about returning an item or requesting a refund.</p>
+    <span class="last-updated">Last updated: April 2026</span>
+  </section>
+
+  <!-- SUMMARY BADGES -->
+  <div class="summary-strip">
+    <div class="summary-badge">
+      <div class="sb-icon">📅</div>
+      <div class="sb-value">14 Days</div>
+      <div class="sb-label">Return Window</div>
+    </div>
+    <div class="summary-badge">
+      <div class="sb-icon">💰</div>
+      <div class="sb-value">Full Refund</div>
+      <div class="sb-label">or Exchange Available</div>
+    </div>
+    <div class="summary-badge">
+      <div class="sb-icon">⏱</div>
+      <div class="sb-value">3–5 Days</div>
+      <div class="sb-label">Refund Processing Time</div>
+    </div>
+  </div>
+
+  <!-- MAIN -->
+  <div class="page-wrap">
+
+    <!-- TOC -->
+    <div class="toc">
+      <h4>Contents</h4>
+      <ul>
+        <li><a href="#eligibility">✅ Eligibility</a></li>
+        <li><a href="#accepted">📋 Accepted Reasons</a></li>
+        <li><a href="#how-to">📦 How to Return</a></li>
+        <li><a href="#refund-options">💰 Refund Options</a></li>
+        <li><a href="#timeline">⏱ Timeline</a></li>
+        <li><a href="#nonreturnable">🚫 Non-Returnable</a></li>
+      </ul>
+    </div>
+
+    <!-- POLICY CONTENT -->
+    <div class="policy-content">
+
+      <!-- ELIGIBILITY -->
+      <div class="policy-section" id="eligibility">
+        <div class="section-head">
+          <div class="section-icon">✅</div>
+          <h2>Return Eligibility</h2>
+        </div>
+        <div class="section-body">
+          <p>We accept return requests within <strong>14 days</strong> of the delivery date. To be eligible for a return, your item must meet the following conditions:</p>
+          <ul class="policy-list">
+            <li>Item must be returned within 14 days from the date it was delivered</li>
+            <li>Item must be unused and in its original condition</li>
+            <li>Item must be in its original packaging with all tags, accessories, and freebies included</li>
+            <li>Proof of purchase (order number or confirmation message) must be presented</li>
+            <li>Photos or video of the issue must be provided for damaged, defective, or incorrect items</li>
+          </ul>
+          <div class="highlight-box">
+            <span class="hb-icon">📸</span>
+            <div class="hb-text">
+              <h4>Tip: Document Your Package on Arrival</h4>
+              <p>We recommend taking a photo or video when opening your package. This helps speed up the return process if there's an issue with your order.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ACCEPTED REASONS -->
+      <div class="policy-section" id="accepted">
+        <div class="section-head">
+          <div class="section-icon">📋</div>
+          <h2>Accepted Return Reasons</h2>
+        </div>
+        <div class="section-body">
+          <p>We only accept returns for the following valid reasons. Change of mind is not covered by our return policy.</p>
+          <div class="accept-grid">
+            <div class="accept-box yes">
+              <h4>✅ We Accept</h4>
+              <ul class="accept-list">
+                <li>✔ Item arrived damaged or broken</li>
+                <li>✔ Item is defective or not working</li>
+                <li>✔ Wrong item was delivered</li>
+                <li>✔ Item is not as described on the listing</li>
+                <li>✔ Missing parts or accessories</li>
+              </ul>
+            </div>
+            <div class="accept-box no">
+              <h4>❌ We Do Not Accept</h4>
+              <ul class="accept-list">
+                <li>✗ Change of mind or buyer's remorse</li>
+                <li>✗ Item already used or opened</li>
+                <li>✗ Return request after 14 days</li>
+                <li>✗ Missing original packaging or tags</li>
+                <li>✗ Items marked as final sale</li>
+              </ul>
+            </div>
+          </div>
+          <div class="warning-box">
+            <span>⚠️</span>
+            <p>For damaged or wrong items, please contact us within <strong>48 hours</strong> of receiving your order. Late reports may not be eligible for a return or refund.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- HOW TO RETURN -->
+      <div class="policy-section" id="how-to">
+        <div class="section-head">
+          <div class="section-icon">📦</div>
+          <h2>How to Request a Return</h2>
+        </div>
+        <div class="section-body">
+          <p>Follow these steps to start a return request. Our team will respond within 24 hours.</p>
+          <ol class="steps-list">
+            <li>
+              <div class="step-num">1</div>
+              <div class="step-text">
+                <h4>Contact Us Within 14 Days</h4>
+                <p>Reach out through our <a href="getInTouch-CONTACT.html" style="color:var(--gold)">Contact page</a> or email us at <a href="mailto:support@homekitchenstudio.com" style="color:var(--gold)">support@homekitchenstudio.com</a> within 14 days of delivery.</p>
+              </div>
+            </li>
+            <li>
+              <div class="step-num">2</div>
+              <div class="step-text">
+                <h4>Provide Your Order Details</h4>
+                <p>Include your order number, the item you want to return, and the reason for the return. Attach clear photos or a short video showing the issue.</p>
+              </div>
+            </li>
+            <li>
+              <div class="step-num">3</div>
+              <div class="step-text">
+                <h4>Wait for Approval</h4>
+                <p>Our team will review your request and respond within 24 hours. We may ask for additional photos or information to process your request.</p>
+              </div>
+            </li>
+            <li>
+              <div class="step-num">4</div>
+              <div class="step-text">
+                <h4>Ship the Item Back</h4>
+                <p>Once approved, we will provide return shipping instructions. Pack the item securely in its original packaging and ship it using the courier we specify.</p>
+              </div>
+            </li>
+            <li>
+              <div class="step-num">5</div>
+              <div class="step-text">
+                <h4>Receive Your Refund or Replacement</h4>
+                <p>Once we receive and inspect the returned item, we will process your refund or send a replacement within 3–5 business days.</p>
+              </div>
+            </li>
+          </ol>
+        </div>
+      </div>
+
+      <!-- REFUND OPTIONS -->
+      <div class="policy-section" id="refund-options">
+        <div class="section-head">
+          <div class="section-icon">💰</div>
+          <h2>Refund & Exchange Options</h2>
+        </div>
+        <div class="section-body">
+          <p>Once your return is approved and the item is received, you may choose between a full refund or an exchange. We want to make sure you're happy with the outcome.</p>
+          <div class="refund-options">
+            <div class="refund-card">
+              <h4>💰 Full Refund</h4>
+              <p>Get a complete refund of the item price back to your original payment method — GCash, bank transfer, or Maya.</p>
+              <span class="refund-tag tag-green">✔ Recommended for defective items</span>
+            </div>
+            <div class="refund-card">
+              <h4>🔄 Exchange / Replacement</h4>
+              <p>Prefer a replacement? We'll send you the same item or a different product of equal value at no extra cost.</p>
+              <span class="refund-tag tag-blue">✔ Best for wrong item received</span>
+            </div>
+          </div>
+          <ul class="policy-list">
+            <li>Refunds are issued to the same payment method used during checkout</li>
+            <li>COD orders will be refunded via GCash or bank transfer</li>
+            <li>Shipping fees are non-refundable unless the return is due to our error</li>
+            <li>For exchanges, replacement items are shipped free of charge</li>
+            <li>Store credit may be offered as an alternative if the item is out of stock</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- TIMELINE -->
+      <div class="policy-section" id="timeline">
+        <div class="section-head">
+          <div class="section-icon">⏱</div>
+          <h2>Refund Timeline</h2>
+        </div>
+        <div class="section-body">
+          <p>Here's how long the process typically takes from start to finish:</p>
+          <div class="timeline-badge">
+            <span class="tl-icon">📬</span>
+            <div class="tl-text">
+              <h4>Step 1 — Return Request Review: 1 business day</h4>
+              <p>We review your return request and photos within 24 hours of submission.</p>
+            </div>
+          </div>
+          <div class="timeline-badge">
+            <span class="tl-icon">📦</span>
+            <div class="tl-text">
+              <h4>Step 2 — Item Return Shipping: 2–5 business days</h4>
+              <p>Depending on your location and courier, the item takes 2–5 days to reach us.</p>
+            </div>
+          </div>
+          <div class="timeline-badge">
+            <span class="tl-icon">🔍</span>
+            <div class="tl-text">
+              <h4>Step 3 — Item Inspection: 1–2 business days</h4>
+              <p>We inspect the returned item to verify the issue before processing.</p>
+            </div>
+          </div>
+          <div class="timeline-badge">
+            <span class="tl-icon">💸</span>
+            <div class="tl-text">
+              <h4>Step 4 — Refund Processing: 3–5 business days</h4>
+              <p>Refunds are processed within 3–5 business days. GCash and Maya refunds are usually faster. Bank transfers may take 1–3 additional banking days.</p>
+            </div>
+          </div>
+          <div class="warning-box">
+            <span>⚠️</span>
+            <p>Total estimated time from return request to refund is <strong>7–13 business days</strong>. We will keep you updated throughout the process via message or email.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- NON-RETURNABLE -->
+      <div class="policy-section" id="nonreturnable">
+        <div class="section-head">
+          <div class="section-icon">🚫</div>
+          <h2>Non-Returnable Items</h2>
+        </div>
+        <div class="section-body">
+          <p>The following items cannot be returned or refunded under any circumstances, unless they arrive damaged or defective:</p>
+          <ul class="policy-list">
+            <li>Items marked as <strong>Final Sale</strong> or purchased during clearance events</li>
+            <li>Personal care and hygiene products once opened (for health and safety reasons)</li>
+            <li>Perishable goods or consumable products</li>
+            <li>Customized or personalized items made specifically for the customer</li>
+            <li>Digital products or downloadable items</li>
+            <li>Items without original packaging, tags, or proof of purchase</li>
+          </ul>
+          <div class="highlight-box">
+            <span class="hb-icon">💬</span>
+            <div class="hb-text">
+              <h4>Not Sure If Your Item Qualifies?</h4>
+              <p>Just reach out to us before sending anything back. Our team is available 24/7 to help you determine if your item is eligible for a return or refund.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- NEED HELP -->
+      <div class="need-help">
+        <h3>Need Help with a Return?</h3>
+        <p>Our team is available 24/7. Reach out and we'll guide you through the process.</p>
+        <div class="help-btns">
+          <a href="getInTouch-CONTACT.html" class="help-btn primary">💬 Contact Us</a>
+          <a href="getInTouch-EMAIL.html" class="help-btn">✉️ Email Us</a>
+          <a href="getInTouch-HELPCENTER.html" class="help-btn">❓ Help Center</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+
+
+
+<section class="footerGroup">
+
+    <div class="subscribe">
+        <h3>Subscribe</h3>
+        <div class="subscribeContent">
+            <input type="email" placeholder="Enter your Email Address"><button type="submit">Subscribe</button><br>
+            <p class="subscribeMessage">Stay updated with new collections, layout improvements, and feature updates from HomeKitchen Studio.</p>
+            <p>Subscribe to receive:</p>
+            <ul>
+                <li>*Product layout previews & UI updates</li>
+                <li>*Design improvements and feature experiments</li>
+                <li>*Project milestones and build highlights</li>
+            </ul><br>
+
+            <p class="subscribeDisclaimer">This is a demo subscription for portfolio purposes only. No real messages will be sent.</p>
+        </div>
+    </div>
+
+    <div class="sectionCombined">
+    <div class="moreInfoGroup">
+        <div>
+            <h4>About Us</h4>
+                <ul>
+                    <li><a href="/footer-links/aboutUs-BLOG.html">Blog</a></li>
+                    <li><a href="/footer-links/aboutUs-CAREERS.html">Careers</a></li>
+                    <li><a href="/footer-links/aboutUs-SHOPREVIEWS.html">Shop Reviews</a></li>
+                </ul>
+        </div>
+        
+        <div>
+            <h4>Get in Touch</h4>
+                <ul>
+                    <li><a href="/footer-links/getInTouch-HELPCENTER.html">Help Center</a></li>
+                    <li><a href="/footer-links/getInTouch-EMAIL.html">Email Us</a></li>
+                    <li><a href="/footer-links/getInTouch-CONTACT.html">Contact Us</a></li>
+                </ul>
+        </div>
+
+        <div>
+            <h4>About Order</h4>
+                <ul>
+                    <li><a href="/footer-links/aboutOrder-TRACKORDER.html">Track Order</a></li>
+                    <li><a href="/footer-links/aboutOrder-DISCOUNTS.html">Discounts</a></li>
+                    <li><a href="/footer-links/aboutOrder-SHIPPINGOPTIONS.html">Shipping Options</a></li>
+                </ul>
+        </div>
+
+        <div>
+            <h4>Our Policies</h4>
+                <ul>
+                    <li><a href="/footer-links/ourPolicies-SHIPPING.html">Shipping Policies</a></li>
+                    <li><a href="/footer-links/ourPolicies-RETURN&REFUND.html">Return & Refund</a></li>
+                    <li><a href="/footer-links/ourPolicies-PRIVACY.html">Privacy Policy</a></li>
+                </ul>
+        </div>
+
+        <div>
+            <h4>Our Location</h4>
+                <p>Calinan District</p>
+                <p>Davao City, Philippines</p>
+        </div>
+
+        <div>
+            <h4>Store Hours</h4>
+                <p>Mondays to Sundays</p>
+                <p>Open 24 hours</p>
+        </div>
+    </div>
+
+
+<div class="paymentSocialShippingGroup">
+        <h4>Payment Options</h4>
+        <div class="paymentGroup">
+                <div class="cards">
+                    <img src="/images/FOOTER-IMAGES/Payment-VISA-logo.jpg" alt="Visa Card Image" aria-label="Visa">
+                </div>
+                <div class="cards">
+                    <img src="/images/FOOTER-IMAGES/Payment-Maya-logo.jpg" alt="Maya Card Image" aria-label="Maya">
+                </div>
+                <div class="cards">
+                    <img src="/images/FOOTER-IMAGES/Payment-BPI-logo.jpg" alt="BPI Card Image" aria-label="BPI">
+                </div>
+                <div class="cards">
+                    <img src="/images/FOOTER-IMAGES/Payment-BDO-logo.jpg" alt="BDO Card Image" aria-label="BDO">
+                </div>
+                <div class="cards">
+                    <img src="/images/FOOTER-IMAGES/Payment-Mastercard-logo.webp" alt="Mastercard Image" aria-label="Mastercard">
+                </div>
+                <div class="cards">
+                    <img src="/images/FOOTER-IMAGES/Payment-Gcash-logo.webp" alt="Gcash Card Image" aria-label="Gcash">
+                </div>
+        </div>
+
+        <div class="socialShipGroup">
+        <div class="socialMediaGroup">
+            <h4>Follow Us</h4>
+                <div class="socialMedia">
+                    <a href="https://www.facebook.com" aria-label="Facebook Link" target="_blank"><img src="/images/FOOTER-IMAGES/fblogo.png" alt="fb logo"></a>
+                    <a href="https://www.Twitter.com" aria-label="Twitter Link" target="_blank"><img src="/images/FOOTER-IMAGES/twitterlogo.png" alt="twitter logo"></a>
+                    <a href="https://www.Instagram.com" aria-label="Instagram Link" target="_blank"><img src="/images/FOOTER-IMAGES/instagramlogo.png" alt="Instagram Logo"></a>
+                    <a href="https://www.LinkedIn.com" aria-label="LinkedIn Link" target="_blank"><img src="/images/FOOTER-IMAGES/linkedinlogo.png" alt="LinkedIn logo"></a>
+                </div>
+        </div>
+
+        <div class="shippingGroup">
+            <h4>Shipping Courriers</h4>
+                <div class="shipping">
+                    <img src="/images/FOOTER-IMAGES/Delivery-FlashExpress.png" alt="Flash Express logo">
+                    <img src="/images/FOOTER-IMAGES/Delivery-FedEx.png" alt="Fedex logo">
+                    <img src="/images/FOOTER-IMAGES/Delivery-NinjaVan.png" alt="NinjaVan Logo">
+                    <img src="/images/FOOTER-IMAGES/Deliver-LBCExpress.png" alt="LBC Express logo">
+                </div>
+        </div>
+        </div>
+    </div>
+    </div>
+
+    <div class="pageDescriptionGroup">
+        <div class="bottomLogo">
+            <img src="/images/LOGO&BACKGROUND/officiallogoTRANSPARTENTBG-CROPPED.png" alt="Home Kitchen Studio Logo">
+        </div>
+
+        <div class="aboutPage">
+            <p class="aboutPageP">This website was built as a portfolio project to practice and demonstrate skills in HTML, CSS, JavaScript, and responsive webdesign.HomeKitchen Studio is not a real store, but a concept project inspired by modern e-commerce platforms and kitchen lifestyle brands. All products and images are for demonstration purposes only.<br><br>
+
+            <a href="/index.html" class="Explore">Explore the Build</a>
+        </div>
+    </div>
+</section>
+
+<footer class="footer">
+    <p>@ 2026 HomeKitchen Studio. All Rights Reserved</p>
+    <p>Designed by Joan Faith </p>
+</footer>
+</div>
+
+<div class="backtotop" id="backtotop">
+    <p>▲ Back To Top</p>
+</div>
+
+
+
+
+<div class="signInOverlay" id="signInOverlay">
+    <div class="signInForm">
+        <button id="closeSignInFormButton" class="closeSignInFormButton">&times;</button>
+        <h2>Sign In</h2>
+        <form id="signInForm">
+            <div class="emailLabelGroup">
+                <label for="email">Email:</label><input type="email" id="email" class="emailSignIn" placeholder="Enter Email" required>
+                <p id="emailMessageResult"></p>
+            </div>
+            <div class="passwordLabelGroup">
+                <label for="password">Password:</label>
+                <div class="passwordInput">
+                    <div class="passwordInputAndEye">
+                    <input type="password" class="passwordSignIn" placeholder="Enter Password" required><i class="mainEye fa-solid fa-eye"></i>
+                    </div>
+                    <p id="passwordMessageResult"></p>
+                </div>
+            </div>
+            <button id="signInButton" onclick="signInSuccessful()">Sign In</button>
+            <p id="finalSignInMessage"></p>
+            <p class="noAccount">No account yet? <a href="#" class="signUp">Sign Up</a></p>
+        </form>
+    </div>
+</div>
+
+
+
+
+<div class="signUpOverlay" id="signUpOverlay">
+    <div class="signUpForm">
+        <button id="closeSignUpFormButton" class="closeSignUpFormButton">&times;</button>
+        <h2>Sign Up</h2>
+        <form id="signUpForm">
+            <div class="usernameLabelGroup">
+                <label for="username">Username:</label><input type="text" id="username" class="usernameSignUp" placeholder="Create Username" required>
+            </div>
+            <div class="emailLabelGroup">
+                <label for="email">Email:</label><input type="email" id="email" class="emailSignUp" placeholder="Enter Email" required>
+            </div>
+            <div class="passwordLabelGroup">
+                <label for="password">Password:</label>
+                <div class="firstPasswordWrapper">
+                    <input type="password" class="password" id="firstPasswordSignUp" placeholder="Enter Password" required><i class="firstEye fa-solid fa-eye"></i>
+                </div>
+            </div>
+            <div class="passwordLabelGroupRepeat">
+                <label for="password">Re-enter Password:</label>
+                <div class="secondPasswordWrapper">
+                <input type="password" class="passwordSecond" id="secondPasswordSignUp" placeholder="Re-enterPassword" required><i class="secondEye fa-solid fa-eye"></i>
+                </div>
+            </div>
+            <div class="tcGroup">
+                <input type="checkbox">
+                <p>I agree to <a href="">Home Kitchen Studio's Terms and Conditions</a></p>
+            </div>
+            <button type="button" id="signUpButton">Sign Up</button>
+            <p class="hasAccount">Already have an account? <a href="javascript:void(0)" onclick="switchToSignIn()">Sign In</a></p>
+        </form>
+    </div>
+</div>
+
+<div class="addToCartPopUp" id="addToCartPopUp">
+    <p>Added to Cart!</p>
+</div>
+
+
+<script src="/js/backtotop.js" defer></script>
+<script src="/js/signInSignUpFORM.js" defer></script>
+<script src="/js/cart.js" defer></script>
+<script src="/js/openBurger.js" defer></script>
+<script src="/js/search.js" defer></script>
+<script src="/js/sort.js" defer></script>
+<script src="/js/desktopNav.js" defer></script>
+
 </body>
 </html>

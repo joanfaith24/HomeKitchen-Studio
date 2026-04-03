@@ -98,6 +98,14 @@ h3
     margin: 0 3px;
 }
 
+.socialMedia img:hover
+{
+    transition: 0.2s;
+    transform: scale(105%);
+    box-shadow: 0 0 5px #D4A800;
+    border-radius: 50%;
+    
+}
 .shippingGroup
 {
     padding-left: 18px;

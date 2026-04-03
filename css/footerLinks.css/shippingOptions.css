@@ -1,0 +1,272 @@
+
+
+    /*SHIPPING OPTIONS*/
+     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --cream: #f0ece2;
+      --cream-dark: #e4dfd3;
+      --gold: #b8922a;
+      --gold-light: #d4a843;
+      --ink: #2c2416;
+      --ink-soft: #5a4f3c;
+      --white: #fdfaf4;
+    }
+
+    body {
+      background: var(--cream);
+      color: var(--ink);
+      font-family: 'Jost', sans-serif;
+      font-weight: 300;
+    }
+
+  
+    /* ── HERO ── */
+    .hero {
+      background: var(--white);
+      text-align: center;
+      padding: 80px 5% 60px;
+      border-bottom: 1px solid var(--cream-dark);
+      position: relative; overflow: hidden;
+    }
+    .hero::before {
+      content: '';
+      position: absolute; inset: 0;
+      background: radial-gradient(ellipse at 50% 120%, #d4a84320 0%, transparent 65%);
+      pointer-events: none;
+    }
+    .hero::after {
+      content: '🚚';
+      position: absolute; right: 6%; top: 50%;
+      transform: translateY(-50%);
+      font-size: 9rem; opacity: 0.05; pointer-events: none;
+    }
+    .eyebrow {
+      display: inline-block;
+      font-size: 0.75rem; letter-spacing: 0.18em;
+      text-transform: uppercase; color: var(--gold); margin-bottom: 1rem;
+    }
+    .hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2.2rem, 5vw, 3.5rem);
+      line-height: 1.15; margin-bottom: 1rem;
+    }
+    .hero p {
+      max-width: 480px; margin: 0 auto;
+      color: var(--ink-soft); font-size: 1rem; line-height: 1.7;
+    }
+
+    /* ── SUMMARY STATS ── */
+    .stats-bar {
+      max-width: 900px; margin: 3rem auto 0;
+      padding: 0 5%;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 1rem;
+    }
+    .stat-card {
+      background: var(--white);
+      border-radius: 10px; padding: 1.3rem;
+      text-align: center;
+      box-shadow: 0 2px 12px #2c241608;
+      animation: fadeUp 0.5s ease both;
+    }
+    .stat-card:nth-child(2){ animation-delay: 0.08s; }
+    .stat-card:nth-child(3){ animation-delay: 0.16s; }
+    .stat-card:nth-child(4){ animation-delay: 0.24s; }
+    .stat-icon { font-size: 1.6rem; margin-bottom: 0.4rem; }
+    .stat-num {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.4rem; color: var(--gold); margin-bottom: 0.2rem;
+    }
+    .stat-label { font-size: 0.78rem; color: var(--ink-soft); }
+
+    /* ── FILTER ── */
+    .filter-row {
+      display: flex; justify-content: center; flex-wrap: wrap;
+      gap: 0.5rem; padding: 2.5rem 5% 1rem;
+    }
+    .filter-btn {
+      border: 1px solid var(--cream-dark);
+      background: var(--white); color: var(--ink-soft);
+      padding: 0.45rem 1.2rem; border-radius: 999px;
+      font-family: 'Jost', sans-serif; font-size: 0.8rem;
+      letter-spacing: 0.05em; cursor: pointer; transition: all 0.2s;
+    }
+    .filter-btn:hover, .filter-btn.active {
+      background: var(--gold); color: var(--white); border-color: var(--gold);
+    }
+
+    /* ── COURIER CARDS ── */
+    .couriers-wrap {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 1rem 5% 3rem;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(480px, 1fr));
+      gap: 1.5rem;
+    }
+    @media (max-width: 560px) { .couriers-wrap { grid-template-columns: 1fr; } }
+
+    .courier-card {
+      background: var(--white);
+      border-radius: 14px;
+      overflow: hidden;
+      box-shadow: 0 4px 20px #2c241610;
+      animation: fadeUp 0.5s ease both;
+      border: 1.5px solid transparent;
+      transition: transform 0.22s, box-shadow 0.22s;
+    }
+    .courier-card:nth-child(1){ animation-delay: 0.05s; }
+    .courier-card:nth-child(2){ animation-delay: 0.10s; }
+    .courier-card:nth-child(3){ animation-delay: 0.15s; }
+    .courier-card:nth-child(4){ animation-delay: 0.20s; }
+    .courier-card:hover { transform: translateY(-3px); box-shadow: 0 10px 30px #2c241615; }
+    .courier-card.lbc:hover     { border-color: #c0392b; }
+    .courier-card.ninjavan:hover{ border-color: #e84118; }
+    .courier-card.flash:hover   { border-color: #e67e22; }
+    .courier-card.fedex:hover   { border-color: #4d148c; }
+
+    /* CARD HEADER */
+    .courier-header {
+      display: flex; align-items: center;
+      justify-content: space-between;
+      padding: 1.4rem 1.8rem;
+      border-bottom: 1px solid var(--cream-dark);
+      gap: 1rem; flex-wrap: wrap;
+    }
+    .courier-left { display: flex; align-items: center; gap: 1rem; }
+    .courier-logo {
+      width: 52px; height: 52px; border-radius: 12px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.5rem; flex-shrink: 0;
+    }
+    .logo-lbc     { background: #fde8e8; }
+    .logo-ninjavan{ background: #fdeee8; }
+    .logo-flash   { background: #fef3e2; }
+    .logo-fedex   { background: #ede8fe; }
+
+    .courier-name {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.15rem; color: var(--ink);
+    }
+    .courier-tagline { font-size: 0.78rem; color: var(--ink-soft); margin-top: 0.2rem; }
+
+    .availability-badge {
+      display: inline-flex; align-items: center; gap: 0.35rem;
+      font-size: 0.72rem; font-weight: 500;
+      padding: 0.3rem 0.75rem; border-radius: 999px;
+      white-space: nowrap;
+    }
+    .badge-local    { background: #e8f5ee; color: #1d6a3a; }
+    .badge-national { background: #e8f0fe; color: #1e40af; }
+    .badge-intl     { background: #ede8fe; color: #5b21b6; }
+    .badge-dot { width: 6px; height: 6px; border-radius: 50%; background: currentColor; }
+
+    /* CARD BODY */
+    .courier-body { padding: 1.4rem 1.8rem; }
+
+    /* FEES TABLE */
+    .fees-label {
+      font-size: 0.7rem; letter-spacing: 0.13em;
+      text-transform: uppercase; color: var(--gold);
+      font-weight: 500; margin-bottom: 0.8rem;
+    }
+    .fees-table { width: 100%; border-collapse: collapse; margin-bottom: 1.2rem; }
+    .fees-table th {
+      text-align: left; font-size: 0.72rem;
+      letter-spacing: 0.08em; text-transform: uppercase;
+      color: var(--ink-soft); padding: 0.4rem 0.6rem;
+      border-bottom: 1px solid var(--cream-dark);
+      font-weight: 500;
+    }
+    .fees-table td {
+      padding: 0.6rem 0.6rem; font-size: 0.85rem;
+      color: var(--ink-soft); border-bottom: 1px solid var(--cream);
+      vertical-align: middle;
+    }
+    .fees-table tr:last-child td { border-bottom: none; }
+    .fees-table .zone { font-weight: 500; color: var(--ink); }
+    .fees-table .fee  { color: var(--gold); font-weight: 500; }
+    .fees-table .days { font-size: 0.78rem; }
+
+    /* HIGHLIGHTS */
+    .highlights {
+      display: flex; flex-wrap: wrap; gap: 0.5rem;
+      margin-bottom: 1.2rem;
+    }
+    .highlight-pill {
+      display: inline-flex; align-items: center; gap: 0.35rem;
+      background: var(--cream); border-radius: 999px;
+      padding: 0.3rem 0.8rem; font-size: 0.75rem; color: var(--ink-soft);
+    }
+
+    /* TRACK LINK */
+    .track-link {
+      display: inline-flex; align-items: center; gap: 0.4rem;
+      background: var(--ink); color: var(--white);
+      text-decoration: none; padding: 0.55rem 1.1rem;
+      border-radius: 7px; font-size: 0.8rem; font-weight: 500;
+      transition: background 0.2s;
+    }
+    .track-link:hover { background: var(--gold); }
+
+    /* ── COVERAGE TABLE ── */
+    .coverage-section {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 5% 4rem;
+    }
+    .coverage-section h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.5rem; margin-bottom: 0.4rem;
+    }
+    .coverage-section .sub {
+      font-size: 0.88rem; color: var(--ink-soft); margin-bottom: 1.5rem;
+    }
+    .coverage-table-wrap {
+      background: var(--white);
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 2px 14px #2c241608;
+      overflow-x: auto;
+    }
+    table.coverage {
+      width: 100%; border-collapse: collapse; min-width: 560px;
+    }
+    table.coverage thead { background: var(--ink); color: var(--white); }
+    table.coverage thead th {
+      padding: 1rem 1.2rem; text-align: left;
+      font-size: 0.8rem; letter-spacing: 0.08em;
+      text-transform: uppercase; font-weight: 500;
+    }
+    table.coverage tbody tr { border-bottom: 1px solid var(--cream-dark); }
+    table.coverage tbody tr:last-child { border-bottom: none; }
+    table.coverage tbody tr:hover { background: var(--cream); }
+    table.coverage td {
+      padding: 0.9rem 1.2rem; font-size: 0.88rem; color: var(--ink-soft);
+    }
+    table.coverage td:first-child { font-weight: 500; color: var(--ink); }
+    .check { color: #2a7a4a; font-size: 1rem; }
+    .cross { color: #c0392b; font-size: 1rem; }
+
+    /* ── FAQ ── */
+    .faq-section {
+      background: var(--white);
+      padding: 4rem 5%;
+    }
+    .faq-inner { max-width: 800px; margin: 0 auto; }
+    .faq-inner h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.5rem; margin-bottom: 0.4rem;
+    }
+    .faq-inner .sub { font-size: 0.88rem; color: var(--ink-soft); margin-bottom: 2rem; }
+    .faq-item {
+      border-bottom: 1px solid var(--cream-dark); padding: 1.2rem 0;
+    }
+    .faq-item:last-child { border-bottom: none; }
+    .faq-q {
+      font-family: 'Playfair Display', serif;
+      font-size: 1rem; color: var(--ink); margin-bottom: 0.5rem;
+    }
+    .faq-a { font-size: 0.88rem; color: var(--ink-soft); line-height: 1.75; }

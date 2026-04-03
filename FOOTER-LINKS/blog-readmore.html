@@ -1,0 +1,746 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Kitchen Studio</title>
+    <link rel="icon" type="image/png" href="/images/LOGO&BACKGROUND/officiallogoWHITEBG.jpg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"><link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/header.css">
+    <link rel="stylesheet" href="/css/universal&body.css">
+    <link rel="stylesheet" href="/css/mobilefirst.css">
+    <link rel="stylesheet" href="/css/categories.css">
+    <link rel="stylesheet" href="/css/mainPage.css">
+    <link rel="stylesheet" href="/css/footermobile.css">
+    <link rel="stylesheet" href="/css/backtotop.css">
+    <link rel="stylesheet" href="/css/signIn.css">
+    <link rel="stylesheet" href="/css/signUp.css">
+    <link rel="stylesheet" href="/css/checkout.css">
+    <link rel="stylesheet" href="/css/responsive.css">
+    <link rel="stylesheet" href="/css/footerLinks.css/blog-readmore.css">
+    <script src="/js/skeleton.js"></script>
+</head>
+
+<body>
+    <header class="headerGroup">
+        <div class="burgerIcon" id="burgerIcon" onclick="openBurger()">
+            <div class="burgerLine"></div>
+            <div class="burgerLine"></div>
+            <div class="burgerLine"></div>
+        </div>
+        <div class="pageLogoBox">
+            <a href="/index.html"><img class="pageLogo" src="/images/LOGO&BACKGROUND/officiallogoTRANSPARTENTBG-CROPPED.png" alt="Home Kitchen Studio Logo"></a>
+        </div>
+        <div class="inputBarHeader">
+            <input type="text" placeholder="Search product here..." id="searchInput">
+            <i class="fa-solid fa-magnifying-glass"></i>
+        </div>
+
+        <div class="cart-Log-Call-Group">
+            <div id="cartIcon" class="cartIcon"  onclick="openCartPop(event)">
+                <a href="javascript:void(0)"><i class="fa-solid fa-cart-shopping"></i></a>
+                <p id="cartBadge" class="cartBadge">0</p>
+            </div>
+                <div class="cartSidePopUpPage hideCart">
+
+                    <div class="cartPageHeader">
+                        <p id="cartHeaderLabel" class="cartHeaderLabel">Cart Items:<span class="totalItems" id="totalItems">0</span></p>
+                        <p id="closeCartPop" class="closeCartPop" onclick="closePop(event)">&times;</p>
+                    </div>
+
+                    <div id="cartDetails" class="cartDetails">
+                        <p class="cartTotalLabel" id="cartTotalLabel">Cart Subtotal: <strong><span id="subtotalPrice" class="subTotalPrice">0.00</span></strong></p>
+                    </div>
+
+                    <div id="itemsOnCartDetails" class="itemsOnCartDetails">
+                    </div>
+                    <button id="checkoutSideCartButton" class="checkoutSideCartButton" onclick="proceedToCheckout()">Proceed to Checkout
+                    </button>   
+                </div>
+        </div>
+        <div class="signInIconDiv">
+            <a href="javascript:void(0)" onclick="openSignIn()"><i class="fa-solid fa-user"></i></a>
+        </div>
+        <div class="contactUsIcon">
+            <a href="/footer-links/getInTouch-EMAIL.html" title="Contact Us">
+            <i class="fa-solid fa-envelope"></i></a>
+        </div>
+    </header>
+
+<nav class="categories" id="categories">
+    <span><i class="fa-solid fa-xmark" onclick="closeCatPop()"></i></span>
+    <div class="eachCategory">
+        <a href="/html-categories/accessories.html">ACCESSORIES</a>
+    </div>
+    <div class="eachCategory">
+        <a href="/html-categories/bakingtools.html">BAKING TOOLS</a>
+    </div>
+    <div class="eachCategory">
+        <a href="/html-categories/storage.html">STORAGE</a>
+        <button onclick="storage()"><i class="fa-solid fa-chevron-right"></i></button>
+    </div>
+    <div class="eachCategory">
+        <a href="/html-categories/glasswares.html">GLASSWARES</a>
+        <button onclick="glasswares()"><i class="fa-solid fa-chevron-right"></i></button>
+    </div>
+    <div class="eachCategory">
+        <a href="/html-categories/kitchenappliances.html">KITCHEN APPLIANCES</a>
+    </div>
+    <div class="eachCategory">
+        <a href="/html-categories/knives.html">KNIVES</a>
+        <button onclick="knives()"><i class="fa-solid fa-chevron-right"></i></button>
+    </div>
+    <div class="eachCategory">
+        <a href="/html-categories/cookwares.html">COOKWARES</a>
+        <button onclick="cookwares()"><i class="fa-solid fa-chevron-right"></i></button>
+    </div>
+    <div class="eachCategory">
+        <a href="/html-categories/utensils.html">UTENSILS</a>
+        <button onclick="utensils()"><i class="fa-solid fa-chevron-right"></i></button>
+    </div>
+</nav>
+<hr>
+
+<div class="categorySubGroup">
+    <ul class="eachCategorySubStorage">
+        <a href="/html-categories/storage.html#singleStorage">Single Storage</a>
+        <a href="/html-categories/storage.html#storageSet">Storage Set</a>
+    </ul>
+    <ul class="eachCategorySubGlasses">
+        <a href="/html-categories/glasswares.html#wineGlasses">Wine Glasses</a>
+        <a href="/html-categories/glasswares.html#mugs">Mugs</a>
+        <a href="/html-categories/glasswares.html#drinkingGlasses">Drinking Glasses</a>
+    </ul>
+    <ul class="eachCategorySubKnife">
+        <a href="/html-categories/knives.html#knifeSet">Knife Set</a>
+        <a href="/html-categories/knives.html#breadKnife">Bread Knife</a>
+        <a href="/html-categories/knives.html#paringKnife">Paring Knife</a>
+        <a href="/html-categories/knives.html#utilityKnife">Utility Knife</a>
+    </ul>
+    <ul class="eachCategorySubCookwares">
+        <a href="/html-categories/cookwares.html#fryingPan">Frying Pan</a>
+        <a href="/html-categories/cookwares.html#grillPan">Grill Pan</a>
+        <a href="/html-categories/cookwares.html#pots">Pots</a>
+    </ul>
+    <ul class="eachCategorySubUtensils">
+        <a href="/html-categories/utensils.html#utensilSet">Utensil Set</a>
+        <a href="/html-categories/utensils.html#spoonForkLadle">Spoon, Fork & Ladle</a>
+        <a href="/html-categories/utensils.html#spatulaTurner">Spatula and Turner</a>
+    </ul>
+</div>
+
+<!-- PAGE HERO -->
+  <div class="page-hero">
+    <span class="eyebrow">✦ Our Blog</span>
+    <h1>Blog Articles</h1>
+    <p>Read the full story behind every post — tips, news, and stories from our store.</p>
+  </div>
+
+  <!-- FLOATING TOC DOTS -->
+  <div class="toc-floating" id="tocDots"></div>
+
+  <!-- ARTICLES -->
+  <div class="articles-wrap">
+
+    <!-- ══════════════════════════════════════════ -->
+    <!-- ARTICLE 1 — FEATURED: WHY WE'RE OPEN 24 HRS -->
+    <!-- ══════════════════════════════════════════ -->
+    <article class="article" id="article-1">
+      <div class="article-banner banner-featured">🛍️</div>
+      <div class="article-meta">
+        <span class="featured-tag">✦ Featured</span>
+        <span class="tag-sep">·</span>
+        <span class="tag">Store News</span>
+        <span class="article-date">March 28, 2026 · 4 min read</span>
+      </div>
+      <div class="article-header">
+        <h2>Why We're Open 24 Hours — and What That Means for You</h2>
+        <span class="read-time">⏱ 4 minute read</span>
+      </div>
+      <hr class="article-divider"/>
+      <div class="article-body">
+        <p>When we first started our little online shop in Calinan District, Davao City, we asked ourselves one simple question: <strong>when do our customers actually need us?</strong> The answer, it turns out, was: all the time.</p>
+
+        <div class="pull-quote">
+          <p>"Convenience shouldn't have a curfew."</p>
+        </div>
+
+        <p>We noticed that some of our most loyal customers were night-shift workers, parents who only get a moment to breathe after putting the kids to sleep, and students burning the midnight oil. They needed to shop on their schedule — not ours.</p>
+
+        <h3>The Decision to Go 24/7</h3>
+        <p>It wasn't an easy call. Operating around the clock means more coordination, more staffing, and more responsibility. But we believed then — and we believe now — that being there for our customers whenever they need us is what sets a good store apart from a great one.</p>
+        <p>We started by extending our hours gradually. First until midnight, then through the early morning. After a few months of testing, we made it official: <strong>we are open 24 hours a day, 7 days a week, Monday through Sunday.</strong></p>
+
+        <h3>What This Means for You</h3>
+        <ul>
+          <li>Place an order at 2 AM and it will be queued for processing first thing in the morning</li>
+          <li>Message us with a question at any hour — our team monitors inquiries around the clock</li>
+          <li>Never feel rushed to place your order before a cutoff time</li>
+          <li>Track your orders and reach customer service even on holidays</li>
+        </ul>
+
+        <div class="highlight-box">
+          <p>💡 <strong>Pro tip:</strong> Orders placed before 12:00 noon are typically processed the same day. Orders placed in the afternoon or evening are processed first thing the next morning — so you're never waiting long.</p>
+        </div>
+
+        <h3>Our Promise to You</h3>
+        <p>Being open 24 hours isn't just a business decision — it's a commitment. A commitment to being there when you need us, whether that's to grab something for dinner, order a last-minute gift, or just browse at your own pace without any pressure.</p>
+        <p>Thank you for being part of our community. We look forward to serving you — any time of day or night. 🙏</p>
+      </div>
+      <div class="article-footer">
+        <span class="author-info">✍️ By Our Store Team · March 28, 2026</span>
+        <a href="aboutUs-BLOG.html" class="back-to-blog">← Back to Blog</a>
+      </div>
+    </article>
+
+    <!-- ══════════════════════════════════════════ -->
+    <!-- ARTICLE 2 — TIPS & TRICKS: 5 WAYS -->
+    <!-- ══════════════════════════════════════════ -->
+    <article class="article" id="article-2">
+      <div class="article-banner banner-tips">💡</div>
+      <div class="article-meta">
+        <span class="tag">Tips & Tricks</span>
+        <span class="article-date">March 20, 2026 · 3 min read</span>
+      </div>
+      <div class="article-header">
+        <h2>5 Ways to Make the Most of Your Order</h2>
+        <span class="read-time">⏱ 3 minute read</span>
+      </div>
+      <hr class="article-divider"/>
+      <div class="article-body">
+        <p>Shopping online should be easy, rewarding, and stress-free. But with so many options and promos flying around, it can be easy to miss out on savings or make a purchase you regret. Here are five smart habits that will make every order worth it.</p>
+
+        <ol class="steps">
+          <li>
+            <div class="step-n">1</div>
+            <div>
+              <strong>Check the Discounts Page Before Checkout</strong>
+              Before you confirm any order, take 30 seconds to visit our <a href="aboutOrder-DISCOUNTS.html" style="color:var(--gold)">Discounts page</a>. We regularly post coupon codes, free shipping promos, and BOGO deals that can save you money instantly. Codes like <strong>WELCOME100</strong> and <strong>WEEKENDSHIP</strong> are easy to miss if you don't look!
+            </div>
+          </li>
+          <li>
+            <div class="step-n">2</div>
+            <div>
+              <strong>Bundle Your Orders to Save on Shipping</strong>
+              Instead of placing multiple small orders, try grouping your purchases into one. Orders above ₱500 within Davao City qualify for <strong>free shipping</strong> — so it pays to plan ahead and add a few extra items to hit that threshold.
+            </div>
+          </li>
+          <li>
+            <div class="step-n">3</div>
+            <div>
+              <strong>Order on Weekends for Free Shipping</strong>
+              Every Saturday and Sunday, use code <strong>WEEKENDSHIP</strong> at checkout to get free delivery on any order within Davao City — no minimum spend required. Perfect for smaller purchases!
+            </div>
+          </li>
+          <li>
+            <div class="step-n">4</div>
+            <div>
+              <strong>Double-Check Your Delivery Address</strong>
+              This sounds simple but it's one of the most common issues we see. Before confirming your order, make sure your barangay, street, and landmark details are complete and accurate. A complete address = faster delivery and fewer headaches.
+            </div>
+          </li>
+          <li>
+            <div class="step-n">5</div>
+            <div>
+              <strong>Unbox on Video — Always</strong>
+              We pack every order carefully, but accidents happen in transit. Recording a short video as you open your package protects you in case anything arrives damaged. It's the fastest way to get a resolution if there's ever an issue with your order.
+            </div>
+          </li>
+        </ol>
+
+        <div class="tip-box">
+          <span>💡</span>
+          <p>Our team is available 24/7 — if you ever have a question before, during, or after your order, don't hesitate to reach out through our <a href="getInTouch-CONTACT.html" style="color:var(--gold)">Contact page</a>.</p>
+        </div>
+      </div>
+      <div class="article-footer">
+        <span class="author-info">✍️ By Our Store Team · March 20, 2026</span>
+        <a href="aboutUs-BLOG.html" class="back-to-blog">← Back to Blog</a>
+      </div>
+    </article>
+
+    <!-- ══════════════════════════════════════════ -->
+    <!-- ARTICLE 3 — PRODUCTS: NEW ARRIVALS -->
+    <!-- ══════════════════════════════════════════ -->
+    <article class="article" id="article-3">
+      <div class="article-banner banner-products">🌿</div>
+      <div class="article-meta">
+        <span class="tag">Products</span>
+        <span class="article-date">March 15, 2026 · 3 min read</span>
+      </div>
+      <div class="article-header">
+        <h2>New Arrivals: What's Fresh This Month</h2>
+        <span class="read-time">⏱ 3 minute read</span>
+      </div>
+      <hr class="article-divider"/>
+      <div class="article-body">
+        <p>Every month, we carefully curate new items to add to our shelves. We don't just add anything — we look for products that our customers actually need, at prices that make sense. Here's a closer look at what's new this March.</p>
+
+        <h3>How We Choose New Products</h3>
+        <p>Our selection process starts with you. We pay attention to what customers ask for most, what items run out fastest, and what trends are emerging in Davao City and beyond. We also personally test or review every new product before it goes live in the shop.</p>
+
+        <div class="pull-quote">
+          <p>"We only add products we'd proudly recommend to our own family."</p>
+        </div>
+
+        <h3>What's New This Month</h3>
+        <p>This March, we've added a fresh batch of items across multiple categories. Some highlights include everyday essentials that have been frequently requested, a few seasonal items perfect for this time of year, and some customer favorites that we temporarily ran out of — now fully restocked.</p>
+
+        <h3>Be the First to Know</h3>
+        <p>Want to hear about new arrivals before anyone else? Subscribe to our newsletter at the bottom of the <a href="aboutUs-BLOG.html" style="color:var(--gold)">Blog page</a> and we'll send you a heads-up whenever fresh items land in the shop.</p>
+
+        <div class="tip-box">
+          <span>🌿</span>
+          <p>New items sell fast — especially popular ones. If you see something you like, don't wait too long. We restock regularly, but some items are limited.</p>
+        </div>
+      </div>
+      <div class="article-footer">
+        <span class="author-info">✍️ By Our Store Team · March 15, 2026</span>
+        <a href="aboutUs-BLOG.html" class="back-to-blog">← Back to Blog</a>
+      </div>
+    </article>
+
+    <!-- ══════════════════════════════════════════ -->
+    <!-- ARTICLE 4 — COMMUNITY: LOYAL CUSTOMERS -->
+    <!-- ══════════════════════════════════════════ -->
+    <article class="article" id="article-4">
+      <div class="article-banner banner-community">❤️</div>
+      <div class="article-meta">
+        <span class="tag">Community</span>
+        <span class="article-date">March 10, 2026 · 4 min read</span>
+      </div>
+      <div class="article-header">
+        <h2>Spotlight: Our Loyal Customers in Davao</h2>
+        <span class="read-time">⏱ 4 minute read</span>
+      </div>
+      <hr class="article-divider"/>
+      <div class="article-body">
+        <p>Behind every order notification is a real person with a real story. This month, we want to take a moment to celebrate the customers who have been with us since the beginning — the people who trusted us before we were well-known, and who keep coming back week after week.</p>
+
+        <div class="pull-quote">
+          <p>"You didn't just buy from us. You believed in us — and that made all the difference."</p>
+        </div>
+
+        <h3>The Night-Shift Nurse</h3>
+        <p>One of our regulars is a nurse who works the night shift at a hospital in Davao City. She discovered our store because we were the only shop open when she got home at 4 AM and needed to order supplies. She's now one of our most loyal customers — and one of the reasons we committed to staying open 24/7.</p>
+
+        <h3>The Tatay Who Orders Every Sunday</h3>
+        <p>Every Sunday morning without fail, we receive an order from a father of three in Calinan. He told us he loves that he can shop quietly while his family sleeps, and that our packaging always arrives intact for his kids' items. Small things matter — and we never forget that.</p>
+
+        <h3>The College Student on a Budget</h3>
+        <p>A university student reached out to thank us for our WELCOME100 discount code — she said it helped her stretch her allowance to get everything she needed for the month. Knowing our promos actually make a difference in people's lives keeps us motivated to keep offering them.</p>
+
+        <h3>Thank You</h3>
+        <p>To every customer who has placed an order, left a review, or simply trusted us with their hard-earned money — <strong>thank you.</strong> You are the reason we show up every day (and every night). We are committed to being a store you can always count on. 🙏</p>
+
+        <div class="highlight-box">
+          <p>💬 Want to share your story? Message us on our <a href="getInTouch-CONTACT.html" style="color:var(--gold-light)">Contact page</a> — we'd love to feature you in a future spotlight!</p>
+        </div>
+      </div>
+      <div class="article-footer">
+        <span class="author-info">✍️ By Our Store Team · March 10, 2026</span>
+        <a href="aboutUs-BLOG.html" class="back-to-blog">← Back to Blog</a>
+      </div>
+    </article>
+
+    <!-- ══════════════════════════════════════════ -->
+    <!-- ARTICLE 5 — STORE NEWS: DELIVERY EXPANSION -->
+    <!-- ══════════════════════════════════════════ -->
+    <article class="article" id="article-5">
+      <div class="article-banner banner-news">📣</div>
+      <div class="article-meta">
+        <span class="tag">Store News</span>
+        <span class="article-date">March 5, 2026 · 2 min read</span>
+      </div>
+      <div class="article-header">
+        <h2>We're Expanding Our Delivery Coverage</h2>
+        <span class="read-time">⏱ 2 minute read</span>
+      </div>
+      <hr class="article-divider"/>
+      <div class="article-body">
+        <p>Big news for our Davao customers — we are officially expanding our same-day delivery coverage starting this April! More barangays across Davao City will now be eligible for faster delivery options.</p>
+
+        <h3>Why We're Expanding</h3>
+        <p>Since we launched, we've received countless messages from customers in areas just outside our original delivery zone asking if we could reach them. After months of planning and working with our courier partners, we're proud to say: <strong>yes, we can.</strong></p>
+
+        <h3>What Changes</h3>
+        <ul>
+          <li>More barangays in Davao City will qualify for same-day delivery</li>
+          <li>Expanded coverage for select areas in nearby municipalities</li>
+          <li>Faster pickup schedules with our courier partners</li>
+          <li>Updated delivery fee structure for newly covered areas</li>
+        </ul>
+
+        <div class="tip-box">
+          <span>📦</span>
+          <p>Not sure if your area is covered? Message us on our <a href="getInTouch-CONTACT.html" style="color:var(--gold)">Contact page</a> with your barangay name and we'll let you know right away!</p>
+        </div>
+
+        <h3>More Good News Coming</h3>
+        <p>This delivery expansion is just the beginning. We have more improvements in store for our customers throughout 2026. Stay tuned to this blog and our social media pages for updates as they happen. Thank you for your patience and continued support!</p>
+      </div>
+      <div class="article-footer">
+        <span class="author-info">✍️ By Our Store Team · March 5, 2026</span>
+        <a href="aboutUs-BLOG.html" class="back-to-blog">← Back to Blog</a>
+      </div>
+    </article>
+
+    <!-- ══════════════════════════════════════════ -->
+    <!-- ARTICLE 6 — TIPS: HOW TO TRACK ORDER -->
+    <!-- ══════════════════════════════════════════ -->
+    <article class="article" id="article-6">
+      <div class="article-banner banner-tips2">📦</div>
+      <div class="article-meta">
+        <span class="tag">Tips & Tricks</span>
+        <span class="article-date">February 28, 2026 · 3 min read</span>
+      </div>
+      <div class="article-header">
+        <h2>How to Track Your Order Like a Pro</h2>
+        <span class="read-time">⏱ 3 minute read</span>
+      </div>
+      <hr class="article-divider"/>
+      <div class="article-body">
+        <p>One of the most common questions we get is: <strong>"Where is my order?"</strong> The good news is — tracking your order is easier than you think. Here's a complete step-by-step guide so you're never left guessing.</p>
+
+        <h3>Step 1: Find Your Order Number</h3>
+        <p>Your order number is sent to you in the confirmation message right after you place your order. It looks something like <strong>ORD-20260328-001</strong>. Keep this handy — you'll need it to track your package.</p>
+
+        <h3>Step 2: Go to Our Track Order Page</h3>
+        <p>Visit our <a href="aboutOrder-TRACKORDER.html" style="color:var(--gold)">Track Order page</a> and enter your order number in the search box. Hit the Track button and you'll see the current status of your package right away.</p>
+
+        <h3>Step 3: Understand the Status Labels</h3>
+        <ul>
+          <li><strong>Processing</strong> — We've received your order and are preparing it</li>
+          <li><strong>Packed & Ready</strong> — Your order is packed and waiting for courier pickup</li>
+          <li><strong>Picked Up</strong> — The courier has collected your package from us</li>
+          <li><strong>In Transit</strong> — Your package is on its way to you</li>
+          <li><strong>Out for Delivery</strong> — Your package is with the delivery rider today</li>
+          <li><strong>Delivered</strong> — Your package has been dropped off at your address</li>
+        </ul>
+
+        <h3>Step 4: Track Directly with the Courier</h3>
+        <p>Once your order is picked up, you'll also receive a <strong>courier tracking number</strong>. You can use this on the courier's own website (LBC, Ninja Van, Flash Express, or FedEx) for even more detailed real-time updates.</p>
+
+        <div class="tip-box">
+          <span>📱</span>
+          <p>Tracking not updating? Give it a few hours — couriers sometimes take time to scan packages at each checkpoint. If there's no update after 24 hours, <a href="getInTouch-CONTACT.html" style="color:var(--gold)">contact us</a> and we'll follow up for you.</p>
+        </div>
+      </div>
+      <div class="article-footer">
+        <span class="author-info">✍️ By Our Store Team · February 28, 2026</span>
+        <a href="aboutUs-BLOG.html" class="back-to-blog">← Back to Blog</a>
+      </div>
+    </article>
+
+    <!-- ══════════════════════════════════════════ -->
+    <!-- ARTICLE 7 — PRODUCTS: BEST SELLERS -->
+    <!-- ══════════════════════════════════════════ -->
+    <article class="article" id="article-7">
+      <div class="article-banner banner-products2">⭐</div>
+      <div class="article-meta">
+        <span class="tag">Products</span>
+        <span class="article-date">February 20, 2026 · 3 min read</span>
+      </div>
+      <div class="article-header">
+        <h2>Our Best-Selling Items of the Quarter</h2>
+        <span class="read-time">⏱ 3 minute read</span>
+      </div>
+      <hr class="article-divider"/>
+      <div class="article-body">
+        <p>Every quarter, we look at which products our customers keep coming back for. These aren't just our most popular items — they're the ones that earn repeat orders, positive reviews, and genuine word-of-mouth recommendations. Here's what made the list this quarter.</p>
+
+        <div class="pull-quote">
+          <p>"The best products don't need to be explained — customers just keep buying them."</p>
+        </div>
+
+        <h3>What Makes a Best-Seller?</h3>
+        <p>For us, a best-seller isn't just about volume. We look at three things: how often it's reordered by the same customer, how many positive reviews it receives, and how rarely it comes back as a return. The products on this list score high on all three.</p>
+
+        <h3>This Quarter's Top Picks</h3>
+        <p>Our top-selling items this quarter span several categories — from everyday household essentials to personal care products that customers love stocking up on. A few of them have been in our top 10 since day one, while others are newer additions that quickly became customer favorites.</p>
+
+        <h3>Why These Products Stand Out</h3>
+        <ul>
+          <li>Consistently high quality — what you see is what you get</li>
+          <li>Great value for money — customers feel the price is fair</li>
+          <li>Practical and useful for everyday life in Davao</li>
+          <li>Arrive in great condition thanks to careful packaging</li>
+        </ul>
+
+        <h3>Stock Up Before They Run Out</h3>
+        <p>Best-sellers tend to sell out fast — especially when we run promos. If you've had your eye on something, now is a great time to order. And if you want early access to restocks and new arrivals, subscribe to our newsletter on the <a href="aboutUs-BLOG.html" style="color:var(--gold)">Blog page</a>.</p>
+
+        <div class="highlight-box">
+          <p>⭐ <strong>Customer Tip:</strong> Use code <strong>LOYAL50</strong> to get ₱50 off your next order if you're a returning customer. Our best-sellers + a discount? That's a win. Check the <a href="aboutOrder-DISCOUNTS.html" style="color:var(--gold-light)">Discounts page</a> for all active promos.</p>
+        </div>
+      </div>
+      <div class="article-footer">
+        <span class="author-info">✍️ By Our Store Team · February 20, 2026</span>
+        <a href="aboutUs-BLOG.html" class="back-to-blog">← Back to Blog</a>
+      </div>
+    </article>
+
+  </div><!-- end articles-wrap -->
+
+
+
+<section class="footerGroup">
+
+    <div class="subscribe">
+        <h3>Subscribe</h3>
+        <div class="subscribeContent">
+            <input type="email" placeholder="Enter your Email Address"><button type="submit">Subscribe</button><br>
+            <p class="subscribeMessage">Stay updated with new collections, layout improvements, and feature updates from HomeKitchen Studio.</p>
+            <p>Subscribe to receive:</p>
+            <ul>
+                <li>*Product layout previews & UI updates</li>
+                <li>*Design improvements and feature experiments</li>
+                <li>*Project milestones and build highlights</li>
+            </ul><br>
+
+            <p class="subscribeDisclaimer">This is a demo subscription for portfolio purposes only. No real messages will be sent.</p>
+        </div>
+    </div>
+
+    <div class="sectionCombined">
+    <div class="moreInfoGroup">
+        <div>
+            <h4>About Us</h4>
+                <ul>
+                    <li><a href="/footer-links/aboutUs-BLOG.html">Blog</a></li>
+                    <li><a href="/footer-links/aboutUs-CAREERS.html">Careers</a></li>
+                    <li><a href="/footer-links/aboutUs-SHOPREVIEWS.html">Shop Reviews</a></li>
+                </ul>
+        </div>
+        
+        <div>
+            <h4>Get in Touch</h4>
+                <ul>
+                    <li><a href="/footer-links/getInTouch-HELPCENTER.html">Help Center</a></li>
+                    <li><a href="/footer-links/getInTouch-EMAIL.html">Email Us</a></li>
+                    <li><a href="/footer-links/getInTouch-CONTACT.html">Contact Us</a></li>
+                </ul>
+        </div>
+
+        <div>
+            <h4>About Order</h4>
+                <ul>
+                    <li><a href="/footer-links/aboutOrder-TRACKORDER.html">Track Order</a></li>
+                    <li><a href="/footer-links/aboutOrder-DISCOUNTS.html">Discounts</a></li>
+                    <li><a href="/footer-links/aboutOrder-SHIPPINGOPTIONS.html">Shipping Options</a></li>
+                </ul>
+        </div>
+
+        <div>
+            <h4>Our Policies</h4>
+                <ul>
+                    <li><a href="/footer-links/ourPolicies-SHIPPING.html">Shipping Policies</a></li>
+                    <li><a href="/footer-links/ourPolicies-RETURN&REFUND.html">Return & Refund</a></li>
+                    <li><a href="/footer-links/ourPolicies-PRIVACY.html">Privacy Policy</a></li>
+                </ul>
+        </div>
+
+        <div>
+            <h4>Our Location</h4>
+                <p>Calinan District</p>
+                <p>Davao City, Philippines</p>
+        </div>
+
+        <div>
+            <h4>Store Hours</h4>
+                <p>Mondays to Sundays</p>
+                <p>Open 24 hours</p>
+        </div>
+    </div>
+
+
+    <div class="paymentSocialShippingGroup">
+        <h4>Payment Options</h4>
+        <div class="paymentGroup">
+                <div class="cards">
+                    <img src="/images/FOOTER-IMAGES/Payment-VISA-logo.jpg" alt="Visa Card Image" aria-label="Visa">
+                </div>
+                <div class="cards">
+                    <img src="/images/FOOTER-IMAGES/Payment-Maya-logo.jpg" alt="Maya Card Image" aria-label="Maya">
+                </div>
+                <div class="cards">
+                    <img src="/images/FOOTER-IMAGES/Payment-BPI-logo.jpg" alt="BPI Card Image" aria-label="BPI">
+                </div>
+                <div class="cards">
+                    <img src="/images/FOOTER-IMAGES/Payment-BDO-logo.jpg" alt="BDO Card Image" aria-label="BDO">
+                </div>
+                <div class="cards">
+                    <img src="/images/FOOTER-IMAGES/Payment-Mastercard-logo.webp" alt="Mastercard Image" aria-label="Mastercard">
+                </div>
+                <div class="cards">
+                    <img src="/images/FOOTER-IMAGES/Payment-Gcash-logo.webp" alt="Gcash Card Image" aria-label="Gcash">
+                </div>
+        </div>
+
+        <div class="socialShipGroup">
+        <div class="socialMediaGroup">
+            <h4>Follow Us</h4>
+                <div class="socialMedia">
+                    <a href="https://www.facebook.com" aria-label="Facebook Link" target="_blank"><img src="/images/FOOTER-IMAGES/fblogo.png" alt="fb logo"></a>
+                    <a href="https://www.Twitter.com" aria-label="Twitter Link" target="_blank"><img src="/images/FOOTER-IMAGES/twitterlogo.png" alt="twitter logo"></a>
+                    <a href="https://www.Instagram.com" aria-label="Instagram Link" target="_blank"><img src="/images/FOOTER-IMAGES/instagramlogo.png" alt="Instagram Logo"></a>
+                    <a href="https://www.LinkedIn.com" aria-label="LinkedIn Link" target="_blank"><img src="/images/FOOTER-IMAGES/linkedinlogo.png" alt="LinkedIn logo"></a>
+                </div>
+        </div>
+
+        <div class="shippingGroup">
+            <h4>Shipping Courriers</h4>
+                <div class="shipping">
+                    <img src="/images/FOOTER-IMAGES/Delivery-FlashExpress.png" alt="Flash Express logo">
+                    <img src="/images/FOOTER-IMAGES/Delivery-FedEx.png" alt="Fedex logo">
+                    <img src="/images/FOOTER-IMAGES/Delivery-NinjaVan.png" alt="NinjaVan Logo">
+                    <img src="/images/FOOTER-IMAGES/Deliver-LBCExpress.png" alt="LBC Express logo">
+                </div>
+        </div>
+        </div>
+    </div>
+    </div>
+
+    <div class="pageDescriptionGroup">
+        <div class="bottomLogo">
+            <img src="/images/LOGO&BACKGROUND/officiallogoTRANSPARTENTBG-CROPPED.png" alt="Home Kitchen Studio Logo">
+        </div>
+
+        <div class="aboutPage">
+            <p class="aboutPageP">This website was built as a portfolio project to practice and demonstrate skills in HTML, CSS, JavaScript, and responsive webdesign.HomeKitchen Studio is not a real store, but a concept project inspired by modern e-commerce platforms and kitchen lifestyle brands. All products and images are for demonstration purposes only.<br><br>
+
+            <a href="/footer-links/explore.html" class="Explore">Explore the Build</a>
+        </div>
+    </div>
+</section>
+
+<footer class="footer">
+    <p>@ 2026 HomeKitchen Studio. All Rights Reserved</p>
+    <p>Designed by Joan Faith </p>
+</footer>
+</div>
+
+<div class="backtotop" id="backtotop">
+    <p>▲ Back To Top</p>
+</div>
+
+
+
+
+<div class="signInOverlay" id="signInOverlay">
+    <div class="signInForm">
+        <button id="closeSignInFormButton" class="closeSignInFormButton">&times;</button>
+        <h2>Sign In</h2>
+        <form id="signInForm">
+            <div class="emailLabelGroup">
+                <label for="email">Email:</label><input type="email" id="email" class="emailSignIn" placeholder="Enter Email" required>
+                <p id="emailMessageResult"></p>
+            </div>
+            <div class="passwordLabelGroup">
+                <label for="password">Password:</label>
+                <div class="passwordInput">
+                    <div class="passwordInputAndEye">
+                    <input type="password" class="passwordSignIn" placeholder="Enter Password" required><i class="mainEye fa-solid fa-eye"></i>
+                    </div>
+                    <p id="passwordMessageResult"></p>
+                </div>
+            </div>
+            <button id="signInButton" onclick="signInSuccessful()">Sign In</button>
+            <p id="finalSignInMessage"></p>
+            <p class="noAccount">No account yet? <a href="#" class="signUp">Sign Up</a></p>
+        </form>
+    </div>
+</div>
+
+
+
+
+<div class="signUpOverlay" id="signUpOverlay">
+    <div class="signUpForm">
+        <button id="closeSignUpFormButton" class="closeSignUpFormButton">&times;</button>
+        <h2>Sign Up</h2>
+        <form id="signUpForm">
+            <div class="usernameLabelGroup">
+                <label for="username">Username:</label><input type="text" id="username" class="usernameSignUp" placeholder="Create Username" required>
+            </div>
+            <div class="emailLabelGroup">
+                <label for="email">Email:</label><input type="email" id="email" class="emailSignUp" placeholder="Enter Email" required>
+            </div>
+            <div class="passwordLabelGroup">
+                <label for="password">Password:</label>
+                <div class="firstPasswordWrapper">
+                    <input type="password" class="password" id="firstPasswordSignUp" placeholder="Enter Password" required><i class="firstEye fa-solid fa-eye"></i>
+                </div>
+            </div>
+            <div class="passwordLabelGroupRepeat">
+                <label for="password">Re-enter Password:</label>
+                <div class="secondPasswordWrapper">
+                <input type="password" class="passwordSecond" id="secondPasswordSignUp" placeholder="Re-enterPassword" required><i class="secondEye fa-solid fa-eye"></i>
+                </div>
+            </div>
+            <div class="tcGroup">
+                <input type="checkbox">
+                <p>I agree to <a href="">Home Kitchen Studio's Terms and Conditions</a></p>
+            </div>
+            <button type="button" id="signUpButton">Sign Up</button>
+            <p class="hasAccount">Already have an account? <a href="javascript:void(0)" onclick="switchToSignIn()">Sign In</a></p>
+        </form>
+    </div>
+</div>
+
+<div class="addToCartPopUp" id="addToCartPopUp">
+    <p>Added to Cart!</p>
+</div>
+
+
+  <script>
+    // Build floating TOC dots
+    const articles = document.querySelectorAll('.article');
+    const tocEl = document.getElementById('tocDots');
+    const titles = [
+      'Why We\'re Open 24 Hours',
+      '5 Ways to Make the Most',
+      'New Arrivals This Month',
+      'Spotlight: Loyal Customers',
+      'Expanding Delivery Coverage',
+      'How to Track Your Order',
+      'Best-Selling Items'
+    ];
+
+    articles.forEach((article, i) => {
+      const dot = document.createElement('div');
+      dot.className = 'toc-dot';
+      dot.title = titles[i];
+      dot.addEventListener('click', () => {
+        article.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      });
+      tocEl.appendChild(dot);
+    });
+
+    // Highlight active dot on scroll
+    const dots = document.querySelectorAll('.toc-dot');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const idx = Array.from(articles).indexOf(entry.target);
+          dots.forEach(d => d.classList.remove('active'));
+          if (dots[idx]) dots[idx].classList.add('active');
+        }
+      });
+    }, { rootMargin: '-30% 0px -60% 0px' });
+
+    articles.forEach(a => observer.observe(a));
+  </script>
+<script src="/js/backtotop.js" defer></script>
+<script src="/js/signInSignUpFORM.js" defer></script>
+<script src="/js/cart.js" defer></script>
+<script src="/js/openBurger.js" defer></script>
+<script src="/js/search.js" defer></script>
+<script src="/js/sort.js" defer></script>
+<script src="/js/desktopNav.js" defer></script>
+
+</body>
+</html>

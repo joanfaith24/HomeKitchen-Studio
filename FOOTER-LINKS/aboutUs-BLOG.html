@@ -3,9 +3,471 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Home Kitchen Studio</title>
+    <link rel="icon" type="image/png" href="/images/LOGO&BACKGROUND/officiallogoWHITEBG.jpg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"><link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/header.css">
+    <link rel="stylesheet" href="/css/universal&body.css">
+    <link rel="stylesheet" href="/css/mobilefirst.css">
+    <link rel="stylesheet" href="/css/categories.css">
+    <link rel="stylesheet" href="/css/mainPage.css">
+    <link rel="stylesheet" href="/css/footermobile.css">
+    <link rel="stylesheet" href="/css/backtotop.css">
+    <link rel="stylesheet" href="/css/signIn.css">
+    <link rel="stylesheet" href="/css/signUp.css">
+    <link rel="stylesheet" href="/css/checkout.css">
+    <link rel="stylesheet" href="/css/responsive.css">
+    <link rel="stylesheet" href="/css/footerLinks.css/blog.css">
+    <script src="/js/skeleton.js"></script>
 </head>
+
 <body>
-    <h2>blog</h2>
+    <header class="headerGroup">
+        <div class="burgerIcon" id="burgerIcon" onclick="openBurger()">
+            <div class="burgerLine"></div>
+            <div class="burgerLine"></div>
+            <div class="burgerLine"></div>
+        </div>
+        <div class="pageLogoBox">
+            <a href="/index.html"><img class="pageLogo" src="/images/LOGO&BACKGROUND/officiallogoTRANSPARTENTBG-CROPPED.png" alt="Home Kitchen Studio Logo"></a>
+        </div>
+        <div class="inputBarHeader">
+            <input type="text" placeholder="Search product here..." id="searchInput">
+            <i class="fa-solid fa-magnifying-glass"></i>
+        </div>
+
+        <div class="cart-Log-Call-Group">
+            <div id="cartIcon" class="cartIcon"  onclick="openCartPop(event)">
+                <a href="javascript:void(0)"><i class="fa-solid fa-cart-shopping"></i></a>
+                <p id="cartBadge" class="cartBadge">0</p>
+            </div>
+                <div class="cartSidePopUpPage hideCart">
+
+                    <div class="cartPageHeader">
+                        <p id="cartHeaderLabel" class="cartHeaderLabel">Cart Items:<span class="totalItems" id="totalItems">0</span></p>
+                        <p id="closeCartPop" class="closeCartPop" onclick="closePop(event)">&times;</p>
+                    </div>
+
+                    <div id="cartDetails" class="cartDetails">
+                        <p class="cartTotalLabel" id="cartTotalLabel">Cart Subtotal: <strong><span id="subtotalPrice" class="subTotalPrice">0.00</span></strong></p>
+                    </div>
+
+                    <div id="itemsOnCartDetails" class="itemsOnCartDetails">
+                    </div>
+                    <button id="checkoutSideCartButton" class="checkoutSideCartButton" onclick="proceedToCheckout()">Proceed to Checkout
+                    </button>   
+                </div>
+        </div>
+        <div class="signInIconDiv">
+            <a href="javascript:void(0)" onclick="openSignIn()"><i class="fa-solid fa-user"></i></a>
+        </div>
+        <div class="contactUsIcon">
+            <a href="/footer-links/getInTouch-EMAIL.html" title="Contact Us">
+            <i class="fa-solid fa-envelope"></i></a>
+        </div>
+    </header>
+
+<nav class="categories" id="categories">
+    <span><i class="fa-solid fa-xmark" onclick="closeCatPop()"></i></span>
+    <div class="eachCategory">
+        <a href="/html-categories/accessories.html">ACCESSORIES</a>
+    </div>
+    <div class="eachCategory">
+        <a href="/html-categories/bakingtools.html">BAKING TOOLS</a>
+    </div>
+    <div class="eachCategory">
+        <a href="/html-categories/storage.html">STORAGE</a>
+        <button onclick="storage()"><i class="fa-solid fa-chevron-right"></i></button>
+    </div>
+    <div class="eachCategory">
+        <a href="/html-categories/glasswares.html">GLASSWARES</a>
+        <button onclick="glasswares()"><i class="fa-solid fa-chevron-right"></i></button>
+    </div>
+    <div class="eachCategory">
+        <a href="/html-categories/kitchenappliances.html">KITCHEN APPLIANCES</a>
+    </div>
+    <div class="eachCategory">
+        <a href="/html-categories/knives.html">KNIVES</a>
+        <button onclick="knives()"><i class="fa-solid fa-chevron-right"></i></button>
+    </div>
+    <div class="eachCategory">
+        <a href="/html-categories/cookwares.html">COOKWARES</a>
+        <button onclick="cookwares()"><i class="fa-solid fa-chevron-right"></i></button>
+    </div>
+    <div class="eachCategory">
+        <a href="/html-categories/utensils.html">UTENSILS</a>
+        <button onclick="utensils()"><i class="fa-solid fa-chevron-right"></i></button>
+    </div>
+</nav>
+<hr>
+
+<div class="categorySubGroup">
+    <ul class="eachCategorySubStorage">
+        <a href="/html-categories/storage.html#singleStorage">Single Storage</a>
+        <a href="/html-categories/storage.html#storageSet">Storage Set</a>
+    </ul>
+    <ul class="eachCategorySubGlasses">
+        <a href="/html-categories/glasswares.html#wineGlasses">Wine Glasses</a>
+        <a href="/html-categories/glasswares.html#mugs">Mugs</a>
+        <a href="/html-categories/glasswares.html#drinkingGlasses">Drinking Glasses</a>
+    </ul>
+    <ul class="eachCategorySubKnife">
+        <a href="/html-categories/knives.html#knifeSet">Knife Set</a>
+        <a href="/html-categories/knives.html#breadKnife">Bread Knife</a>
+        <a href="/html-categories/knives.html#paringKnife">Paring Knife</a>
+        <a href="/html-categories/knives.html#utilityKnife">Utility Knife</a>
+    </ul>
+    <ul class="eachCategorySubCookwares">
+        <a href="/html-categories/cookwares.html#fryingPan">Frying Pan</a>
+        <a href="/html-categories/cookwares.html#grillPan">Grill Pan</a>
+        <a href="/html-categories/cookwares.html#pots">Pots</a>
+    </ul>
+    <ul class="eachCategorySubUtensils">
+        <a href="/html-categories/utensils.html#utensilSet">Utensil Set</a>
+        <a href="/html-categories/utensils.html#spoonForkLadle">Spoon, Fork & Ladle</a>
+        <a href="/html-categories/utensils.html#spatulaTurner">Spatula and Turner</a>
+    </ul>
+</div>
+
+
+<!-- HERO -->
+    <section class="blog-hero">
+        <span class="hero-eyebrow">✦ From Our Kitchen to Yours</span>
+        <h1>Our Blog</h1>
+        <p>Tips, stories, behind-the-scenes moments, and everything you need to know about what we do.</p>
+    </section>
+
+
+<!-- FEATURED POST -->
+    <section class="featured-section">
+        <div class="featured-card">
+            <div class="featured-img">
+                <span class="featured-img-placeholder">🛍️</span>
+            </div>
+            <div class="featured-body">
+                <span class="post-tag">✦ Featured · Store News</span>
+                <h2>Why We're Open 24 Hours — and What That Means for You</h2>
+                <p>We believe convenience shouldn't have a curfew. Learn the story behind our round-the-clock commitment to our customers in Calinan District, Davao City.</p>
+                <div class="post-meta">March 28, 2026 &nbsp;·&nbsp; 4 min read</div>
+                <a href="blog-readmore.html#article-1" class="read-btn">Read Article →</a>
+            </div>
+        </div>
+    </section>
+
+<!-- POST GRID -->
+    <section class="grid-section">
+        <h2 class="section-heading">Latest Posts</h2>
+        <div class="posts-grid" id="postsGrid">
+            <div class="post-card" data-cat="tips">
+            <div class="card-thumb c1">💡</div>
+            <div class="card-body">
+                <span class="post-tag">Tips & Tricks</span>
+                <h3>5 Ways to Make the Most of Your Order</h3>
+                <p>Smart shopping habits that save you time and make every purchase worth it.</p>
+                <div class="card-footer">
+                <span>March 20, 2026</span>
+                <a href="blog-readmore.html#article-2" class="card-link">Read more →</a>
+            </div>
+            </div>
+        </div>
+
+        <div class="post-card" data-cat="products">
+            <div class="card-thumb c2">🌿</div>
+            <div class="card-body">
+                <span class="post-tag">Products</span>
+                <h3>New Arrivals: What's Fresh This Month</h3>
+                <p>A closer look at the latest items we've added to our shelves — and why we love them.</p>
+            <div class="card-footer">
+                <span>March 15, 2026</span>
+                <a href="blog-readmore.html#article-3" class="card-link">Read more →</a>
+            </div>
+            </div>
+        </div>
+
+        <div class="post-card" data-cat="community">
+            <div class="card-thumb c3">❤️</div>
+            <div class="card-body">
+                <span class="post-tag">Community</span>
+                <h3>Spotlight: Our Loyal Customers in Davao</h3>
+                <p>Real stories from real people who shop with us every week. Thank you for your trust.</p>
+            <div class="card-footer">
+                <span>March 10, 2026</span>
+                <a href="blog-readmore.html#article-4" class="card-link">Read more →</a>
+            </div>
+            </div>
+        </div>
+
+        <div class="post-card" data-cat="news">
+            <div class="card-thumb c4">📣</div>
+            <div class="card-body">
+                <span class="post-tag">Store News</span>
+                <h3>We're Expanding Our Delivery Coverage</h3>
+                <p>Exciting news: more barangays in Davao will now receive same-day deliveries starting April.</p>
+            <div class="card-footer">
+                <span>March 5, 2026</span>
+                <a href="blog-readmore.html#article-5" class="card-link">Read more →</a>
+            </div>
+            </div>
+        </div>
+
+        <div class="post-card" data-cat="tips">
+            <div class="card-thumb c5">📦</div>
+            <div class="card-body">
+                <span class="post-tag">Tips & Tricks</span>
+                <h3>How to Track Your Order Like a Pro</h3>
+                <p>A step-by-step guide to using our order tracking page so you're never left guessing.</p>
+            <div class="card-footer">
+                <span>Feb 28, 2026</span>
+                <a href="blog-readmore.html#article-6" class="card-link">Read more →</a>
+            </div>
+            </div>
+        </div>
+
+        <div class="post-card" data-cat="products">
+            <div class="card-thumb c6">⭐</div>
+            <div class="card-body">
+                <span class="post-tag">Products</span>
+                <h3>Our Best-Selling Items of the Quarter</h3>
+                <p>These are the products our customers keep coming back for — and for good reason.</p>
+            <div class="card-footer">
+                <span>Feb 20, 2026</span>
+                <a href="blog-readmore.html#article-7" class="card-link">Read more →</a>
+            </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<section class="footerGroup">
+
+    <div class="subscribe">
+        <h3>Subscribe</h3>
+        <div class="subscribeContent">
+            <input type="email" placeholder="Enter your Email Address"><button type="submit">Subscribe</button><br>
+            <p class="subscribeMessage">Stay updated with new collections, layout improvements, and feature updates from HomeKitchen Studio.</p>
+            <p>Subscribe to receive:</p>
+            <ul>
+                <li>*Product layout previews & UI updates</li>
+                <li>*Design improvements and feature experiments</li>
+                <li>*Project milestones and build highlights</li>
+            </ul><br>
+
+            <p class="subscribeDisclaimer">This is a demo subscription for portfolio purposes only. No real messages will be sent.</p>
+        </div>
+    </div>
+
+    <div class="sectionCombined">
+    <div class="moreInfoGroup">
+        <div>
+            <h4>About Us</h4>
+                <ul>
+                    <li><a href="/footer-links/aboutUs-BLOG.html">Blog</a></li>
+                    <li><a href="/footer-links/aboutUs-CAREERS.html">Careers</a></li>
+                    <li><a href="/footer-links/aboutUs-SHOPREVIEWS.html">Shop Reviews</a></li>
+                </ul>
+        </div>
+        
+        <div>
+            <h4>Get in Touch</h4>
+                <ul>
+                    <li><a href="/footer-links/getInTouch-HELPCENTER.html">Help Center</a></li>
+                    <li><a href="/footer-links/getInTouch-EMAIL.html">Email Us</a></li>
+                    <li><a href="/footer-links/getInTouch-CONTACT.html">Contact Us</a></li>
+                </ul>
+        </div>
+
+        <div>
+            <h4>About Order</h4>
+                <ul>
+                    <li><a href="/footer-links/aboutOrder-TRACKORDER.html">Track Order</a></li>
+                    <li><a href="/footer-links/aboutOrder-DISCOUNTS.html">Discounts</a></li>
+                    <li><a href="/footer-links/aboutOrder-SHIPPINGOPTIONS.html">Shipping Options</a></li>
+                </ul>
+        </div>
+
+        <div>
+            <h4>Our Policies</h4>
+                <ul>
+                    <li><a href="ourPolicies-SHIPPING.html">Shipping Policies</a></li>
+                    <li><a href="/footer-links/ourPolicies-RETURN&REFUND.html">Return & Refund</a></li>
+                    <li><a href="/footer-links/ourPolicies-PRIVACY.html">Privacy Policy</a></li>
+                </ul>
+        </div>
+
+        <div>
+            <h4>Our Location</h4>
+                <p>Calinan District</p>
+                <p>Davao City, Philippines</p>
+        </div>
+
+        <div>
+            <h4>Store Hours</h4>
+                <p>Mondays to Sundays</p>
+                <p>Open 24 hours</p>
+        </div>
+    </div>
+
+
+    <div class="paymentSocialShippingGroup">
+        <h4>Payment Options</h4>
+        <div class="paymentGroup">
+                <div class="cards">
+                    <img src="/images/FOOTER-IMAGES/Payment-VISA-logo.jpg" alt="Visa Card Image" aria-label="Visa">
+                </div>
+                <div class="cards">
+                    <img src="/images/FOOTER-IMAGES/Payment-Maya-logo.jpg" alt="Maya Card Image" aria-label="Maya">
+                </div>
+                <div class="cards">
+                    <img src="/images/FOOTER-IMAGES/Payment-BPI-logo.jpg" alt="BPI Card Image" aria-label="BPI">
+                </div>
+                <div class="cards">
+                    <img src="/images/FOOTER-IMAGES/Payment-BDO-logo.jpg" alt="BDO Card Image" aria-label="BDO">
+                </div>
+                <div class="cards">
+                    <img src="/images/FOOTER-IMAGES/Payment-Mastercard-logo.webp" alt="Mastercard Image" aria-label="Mastercard">
+                </div>
+                <div class="cards">
+                    <img src="/images/FOOTER-IMAGES/Payment-Gcash-logo.webp" alt="Gcash Card Image" aria-label="Gcash">
+                </div>
+        </div>
+
+        <div class="socialShipGroup">
+        <div class="socialMediaGroup">
+            <h4>Follow Us</h4>
+                <div class="socialMedia">
+                    <a href="https://www.facebook.com" aria-label="Facebook Link" target="_blank"><img src="/images/FOOTER-IMAGES/fblogo.png" alt="fb logo"></a>
+                    <a href="https://www.Twitter.com" aria-label="Twitter Link" target="_blank"><img src="/images/FOOTER-IMAGES/twitterlogo.png" alt="twitter logo"></a>
+                    <a href="https://www.Instagram.com" aria-label="Instagram Link" target="_blank"><img src="/images/FOOTER-IMAGES/instagramlogo.png" alt="Instagram Logo"></a>
+                    <a href="https://www.LinkedIn.com" aria-label="LinkedIn Link" target="_blank"><img src="/images/FOOTER-IMAGES/linkedinlogo.png" alt="LinkedIn logo"></a>
+                </div>
+        </div>
+
+        <div class="shippingGroup">
+            <h4>Shipping Courriers</h4>
+                <div class="shipping">
+                    <img src="/images/FOOTER-IMAGES/Delivery-FlashExpress.png" alt="Flash Express logo">
+                    <img src="/images/FOOTER-IMAGES/Delivery-FedEx.png" alt="Fedex logo">
+                    <img src="/images/FOOTER-IMAGES/Delivery-NinjaVan.png" alt="NinjaVan Logo">
+                    <img src="/images/FOOTER-IMAGES/Deliver-LBCExpress.png" alt="LBC Express logo">
+                </div>
+        </div>
+        </div>
+    </div>
+    </div>
+    
+    <div class="pageDescriptionGroup">
+        <div class="bottomLogo">
+            <img src="/images/LOGO&BACKGROUND/officiallogoTRANSPARTENTBG-CROPPED.png" alt="Home Kitchen Studio Logo">
+        </div>
+
+        <div class="aboutPage">
+            <p class="aboutPageP">This website was built as a portfolio project to practice and demonstrate skills in HTML, CSS, JavaScript, and responsive webdesign.HomeKitchen Studio is not a real store, but a concept project inspired by modern e-commerce platforms and kitchen lifestyle brands. All products and images are for demonstration purposes only.<br><br>
+
+            <a href="/index.html" class="Explore">Explore the Build</a>
+        </div>
+    </div>
+</section>
+
+<footer class="footer">
+    <p>@ 2026 HomeKitchen Studio. All Rights Reserved</p>
+    <p>Designed by Joan Faith </p>
+</footer>
+</div>
+
+<div class="backtotop" id="backtotop">
+    <p>▲ Back To Top</p>
+</div>
+
+
+
+
+<div class="signInOverlay" id="signInOverlay">
+    <div class="signInForm">
+        <button id="closeSignInFormButton" class="closeSignInFormButton">&times;</button>
+        <h2>Sign In</h2>
+        <form id="signInForm">
+            <div class="emailLabelGroup">
+                <label for="email">Email:</label><input type="email" id="email" class="emailSignIn" placeholder="Enter Email" required>
+                <p id="emailMessageResult"></p>
+            </div>
+            <div class="passwordLabelGroup">
+                <label for="password">Password:</label>
+                <div class="passwordInput">
+                    <div class="passwordInputAndEye">
+                    <input type="password" class="passwordSignIn" placeholder="Enter Password" required><i class="mainEye fa-solid fa-eye"></i>
+                    </div>
+                    <p id="passwordMessageResult"></p>
+                </div>
+            </div>
+            <button id="signInButton" onclick="signInSuccessful()">Sign In</button>
+            <p id="finalSignInMessage"></p>
+            <p class="noAccount">No account yet? <a href="#" class="signUp">Sign Up</a></p>
+        </form>
+    </div>
+</div>
+
+
+
+
+<div class="signUpOverlay" id="signUpOverlay">
+    <div class="signUpForm">
+        <button id="closeSignUpFormButton" class="closeSignUpFormButton">&times;</button>
+        <h2>Sign Up</h2>
+        <form id="signUpForm">
+            <div class="usernameLabelGroup">
+                <label for="username">Username:</label><input type="text" id="username" class="usernameSignUp" placeholder="Create Username" required>
+            </div>
+            <div class="emailLabelGroup">
+                <label for="email">Email:</label><input type="email" id="email" class="emailSignUp" placeholder="Enter Email" required>
+            </div>
+            <div class="passwordLabelGroup">
+                <label for="password">Password:</label>
+                <div class="firstPasswordWrapper">
+                    <input type="password" class="password" id="firstPasswordSignUp" placeholder="Enter Password" required><i class="firstEye fa-solid fa-eye"></i>
+                </div>
+            </div>
+            <div class="passwordLabelGroupRepeat">
+                <label for="password">Re-enter Password:</label>
+                <div class="secondPasswordWrapper">
+                <input type="password" class="passwordSecond" id="secondPasswordSignUp" placeholder="Re-enterPassword" required><i class="secondEye fa-solid fa-eye"></i>
+                </div>
+            </div>
+            <div class="tcGroup">
+                <input type="checkbox">
+                <p>I agree to <a href="">Home Kitchen Studio's Terms and Conditions</a></p>
+            </div>
+            <button type="button" id="signUpButton">Sign Up</button>
+            <p class="hasAccount">Already have an account? <a href="javascript:void(0)" onclick="switchToSignIn()">Sign In</a></p>
+        </form>
+    </div>
+</div>
+
+<div class="addToCartPopUp" id="addToCartPopUp">
+    <p>Added to Cart!</p>
+</div>
+
+
+  <script>
+    function filterCat(btn, cat) {
+      document.querySelectorAll('.cat-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      document.querySelectorAll('.post-card').forEach(card => {
+        const match = cat === 'all' || card.dataset.cat === cat;
+        card.style.display = match ? 'block' : 'none';
+      });
+    }
+  </script>
+<script src="/js/backtotop.js" defer></script>
+<script src="/js/signInSignUpFORM.js" defer></script>
+<script src="/js/cart.js" defer></script>
+<script src="/js/openBurger.js" defer></script>
+<script src="/js/search.js" defer></script>
+<script src="/js/sort.js" defer></script>
+<script src="/js/desktopNav.js" defer></script>
+
 </body>
 </html>

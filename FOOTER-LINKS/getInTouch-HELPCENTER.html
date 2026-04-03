@@ -3,9 +3,590 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Home Kitchen Studio</title>
+    <link rel="icon" type="image/png" href="/images/LOGO&BACKGROUND/officiallogoWHITEBG.jpg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"><link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/header.css">
+    <link rel="stylesheet" href="/css/universal&body.css">
+    <link rel="stylesheet" href="/css/mobilefirst.css">
+    <link rel="stylesheet" href="/css/categories.css">
+    <link rel="stylesheet" href="/css/mainPage.css">
+    <link rel="stylesheet" href="/css/footermobile.css">
+    <link rel="stylesheet" href="/css/backtotop.css">
+    <link rel="stylesheet" href="/css/signIn.css">
+    <link rel="stylesheet" href="/css/signUp.css">
+    <link rel="stylesheet" href="/css/checkout.css">
+    <link rel="stylesheet" href="/css/responsive.css">
+    <link rel="stylesheet" href="/css/footerLinks.css/helpCenter.css">
+    <script src="/js/skeleton.js"></script>
 </head>
+
 <body>
-    <h2>help center</h2>
+    <header class="headerGroup">
+        <div class="burgerIcon" id="burgerIcon" onclick="openBurger()">
+            <div class="burgerLine"></div>
+            <div class="burgerLine"></div>
+            <div class="burgerLine"></div>
+        </div>
+        <div class="pageLogoBox">
+            <a href="/index.html"><img class="pageLogo" src="/images/LOGO&BACKGROUND/officiallogoTRANSPARTENTBG-CROPPED.png" alt="Home Kitchen Studio Logo"></a>
+        </div>
+        <div class="inputBarHeader">
+            <input type="text" placeholder="Search product here..." id="searchInput">
+            <i class="fa-solid fa-magnifying-glass"></i>
+        </div>
+
+        <div class="cart-Log-Call-Group">
+            <div id="cartIcon" class="cartIcon"  onclick="openCartPop(event)">
+                <a href="javascript:void(0)"><i class="fa-solid fa-cart-shopping"></i></a>
+                <p id="cartBadge" class="cartBadge">0</p>
+            </div>
+                <div class="cartSidePopUpPage hideCart">
+
+                    <div class="cartPageHeader">
+                        <p id="cartHeaderLabel" class="cartHeaderLabel">Cart Items:<span class="totalItems" id="totalItems">0</span></p>
+                        <p id="closeCartPop" class="closeCartPop" onclick="closePop(event)">&times;</p>
+                    </div>
+
+                    <div id="cartDetails" class="cartDetails">
+                        <p class="cartTotalLabel" id="cartTotalLabel">Cart Subtotal: <strong><span id="subtotalPrice" class="subTotalPrice">0.00</span></strong></p>
+                    </div>
+
+                    <div id="itemsOnCartDetails" class="itemsOnCartDetails">
+                    </div>
+                    <button id="checkoutSideCartButton" class="checkoutSideCartButton" onclick="proceedToCheckout()">Proceed to Checkout
+                    </button>   
+                </div>
+        </div>
+        <div class="signInIconDiv">
+            <a href="javascript:void(0)" onclick="openSignIn()"><i class="fa-solid fa-user"></i></a>
+        </div>
+        <div class="contactUsIcon">
+            <a href="/footer-links/getInTouch-EMAIL.html" title="Contact Us">
+            <i class="fa-solid fa-envelope"></i></a>
+        </div>
+    </header>
+
+<nav class="categories" id="categories">
+    <span><i class="fa-solid fa-xmark" onclick="closeCatPop()"></i></span>
+    <div class="eachCategory">
+        <a href="/html-categories/accessories.html">ACCESSORIES</a>
+    </div>
+    <div class="eachCategory">
+        <a href="/html-categories/bakingtools.html">BAKING TOOLS</a>
+    </div>
+    <div class="eachCategory">
+        <a href="/html-categories/storage.html">STORAGE</a>
+        <button onclick="storage()"><i class="fa-solid fa-chevron-right"></i></button>
+    </div>
+    <div class="eachCategory">
+        <a href="/html-categories/glasswares.html">GLASSWARES</a>
+        <button onclick="glasswares()"><i class="fa-solid fa-chevron-right"></i></button>
+    </div>
+    <div class="eachCategory">
+        <a href="/html-categories/kitchenappliances.html">KITCHEN APPLIANCES</a>
+    </div>
+    <div class="eachCategory">
+        <a href="/html-categories/knives.html">KNIVES</a>
+        <button onclick="knives()"><i class="fa-solid fa-chevron-right"></i></button>
+    </div>
+    <div class="eachCategory">
+        <a href="/html-categories/cookwares.html">COOKWARES</a>
+        <button onclick="cookwares()"><i class="fa-solid fa-chevron-right"></i></button>
+    </div>
+    <div class="eachCategory">
+        <a href="/html-categories/utensils.html">UTENSILS</a>
+        <button onclick="utensils()"><i class="fa-solid fa-chevron-right"></i></button>
+    </div>
+</nav>
+<hr>
+
+<div class="categorySubGroup">
+    <ul class="eachCategorySubStorage">
+        <a href="/html-categories/storage.html#singleStorage">Single Storage</a>
+        <a href="/html-categories/storage.html#storageSet">Storage Set</a>
+    </ul>
+    <ul class="eachCategorySubGlasses">
+        <a href="/html-categories/glasswares.html#wineGlasses">Wine Glasses</a>
+        <a href="/html-categories/glasswares.html#mugs">Mugs</a>
+        <a href="/html-categories/glasswares.html#drinkingGlasses">Drinking Glasses</a>
+    </ul>
+    <ul class="eachCategorySubKnife">
+        <a href="/html-categories/knives.html#knifeSet">Knife Set</a>
+        <a href="/html-categories/knives.html#breadKnife">Bread Knife</a>
+        <a href="/html-categories/knives.html#paringKnife">Paring Knife</a>
+        <a href="/html-categories/knives.html#utilityKnife">Utility Knife</a>
+    </ul>
+    <ul class="eachCategorySubCookwares">
+        <a href="/html-categories/cookwares.html#fryingPan">Frying Pan</a>
+        <a href="/html-categories/cookwares.html#grillPan">Grill Pan</a>
+        <a href="/html-categories/cookwares.html#pots">Pots</a>
+    </ul>
+    <ul class="eachCategorySubUtensils">
+        <a href="/html-categories/utensils.html#utensilSet">Utensil Set</a>
+        <a href="/html-categories/utensils.html#spoonForkLadle">Spoon, Fork & Ladle</a>
+        <a href="/html-categories/utensils.html#spatulaTurner">Spatula and Turner</a>
+    </ul>
+</div>
+
+ <!-- HERO -->
+  <section class="hero">
+    <span class="eyebrow">✦ We're Here to Help</span>
+    <h1>Help Center</h1>
+    <p>Find answers to the most common questions about your orders, payments, shipping, and returns.</p>
+    <div class="search-wrap">
+      <span class="search-icon">🔍</span>
+      <input class="search-input" type="text" placeholder="Search for answers..." oninput="searchFAQ(this.value)"/>
+    </div>
+  </section>
+
+  <!-- QUICK LINKS -->
+  <div class="quick-links">
+    <a href="#orders" class="quick-link"><span>📦</span> Orders & Tracking</a>
+    <a href="#payments" class="quick-link"><span>💳</span> Payments</a>
+    <a href="#shipping" class="quick-link"><span>🚚</span> Shipping & Delivery</a>
+    <a href="#returns" class="quick-link"><span>↩️</span> Returns & Refunds</a>
+  </div>
+
+  <!-- MAIN -->
+  <div class="page-wrap">
+
+
+
+    <!-- FAQ CONTENT -->
+    <div id="faqContent">
+
+      <!-- ORDERS & TRACKING -->
+      <section class="faq-section" id="orders">
+        <div class="section-header">
+          <div class="section-icon">📦</div>
+          <h2>Orders & Tracking</h2>
+        </div>
+        <div class="faq-grid">
+
+          <div class="faq-item">
+            <p class="faq-q">How do I place an order?</p>
+            <p class="faq-a">Browse our shop, add items to your cart, and proceed to checkout. Fill in your delivery details, choose your payment method, and confirm your order. You'll receive a confirmation message once it's placed.</p>
+            <span class="faq-tag">Orders</span>
+          </div>
+
+          <div class="faq-item">
+            <p class="faq-q">How can I track my order?</p>
+            <p class="faq-a">Go to our <a href="aboutOrder-TRACKORDER.html">Track Order</a> page and enter your order reference number. You'll see the current status and estimated delivery time of your package.</p>
+            <span class="faq-tag">Tracking</span>
+          </div>
+
+          <div class="faq-item">
+            <p class="faq-q">Can I change or cancel my order?</p>
+            <p class="faq-a">You can cancel or modify your order within 1 hour of placing it. After that, the order may already be packed and ready for pickup. Contact us immediately via our <a href="getInTouch-CONTACT.html">Contact page</a>.</p>
+            <span class="faq-tag">Orders</span>
+          </div>
+
+          <div class="faq-item">
+            <p class="faq-q">I didn't receive an order confirmation. What should I do?</p>
+            <p class="faq-a">Check your spam or junk folder first. If it's not there, message us with your name and the items you ordered so we can verify it on our end.</p>
+            <span class="faq-tag">Orders</span>
+          </div>
+
+          <div class="faq-item">
+            <p class="faq-q">What are your store hours for placing orders?</p>
+            <p class="faq-a">We are open 24 hours a day, 7 days a week — Monday to Sunday. You can place an order any time, day or night!</p>
+            <span class="faq-tag">Orders</span>
+          </div>
+
+          <div class="faq-item">
+            <p class="faq-q">My order status hasn't updated. Is that normal?</p>
+            <p class="faq-a">Tracking updates may take a few hours to reflect, especially after pickup by the courier. If there's no update after 24 hours, please contact us and we'll check on it right away.</p>
+            <span class="faq-tag">Tracking</span>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- PAYMENTS -->
+      <section class="faq-section" id="payments">
+        <div class="section-header">
+          <div class="section-icon">💳</div>
+          <h2>Payments</h2>
+        </div>
+        <div class="faq-grid">
+
+          <div class="faq-item">
+            <p class="faq-q">What payment methods do you accept?</p>
+            <p class="faq-a">We accept Cash on Delivery (COD), GCash, Maya, bank transfer, and online payment via Shopee Pay or Lazada Wallet depending on where you ordered.</p>
+            <span class="faq-tag">Payments</span>
+          </div>
+
+          <div class="faq-item">
+            <p class="faq-q">Is Cash on Delivery (COD) available?</p>
+            <p class="faq-a">Yes! COD is available for orders within Davao City and select nearby areas. You pay the courier upon delivery of your package.</p>
+            <span class="faq-tag">COD</span>
+          </div>
+
+          <div class="faq-item">
+            <p class="faq-q">I paid but my order wasn't confirmed. What do I do?</p>
+            <p class="faq-a">Send us a screenshot of your payment confirmation (GCash receipt, bank transfer slip, etc.) via our <a href="getInTouch-CONTACT.html">Contact page</a> and we'll verify it within 1–2 hours.</p>
+            <span class="faq-tag">Payments</span>
+          </div>
+
+          <div class="faq-item">
+            <p class="faq-q">Are there any hidden charges?</p>
+            <p class="faq-a">No hidden charges. The price shown at checkout is the final amount. Shipping fees, if any, are shown before you confirm your order.</p>
+            <span class="faq-tag">Payments</span>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- SHIPPING & DELIVERY -->
+      <section class="faq-section" id="shipping">
+        <div class="section-header">
+          <div class="section-icon">🚚</div>
+          <h2>Shipping & Delivery</h2>
+        </div>
+        <div class="faq-grid">
+
+          <div class="faq-item">
+            <p class="faq-q">How long does delivery take?</p>
+            <p class="faq-a">Orders within Davao City typically arrive within 1–3 business days. Same-day delivery may be available depending on your area and order time. Check our <a href="aboutOrder-SHIPPINGOPTIONS.html">Shipping Options</a> page for details.</p>
+            <span class="faq-tag">Delivery</span>
+          </div>
+
+          <div class="faq-item">
+            <p class="faq-q">Do you deliver outside Davao City?</p>
+            <p class="faq-a">Yes, we ship nationwide through our partner couriers (J&T, LBC, etc.). Delivery time for provincial orders is 3–7 business days depending on location.</p>
+            <span class="faq-tag">Shipping</span>
+          </div>
+
+          <div class="faq-item">
+            <p class="faq-q">How much is the shipping fee?</p>
+            <p class="faq-a">Shipping fees vary based on your location and the weight of your order. The exact fee will be shown at checkout before you confirm your order. Free shipping promos are available — check our <a href="aboutOrder-DISCOUNTS.html">Discounts</a> page.</p>
+            <span class="faq-tag">Shipping</span>
+          </div>
+
+          <div class="faq-item">
+            <p class="faq-q">My package was marked as delivered but I didn't receive it.</p>
+            <p class="faq-a">Check with your neighbors or household members first. If it's truly missing, contact us within 24 hours of the delivery status update and we'll coordinate with the courier immediately.</p>
+            <span class="faq-tag">Delivery</span>
+          </div>
+
+          <div class="faq-item">
+            <p class="faq-q">Can I change my delivery address after ordering?</p>
+            <p class="faq-a">Address changes can only be made within 1 hour of placing your order and before it's been picked up by the courier. Contact us as soon as possible through our <a href="getInTouch-CONTACT.html">Contact page</a>.</p>
+            <span class="faq-tag">Delivery</span>
+          </div>
+
+          <div class="faq-item">
+            <p class="faq-q">Which couriers do you use?</p>
+            <p class="faq-a">We use J&T Express, LBC, and Grab Express for local deliveries. The courier assigned to your order will be shown in your tracking information.</p>
+            <span class="faq-tag">Shipping</span>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- RETURNS & REFUNDS -->
+      <section class="faq-section" id="returns">
+        <div class="section-header">
+          <div class="section-icon">↩️</div>
+          <h2>Returns & Refunds</h2>
+        </div>
+        <div class="faq-grid">
+
+          <div class="faq-item">
+            <p class="faq-q">What is your return policy?</p>
+            <p class="faq-a">We accept returns within 7 days of delivery for items that are damaged, defective, or incorrect. Items must be unused, in original packaging, and with proof of purchase.</p>
+            <span class="faq-tag">Returns</span>
+          </div>
+
+          <div class="faq-item">
+            <p class="faq-q">How do I request a return or refund?</p>
+            <p class="faq-a">Message us through our <a href="getInTouch-CONTACT.html">Contact page</a> with your order number, a photo of the item, and the reason for return. Our team will respond within 24 hours.</p>
+            <span class="faq-tag">Refunds</span>
+          </div>
+
+          <div class="faq-item">
+            <p class="faq-q">How long does a refund take?</p>
+            <p class="faq-a">Once your return is approved and received, refunds are processed within 3–5 business days. GCash and bank transfer refunds may take 1–3 additional banking days to reflect.</p>
+            <span class="faq-tag">Refunds</span>
+          </div>
+
+          <div class="faq-item">
+            <p class="faq-q">What items cannot be returned?</p>
+            <p class="faq-a">Items that are on sale, perishable, or marked as "final sale" cannot be returned. Personal care products and opened items are also non-returnable for hygiene reasons.</p>
+            <span class="faq-tag">Returns</span>
+          </div>
+
+          <div class="faq-item wide">
+            <p class="faq-q">I received a wrong or damaged item. What should I do?</p>
+            <p class="faq-a">We're so sorry about that! Please take a clear photo of the item and packaging immediately upon receiving it, then contact us within 48 hours via our <a href="getInTouch-CONTACT.html">Contact page</a>. We'll arrange a replacement or full refund at no extra cost to you.</p>
+            <span class="faq-tag">Returns</span>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- STILL NEED HELP -->
+      <div class="need-help">
+        <h3>Still Need Help?</h3>
+        <p>Can't find the answer you're looking for? Our team is available 24/7 to assist you.</p>
+        <div class="contact-options">
+          <a href="getInTouch-CONTACT.html" class="contact-btn primary">💬 Chat with Us</a>
+          <a href="mailto:support@homekitchenstudio.com" class="contact-btn">✉️ Email Us</a>
+          <a href="getInTouch-CONTACT.html" class="contact-btn">📞 Call Us</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+
+<section class="footerGroup">
+
+    <div class="subscribe">
+        <h3>Subscribe</h3>
+        <div class="subscribeContent">
+            <input type="email" placeholder="Enter your Email Address"><button type="submit">Subscribe</button><br>
+            <p class="subscribeMessage">Stay updated with new collections, layout improvements, and feature updates from HomeKitchen Studio.</p>
+            <p>Subscribe to receive:</p>
+            <ul>
+                <li>*Product layout previews & UI updates</li>
+                <li>*Design improvements and feature experiments</li>
+                <li>*Project milestones and build highlights</li>
+            </ul><br>
+
+            <p class="subscribeDisclaimer">This is a demo subscription for portfolio purposes only. No real messages will be sent.</p>
+        </div>
+    </div>
+
+    <div class="sectionCombined">
+    <div class="moreInfoGroup">
+        <div>
+            <h4>About Us</h4>
+                <ul>
+                    <li><a href="/footer-links/aboutUs-BLOG.html">Blog</a></li>
+                    <li><a href="/footer-links/aboutUs-CAREERS.html">Careers</a></li>
+                    <li><a href="/footer-links/aboutUs-SHOPREVIEWS.html">Shop Reviews</a></li>
+                </ul>
+        </div>
+        
+        <div>
+            <h4>Get in Touch</h4>
+                <ul>
+                    <li><a href="/footer-links/getInTouch-HELPCENTER.html">Help Center</a></li>
+                    <li><a href="/footer-links/getInTouch-EMAIL.html">Email Us</a></li>
+                    <li><a href="/footer-links/getInTouch-CONTACT.html">Contact Us</a></li>
+                </ul>
+        </div>
+
+        <div>
+            <h4>About Order</h4>
+                <ul>
+                    <li><a href="/footer-links/aboutOrder-TRACKORDER.html">Track Order</a></li>
+                    <li><a href="/footer-links/aboutOrder-DISCOUNTS.html">Discounts</a></li>
+                    <li><a href="/footer-links/aboutOrder-SHIPPINGOPTIONS.html">Shipping Options</a></li>
+                </ul>
+        </div>
+
+        <div>
+            <h4>Our Policies</h4>
+                <ul>
+                    <li><a href="/footer-links/ourPolicies-SHIPPING.html">Shipping Policies</a></li>
+                    <li><a href="/footer-links/ourPolicies-RETURN&REFUND.html">Return & Refund</a></li>
+                    <li><a href="/footer-links/ourPolicies-PRIVACY.html">Privacy Policy</a></li>
+                </ul>
+        </div>
+
+        <div>
+            <h4>Our Location</h4>
+                <p>Calinan District</p>
+                <p>Davao City, Philippines</p>
+        </div>
+
+        <div>
+            <h4>Store Hours</h4>
+                <p>Mondays to Sundays</p>
+                <p>Open 24 hours</p>
+        </div>
+    </div>
+
+
+    <div class="paymentSocialShippingGroup">
+        <h4>Payment Options</h4>
+        <div class="paymentGroup">
+                <div class="cards">
+                    <img src="/images/FOOTER-IMAGES/Payment-VISA-logo.jpg" alt="Visa Card Image" aria-label="Visa">
+                </div>
+                <div class="cards">
+                    <img src="/images/FOOTER-IMAGES/Payment-Maya-logo.jpg" alt="Maya Card Image" aria-label="Maya">
+                </div>
+                <div class="cards">
+                    <img src="/images/FOOTER-IMAGES/Payment-BPI-logo.jpg" alt="BPI Card Image" aria-label="BPI">
+                </div>
+                <div class="cards">
+                    <img src="/images/FOOTER-IMAGES/Payment-BDO-logo.jpg" alt="BDO Card Image" aria-label="BDO">
+                </div>
+                <div class="cards">
+                    <img src="/images/FOOTER-IMAGES/Payment-Mastercard-logo.webp" alt="Mastercard Image" aria-label="Mastercard">
+                </div>
+                <div class="cards">
+                    <img src="/images/FOOTER-IMAGES/Payment-Gcash-logo.webp" alt="Gcash Card Image" aria-label="Gcash">
+                </div>
+        </div>
+
+        <div class="socialShipGroup">
+        <div class="socialMediaGroup">
+            <h4>Follow Us</h4>
+                <div class="socialMedia">
+                    <a href="https://www.facebook.com" aria-label="Facebook Link" target="_blank"><img src="/images/FOOTER-IMAGES/fblogo.png" alt="fb logo"></a>
+                    <a href="https://www.Twitter.com" aria-label="Twitter Link" target="_blank"><img src="/images/FOOTER-IMAGES/twitterlogo.png" alt="twitter logo"></a>
+                    <a href="https://www.Instagram.com" aria-label="Instagram Link" target="_blank"><img src="/images/FOOTER-IMAGES/instagramlogo.png" alt="Instagram Logo"></a>
+                    <a href="https://www.LinkedIn.com" aria-label="LinkedIn Link" target="_blank"><img src="/images/FOOTER-IMAGES/linkedinlogo.png" alt="LinkedIn logo"></a>
+                </div>
+        </div>
+
+        <div class="shippingGroup">
+            <h4>Shipping Courriers</h4>
+                <div class="shipping">
+                    <img src="/images/FOOTER-IMAGES/Delivery-FlashExpress.png" alt="Flash Express logo">
+                    <img src="/images/FOOTER-IMAGES/Delivery-FedEx.png" alt="Fedex logo">
+                    <img src="/images/FOOTER-IMAGES/Delivery-NinjaVan.png" alt="NinjaVan Logo">
+                    <img src="/images/FOOTER-IMAGES/Deliver-LBCExpress.png" alt="LBC Express logo">
+                </div>
+        </div>
+        </div>
+    </div>
+    </div>
+    
+    <div class="pageDescriptionGroup">
+        <div class="bottomLogo">
+            <img src="/images/LOGO&BACKGROUND/officiallogoTRANSPARTENTBG-CROPPED.png" alt="Home Kitchen Studio Logo">
+        </div>
+
+        <div class="aboutPage">
+            <p class="aboutPageP">This website was built as a portfolio project to practice and demonstrate skills in HTML, CSS, JavaScript, and responsive webdesign.HomeKitchen Studio is not a real store, but a concept project inspired by modern e-commerce platforms and kitchen lifestyle brands. All products and images are for demonstration purposes only.<br><br>
+
+            <a href="/index.html" class="Explore">Explore the Build</a>
+        </div>
+    </div>
+</section>
+
+<footer class="footer">
+    <p>@ 2026 HomeKitchen Studio. All Rights Reserved</p>
+    <p>Designed by Joan Faith </p>
+</footer>
+</div>
+
+<div class="backtotop" id="backtotop">
+    <p>▲ Back To Top</p>
+</div>
+
+
+
+
+<div class="signInOverlay" id="signInOverlay">
+    <div class="signInForm">
+        <button id="closeSignInFormButton" class="closeSignInFormButton">&times;</button>
+        <h2>Sign In</h2>
+        <form id="signInForm">
+            <div class="emailLabelGroup">
+                <label for="email">Email:</label><input type="email" id="email" class="emailSignIn" placeholder="Enter Email" required>
+                <p id="emailMessageResult"></p>
+            </div>
+            <div class="passwordLabelGroup">
+                <label for="password">Password:</label>
+                <div class="passwordInput">
+                    <div class="passwordInputAndEye">
+                    <input type="password" class="passwordSignIn" placeholder="Enter Password" required><i class="mainEye fa-solid fa-eye"></i>
+                    </div>
+                    <p id="passwordMessageResult"></p>
+                </div>
+            </div>
+            <button id="signInButton" onclick="signInSuccessful()">Sign In</button>
+            <p id="finalSignInMessage"></p>
+            <p class="noAccount">No account yet? <a href="#" class="signUp">Sign Up</a></p>
+        </form>
+    </div>
+</div>
+
+
+
+
+<div class="signUpOverlay" id="signUpOverlay">
+    <div class="signUpForm">
+        <button id="closeSignUpFormButton" class="closeSignUpFormButton">&times;</button>
+        <h2>Sign Up</h2>
+        <form id="signUpForm">
+            <div class="usernameLabelGroup">
+                <label for="username">Username:</label><input type="text" id="username" class="usernameSignUp" placeholder="Create Username" required>
+            </div>
+            <div class="emailLabelGroup">
+                <label for="email">Email:</label><input type="email" id="email" class="emailSignUp" placeholder="Enter Email" required>
+            </div>
+            <div class="passwordLabelGroup">
+                <label for="password">Password:</label>
+                <div class="firstPasswordWrapper">
+                    <input type="password" class="password" id="firstPasswordSignUp" placeholder="Enter Password" required><i class="firstEye fa-solid fa-eye"></i>
+                </div>
+            </div>
+            <div class="passwordLabelGroupRepeat">
+                <label for="password">Re-enter Password:</label>
+                <div class="secondPasswordWrapper">
+                <input type="password" class="passwordSecond" id="secondPasswordSignUp" placeholder="Re-enterPassword" required><i class="secondEye fa-solid fa-eye"></i>
+                </div>
+            </div>
+            <div class="tcGroup">
+                <input type="checkbox">
+                <p>I agree to <a href="">Home Kitchen Studio's Terms and Conditions</a></p>
+            </div>
+            <button type="button" id="signUpButton">Sign Up</button>
+            <p class="hasAccount">Already have an account? <a href="javascript:void(0)" onclick="switchToSignIn()">Sign In</a></p>
+        </form>
+    </div>
+</div>
+
+<div class="addToCartPopUp" id="addToCartPopUp">
+    <p>Added to Cart!</p>
+</div>
+
+
+  <script>
+    function searchFAQ(query) {
+      const q = query.toLowerCase().trim();
+      const items = document.querySelectorAll('.faq-item');
+      const sections = document.querySelectorAll('.faq-section');
+
+      if (!q) {
+        items.forEach(i => i.style.display = 'block');
+        sections.forEach(s => s.style.display = 'block');
+        return;
+      }
+
+      sections.forEach(section => {
+        let hasVisible = false;
+        section.querySelectorAll('.faq-item').forEach(item => {
+          const text = item.innerText.toLowerCase();
+          if (text.includes(q)) {
+            item.style.display = 'block';
+            hasVisible = true;
+          } else {
+            item.style.display = 'none';
+          }
+        });
+        section.style.display = hasVisible ? 'block' : 'none';
+      });
+    }
+  </script>
+<script src="/js/backtotop.js" defer></script>
+<script src="/js/signInSignUpFORM.js" defer></script>
+<script src="/js/cart.js" defer></script>
+<script src="/js/openBurger.js" defer></script>
+<script src="/js/search.js" defer></script>
+<script src="/js/sort.js" defer></script>
+<script src="/js/desktopNav.js" defer></script>
+
 </body>
 </html>

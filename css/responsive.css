@@ -15,8 +15,9 @@
 }
 /*MOBILE 0PX - 480PX*/
 
+
 /*TABLET 481px-768px*/
-@media (min-width: 481px) and (max-width:768px)
+@media (max-width:767px)
 {
     .inputBarHeader
     {
@@ -43,29 +44,30 @@
 
     .bannerMessageMain
     {
-        height: 24vh;
-        top: 12px;
-        font-size: 45px;
+        height: 50%;
+        top: 20%;
+        font-size: 35px;
+        padding-top: 15px;
     }
 
     .bannerMessageSub
     {
         top: 42%;
-        font-size: 16px;
-        padding: 0 1rem;
+        font-size: 14px;
+        padding: 0.5rem 1rem;
     }
 
     .handPointer
     {
-        bottom: 10px;
+        bottom: 15px;
         font-size: 2rem;
-        left: 30%;
+        left: 15%;
     }
 
     .shopNowButton
     {
-        bottom: 14px;
-        padding: 10px 30px;
+        bottom: 20px;
+        padding: 5px 15px;
         font-size: 20px;
         font-weight: 600;
     }
@@ -123,62 +125,102 @@
         font-size: 14px;
     }
 
+    .sectionCombined
+    {
+        display: flex;
+        flex-direction: column;
+        margin: 7px;
+    }
+    .moreInfoGroup
+    {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        width: 85%;
+    }
     .moreInfoGroup h4
     {
-        font-size: 23px;
+        font-size: 16px;
         font-weight: bold;
+    }
+
+    .moreInfoGroup div
+    {
+        width: 120px;
+        padding: 10px;
     }
     .moreInfoGroup a,
     .moreInfoGroup p
     {
-        font-size: 17px;
+        font-size: 12px;
     }
 
     .paymentGroup
     {
         display: flex;
         flex-direction: row;
-
+        width: 70%;
     }
 
     .cards
     {
-        width: 100%;
-    }
-    .cards img
-    {
-        width: 50%;
-        height: 5vh;
+        width: 20%;
+        margin: 2px 5px 10px 0;
     }
 
+    .cards img
+    {
+        width: 90%;
+        height: 2.9vh;
+    }
+
+    .paymentSocialShippingGroup
+    {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
     .paymentSocialShippingGroup h4
     {
-        font-size: 23px;
+        font-size: 16px;
     }
 
     .socialShipGroup
     {
         display: flex;
-        flex-direction: column;
+        width: 100%;
+    }
+
+    .socialMediaGroup
+    {
         width: 40%;
-        margin: 15px 0;
+    }
+
+    .socialMedia a
+    {
+        width: 80px;
     }
 
     .socialMedia img
     {
-        width: 40%;
+        width: 65%;
         height: auto;
+        margin: 2px 3px 0 0;
     }
 
     .shippingGroup
     {
-    padding-left: 0;
+    padding-left: 15px;
+    }
+
+    .shipping img
+    {
+        margin-top: 2px;
     }
 
     .footer p,
     .aboutPageP
     {
-        font-size: 15px;
+        font-size: 12px;
     }
 
     .aboutPageP a
@@ -199,7 +241,8 @@
 /* ─────────────────────────────────────────
 laptop/small pc 769px - 1024px
 ───────────────────────────────────────────*/
-@media (min-width: 769px) {
+@media (min-width: 768px)
+{
 
     /* hide burger */
     .burgerIcon {
@@ -425,24 +468,25 @@ laptop/small pc 769px - 1024px
 
     .bannerMessageMain
     {
-        height: 33vh;
-        top: 10vh;
-        font-size: 5rem;
+        height: 50%;
+        top: 18%;
+        font-size: 3rem;
         letter-spacing: -2px;
+        padding-top: 13px;
 
     }
 
     .bannerMessageSub
     {
-        font-size: 1.8rem;
-        top: 40%;
+        font-size: 1.2rem;
+        top: 45%;
         color: #75521d;
         padding: 0 1rem;
     }
 
     .shopNowButton
     {
-        bottom: 3.2rem;
+        bottom: 1.5rem;
         font-size: 1.5rem;
         font-weight: 500;
         padding: 10px;
@@ -450,9 +494,9 @@ laptop/small pc 769px - 1024px
 
     .handPointer
     {
-        bottom: 3rem;
+        bottom: 1.5rem;
         font-size: 2.2rem;
-        left: 38.5%;
+        left: 32%;
     }
 
     .cartSidePopUpPage
@@ -510,6 +554,38 @@ laptop/small pc 769px - 1024px
         padding: 6.4px;
     }
 
+    .moreInfoGroup
+    {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        width: 60%;
+    }
+
+    .sectionCombined
+    {
+        display: flex;
+    }
+
+    .paymentSocialShippingGroup
+    {
+        display: flex;
+        flex-direction: column;
+        width: 40%;
+        padding: 0 20px 20px 20px;
+        margin-top: 0;
+    }
+
+    .paymentSocialShippingGroup h4
+    {
+        width: 150px !important;
+    }
+
+    .socialShipGroup
+    {
+        display: flex;
+        flex-direction: column;
+    }
+
     .moreInfoGroup h4
     {
         font-size: 20px;
@@ -522,27 +598,40 @@ laptop/small pc 769px - 1024px
 
     .paymentGroup
     {
-        padding: 0 30px;
+        width: 80%;
     }
 
     .paymentGroup img
     {
-        margin-top: 50px;
+        margin: 20px 10px 0 0;
         transform: translateY(-50%);
-        width: 60px;
+        width: 100%;
         height: 30px;
     }
 
+    .cards
+    {
+        width: 45px;
+        margin: 0 5px 0 0;
+    }
     .socialMediaGroup
     {
         width: 150px;
-        margin: -10px 50px 0 30px;
+        margin: -10px 50px 0 0;
+    }
+
+    .socialShipGroup
+    {
+        display: flex;
+        flex-direction: column;
+        margin-top: 0;
     }
 
     .shippingGroup
     {
         width: 250px;
         margin-top: -10px;
+        padding-left: 0;
     }
 
     .socialMediaGroup h4, .shippingGroup h4
@@ -560,6 +649,11 @@ laptop/small pc 769px - 1024px
     {
         width: 60px;
         margin-top: 20px;
+    }
+
+    .shipping
+    {
+        width: 70%;
     }
 
     .bottomLogo img

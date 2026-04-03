@@ -3,9 +3,569 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Home Kitchen Studio</title>
+    <link rel="icon" type="image/png" href="/images/LOGO&BACKGROUND/officiallogoWHITEBG.jpg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"><link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/header.css">
+    <link rel="stylesheet" href="/css/universal&body.css">
+    <link rel="stylesheet" href="/css/mobilefirst.css">
+    <link rel="stylesheet" href="/css/categories.css">
+    <link rel="stylesheet" href="/css/mainPage.css">
+    <link rel="stylesheet" href="/css/footermobile.css">
+    <link rel="stylesheet" href="/css/backtotop.css">
+    <link rel="stylesheet" href="/css/signIn.css">
+    <link rel="stylesheet" href="/css/signUp.css">
+    <link rel="stylesheet" href="/css/checkout.css">
+    <link rel="stylesheet" href="/css/responsive.css">
+    <link rel="stylesheet" href="/css/footerLinks.css/trackOrder.css">
+    <script src="/js/skeleton.js"></script>
 </head>
+
 <body>
-    <h2>track order</h2>
+    <header class="headerGroup">
+        <div class="burgerIcon" id="burgerIcon" onclick="openBurger()">
+            <div class="burgerLine"></div>
+            <div class="burgerLine"></div>
+            <div class="burgerLine"></div>
+        </div>
+        <div class="pageLogoBox">
+            <a href="/index.html"><img class="pageLogo" src="/images/LOGO&BACKGROUND/officiallogoTRANSPARTENTBG-CROPPED.png" alt="Home Kitchen Studio Logo"></a>
+        </div>
+        <div class="inputBarHeader">
+            <input type="text" placeholder="Search product here..." id="searchInput">
+            <i class="fa-solid fa-magnifying-glass"></i>
+        </div>
+
+        <div class="cart-Log-Call-Group">
+            <div id="cartIcon" class="cartIcon"  onclick="openCartPop(event)">
+                <a href="javascript:void(0)"><i class="fa-solid fa-cart-shopping"></i></a>
+                <p id="cartBadge" class="cartBadge">0</p>
+            </div>
+                <div class="cartSidePopUpPage hideCart">
+
+                    <div class="cartPageHeader">
+                        <p id="cartHeaderLabel" class="cartHeaderLabel">Cart Items:<span class="totalItems" id="totalItems">0</span></p>
+                        <p id="closeCartPop" class="closeCartPop" onclick="closePop(event)">&times;</p>
+                    </div>
+
+                    <div id="cartDetails" class="cartDetails">
+                        <p class="cartTotalLabel" id="cartTotalLabel">Cart Subtotal: <strong><span id="subtotalPrice" class="subTotalPrice">0.00</span></strong></p>
+                    </div>
+
+                    <div id="itemsOnCartDetails" class="itemsOnCartDetails">
+                    </div>
+                    <button id="checkoutSideCartButton" class="checkoutSideCartButton" onclick="proceedToCheckout()">Proceed to Checkout
+                    </button>   
+                </div>
+        </div>
+        <div class="signInIconDiv">
+            <a href="javascript:void(0)" onclick="openSignIn()"><i class="fa-solid fa-user"></i></a>
+        </div>
+        <div class="contactUsIcon">
+            <a href="/footer-links/getInTouch-EMAIL.html" title="Contact Us">
+            <i class="fa-solid fa-envelope"></i></a>
+        </div>
+    </header>
+
+<nav class="categories" id="categories">
+    <span><i class="fa-solid fa-xmark" onclick="closeCatPop()"></i></span>
+    <div class="eachCategory">
+        <a href="/html-categories/accessories.html">ACCESSORIES</a>
+    </div>
+    <div class="eachCategory">
+        <a href="/html-categories/bakingtools.html">BAKING TOOLS</a>
+    </div>
+    <div class="eachCategory">
+        <a href="/html-categories/storage.html">STORAGE</a>
+        <button onclick="storage()"><i class="fa-solid fa-chevron-right"></i></button>
+    </div>
+    <div class="eachCategory">
+        <a href="/html-categories/glasswares.html">GLASSWARES</a>
+        <button onclick="glasswares()"><i class="fa-solid fa-chevron-right"></i></button>
+    </div>
+    <div class="eachCategory">
+        <a href="/html-categories/kitchenappliances.html">KITCHEN APPLIANCES</a>
+    </div>
+    <div class="eachCategory">
+        <a href="/html-categories/knives.html">KNIVES</a>
+        <button onclick="knives()"><i class="fa-solid fa-chevron-right"></i></button>
+    </div>
+    <div class="eachCategory">
+        <a href="/html-categories/cookwares.html">COOKWARES</a>
+        <button onclick="cookwares()"><i class="fa-solid fa-chevron-right"></i></button>
+    </div>
+    <div class="eachCategory">
+        <a href="/html-categories/utensils.html">UTENSILS</a>
+        <button onclick="utensils()"><i class="fa-solid fa-chevron-right"></i></button>
+    </div>
+</nav>
+<hr>
+
+<div class="categorySubGroup">
+    <ul class="eachCategorySubStorage">
+        <a href="/html-categories/storage.html#singleStorage">Single Storage</a>
+        <a href="/html-categories/storage.html#storageSet">Storage Set</a>
+    </ul>
+    <ul class="eachCategorySubGlasses">
+        <a href="/html-categories/glasswares.html#wineGlasses">Wine Glasses</a>
+        <a href="/html-categories/glasswares.html#mugs">Mugs</a>
+        <a href="/html-categories/glasswares.html#drinkingGlasses">Drinking Glasses</a>
+    </ul>
+    <ul class="eachCategorySubKnife">
+        <a href="/html-categories/knives.html#knifeSet">Knife Set</a>
+        <a href="/html-categories/knives.html#breadKnife">Bread Knife</a>
+        <a href="/html-categories/knives.html#paringKnife">Paring Knife</a>
+        <a href="/html-categories/knives.html#utilityKnife">Utility Knife</a>
+    </ul>
+    <ul class="eachCategorySubCookwares">
+        <a href="/html-categories/cookwares.html#fryingPan">Frying Pan</a>
+        <a href="/html-categories/cookwares.html#grillPan">Grill Pan</a>
+        <a href="/html-categories/cookwares.html#pots">Pots</a>
+    </ul>
+    <ul class="eachCategorySubUtensils">
+        <a href="/html-categories/utensils.html#utensilSet">Utensil Set</a>
+        <a href="/html-categories/utensils.html#spoonForkLadle">Spoon, Fork & Ladle</a>
+        <a href="/html-categories/utensils.html#spatulaTurner">Spatula and Turner</a>
+    </ul>
+</div>
+
+
+ <!-- HERO -->
+  <section class="hero">
+    <span class="eyebrow">✦ Where's My Order?</span>
+    <h1>Track Your Order</h1>
+    <p>Enter your order number below to see the latest status and delivery updates.</p>
+  </section>
+
+  <!-- TRACK FORM -->
+  <div class="track-wrap">
+    <div class="track-card">
+      <h2>Enter Your Order Number</h2>
+      <p class="subtitle">Your order number can be found in your confirmation message or email. Example: <strong>ORD-20250328-001</strong></p>
+
+      <div class="input-row">
+        <input
+          class="track-input"
+          type="text"
+          id="orderInput"
+          placeholder="e.g. ORD-20250328-001"
+          onkeydown="if(event.key==='Enter') trackOrder()"
+        />
+        <button class="track-btn" onclick="trackOrder()">🔍 Track</button>
+      </div>
+      <p class="track-hint">No spaces needed — just type or paste your order number</p>
+
+      <!-- RESULT -->
+      <div id="resultArea"></div>
+    </div>
+  </div>
+
+  <!-- COURIER DIRECT LINKS -->
+  <div class="couriers-section">
+    <h2>Track Directly with Couriers</h2>
+    <p class="sub">Already have your courier tracking number? Go directly to the courier's website.</p>
+    <div class="courier-cards">
+      <a href="https://www.fedex.com" target="_blank" class="courier-card">
+        <div class="courier-emoji"><img src="/images/FOOTER-IMAGES/Delivery-FedEx.png" alt="FedEx logo" width="95"></div>
+        <div class="courier-name">FedEx</div>
+        <div class="courier-sub">Track on FedEx →</div>
+      </a>
+      <a href="https://www.lbcexpress.com" target="_blank" class="courier-card">
+        <div class="courier-emoji"><img src="/images/FOOTER-IMAGES/Deliver-LBCExpress.png" alt="LBC Express Logo"></div>
+        <div class="courier-name">LBC Express</div>
+        <div class="courier-sub">Track on LBC →</div>
+      </a>
+      <a href="https://www.flashexpress.ph" target="_blank" class="courier-card">
+        <div class="courier-emoji"><img src="/images/FOOTER-IMAGES/Delivery-FlashExpress.png" alt="Flash Express Logo" width="105"></div>
+        <div class="courier-name">Flash Express</div>
+        <div class="courier-sub">Track on Flash Express →</div>
+      </a>
+      <a href="https://www.ninjavan.co/en-ph/tracking" target="_blank" class="courier-card">
+        <div class="courier-emoji"><img src="/images/FOOTER-IMAGES/Delivery-NinjaVan.png" alt="NinjaVan Logo" width="80"></div>
+        <div class="courier-name">Ninja Van</div>
+        <div class="courier-sub">Track on Ninja Van →</div>
+      </a>
+    </div>
+  </div>
+
+
+
+
+
+
+<section class="footerGroup">
+
+    <div class="subscribe">
+        <h3>Subscribe</h3>
+        <div class="subscribeContent">
+            <input type="email" placeholder="Enter your Email Address"><button type="submit">Subscribe</button><br>
+            <p class="subscribeMessage">Stay updated with new collections, layout improvements, and feature updates from HomeKitchen Studio.</p>
+            <p>Subscribe to receive:</p>
+            <ul>
+                <li>*Product layout previews & UI updates</li>
+                <li>*Design improvements and feature experiments</li>
+                <li>*Project milestones and build highlights</li>
+            </ul><br>
+
+            <p class="subscribeDisclaimer">This is a demo subscription for portfolio purposes only. No real messages will be sent.</p>
+        </div>
+    </div>
+
+    <div class="sectionCombined">
+    <div class="moreInfoGroup">
+        <div>
+            <h4>About Us</h4>
+                <ul>
+                    <li><a href="/footer-links/aboutUs-BLOG.html">Blog</a></li>
+                    <li><a href="/footer-links/aboutUs-CAREERS.html">Careers</a></li>
+                    <li><a href="/footer-links/aboutUs-SHOPREVIEWS.html">Shop Reviews</a></li>
+                </ul>
+        </div>
+        
+        <div>
+            <h4>Get in Touch</h4>
+                <ul>
+                    <li><a href="/footer-links/getInTouch-HELPCENTER.html">Help Center</a></li>
+                    <li><a href="/footer-links/getInTouch-EMAIL.html">Email Us</a></li>
+                    <li><a href="/footer-links/getInTouch-CONTACT.html">Contact Us</a></li>
+                </ul>
+        </div>
+
+        <div>
+            <h4>About Order</h4>
+                <ul>
+                    <li><a href="/footer-links/aboutOrder-TRACKORDER.html">Track Order</a></li>
+                    <li><a href="/footer-links/aboutOrder-DISCOUNTS.html">Discounts</a></li>
+                    <li><a href="/footer-links/aboutOrder-SHIPPINGOPTIONS.html">Shipping Options</a></li>
+                </ul>
+        </div>
+
+        <div>
+            <h4>Our Policies</h4>
+                <ul>
+                    <li><a href="/footer-links/ourPolicies-SHIPPING.html">Shipping Policies</a></li>
+                    <li><a href="/footer-links/ourPolicies-RETURN&REFUND.html">Return & Refund</a></li>
+                    <li><a href="/footer-links/ourPolicies-PRIVACY.html">Privacy Policy</a></li>
+                </ul>
+        </div>
+
+        <div>
+            <h4>Our Location</h4>
+                <p>Calinan District</p>
+                <p>Davao City, Philippines</p>
+        </div>
+
+        <div>
+            <h4>Store Hours</h4>
+                <p>Mondays to Sundays</p>
+                <p>Open 24 hours</p>
+        </div>
+    </div>
+
+
+    <div class="paymentSocialShippingGroup">
+        <h4>Payment Options</h4>
+        <div class="paymentGroup">
+                <div class="cards">
+                    <img src="/images/FOOTER-IMAGES/Payment-VISA-logo.jpg" alt="Visa Card Image" aria-label="Visa">
+                </div>
+                <div class="cards">
+                    <img src="/images/FOOTER-IMAGES/Payment-Maya-logo.jpg" alt="Maya Card Image" aria-label="Maya">
+                </div>
+                <div class="cards">
+                    <img src="/images/FOOTER-IMAGES/Payment-BPI-logo.jpg" alt="BPI Card Image" aria-label="BPI">
+                </div>
+                <div class="cards">
+                    <img src="/images/FOOTER-IMAGES/Payment-BDO-logo.jpg" alt="BDO Card Image" aria-label="BDO">
+                </div>
+                <div class="cards">
+                    <img src="/images/FOOTER-IMAGES/Payment-Mastercard-logo.webp" alt="Mastercard Image" aria-label="Mastercard">
+                </div>
+                <div class="cards">
+                    <img src="/images/FOOTER-IMAGES/Payment-Gcash-logo.webp" alt="Gcash Card Image" aria-label="Gcash">
+                </div>
+        </div>
+
+        <div class="socialShipGroup">
+        <div class="socialMediaGroup">
+            <h4>Follow Us</h4>
+                <div class="socialMedia">
+                    <a href="https://www.facebook.com" aria-label="Facebook Link" target="_blank"><img src="/images/FOOTER-IMAGES/fblogo.png" alt="fb logo"></a>
+                    <a href="https://www.Twitter.com" aria-label="Twitter Link" target="_blank"><img src="/images/FOOTER-IMAGES/twitterlogo.png" alt="twitter logo"></a>
+                    <a href="https://www.Instagram.com" aria-label="Instagram Link" target="_blank"><img src="/images/FOOTER-IMAGES/instagramlogo.png" alt="Instagram Logo"></a>
+                    <a href="https://www.LinkedIn.com" aria-label="LinkedIn Link" target="_blank"><img src="/images/FOOTER-IMAGES/linkedinlogo.png" alt="LinkedIn logo"></a>
+                </div>
+        </div>
+
+        <div class="shippingGroup">
+            <h4>Shipping Courriers</h4>
+                <div class="shipping">
+                    <img src="/images/FOOTER-IMAGES/Delivery-FlashExpress.png" alt="Flash Express logo">
+                    <img src="/images/FOOTER-IMAGES/Delivery-FedEx.png" alt="Fedex logo">
+                    <img src="/images/FOOTER-IMAGES/Delivery-NinjaVan.png" alt="NinjaVan Logo">
+                    <img src="/images/FOOTER-IMAGES/Deliver-LBCExpress.png" alt="LBC Express logo">
+                </div>
+        </div>
+        </div>
+    </div>
+    </div>
+    
+    <div class="pageDescriptionGroup">
+        <div class="bottomLogo">
+            <img src="/images/LOGO&BACKGROUND/officiallogoTRANSPARTENTBG-CROPPED.png" alt="Home Kitchen Studio Logo">
+        </div>
+
+        <div class="aboutPage">
+            <p class="aboutPageP">This website was built as a portfolio project to practice and demonstrate skills in HTML, CSS, JavaScript, and responsive webdesign.HomeKitchen Studio is not a real store, but a concept project inspired by modern e-commerce platforms and kitchen lifestyle brands. All products and images are for demonstration purposes only.<br><br>
+
+            <a href="/index.html" class="Explore">Explore the Build</a>
+        </div>
+    </div>
+</section>
+
+<footer class="footer">
+    <p>@ 2026 HomeKitchen Studio. All Rights Reserved</p>
+    <p>Designed by Joan Faith </p>
+</footer>
+</div>
+
+<div class="backtotop" id="backtotop">
+    <p>▲ Back To Top</p>
+</div>
+
+
+
+
+<div class="signInOverlay" id="signInOverlay">
+    <div class="signInForm">
+        <button id="closeSignInFormButton" class="closeSignInFormButton">&times;</button>
+        <h2>Sign In</h2>
+        <form id="signInForm">
+            <div class="emailLabelGroup">
+                <label for="email">Email:</label><input type="email" id="email" class="emailSignIn" placeholder="Enter Email" required>
+                <p id="emailMessageResult"></p>
+            </div>
+            <div class="passwordLabelGroup">
+                <label for="password">Password:</label>
+                <div class="passwordInput">
+                    <div class="passwordInputAndEye">
+                    <input type="password" class="passwordSignIn" placeholder="Enter Password" required><i class="mainEye fa-solid fa-eye"></i>
+                    </div>
+                    <p id="passwordMessageResult"></p>
+                </div>
+            </div>
+            <button id="signInButton" onclick="signInSuccessful()">Sign In</button>
+            <p id="finalSignInMessage"></p>
+            <p class="noAccount">No account yet? <a href="#" class="signUp">Sign Up</a></p>
+        </form>
+    </div>
+</div>
+
+
+
+
+<div class="signUpOverlay" id="signUpOverlay">
+    <div class="signUpForm">
+        <button id="closeSignUpFormButton" class="closeSignUpFormButton">&times;</button>
+        <h2>Sign Up</h2>
+        <form id="signUpForm">
+            <div class="usernameLabelGroup">
+                <label for="username">Username:</label><input type="text" id="username" class="usernameSignUp" placeholder="Create Username" required>
+            </div>
+            <div class="emailLabelGroup">
+                <label for="email">Email:</label><input type="email" id="email" class="emailSignUp" placeholder="Enter Email" required>
+            </div>
+            <div class="passwordLabelGroup">
+                <label for="password">Password:</label>
+                <div class="firstPasswordWrapper">
+                    <input type="password" class="password" id="firstPasswordSignUp" placeholder="Enter Password" required><i class="firstEye fa-solid fa-eye"></i>
+                </div>
+            </div>
+            <div class="passwordLabelGroupRepeat">
+                <label for="password">Re-enter Password:</label>
+                <div class="secondPasswordWrapper">
+                <input type="password" class="passwordSecond" id="secondPasswordSignUp" placeholder="Re-enterPassword" required><i class="secondEye fa-solid fa-eye"></i>
+                </div>
+            </div>
+            <div class="tcGroup">
+                <input type="checkbox">
+                <p>I agree to <a href="">Home Kitchen Studio's Terms and Conditions</a></p>
+            </div>
+            <button type="button" id="signUpButton">Sign Up</button>
+            <p class="hasAccount">Already have an account? <a href="javascript:void(0)" onclick="switchToSignIn()">Sign In</a></p>
+        </form>
+    </div>
+</div>
+
+<div class="addToCartPopUp" id="addToCartPopUp">
+    <p>Added to Cart!</p>
+</div>
+
+  <script>
+    // Sample orders for demo — replace with your real backend/database call
+    const sampleOrders = {
+      'ORD-20250328-001': {
+        name: 'Maria Santos',
+        status: 'delivered',
+        statusLabel: 'Delivered',
+        courier: 'J&T Express',
+        courierUrl: 'https://www.jtexpress.ph/trajectoryQuery',
+        courierTracking: 'JT1234567890PH',
+        date: 'March 28, 2025',
+        eta: 'Delivered March 30, 2025',
+        address: 'Calinan District, Davao City',
+        items: '2 items',
+        step: 4,
+        timeline: [
+          { time: 'Mar 30, 2:45 PM', event: 'Package Delivered', location: 'Calinan District, Davao City', state: 'done' },
+          { time: 'Mar 30, 9:10 AM', event: 'Out for Delivery', location: 'Davao City Hub', state: 'done' },
+          { time: 'Mar 29, 6:00 PM', event: 'Arrived at Sorting Facility', location: 'Davao City Warehouse', state: 'done' },
+          { time: 'Mar 28, 3:00 PM', event: 'Order Picked Up by Courier', location: 'Calinan District', state: 'done' },
+          { time: 'Mar 28, 1:30 PM', event: 'Order Packed & Ready', location: 'Our Store', state: 'done' },
+        ]
+      },
+      'ORD-20250329-002': {
+        name: 'Juan Reyes',
+        status: 'transit',
+        statusLabel: 'In Transit',
+        courier: 'LBC Express',
+        courierUrl: 'https://www.lbcexpress.com/track',
+        courierTracking: 'LBC9876543210',
+        date: 'March 29, 2025',
+        eta: 'Expected April 1, 2025',
+        address: 'Buhangin, Davao City',
+        items: '1 item',
+        step: 3,
+        timeline: [
+          { time: 'Mar 31, 8:00 AM', event: 'Arrived at Sorting Facility', location: 'Davao City Hub', state: 'active' },
+          { time: 'Mar 30, 4:00 PM', event: 'Order Picked Up by Courier', location: 'Calinan District', state: 'done' },
+          { time: 'Mar 29, 2:00 PM', event: 'Order Packed & Ready', location: 'Our Store', state: 'done' },
+        ]
+      },
+      'ORD-20250330-003': {
+        name: 'Ana Cruz',
+        status: 'processing',
+        statusLabel: 'Processing',
+        courier: 'Grab Express',
+        courierUrl: 'https://www.grab.com/ph/express/',
+        courierTracking: 'GRAB112233445',
+        date: 'March 30, 2025',
+        eta: 'Expected April 2, 2025',
+        address: 'Toril, Davao City',
+        items: '3 items',
+        step: 1,
+        timeline: [
+          { time: 'Mar 30, 6:00 PM', event: 'Order Received & Being Processed', location: 'Our Store', state: 'active' },
+        ]
+      }
+    };
+
+    function trackOrder() {
+      const input = document.getElementById('orderInput').value.trim().toUpperCase();
+      const area  = document.getElementById('resultArea');
+      area.style.display = 'block';
+
+      if (!input) {
+        area.innerHTML = notFoundHTML('Please enter an order number to search.');
+        return;
+      }
+
+      const order = sampleOrders[input];
+
+      if (!order) {
+        area.innerHTML = notFoundHTML(`We couldn't find order <strong>${input}</strong>. Please double-check your order number and try again. If the issue persists, <a href="getInTouch-CONTACT.html" style="color:var(--gold)">contact us</a>.`);
+        return;
+      }
+
+      const stepLabels = ['Order Placed', 'Packed', 'Picked Up', 'In Transit', 'Delivered'];
+      const stepIcons  = ['🛒', '📦', '🚚', '🔄', '✅'];
+      const steps = stepLabels.map((label, i) => {
+        const state = i < order.step ? 'done' : i === order.step - 1 ? 'active' : '';
+        return `<div class="step ${state}">
+          <div class="step-dot">${state ? stepIcons[i] : ''}</div>
+          <div class="step-label">${label}</div>
+        </div>`;
+      }).join('');
+
+      const timeline = order.timeline.map(t => `
+        <li class="${t.state}">
+          <div class="tl-time">${t.time}</div>
+          <div class="tl-event">${t.event}</div>
+          <div class="tl-location">📍 ${t.location}</div>
+        </li>`).join('');
+
+      area.innerHTML = `
+        <div class="order-found">
+          <div class="order-header">
+            <div>
+              <div class="order-id">ORDER #${input}</div>
+              <div class="order-name">${order.name}</div>
+            </div>
+            <div class="status-pill ${order.status}">
+              <div class="status-dot"></div>
+              ${order.statusLabel}
+            </div>
+          </div>
+
+          <div class="progress-section">
+            <div class="progress-label">Delivery Progress</div>
+            <div class="steps">${steps}</div>
+          </div>
+
+          <div class="order-details">
+            <div class="detail-row">
+              <span class="detail-key">Order Date</span>
+              <span class="detail-val">${order.date}</span>
+            </div>
+            <div class="detail-row">
+              <span class="detail-key">Estimated Delivery</span>
+              <span class="detail-val">${order.eta}</span>
+            </div>
+            <div class="detail-row">
+              <span class="detail-key">Courier</span>
+              <span class="detail-val">${order.courier}</span>
+            </div>
+            <div class="detail-row">
+              <span class="detail-key">Courier Tracking #</span>
+              <span class="detail-val">${order.courierTracking}</span>
+            </div>
+            <div class="detail-row">
+              <span class="detail-key">Delivery Address</span>
+              <span class="detail-val">${order.address}</span>
+            </div>
+            <div class="detail-row">
+              <span class="detail-key">Items</span>
+              <span class="detail-val">${order.items}</span>
+            </div>
+          </div>
+
+          <div class="timeline-label">Activity Timeline</div>
+          <ul class="timeline">${timeline}</ul>
+
+          <div class="courier-link-box">
+            <p>Track live on <strong>${order.courier}</strong>'s website using your courier tracking number.</p>
+            <a href="${order.courierUrl}" target="_blank">Track on ${order.courier} →</a>
+          </div>
+        </div>`;
+    }
+
+    function notFoundHTML(msg) {
+      return `<div class="not-found">
+        <div class="nf-icon">📭</div>
+        <h3>Order Not Found</h3>
+        <p>${msg}</p>
+      </div>`;
+    }
+  </script>
+<script src="/js/backtotop.js" defer></script>
+<script src="/js/signInSignUpFORM.js" defer></script>
+<script src="/js/cart.js" defer></script>
+<script src="/js/openBurger.js" defer></script>
+<script src="/js/search.js" defer></script>
+<script src="/js/sort.js" defer></script>
+<script src="/js/desktopNav.js" defer></script>
+
 </body>
 </html>
